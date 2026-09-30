@@ -1,0 +1,17 @@
+{
+  "accent": "#bb8987",
+  "background": "#2d2c41",
+  "border": "#756172",
+  "deep_ocean": "#2d2c41",
+  "elevated": "#48445b",
+  "foreground": "#f1e3df",
+  "frost": "#48445b",
+  "ink": "#2d2c41",
+  "mist": "#d3adb0",
+  "muted": "#d3adb0",
+  "slate_blue": "#756172",
+  "surface": "#373950",
+  "terminal": "#2d2c41",
+  "terminal_foreground": "#f1e3df",
+  "text": "#f1e3df"
+}

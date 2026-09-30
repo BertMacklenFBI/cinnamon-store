@@ -1,0 +1,51 @@
+{
+  "boot_login_accepted": false,
+  "captures_sha256": {
+    "desktop.png": "65cacdda444a4924c89502fb06b799f1bb4893c26a4ed6764757abb51bdac6cf",
+    "gtk2.png": "451e4e72ffacac367a65478a2668f844d31a6018c5cf07456433c100d888767e",
+    "gtk3.png": "c9c4acc53986dfad882bdfd31fe5a410384f7aac92fd7df016b4435ff4f74125",
+    "gtk4.png": "abc63ad3a17f1dd293f7f1b87b5949512a3e7d63d3356a18f8dfb2ddb6b863ad",
+    "menu.png": "4aa7101175c10b72b4637f6bebc232a7c931022eafbb1b93f87af90369dcfeab",
+    "notifications.png": "f07eb97fd7a67a6d44c6c5c523eb3c443feb299112a91d9517468717045bcb9c",
+    "sound.png": "4f5d617a8e518637cfa17c3030e5fcbb8d477aa3eff2761b6817bf6a0c982ff0",
+    "wallpaper.png": "76250fdd34b863b52a8499f8b4b1f34a314367a7c6673a08d5d3065d5fd8a650"
+  },
+  "checks": [
+    "Exact packaged theme installed in private HOME",
+    "Private 2880x1800 Cinnamon started with selected theme and stock applets",
+    "Workspace hit targets and labels fit actual allocations",
+    "Four stock workspace controls accept native pointer clicks",
+    "menu@cinnamon.org opens, paints within screen and closes",
+    "notifications@cinnamon.org opens, paints within screen and closes",
+    "sound@cinnamon.org opens, paints within screen and closes",
+    "GTK 2 selected theme, mapped controls and interaction states",
+    "GTK 3 selected theme, mapped controls and interaction states",
+    "GTK 4 selected theme, mapped controls and interaction states",
+    "Cinnamon theme reload"
+  ],
+  "full_workstation_accepted": false,
+  "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+  "independent_visual_review": "PASS_WITH_SCOPED_LIMITS",
+  "installed_tree_sha256": "ae93ee954930cb5099c15878d94c64abf5dd23ad28cb41609db4c8479481a7cc",
+  "live_installation_performed": false,
+  "package_integration": "PASS",
+  "package_scope": "desktop-theme-and-artwork",
+  "private_home_removed": true,
+  "public_artwork_provenance": "UNRESOLVED_ORIGINAL_ARTWORK_SOURCE_AND_GRANT",
+  "remaining_owned_private_processes": [],
+  "schema": 1,
+  "slug": "quiet-sage",
+  "source_native_report": "reports/cinnamon-store-readiness-2026-09-30/native/quiet-sage/20260930-124403/report.json",
+  "source_native_report_sha256": "ffa4d7d0ac697c1dc4c3de54a8f9cca52cd7dc7af59bb7f3d51212bc1781e97a",
+  "source_theme_unchanged_after_native_test": true,
+  "status": "PASS_BOUNDED_DESKTOP_PACKAGE_NATIVE",
+  "test_harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
+  "theme_name": "Quiet Sage",
+  "workspace_native_pointer_visits": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "publication_authorized": true
+}

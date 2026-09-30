@@ -1,0 +1,23 @@
+{
+  "accent": "#507D7D",
+  "background": "#EBE9E1",
+  "border": "#A5ABA8",
+  "control_border": "#697773",
+  "desktop": "#727F88",
+  "elevated": "#D7D9D4",
+  "error": "#944338",
+  "focus": "#356262",
+  "foreground": "#293238",
+  "island_background": "#293238",
+  "island_foreground": "#9DC6C3",
+  "muted": "#505D66",
+  "selection": "#356262",
+  "selection_foreground": "#FBF8F1",
+  "success": "#356247",
+  "surface": "#EBE9E1",
+  "terminal": "#293238",
+  "terminal_foreground": "#EBE9E1",
+  "top_background": "#293238",
+  "top_foreground": "#9DC6C3",
+  "warning": "#795615"
+}

@@ -1,0 +1,112 @@
+{
+  "acceptance": {
+    "full_workstation": false,
+    "gtk2": "PASS",
+    "gtk3": "PASS",
+    "gtk4": "PASS",
+    "independent_visual_acceptance": "PASS_WITH_SCOPED_LIMITS",
+    "native_package": "PASS_BOUNDED_PRIVATE_DESKTOP_PACKAGE",
+    "package_integration": "PASS",
+    "public_provenance_review": "UNRESOLVED_ORIGINAL_ARTWORK_SOURCE_AND_GRANT",
+    "source_candidate_release_gates_changed": false,
+    "static_resource_closure": "PASS",
+    "store_package_ready": false,
+    "visual_review": "PASS_WITH_SCOPED_LIMITS"
+  },
+  "artwork": {
+    "files/Ocean-Silk/artwork/macklenmobile-logo-ocean-silk.png": "50c72309586af55ff823a1da24fef5e9f196e4f497f0ea9cbf5879848ac242f8",
+    "files/Ocean-Silk/artwork/menu-logo.png": "50c72309586af55ff823a1da24fef5e9f196e4f497f0ea9cbf5879848ac242f8",
+    "files/Ocean-Silk/artwork/wallpaper.png": "47c672c90403b254198d2000717173144a6becdd16c595a8d078ef5eb57cd98d"
+  },
+  "display_name": "Ocean-Silk",
+  "excluded_layers": [
+    "icons",
+    "cursors",
+    "fonts",
+    "panel-arrangement",
+    "workspace-applet-runtime",
+    "Island/Eww",
+    "application-adapters",
+    "terminal-integrations",
+    "boot/login",
+    "activation/restore-controllers"
+  ],
+  "external_dependencies": [
+    {
+      "kind": "gtk-engine",
+      "name": "murrine",
+      "reason": "Referenced by GTK2 theme rules; required for GTK2 coverage."
+    },
+    {
+      "kind": "font",
+      "name": "Ubuntu",
+      "reason": "Named in shipped desktop CSS; fonts are installed separately."
+    },
+    {
+      "kind": "icon-theme",
+      "name": "Ocean-Silk-Icons",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    },
+    {
+      "kind": "cursor-theme",
+      "name": "Ocean-Silk-Cursors",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    }
+  ],
+  "icon": {
+    "byte_exact_artwork_source": "files/Ocean-Silk/artwork/menu-logo.png",
+    "path": "icon.png",
+    "sha256": "50c72309586af55ff823a1da24fef5e9f196e4f497f0ea9cbf5879848ac242f8"
+  },
+  "native_binding": {
+    "checks_passed": 11,
+    "harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
+    "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+    "installed_tree_sha256": "0b3b28a0cd7fda2574b00dfddda0052075e784ea00807e0fa38e7231a0448c8c",
+    "native_callback_scope": "Stock workspace controls received real private-session pointer visits; GTK fixtures invoked programmatic button/checkbox callbacks and checked mapped selected-theme readback.",
+    "owned_cleanup_complete": true,
+    "report": "reports/cinnamon-store-readiness-2026-09-30/native/ocean-silk/20260930-123745/report.json",
+    "report_sha256": "987cb8f1398488c04243fa92453ebedfe6b5241bd290df10e8e08363d251443a",
+    "source_unchanged": true
+  },
+  "package_scope": "desktop-theme-and-artwork",
+  "palette": {
+    "path": "files/Ocean-Silk/palette.json",
+    "preserved_from_source": true,
+    "sha256": "58b6af1ea12669b0d6ed2e6df8c6616107c735cfc8805aad5dd8038649bcb01d"
+  },
+  "schema": 1,
+  "screenshot": {
+    "capture_name": "gtk3.png",
+    "contains_account_identity": false,
+    "context": "Private Cinnamon at 2880x1800; 44px top panel, stock applets, Adwaita icons and synthetic GTK3 acceptance controls.",
+    "full_composition_capture": false,
+    "genuine_private_package_capture": true,
+    "includes_optional_icons_and_panel_layout": true,
+    "path": "screenshot.png",
+    "sha256": "fbace1e1f77d67e1df7f15d6473120aab6adfe8103cdd1859b11c942b1443b0f",
+    "source_report": "reports/cinnamon-store-readiness-2026-09-30/native/ocean-silk/20260930-123745/report.json",
+    "source_report_sha256": "987cb8f1398488c04243fa92453ebedfe6b5241bd290df10e8e08363d251443a",
+    "status": "CURRENT_PACKAGED_THEME_CAPTURE"
+  },
+  "slug": "ocean-silk",
+  "store_only_rendering_repairs": [
+    "six-theme-enabled-scale-text-repair.json"
+  ],
+  "theme_name": "Ocean-Silk",
+  "publication": {
+    "status": "USER_AUTHORIZED_REPOSITORY_SUBMISSION",
+    "requested_on": "2026-09-30",
+    "scope": "desktop-theme-and-artwork",
+    "authorization": "User explicitly requested publication of the remaining six after being informed of the unresolved artwork record.",
+    "artwork_provenance_resolved": false
+  },
+  "review_bindings_sha256": {
+    "local-ocean-plum-visual-review.json": "219cc4a330bccfe7f844d60eb59de99295085eb764a80a7ea96844ba5864a261",
+    "local-eight-integration-review.json": "1a56849e8968015805e142c0877516fdd42b1ac51d24d40957f8c30c3733c693",
+    "local-eight-package-validation-final.json": "b8331f8b57df0adfffc88f0d0f1ce317f75f4ee9b426f2c72516389dd813fb6b",
+    "desktop-public-provenance-review.json": "e1cba196c77ede81d0e4a712fb08ffc119f7d03876cd9e18b22eb136f3a54298"
+  }
+}

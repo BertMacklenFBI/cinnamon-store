@@ -1,0 +1,51 @@
+{
+  "boot_login_accepted": false,
+  "captures_sha256": {
+    "desktop.png": "a4d6d7e6decb6045bebfc072f0746755e015c212f8ec708a50b9547e7e840f68",
+    "gtk2.png": "7ca2fc1d9af930a025637c3923ee719ad16b2749e50521d02f5c27c3473b61ba",
+    "gtk3.png": "7bee07ce96ade2f148464515f5eb112cec6bb9252979c8380f9e55a5fd1f9f46",
+    "gtk4.png": "9e30ca5f021040208ea7854dffed9c84b0ecdcae9eb12d8c98257ecd09b47ecf",
+    "menu.png": "3f98128b2b88eb46558e930d6b564964835a1468ca04dfb8770d160db8e01255",
+    "notifications.png": "9041cb36621c76d47d1caa6c907bc604b5cb3aeadbb4e0596594c31b665897f3",
+    "sound.png": "bc8e205843d9f21d7b2ec845ad9d921a97a9f28dbe90d5197559be205a3a0993",
+    "wallpaper.png": "a0fb3bedbb552b9ef66ffbb214dfee12539e7ae68672dd1e41a0bbe9bb2fbcfb"
+  },
+  "checks": [
+    "Exact packaged theme installed in private HOME",
+    "Private 2880x1800 Cinnamon started with selected theme and stock applets",
+    "Workspace hit targets and labels fit actual allocations",
+    "Four stock workspace controls accept native pointer clicks",
+    "menu@cinnamon.org opens, paints within screen and closes",
+    "notifications@cinnamon.org opens, paints within screen and closes",
+    "sound@cinnamon.org opens, paints within screen and closes",
+    "GTK 2 selected theme, mapped controls and interaction states",
+    "GTK 3 selected theme, mapped controls and interaction states",
+    "GTK 4 selected theme, mapped controls and interaction states",
+    "Cinnamon theme reload"
+  ],
+  "full_workstation_accepted": false,
+  "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+  "independent_visual_review": "PASS_WITH_SCOPED_LIMITS",
+  "installed_tree_sha256": "988c0b1d06b38e2e538efa32203d1823f5089ecc20969009f30c0f6efc1b5b71",
+  "live_installation_performed": false,
+  "package_integration": "PASS",
+  "package_scope": "desktop-theme-and-artwork",
+  "private_home_removed": true,
+  "public_artwork_provenance": "UNRESOLVED_ORIGINAL_ARTWORK_SOURCE_AND_GRANT",
+  "remaining_owned_private_processes": [],
+  "schema": 1,
+  "slug": "macintosh-soft",
+  "source_native_report": "reports/cinnamon-store-readiness-2026-09-30/native/macintosh-soft/20260930-123540/report.json",
+  "source_native_report_sha256": "1ebc842b4f29ee968472abe465bedd059a4cf884aad679f3fe76871b83a979da",
+  "source_theme_unchanged_after_native_test": true,
+  "status": "PASS_BOUNDED_DESKTOP_PACKAGE_NATIVE",
+  "test_harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
+  "theme_name": "Macintosh Soft",
+  "workspace_native_pointer_visits": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "publication_authorized": true
+}

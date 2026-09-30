@@ -1,0 +1,113 @@
+{
+  "acceptance": {
+    "full_workstation": false,
+    "gtk2": "PASS",
+    "gtk3": "PASS",
+    "gtk4": "PASS",
+    "independent_visual_acceptance": "PASS_WITH_SCOPED_LIMITS",
+    "native_package": "PASS_BOUNDED_PRIVATE_DESKTOP_PACKAGE",
+    "package_integration": "PASS",
+    "public_provenance_review": "UNRESOLVED_ORIGINAL_ARTWORK_SOURCE_AND_GRANT",
+    "source_candidate_release_gates_changed": false,
+    "static_resource_closure": "PASS",
+    "store_package_ready": false,
+    "visual_review": "PASS_WITH_SCOPED_LIMITS"
+  },
+  "artwork": {
+    "files/Quiet Sage/artwork/macklenmobile-logo-quiet-sage.png": "7698988811885e0e7c28974b41032938af781a0402c8628e40b3720dd24487ff",
+    "files/Quiet Sage/artwork/menu-logo.png": "7698988811885e0e7c28974b41032938af781a0402c8628e40b3720dd24487ff",
+    "files/Quiet Sage/artwork/wallpaper.png": "76250fdd34b863b52a8499f8b4b1f34a314367a7c6673a08d5d3065d5fd8a650"
+  },
+  "display_name": "Quiet Sage",
+  "excluded_layers": [
+    "icons",
+    "cursors",
+    "fonts",
+    "panel-arrangement",
+    "workspace-applet-runtime",
+    "Island/Eww",
+    "application-adapters",
+    "terminal-integrations",
+    "boot/login",
+    "activation/restore-controllers"
+  ],
+  "external_dependencies": [
+    {
+      "kind": "gtk-engine",
+      "name": "murrine",
+      "reason": "Referenced by GTK2 theme rules; required for GTK2 coverage."
+    },
+    {
+      "kind": "font",
+      "name": "Ubuntu",
+      "reason": "Named in shipped desktop CSS; fonts are installed separately."
+    },
+    {
+      "kind": "icon-theme",
+      "name": "Quiet Sage icons",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    },
+    {
+      "kind": "cursor-theme",
+      "name": "Quiet Sage cursors",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    }
+  ],
+  "icon": {
+    "byte_exact_artwork_source": "files/Quiet Sage/artwork/menu-logo.png",
+    "path": "icon.png",
+    "sha256": "7698988811885e0e7c28974b41032938af781a0402c8628e40b3720dd24487ff"
+  },
+  "native_binding": {
+    "checks_passed": 11,
+    "harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
+    "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+    "installed_tree_sha256": "ae93ee954930cb5099c15878d94c64abf5dd23ad28cb41609db4c8479481a7cc",
+    "native_callback_scope": "Stock workspace controls received real private-session pointer visits; GTK fixtures invoked programmatic button/checkbox callbacks and checked mapped selected-theme readback.",
+    "owned_cleanup_complete": true,
+    "report": "reports/cinnamon-store-readiness-2026-09-30/native/quiet-sage/20260930-124403/report.json",
+    "report_sha256": "ffa4d7d0ac697c1dc4c3de54a8f9cca52cd7dc7af59bb7f3d51212bc1781e97a",
+    "source_unchanged": true
+  },
+  "package_scope": "desktop-theme-and-artwork",
+  "palette": {
+    "path": "files/Quiet Sage/palette.json",
+    "preserved_from_source": true,
+    "sha256": "bafb90e791122f0178d44c4aa0089220dd9857cc1be9c2fb6cf53f95ef465587"
+  },
+  "schema": 1,
+  "screenshot": {
+    "capture_name": "gtk3.png",
+    "contains_account_identity": false,
+    "context": "Private Cinnamon at 2880x1800; 44px top panel, stock applets, Adwaita icons and synthetic GTK3 acceptance controls.",
+    "full_composition_capture": false,
+    "genuine_private_package_capture": true,
+    "includes_optional_icons_and_panel_layout": true,
+    "path": "screenshot.png",
+    "sha256": "c9c4acc53986dfad882bdfd31fe5a410384f7aac92fd7df016b4435ff4f74125",
+    "source_report": "reports/cinnamon-store-readiness-2026-09-30/native/quiet-sage/20260930-124403/report.json",
+    "source_report_sha256": "ffa4d7d0ac697c1dc4c3de54a8f9cca52cd7dc7af59bb7f3d51212bc1781e97a",
+    "status": "CURRENT_PACKAGED_THEME_CAPTURE"
+  },
+  "slug": "quiet-sage",
+  "store_only_rendering_repairs": [
+    "six-theme-enabled-scale-text-repair.json",
+    "dark-theme-enabled-controls-repair.json"
+  ],
+  "theme_name": "Quiet Sage",
+  "publication": {
+    "status": "USER_AUTHORIZED_REPOSITORY_SUBMISSION",
+    "requested_on": "2026-09-30",
+    "scope": "desktop-theme-and-artwork",
+    "authorization": "User explicitly requested publication of the remaining six after being informed of the unresolved artwork record.",
+    "artwork_provenance_resolved": false
+  },
+  "review_bindings_sha256": {
+    "dusk-quiet-package-visual-review.json": "6a5b2f95aedac2d7e74d7eec13b757f29e401a51bebb55e7e53bce77fe5f25a2",
+    "local-eight-integration-review.json": "1a56849e8968015805e142c0877516fdd42b1ac51d24d40957f8c30c3733c693",
+    "local-eight-package-validation-final.json": "b8331f8b57df0adfffc88f0d0f1ce317f75f4ee9b426f2c72516389dd813fb6b",
+    "desktop-public-provenance-review.json": "e1cba196c77ede81d0e4a712fb08ffc119f7d03876cd9e18b22eb136f3a54298"
+  }
+}

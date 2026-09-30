@@ -1,0 +1,112 @@
+{
+  "acceptance": {
+    "full_workstation": false,
+    "gtk2": "PASS",
+    "gtk3": "PASS",
+    "gtk4": "PASS",
+    "independent_visual_acceptance": "PASS_WITH_SCOPED_LIMITS",
+    "native_package": "PASS_BOUNDED_PRIVATE_DESKTOP_PACKAGE",
+    "package_integration": "PASS",
+    "public_provenance_review": "UNRESOLVED_ORIGINAL_ARTWORK_SOURCE_AND_GRANT",
+    "source_candidate_release_gates_changed": false,
+    "static_resource_closure": "PASS",
+    "store_package_ready": false,
+    "visual_review": "PASS_WITH_SCOPED_LIMITS"
+  },
+  "artwork": {
+    "files/Macintosh Soft/artwork/macklenmobile-logo-macintosh-soft.png": "414c19ce3069d01a62d972fe8fe78db8dce48113c65acb0650d684057a0e4e10",
+    "files/Macintosh Soft/artwork/menu-logo.png": "414c19ce3069d01a62d972fe8fe78db8dce48113c65acb0650d684057a0e4e10",
+    "files/Macintosh Soft/artwork/wallpaper.png": "a0fb3bedbb552b9ef66ffbb214dfee12539e7ae68672dd1e41a0bbe9bb2fbcfb"
+  },
+  "display_name": "Macintosh Soft",
+  "excluded_layers": [
+    "icons",
+    "cursors",
+    "fonts",
+    "panel-arrangement",
+    "workspace-applet-runtime",
+    "Island/Eww",
+    "application-adapters",
+    "terminal-integrations",
+    "boot/login",
+    "activation/restore-controllers"
+  ],
+  "external_dependencies": [
+    {
+      "kind": "gtk-engine",
+      "name": "murrine",
+      "reason": "Referenced by GTK2 theme rules; required for GTK2 coverage."
+    },
+    {
+      "kind": "font",
+      "name": "Ubuntu",
+      "reason": "Named in shipped desktop CSS; fonts are installed separately."
+    },
+    {
+      "kind": "icon-theme",
+      "name": "Macintosh Soft icons",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    },
+    {
+      "kind": "cursor-theme",
+      "name": "Macintosh Soft cursors",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    }
+  ],
+  "icon": {
+    "byte_exact_artwork_source": "files/Macintosh Soft/artwork/menu-logo.png",
+    "path": "icon.png",
+    "sha256": "414c19ce3069d01a62d972fe8fe78db8dce48113c65acb0650d684057a0e4e10"
+  },
+  "native_binding": {
+    "checks_passed": 11,
+    "harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
+    "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+    "installed_tree_sha256": "988c0b1d06b38e2e538efa32203d1823f5089ecc20969009f30c0f6efc1b5b71",
+    "native_callback_scope": "Stock workspace controls received real private-session pointer visits; GTK fixtures invoked programmatic button/checkbox callbacks and checked mapped selected-theme readback.",
+    "owned_cleanup_complete": true,
+    "report": "reports/cinnamon-store-readiness-2026-09-30/native/macintosh-soft/20260930-123540/report.json",
+    "report_sha256": "1ebc842b4f29ee968472abe465bedd059a4cf884aad679f3fe76871b83a979da",
+    "source_unchanged": true
+  },
+  "package_scope": "desktop-theme-and-artwork",
+  "palette": {
+    "path": "files/Macintosh Soft/palette.json",
+    "preserved_from_source": true,
+    "sha256": "7bd1df1af8d38e1c1f96fc11e3a7486e01b967d414a3565eddca426e3a5ad349"
+  },
+  "schema": 1,
+  "screenshot": {
+    "capture_name": "gtk3.png",
+    "contains_account_identity": false,
+    "context": "Private Cinnamon at 2880x1800; 44px top panel, stock applets, Adwaita icons and synthetic GTK3 acceptance controls.",
+    "full_composition_capture": false,
+    "genuine_private_package_capture": true,
+    "includes_optional_icons_and_panel_layout": true,
+    "path": "screenshot.png",
+    "sha256": "7bee07ce96ade2f148464515f5eb112cec6bb9252979c8380f9e55a5fd1f9f46",
+    "source_report": "reports/cinnamon-store-readiness-2026-09-30/native/macintosh-soft/20260930-123540/report.json",
+    "source_report_sha256": "1ebc842b4f29ee968472abe465bedd059a4cf884aad679f3fe76871b83a979da",
+    "status": "CURRENT_PACKAGED_THEME_CAPTURE"
+  },
+  "slug": "macintosh-soft",
+  "store_only_rendering_repairs": [
+    "six-theme-enabled-scale-text-repair.json"
+  ],
+  "theme_name": "Macintosh Soft",
+  "publication": {
+    "status": "USER_AUTHORIZED_REPOSITORY_SUBMISSION",
+    "requested_on": "2026-09-30",
+    "scope": "desktop-theme-and-artwork",
+    "authorization": "User explicitly requested publication of the remaining six after being informed of the unresolved artwork record.",
+    "artwork_provenance_resolved": false
+  },
+  "review_bindings_sha256": {
+    "local-macintosh-visual-review.json": "23b4596169424318d2e97c1a3270cdc538b2831aba9c2f4de756e53bb6d7f9f8",
+    "local-eight-integration-review.json": "1a56849e8968015805e142c0877516fdd42b1ac51d24d40957f8c30c3733c693",
+    "local-eight-package-validation-final.json": "b8331f8b57df0adfffc88f0d0f1ce317f75f4ee9b426f2c72516389dd813fb6b",
+    "desktop-public-provenance-review.json": "e1cba196c77ede81d0e4a712fb08ffc119f7d03876cd9e18b22eb136f3a54298"
+  }
+}

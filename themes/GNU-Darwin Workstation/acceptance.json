@@ -1,0 +1,173 @@
+{
+  "schema": 1,
+  "scope": "desktop-theme-and-artwork",
+  "date": "2026-09-30",
+  "theme_name": "GNU-Darwin Workstation",
+  "theme_tree_sha256": "ed6727027ab98401d6cba07f536e5f61df111047d00ccdb45ad7a17e38c6ab00",
+  "tree_hash_algorithm": "SHA256 of sorted relative UTF-8 filenames followed by raw file bytes; per-file digests in theme-files.sha256.json",
+  "environment": {
+    "cinnamon": "6.6.9",
+    "gtk2": "2.24.33",
+    "gtk3": "3.24.41",
+    "gtk4": "4.14.5",
+    "framebuffer": [
+      2880,
+      1800
+    ]
+  },
+  "native_checks": [
+    "Exact packaged theme installed in private HOME",
+    "Private 2880x1800 Cinnamon started with selected theme and stock applets",
+    "Workspace hit targets and labels fit actual allocations",
+    "Four stock workspace controls accept native pointer clicks",
+    "menu@cinnamon.org opens, paints within screen and closes",
+    "notifications@cinnamon.org opens, paints within screen and closes",
+    "sound@cinnamon.org opens, paints within screen and closes",
+    "GTK 2 selected theme, mapped controls and interaction states",
+    "GTK 3 selected theme, mapped controls and interaction states",
+    "GTK 4 selected theme, mapped controls and interaction states",
+    "Cinnamon theme reload"
+  ],
+  "workspace_geometry": {
+    "strip": {
+      "p": [
+        44.000244140625,
+        1735.9998779296875
+      ],
+      "s": [
+        279.9999694824219,
+        64
+      ]
+    },
+    "buttons": [
+      {
+        "p": [
+          50.000152587890625,
+          1735.9998779296875
+        ],
+        "s": [
+          64,
+          64
+        ],
+        "radii": [
+          999,
+          999,
+          999,
+          999
+        ],
+        "label": {
+          "p": [
+            78.00018310546875,
+            1759.9998779296875
+          ],
+          "s": [
+            7.000007629394531,
+            16
+          ]
+        }
+      },
+      {
+        "p": [
+          118.00019836425781,
+          1735.9998779296875
+        ],
+        "s": [
+          64,
+          64
+        ],
+        "radii": [
+          999,
+          999,
+          999,
+          999
+        ],
+        "label": {
+          "p": [
+            146.00022888183594,
+            1759.9998779296875
+          ],
+          "s": [
+            7.0000152587890625,
+            16
+          ]
+        }
+      },
+      {
+        "p": [
+          186.0000762939453,
+          1735.9998779296875
+        ],
+        "s": [
+          64,
+          64
+        ],
+        "radii": [
+          999,
+          999,
+          999,
+          999
+        ],
+        "label": {
+          "p": [
+            214.00010681152344,
+            1759.9998779296875
+          ],
+          "s": [
+            7.0000152587890625,
+            16
+          ]
+        }
+      },
+      {
+        "p": [
+          254.0001220703125,
+          1735.9998779296875
+        ],
+        "s": [
+          64,
+          64
+        ],
+        "radii": [
+          999,
+          999,
+          999,
+          999
+        ],
+        "label": {
+          "p": [
+            282.0001525878906,
+            1759.9998779296875
+          ],
+          "s": [
+            7.000030517578125,
+            16
+          ]
+        }
+      }
+    ]
+  },
+  "workspace_native_pointer_visits": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "gtk_callbacks": "Programmatic button and checkbox callbacks with selected-theme and mapped-control readback; not physical pointer-click evidence.",
+  "test_harness_sha256": "bb4c4a3db5916527f47dc478f79d80bb39d76f3b5135d840a8909dca059f6247",
+  "gtk2_fixture_sha256": "1dfe798c3b9d15d0ac259e4ae356ce24e210a5aa7e000807f8ff3ebf87203e28",
+  "gtk34_fixture_sha256": "4614d9dedc45ca21a3d2c08022799eba955e09a506c5c0068fa9c98aacb8072b",
+  "stock_applet_runtime_sha256": {
+    "workspace-switcher@cinnamon.org": "f1b3f64e6fd91e6535e10f3dfb37e57aad1e681b35849fd1aaff7d315a8e6703",
+    "menu@cinnamon.org": "e6a5a59804d6acbe02a1d11bf0254eeabb73c57ed6002821229427158402cdfc",
+    "notifications@cinnamon.org": "689c4b68e8727ed66e4f3cffcad750f8fb236b9e8736b9c4a79cfc6644ed7b4b",
+    "sound@cinnamon.org": "6061e62f5dd035400bf55e20a6de773ef03c4c5d4a7c5e3e4d6e05cae09c351b"
+  },
+  "source_native_report_sha256": "c1070aa60cafd9a24540e21b0d2b13912642f7a4032c1af39d3035ca1d927aaf",
+  "source_artwork_unchanged": true,
+  "source_theme_unchanged_after_native_test": true,
+  "private_home_removed": true,
+  "remaining_owned_private_processes": [],
+  "full_workstation_accepted": false,
+  "live_installation_performed": false,
+  "boot_login_accepted": false
+}

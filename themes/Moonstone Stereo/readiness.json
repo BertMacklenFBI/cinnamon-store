@@ -1,0 +1,117 @@
+{
+  "acceptance": {
+    "full_workstation": false,
+    "gtk2": "PASS",
+    "gtk3": "PASS",
+    "gtk4": "PASS",
+    "independent_visual_acceptance": "PASS_WITH_SCOPED_LIMITS",
+    "native_package": "PASS_BOUNDED_PRIVATE_DESKTOP_PACKAGE",
+    "package_integration": "PASS",
+    "public_provenance_review": "UNRESOLVED_ORIGINAL_ARTWORK_SOURCE_AND_GRANT",
+    "source_candidate_release_gates_changed": false,
+    "static_resource_closure": "PASS",
+    "store_package_ready": false,
+    "visual_review": "PASS_WITH_SCOPED_LIMITS"
+  },
+  "artwork": {
+    "files/Moonstone Stereo/artwork/macklenmobile-logo-moonstone-stereo.png": "3699a61e7e08480fb9d24c03883e470cfbf01d1bd1411cb6fd31441fa87d24cd",
+    "files/Moonstone Stereo/artwork/menu-logo.png": "3699a61e7e08480fb9d24c03883e470cfbf01d1bd1411cb6fd31441fa87d24cd",
+    "files/Moonstone Stereo/artwork/wallpaper.png": "ce52ed020dec23db97a64e930d8fa2075ec362c94e264d1de508f2dce5f05509"
+  },
+  "display_name": "Moonstone Stereo",
+  "excluded_layers": [
+    "icons",
+    "cursors",
+    "fonts",
+    "panel-arrangement",
+    "workspace-applet-runtime",
+    "Island/Eww",
+    "application-adapters",
+    "terminal-integrations",
+    "boot/login",
+    "activation/restore-controllers"
+  ],
+  "external_dependencies": [
+    {
+      "kind": "gtk-engine",
+      "name": "murrine",
+      "reason": "Referenced by GTK2 theme rules; required for GTK2 coverage."
+    },
+    {
+      "kind": "font",
+      "name": "Hack",
+      "reason": "Named in shipped desktop CSS; fonts are installed separately."
+    },
+    {
+      "kind": "font",
+      "name": "Ubuntu",
+      "reason": "Named in shipped desktop CSS; fonts are installed separately."
+    },
+    {
+      "kind": "icon-theme",
+      "name": "Moonstone Stereo icons",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    },
+    {
+      "kind": "cursor-theme",
+      "name": "Moonstone Stereo cursors",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    }
+  ],
+  "icon": {
+    "byte_exact_artwork_source": "files/Moonstone Stereo/artwork/menu-logo.png",
+    "path": "icon.png",
+    "sha256": "3699a61e7e08480fb9d24c03883e470cfbf01d1bd1411cb6fd31441fa87d24cd"
+  },
+  "native_binding": {
+    "checks_passed": 11,
+    "harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
+    "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+    "installed_tree_sha256": "1b90e6dcb067b9e4a700dd4a9c1908c6dbbdd912b8ee1a8407c3349ac4d7dc4b",
+    "native_callback_scope": "Stock workspace controls received real private-session pointer visits; GTK fixtures invoked programmatic button/checkbox callbacks and checked mapped selected-theme readback.",
+    "owned_cleanup_complete": true,
+    "report": "reports/cinnamon-store-readiness-2026-09-30/native/moonstone-stereo/20260930-123644/report.json",
+    "report_sha256": "549b083545edd111a5f8863114077b7ae4344eb767f15ae17d0ce275fa0aaf5a",
+    "source_unchanged": true
+  },
+  "package_scope": "desktop-theme-and-artwork",
+  "palette": {
+    "path": "files/Moonstone Stereo/palette.json",
+    "preserved_from_source": true,
+    "sha256": "779973a81b676f85a7c3c7e4ec14c93bc35fba89284d561b07681a5984f426a5"
+  },
+  "schema": 1,
+  "screenshot": {
+    "capture_name": "gtk3.png",
+    "contains_account_identity": false,
+    "context": "Private Cinnamon at 2880x1800; 78px top panel, stock applets, Adwaita icons and synthetic GTK3 acceptance controls.",
+    "full_composition_capture": false,
+    "genuine_private_package_capture": true,
+    "includes_optional_icons_and_panel_layout": true,
+    "path": "screenshot.png",
+    "sha256": "8993ee80666457e760365e1a96082784893f87ebb7feb4bf47645dda9293507f",
+    "source_report": "reports/cinnamon-store-readiness-2026-09-30/native/moonstone-stereo/20260930-123644/report.json",
+    "source_report_sha256": "549b083545edd111a5f8863114077b7ae4344eb767f15ae17d0ce275fa0aaf5a",
+    "status": "CURRENT_PACKAGED_THEME_CAPTURE"
+  },
+  "slug": "moonstone-stereo",
+  "store_only_rendering_repairs": [
+    "six-theme-enabled-scale-text-repair.json"
+  ],
+  "theme_name": "Moonstone Stereo",
+  "publication": {
+    "status": "USER_AUTHORIZED_REPOSITORY_SUBMISSION",
+    "requested_on": "2026-09-30",
+    "scope": "desktop-theme-and-artwork",
+    "authorization": "User explicitly requested publication of the remaining six after being informed of the unresolved artwork record.",
+    "artwork_provenance_resolved": false
+  },
+  "review_bindings_sha256": {
+    "moonstone-package-visual-review.json": "92f1d54557a101801b7bf528c2e4e664916a7b5961d62a8fd2441dab5f073773",
+    "local-eight-integration-review.json": "1a56849e8968015805e142c0877516fdd42b1ac51d24d40957f8c30c3733c693",
+    "local-eight-package-validation-final.json": "b8331f8b57df0adfffc88f0d0f1ce317f75f4ee9b426f2c72516389dd813fb6b",
+    "desktop-public-provenance-review.json": "e1cba196c77ede81d0e4a712fb08ffc119f7d03876cd9e18b22eb136f3a54298"
+  }
+}
