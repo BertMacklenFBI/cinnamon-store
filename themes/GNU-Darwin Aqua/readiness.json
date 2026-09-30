@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "package_scope": "desktop-theme-and-artwork",
+  "additional_companion_payloads": [
+    "icons",
+    "Cinnamon dock extension"
+  ],
+  "theme_name": "GNU-Darwin Aqua",
+  "display_name": "GNU-Darwin Aqua",
+  "slug": "gnu-darwin-aqua",
+  "external_dependencies": [
+    {
+      "kind": "font",
+      "name": "Lucida Grande",
+      "reason": "Reference font for UI/title; user-supplied licensed font software, not bundled."
+    },
+    {
+      "kind": "font",
+      "name": "Liberation Mono",
+      "reason": "Reference monospace font; installed separately."
+    },
+    {
+      "kind": "gtk-engine",
+      "name": "murrine",
+      "reason": "GTK2 theme engine."
+    },
+    {
+      "kind": "icon-theme",
+      "name": "GNU-Darwin Aqua icons",
+      "reason": "Separate bundled companion, installed by install.py."
+    },
+    {
+      "kind": "icon-theme",
+      "name": "Papirus",
+      "reason": "Fallback for application icons not bundled."
+    },
+    {
+      "kind": "icon-theme",
+      "name": "hicolor",
+      "reason": "System fallback for application icons."
+    },
+    {
+      "kind": "cursor-theme",
+      "name": "Bibata-Modern-Classic",
+      "reason": "External reference cursor; no cursor binaries shipped."
+    }
+  ],
+  "excluded_layers": [
+    "fonts",
+    "cursor-binaries",
+    "automatic-panel-arrangement",
+    "workspace-applet-runtime",
+    "Island/Eww",
+    "application-adapters",
+    "terminal-integrations",
+    "boot/login",
+    "whole-workstation-activation/restore-controller"
+  ],
+  "artwork": {
+    "files/GNU-Darwin Aqua/artwork/wallpaper.png": "e90cf3659735c402eb75ab15769eba5037b940f64a9a8db6f15e9db7aa4d3ee8",
+    "files/GNU-Darwin Aqua/artwork/menu-logo.png": "ff45ddb25cb717e4b1dabb99ea4f6e22dff1fac694b1e7b09b4d953343f79a34"
+  },
+  "acceptance": {
+    "native_package": "PASS",
+    "public_provenance_review": "UNRESOLVED-third-party-artwork",
+    "publication_requested_by_owner": true,
+    "full_workstation": false,
+    "live_installation_performed": false,
+    "native_checks": 28,
+    "installer_fixtures": "PASS-7",
+    "harness_teardown": "Initial cleanup race; owned temporary directory subsequently removed"
+  }
+}

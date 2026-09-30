@@ -1,0 +1,12 @@
+{
+  "removed_non_rendered_export_paths": [
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/menu/submenu.svg",
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/checkbox/checkbox-checked.svg",
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/checkbox/checkbox-unchecked-focused.svg",
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/checkbox/checkbox-checked-focused.svg",
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/checkbox/checkbox-unchecked.svg"
+  ],
+  "index_theme": "Removed CursorTheme selection key; cursor binaries remain external. All rendered source pixels and styles are otherwise preserved.",
+  "font_binaries": "Not included; external dependency.",
+  "cursor_binaries": "Not included; external dependency."
+}

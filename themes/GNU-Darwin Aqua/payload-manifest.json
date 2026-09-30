@@ -1,0 +1,2627 @@
+{
+  "schema": 1,
+  "files": {
+    "files/GNU-Darwin Aqua/COPYRIGHT": {
+      "sha256": "0fc708139ce780116a60acd0d948940b2b581520ae6c1191ab7e457f3b27c56b"
+    },
+    "files/GNU-Darwin Aqua/SOURCE.md": {
+      "sha256": "a2925dffaa359942006ad7d3d20f874a6a07e5c1c54e1de2a550aa53bbbfc568"
+    },
+    "files/GNU-Darwin Aqua/artwork/menu-logo.png": {
+      "sha256": "ff45ddb25cb717e4b1dabb99ea4f6e22dff1fac694b1e7b09b4d953343f79a34"
+    },
+    "files/GNU-Darwin Aqua/artwork/wallpaper.png": {
+      "sha256": "e90cf3659735c402eb75ab15769eba5037b940f64a9a8db6f15e9db7aa4d3ee8"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/assets/dock-running.svg": {
+      "sha256": "0f0fbfd1876c0eed1e2db7e6b9b681a25623cbd044f3867b19ab28c51d1d620d"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/assets/dock-separator.svg": {
+      "sha256": "cb110bd863bff66004a1895632efb612905f2585be4768e32704a89c701a7b09"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/assets/dock-shelf.svg": {
+      "sha256": "7ece401631de790df1e516d36293bad47437271cfec52cdc7c2693797157d10d"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/cinnamon.css": {
+      "sha256": "64c828c6d30a4947d35ee46898d6221ac0503684ae59267233b3f0747422161b"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/menu/menu-separator.svg": {
+      "sha256": "07d7928b2324219758f87af1204537798c461f9f2e8b61657c5742ffe5db8546"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/add-workspace-active.svg": {
+      "sha256": "e1f8c1e1193d2c70c34aa585dcc12832444f7788f1ce422f49bb874eafb0d57e"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/add-workspace-hover.svg": {
+      "sha256": "180bc6fa36f7550112111de6646f885b2ecf91a798617e241092f2777831f8df"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/add-workspace.svg": {
+      "sha256": "c4237098886c47d1bb951435eb5ef4ccd5c25d51ce81ff8b9729191daf91b833"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/bg.svg": {
+      "sha256": "c63d90595cb46744e315ef40da649cd5c589c950bf8716f5b409b6bcfc13004f"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/calendar-arrow-left-hover.svg": {
+      "sha256": "3fb82455283d5c5b07f0750fa8d712053a532cf18dc57e00a0646bc98efda522"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/calendar-arrow-left.svg": {
+      "sha256": "0f0c7d584513a190bd43e0664ef0c7ff2c1fac058a5e4f38ccf9e6b631c5c126"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/calendar-arrow-right-hover.svg": {
+      "sha256": "3c7b2b6533f768178005d087e308a1a1c7b5ef6ab1335a4e745038115f2f1d52"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/calendar-arrow-right.svg": {
+      "sha256": "7666d6c91ad1a458736e10b9e764817f5914e64e0d6b98cfa801f18c14933de2"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/close-active.svg": {
+      "sha256": "d4c1136c91c9eccc95a36ba12a358c6f3f42271a6bdb329df0d77f80e29ada31"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/close-hover.svg": {
+      "sha256": "f9f0e6519b9cfd657db0fa5fe30f9f7fac9b55458c2050dc90d3ed2eb0b2a890"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/close.svg": {
+      "sha256": "90c33c942643ffc4de54bd364bc6e0fe45db85e129a337039bebbc41acfbec58"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/corner-ripple.svg": {
+      "sha256": "e08598fc56fbd1999013375f3e86aae66d9788510868fb943f7883bcf64c69e4"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/desklet-header.svg": {
+      "sha256": "762a930b0a6b0a4e5bec904768752a789950356738a5bea327218efcc39521ce"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/desklet.svg": {
+      "sha256": "24d13e9390a46414f8d009e72e86f03d47e0e069f10fee34c459ba97c54fa8fb"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/osd.svg": {
+      "sha256": "33883bec5fd5f8099e876df05641bdf3b5b8fa981c03ed912fd20de2fe7d8ecf"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/overview-hover.png": {
+      "sha256": "11c2b2ab57ffdad8f6bc42ac60652e5236ba7e30a07c5173611835b5a0d2a925"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/overview.png": {
+      "sha256": "df5e2f79674a811a2a26554abd0035537d32eaed944ce9a92ae6095735a9150c"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/misc/trash-icon.svg": {
+      "sha256": "99e8e1c9472111140174851fe99a5623317e506237bdd5e0a58da32a6b57f38b"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/panel/activities-active.svg": {
+      "sha256": "ce0ae0f5c1e0e09992776ee39888bd16e9af783d3eba118497f2d3fb72e02b1d"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/panel/activities.svg": {
+      "sha256": "f9f3c22b5bdffd0eab841f01463478620afd71028700dbbe20870061b48e454d"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/panel/window-list-active-bottom.svg": {
+      "sha256": "b316dc4111732dd0dbacacb6cd173e2aa0258f02c75430b47a43cfebb66ea850"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/common-assets/panel/window-list-active-top.svg": {
+      "sha256": "9275a2c68a372edf121f59e8a6f17e680ef552221d3b049d31a6b786dbb7870c"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/checkbox/checkbox-checked-focused.svg": {
+      "sha256": "88d7529ea66da9b444697fb08d1fbd1a816a93df1a62d35dd269c2ce71e41e81"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/checkbox/checkbox-checked.svg": {
+      "sha256": "031effdabd4967ca0bf2abc7e684cb095f8ae6dad3216756e71e3fd8b5361444"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/checkbox/checkbox-unchecked-focused.svg": {
+      "sha256": "d57539f3ef90053ed9c11c367f0b863558a18bfaf4b1bc42c2023535d9fa990e"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/checkbox/checkbox-unchecked.svg": {
+      "sha256": "f7d2943ae4ec060c1caa85183df25917bceb0e243fbdf256f7483e65dec19aeb"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/checkbox/radio-checked.svg": {
+      "sha256": "8246bdaa79f589d62a8ea0175c05b61f5bef6c7a71cb9944898d69e2b43b4f58"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/checkbox/radio-unchecked.svg": {
+      "sha256": "92953106bfec132382c1ec255bef475ba0b702e27c9fc94b9b88dd1d712bb1d3"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/menu/menu-hover.svg": {
+      "sha256": "15a205254e1624f948b6bef48abe2cedffaf2df183b9a2053c3da40eeb5f9081"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/menu/menu.svg": {
+      "sha256": "6b9e200db63255c82007fed32f9209ab6dc0e55b6aacc2d5c9d11f2f2cc2ed86"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/menu/submenu.svg": {
+      "sha256": "1cd61f0d3ad969674891178af4bb5794c6776c74bb1d25f875d8cb2f69b1dc06"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/misc/button-box.svg": {
+      "sha256": "4a21d237280729ba6377f76adedad55b5f0ea626a19c061373c7d8090dac7f66"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/misc/message.svg": {
+      "sha256": "0b14d5ae657cfa57f72b0895619e7ba24fa8398a2bb8f14eb3e283060520eebc"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/misc/modal.svg": {
+      "sha256": "3fbbc0d04f4de5ec41321023cbd0c7d7794ce7fa5ba2b3c2b4638e160064dd6b"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/switch/switch-off.svg": {
+      "sha256": "a9e0f8e51969438587d868bf0abf0563527c6044089201bf03c99c82cb189024"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/dark-assets/switch/switch-on.svg": {
+      "sha256": "51ae4056a4a12b38c071f8f933908ad2e42239add563b96952e9aa21e192fb74"
+    },
+    "files/GNU-Darwin Aqua/cinnamon/thumbnail.png": {
+      "sha256": "522c2ec59eac043a2a2ca19c92836c8b51b9d2410184eb0f074a370fb6573aee"
+    },
+    "files/GNU-Darwin Aqua/gtk-2.0/gtkrc": {
+      "sha256": "145b01e8e0cb72db26fc3c0f80bf9e61546d721f429310192be3e9ac64d345c8"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-checked-insensitive-unfocused.png": {
+      "sha256": "423c4919747b32166d32eccc030940e2bc46c608fb20f00d81a384892641e053"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-checked-insensitive-unfocused@2.png": {
+      "sha256": "d5dfdaa309359b6e61c49c923c021f3ef2f6e7a0fd03e801549798c986e3ca9b"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-checked-insensitive.png": {
+      "sha256": "423c4919747b32166d32eccc030940e2bc46c608fb20f00d81a384892641e053"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-checked-insensitive@2.png": {
+      "sha256": "d5dfdaa309359b6e61c49c923c021f3ef2f6e7a0fd03e801549798c986e3ca9b"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-checked-unfocused.png": {
+      "sha256": "541043fd0f2fc749990eefe04a5bdef142314268bbb411271d5d8a7e8be40e49"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-checked-unfocused@2.png": {
+      "sha256": "512fb56807e5a4a21cfeb5b07e8798b2e0043c6daa23e69b2748c4ba314d4777"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-checked.png": {
+      "sha256": "541043fd0f2fc749990eefe04a5bdef142314268bbb411271d5d8a7e8be40e49"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-checked@2.png": {
+      "sha256": "512fb56807e5a4a21cfeb5b07e8798b2e0043c6daa23e69b2748c4ba314d4777"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-mixed-insensitive-unfocused.png": {
+      "sha256": "eb0cc2ab495ecc908959ae5a0e2f54ee65cd184cbcac223653bd35eed2638b5c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-mixed-insensitive-unfocused@2.png": {
+      "sha256": "a3befb2cb72a95008f25610971e2caa4a7495602d1950ae63cf0fbd1aa2264c6"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-mixed-insensitive.png": {
+      "sha256": "eb0cc2ab495ecc908959ae5a0e2f54ee65cd184cbcac223653bd35eed2638b5c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-mixed-insensitive@2.png": {
+      "sha256": "a3befb2cb72a95008f25610971e2caa4a7495602d1950ae63cf0fbd1aa2264c6"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-mixed-unfocused.png": {
+      "sha256": "5d800e0a790bcbec195a95eb5b0bf2a52ea08ba5c5289d0b5d3ed8ee3b4cc1f2"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-mixed-unfocused@2.png": {
+      "sha256": "79a890078bae715da3fb48161739178df024edf875ef42dfb4bd13c779364210"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-mixed.png": {
+      "sha256": "5d800e0a790bcbec195a95eb5b0bf2a52ea08ba5c5289d0b5d3ed8ee3b4cc1f2"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-mixed@2.png": {
+      "sha256": "79a890078bae715da3fb48161739178df024edf875ef42dfb4bd13c779364210"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-unchecked-insensitive-unfocused.png": {
+      "sha256": "bd553ef1d85b755ebfae6ecdced05e751488d4fce2b6949da44815b674cfaeb0"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-unchecked-insensitive-unfocused@2.png": {
+      "sha256": "4d46b2a61fa90dd63aa9bebd470375fd4f58d4ced5c929ebfd67165783c64890"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-unchecked-insensitive.png": {
+      "sha256": "bd553ef1d85b755ebfae6ecdced05e751488d4fce2b6949da44815b674cfaeb0"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-unchecked-insensitive@2.png": {
+      "sha256": "4d46b2a61fa90dd63aa9bebd470375fd4f58d4ced5c929ebfd67165783c64890"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-unchecked-unfocused.png": {
+      "sha256": "b213a07521707c5f32b075c6abcef7c7ea7880ecf3cc17e3e2e553328485954d"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-unchecked-unfocused@2.png": {
+      "sha256": "42b083157c7f843f616750dae7b08d62a3b8cfdf415ef1fc0c38cac365b1bcac"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-unchecked.png": {
+      "sha256": "b213a07521707c5f32b075c6abcef7c7ea7880ecf3cc17e3e2e553328485954d"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/checkbox-unchecked@2.png": {
+      "sha256": "42b083157c7f843f616750dae7b08d62a3b8cfdf415ef1fc0c38cac365b1bcac"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/close-active.png": {
+      "sha256": "370bc804153b3cdb1af358599c311beec260d350bec5e761b9555e0ec71d60ef"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/close-backdrop.png": {
+      "sha256": "e2437eb98e0e06e6426dc2ed469c80a2d94e97274482a1ed3d6d2844db02f3f6"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/close-hover.png": {
+      "sha256": "e06e71c28b2fd8abb6198df70beb6615d3dd18ef465d29ef44f8c242a22d6cba"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/close-normal.png": {
+      "sha256": "b92df23e6c8dd5a81341bf102aa1607031f268db25e297db1d54058ffa77c3b6"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/maximize-active.png": {
+      "sha256": "0f7f0cf3bb8cf2a378566e1bffb274c5f8c7c859972958afbe202e5fc11ea40e"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/maximize-backdrop.png": {
+      "sha256": "5f23df73ae37cfe36f3009784f197b4ae719a6775e855f580d8df9cfd628abaf"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/maximize-hover.png": {
+      "sha256": "7597cbdbb333faaa1968382d07b9131440eea8d5b8ae9cc9850232f60dfdf0d7"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/maximize-normal.png": {
+      "sha256": "f6e72f681a6757ea6f3b6ef6831a9a97ef210c2ef3c8692a48194cf93abfc87e"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/minimize-active.png": {
+      "sha256": "496804802914113c691f069f9205187f24b38f4474f865e8962844f55726e0c6"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/minimize-backdrop.png": {
+      "sha256": "310749309f813ea3f808ef69e7a3e620028aa8b7bdf1d1386e35d576fbecd7c1"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/minimize-hover.png": {
+      "sha256": "89cec5ac9bb81a28ded0d4bc3a9531543ff02cb6a963e84b8b09d1ce0a50420e"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/minimize-normal.png": {
+      "sha256": "ac0795425207c2514f0e4adcda1e849e1e41cbfd3e257054699bda3a5cbc9e82"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-checked-insensitive-unfocused.png": {
+      "sha256": "5ef4184f0f3af84eb74cf69f71a254073106427aa589110c314a8c2f74c84610"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-checked-insensitive-unfocused@2.png": {
+      "sha256": "98ed5a1c3f0d2abe338faf17c33bc7ac6083b01ae2efd3cb29ed61c9471d793f"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-checked-insensitive.png": {
+      "sha256": "5ef4184f0f3af84eb74cf69f71a254073106427aa589110c314a8c2f74c84610"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-checked-insensitive@2.png": {
+      "sha256": "98ed5a1c3f0d2abe338faf17c33bc7ac6083b01ae2efd3cb29ed61c9471d793f"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-checked-unfocused.png": {
+      "sha256": "2306e465253e763b22a3bff438d91bfaa8b3c640d3f6e66d37af0c8e30273add"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-checked-unfocused@2.png": {
+      "sha256": "75329226a4b17fa4e45f53634e0858eadf9ba10b23ae8219d5e2e7ddfbe4d751"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-checked.png": {
+      "sha256": "2306e465253e763b22a3bff438d91bfaa8b3c640d3f6e66d37af0c8e30273add"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-checked@2.png": {
+      "sha256": "75329226a4b17fa4e45f53634e0858eadf9ba10b23ae8219d5e2e7ddfbe4d751"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-mixed-insensitive-unfocused.png": {
+      "sha256": "8facd3f2f822de9e7a09807225a56a271ff3a831a718c8e2297353ed8f6723fa"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-mixed-insensitive-unfocused@2.png": {
+      "sha256": "71ee6ccdd35f11eaa4ca1a0e9ada97820be085357b68032b59bb1215c2fffc0c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-mixed-insensitive.png": {
+      "sha256": "8facd3f2f822de9e7a09807225a56a271ff3a831a718c8e2297353ed8f6723fa"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-mixed-insensitive@2.png": {
+      "sha256": "71ee6ccdd35f11eaa4ca1a0e9ada97820be085357b68032b59bb1215c2fffc0c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-mixed-unfocused.png": {
+      "sha256": "448e919013bd9d3ac4d767aa4aef562df42eb2cbad4c578fc33491fcb631be82"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-mixed-unfocused@2.png": {
+      "sha256": "280c57de8b935ffc24e78eb3d2566c2bb50d2dbfdecb57a706bed7d3cffcb716"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-mixed.png": {
+      "sha256": "448e919013bd9d3ac4d767aa4aef562df42eb2cbad4c578fc33491fcb631be82"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-mixed@2.png": {
+      "sha256": "280c57de8b935ffc24e78eb3d2566c2bb50d2dbfdecb57a706bed7d3cffcb716"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-unchecked-insensitive-unfocused.png": {
+      "sha256": "1a47ed3b1abdad3d98031c136d2533b791653171d700b18126784508f1273aa6"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-unchecked-insensitive-unfocused@2.png": {
+      "sha256": "823e938dde69c087fa79a640cebd7a1be49ec684dc129f641e3c56de1dfcaa09"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-unchecked-insensitive.png": {
+      "sha256": "1a47ed3b1abdad3d98031c136d2533b791653171d700b18126784508f1273aa6"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-unchecked-insensitive@2.png": {
+      "sha256": "823e938dde69c087fa79a640cebd7a1be49ec684dc129f641e3c56de1dfcaa09"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-unchecked-unfocused.png": {
+      "sha256": "003fdc7a5e0c0d60b34b61e689f3f6217bc2ddf99f7f76372e2b10816fcfd168"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-unchecked-unfocused@2.png": {
+      "sha256": "c5d141924cbaac000c6adde174ab25b21c86a3c4b23b3f7a3d4cbfc80a386806"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-unchecked.png": {
+      "sha256": "003fdc7a5e0c0d60b34b61e689f3f6217bc2ddf99f7f76372e2b10816fcfd168"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/radio-unchecked@2.png": {
+      "sha256": "c5d141924cbaac000c6adde174ab25b21c86a3c4b23b3f7a3d4cbfc80a386806"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/restore-active.png": {
+      "sha256": "0f7f0cf3bb8cf2a378566e1bffb274c5f8c7c859972958afbe202e5fc11ea40e"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/restore-backdrop.png": {
+      "sha256": "2e71dda8de957c77b9b892e9907057622a6659f72efe393a96d4beb4dac65d33"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/restore-hover.png": {
+      "sha256": "7597cbdbb333faaa1968382d07b9131440eea8d5b8ae9cc9850232f60dfdf0d7"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/restore-normal.png": {
+      "sha256": "f6e72f681a6757ea6f3b6ef6831a9a97ef210c2ef3c8692a48194cf93abfc87e"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/stepper-down.png": {
+      "sha256": "2f6686168288bc2d092eed13d49a531564d9078a58f54114e74c169157f9f06a"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/stepper-left.png": {
+      "sha256": "429b2f43e906bf6043d4e71c7350cd9b70153df023e197a8ea6667d2d54c28f7"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/stepper-right.png": {
+      "sha256": "34996e7a3d7d4562d0292eaef082f42b25e3e061b272693f344c6db7541cc1ff"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/aqua/stepper-up.png": {
+      "sha256": "e7aaa726afe97017fae6cf09c65472b38e7112ae357784ceedcf7ddc15ebb2f7"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-checked-dark.svg": {
+      "sha256": "b72933e300719f9509a6146ff12dec1e37e408b5c93229de8371f42c08e99615"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-checked-dark@2.svg": {
+      "sha256": "d791fad520760aa4ce6ac085d559cd5a16effaffd744eda9ac12c27c879f886b"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-checked-insensitive-dark.svg": {
+      "sha256": "fbac8e4f4e3989c53c36d8c5e8af5ca57d51c7ca35f7f7c2b93e9d69ac81e1a7"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-checked-insensitive-dark@2.svg": {
+      "sha256": "44d9adfb530082dd5494bd2ec62e88e1c656c3ec455159cc3a653e8e2235cee4"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-checked-insensitive-selected.svg": {
+      "sha256": "fbac8e4f4e3989c53c36d8c5e8af5ca57d51c7ca35f7f7c2b93e9d69ac81e1a7"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-checked-insensitive-selected@2.svg": {
+      "sha256": "44d9adfb530082dd5494bd2ec62e88e1c656c3ec455159cc3a653e8e2235cee4"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-checked-selected.svg": {
+      "sha256": "b72933e300719f9509a6146ff12dec1e37e408b5c93229de8371f42c08e99615"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-checked-selected@2.svg": {
+      "sha256": "d791fad520760aa4ce6ac085d559cd5a16effaffd744eda9ac12c27c879f886b"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-checked-selectionmode-dark.svg": {
+      "sha256": "b72933e300719f9509a6146ff12dec1e37e408b5c93229de8371f42c08e99615"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-checked-selectionmode-dark@2.svg": {
+      "sha256": "d791fad520760aa4ce6ac085d559cd5a16effaffd744eda9ac12c27c879f886b"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-mixed-dark.svg": {
+      "sha256": "7c9601633fc02183bba00bb8e920c0e1804ddc987d6aea6de246a683b03e544b"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-mixed-dark@2.svg": {
+      "sha256": "3797880b28d834f32c1aff2dd803f2c6859e5dad37ec28176e9bfa43ba2d5e19"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-mixed-insensitive-dark.svg": {
+      "sha256": "bdf97351744355dc6644b8b7b75ae4bf5d50da6f1f70ff87c2ba85650cf321cf"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-mixed-insensitive-dark@2.svg": {
+      "sha256": "02c623c9f8c2895dc1b893f5bdd92528c945631c539d6397c9e8ebfc39c51112"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-mixed-insensitive-selected.svg": {
+      "sha256": "bdf97351744355dc6644b8b7b75ae4bf5d50da6f1f70ff87c2ba85650cf321cf"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-mixed-insensitive-selected@2.svg": {
+      "sha256": "02c623c9f8c2895dc1b893f5bdd92528c945631c539d6397c9e8ebfc39c51112"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-mixed-selected.svg": {
+      "sha256": "7c9601633fc02183bba00bb8e920c0e1804ddc987d6aea6de246a683b03e544b"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-mixed-selected@2.svg": {
+      "sha256": "3797880b28d834f32c1aff2dd803f2c6859e5dad37ec28176e9bfa43ba2d5e19"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-selectionmode-dark.svg": {
+      "sha256": "bf4f3855830717d05a07420155979053a74af1f7728e2ab4088ed5baec33fb11"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-selectionmode-dark@2.svg": {
+      "sha256": "b93a86f98655f03b2045893001f5dcba5980c5eda3c056430e353997f8e3e7c0"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-unchecked-dark.svg": {
+      "sha256": "bf4f3855830717d05a07420155979053a74af1f7728e2ab4088ed5baec33fb11"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-unchecked-dark@2.svg": {
+      "sha256": "b93a86f98655f03b2045893001f5dcba5980c5eda3c056430e353997f8e3e7c0"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-unchecked-insensitive-dark.svg": {
+      "sha256": "bf4f3855830717d05a07420155979053a74af1f7728e2ab4088ed5baec33fb11"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-unchecked-insensitive-dark@2.svg": {
+      "sha256": "b93a86f98655f03b2045893001f5dcba5980c5eda3c056430e353997f8e3e7c0"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-unchecked-insensitive-selected.svg": {
+      "sha256": "bf4f3855830717d05a07420155979053a74af1f7728e2ab4088ed5baec33fb11"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-unchecked-insensitive-selected@2.svg": {
+      "sha256": "b93a86f98655f03b2045893001f5dcba5980c5eda3c056430e353997f8e3e7c0"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-unchecked-selected.svg": {
+      "sha256": "bf4f3855830717d05a07420155979053a74af1f7728e2ab4088ed5baec33fb11"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/checkbox-unchecked-selected@2.svg": {
+      "sha256": "b93a86f98655f03b2045893001f5dcba5980c5eda3c056430e353997f8e3e7c0"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/pane-separator-vertical.svg": {
+      "sha256": "3c1655e584b671a078af9e56f00f0e5a91302b953af9201aeb27a56c6c305a2e"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/pane-separator-vertical@2.svg": {
+      "sha256": "4a5fb9d0d414ac5ed2f06959f454f436aa12cbf72aa671847a13e7683092bf0c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/pane-separator.svg": {
+      "sha256": "3c1655e584b671a078af9e56f00f0e5a91302b953af9201aeb27a56c6c305a2e"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/pane-separator@2.svg": {
+      "sha256": "4a5fb9d0d414ac5ed2f06959f454f436aa12cbf72aa671847a13e7683092bf0c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-checked-dark.svg": {
+      "sha256": "82ea125ba8e99322db336fdd22fb2587ce08737d263a4f949a2e51e7b131e1ad"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-checked-dark@2.svg": {
+      "sha256": "4d08ab0866e70ed325514cd9adce4e9966caa5245290e487afd1022458872ea8"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-checked-insensitive-dark.svg": {
+      "sha256": "b535d2f5c921ac0fbe48a3d7b6dfd8689d24ca0499f134ab16c5723c6d71dc8c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-checked-insensitive-dark@2.svg": {
+      "sha256": "aadf12bccd35ff58e499eb740025ab67693e805d531144c7155d1e8b7d10f8d6"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-checked-insensitive-selected.svg": {
+      "sha256": "b535d2f5c921ac0fbe48a3d7b6dfd8689d24ca0499f134ab16c5723c6d71dc8c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-checked-insensitive-selected@2.svg": {
+      "sha256": "aadf12bccd35ff58e499eb740025ab67693e805d531144c7155d1e8b7d10f8d6"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-checked-selected.svg": {
+      "sha256": "82ea125ba8e99322db336fdd22fb2587ce08737d263a4f949a2e51e7b131e1ad"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-checked-selected@2.svg": {
+      "sha256": "4d08ab0866e70ed325514cd9adce4e9966caa5245290e487afd1022458872ea8"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-mixed-dark.svg": {
+      "sha256": "af155d6f652b128bba0789694bfaa87926f7058a3792a9fc2e413010f6e64e30"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-mixed-dark@2.svg": {
+      "sha256": "5628021df8b2dbe60d5b255e6dd0ed2f82829446046d676815294c9e2d0f2744"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-mixed-insensitive-dark.svg": {
+      "sha256": "2548f7de598c4c20c396db0e923878d0b67e88fcba2b5ca5c27bda7a599bb4b8"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-mixed-insensitive-dark@2.svg": {
+      "sha256": "625b4c9eeb02bc34ea18e85d959900417c0d37550091f8ef9aee68d82518af19"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-mixed-insensitive-selected.svg": {
+      "sha256": "2548f7de598c4c20c396db0e923878d0b67e88fcba2b5ca5c27bda7a599bb4b8"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-mixed-insensitive-selected@2.svg": {
+      "sha256": "625b4c9eeb02bc34ea18e85d959900417c0d37550091f8ef9aee68d82518af19"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-mixed-selected.svg": {
+      "sha256": "af155d6f652b128bba0789694bfaa87926f7058a3792a9fc2e413010f6e64e30"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-mixed-selected@2.svg": {
+      "sha256": "5628021df8b2dbe60d5b255e6dd0ed2f82829446046d676815294c9e2d0f2744"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-unchecked-dark.svg": {
+      "sha256": "b03783055cb3b699f5df22e6fc7ae645e88ac54888bd3a0e1f2a60fc7bde2b88"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-unchecked-dark@2.svg": {
+      "sha256": "8d54440b33a70d018dd98d1d30e21e4790005577e1079828c0667203c78ce9e0"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-unchecked-insensitive-dark.svg": {
+      "sha256": "b03783055cb3b699f5df22e6fc7ae645e88ac54888bd3a0e1f2a60fc7bde2b88"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-unchecked-insensitive-dark@2.svg": {
+      "sha256": "8d54440b33a70d018dd98d1d30e21e4790005577e1079828c0667203c78ce9e0"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-unchecked-insensitive-selected.svg": {
+      "sha256": "b03783055cb3b699f5df22e6fc7ae645e88ac54888bd3a0e1f2a60fc7bde2b88"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-unchecked-insensitive-selected@2.svg": {
+      "sha256": "8d54440b33a70d018dd98d1d30e21e4790005577e1079828c0667203c78ce9e0"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-unchecked-selected.svg": {
+      "sha256": "b03783055cb3b699f5df22e6fc7ae645e88ac54888bd3a0e1f2a60fc7bde2b88"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/radio-unchecked-selected@2.svg": {
+      "sha256": "8d54440b33a70d018dd98d1d30e21e4790005577e1079828c0667203c78ce9e0"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-active-dark.svg": {
+      "sha256": "acc213561bcd9337952a1508814358d5d67037d5336a8cebeed87d9a9d88ce10"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-active-dark@2.svg": {
+      "sha256": "c350adca1fa44d8b0a92b9e60407fa8ec889390d2baa7a61d680515540cee82c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-active-header-dark.svg": {
+      "sha256": "acc213561bcd9337952a1508814358d5d67037d5336a8cebeed87d9a9d88ce10"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-active-header-dark@2.svg": {
+      "sha256": "c350adca1fa44d8b0a92b9e60407fa8ec889390d2baa7a61d680515540cee82c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-active-insensitive-dark.svg": {
+      "sha256": "28f4e08ad59b1412c53aea890630c9fc4f73c4d68cd62b807a189522e552ba0f"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-active-insensitive-dark@2.svg": {
+      "sha256": "a09c9781bf3f5917e6b033779102f2e5a057a01a9a462991a84870e28eb4a51b"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-active-insensitive-header-dark.svg": {
+      "sha256": "28f4e08ad59b1412c53aea890630c9fc4f73c4d68cd62b807a189522e552ba0f"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-active-insensitive-header-dark@2.svg": {
+      "sha256": "a09c9781bf3f5917e6b033779102f2e5a057a01a9a462991a84870e28eb4a51b"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-active-insensitive-selected.svg": {
+      "sha256": "28f4e08ad59b1412c53aea890630c9fc4f73c4d68cd62b807a189522e552ba0f"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-active-insensitive-selected@2.svg": {
+      "sha256": "a09c9781bf3f5917e6b033779102f2e5a057a01a9a462991a84870e28eb4a51b"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-active-selected.svg": {
+      "sha256": "acc213561bcd9337952a1508814358d5d67037d5336a8cebeed87d9a9d88ce10"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-active-selected@2.svg": {
+      "sha256": "c350adca1fa44d8b0a92b9e60407fa8ec889390d2baa7a61d680515540cee82c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-dark.svg": {
+      "sha256": "8620923f76b84c7757aba1cd4ebe128dee036a70fb178a391a0228bd1369f87c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-dark@2.svg": {
+      "sha256": "7610239dd85c49e7daa4537547c8d8e62c11f0935dd819d815d5bd8d63181e6c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-header-dark.svg": {
+      "sha256": "8620923f76b84c7757aba1cd4ebe128dee036a70fb178a391a0228bd1369f87c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-header-dark@2.svg": {
+      "sha256": "7610239dd85c49e7daa4537547c8d8e62c11f0935dd819d815d5bd8d63181e6c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-insensitive-dark.svg": {
+      "sha256": "8620923f76b84c7757aba1cd4ebe128dee036a70fb178a391a0228bd1369f87c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-insensitive-dark@2.svg": {
+      "sha256": "7610239dd85c49e7daa4537547c8d8e62c11f0935dd819d815d5bd8d63181e6c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-insensitive-header-dark.svg": {
+      "sha256": "8620923f76b84c7757aba1cd4ebe128dee036a70fb178a391a0228bd1369f87c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-insensitive-header-dark@2.svg": {
+      "sha256": "7610239dd85c49e7daa4537547c8d8e62c11f0935dd819d815d5bd8d63181e6c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-insensitive-selected.svg": {
+      "sha256": "8620923f76b84c7757aba1cd4ebe128dee036a70fb178a391a0228bd1369f87c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-insensitive-selected@2.svg": {
+      "sha256": "7610239dd85c49e7daa4537547c8d8e62c11f0935dd819d815d5bd8d63181e6c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-selected.svg": {
+      "sha256": "8620923f76b84c7757aba1cd4ebe128dee036a70fb178a391a0228bd1369f87c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/switch-selected@2.svg": {
+      "sha256": "7610239dd85c49e7daa4537547c8d8e62c11f0935dd819d815d5bd8d63181e6c"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/assets/thumbnail-frame.svg": {
+      "sha256": "3c1655e584b671a078af9e56f00f0e5a91302b953af9201aeb27a56c6c305a2e"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/gtk-dark.css": {
+      "sha256": "41c5ee6000b1fb7e9d648392aaa7ea0fd9241b1e3c7ffeabd1ea6f3ca9d99669"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/gtk.css": {
+      "sha256": "a91b356020c6a1d0c8d4c5f7381f8c3f516a7a1e0c567f00cca928929429fc47"
+    },
+    "files/GNU-Darwin Aqua/gtk-3.0/thumbnail.png": {
+      "sha256": "e5b5ab505ffdc22e229f2a7bee9c76ff5aab4f782fe5791a593834ebfe4564e8"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-checked-insensitive-unfocused.png": {
+      "sha256": "423c4919747b32166d32eccc030940e2bc46c608fb20f00d81a384892641e053"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-checked-insensitive-unfocused@2.png": {
+      "sha256": "d5dfdaa309359b6e61c49c923c021f3ef2f6e7a0fd03e801549798c986e3ca9b"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-checked-insensitive.png": {
+      "sha256": "423c4919747b32166d32eccc030940e2bc46c608fb20f00d81a384892641e053"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-checked-insensitive@2.png": {
+      "sha256": "d5dfdaa309359b6e61c49c923c021f3ef2f6e7a0fd03e801549798c986e3ca9b"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-checked-unfocused.png": {
+      "sha256": "541043fd0f2fc749990eefe04a5bdef142314268bbb411271d5d8a7e8be40e49"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-checked-unfocused@2.png": {
+      "sha256": "512fb56807e5a4a21cfeb5b07e8798b2e0043c6daa23e69b2748c4ba314d4777"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-checked.png": {
+      "sha256": "541043fd0f2fc749990eefe04a5bdef142314268bbb411271d5d8a7e8be40e49"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-checked@2.png": {
+      "sha256": "512fb56807e5a4a21cfeb5b07e8798b2e0043c6daa23e69b2748c4ba314d4777"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-mixed-insensitive-unfocused.png": {
+      "sha256": "eb0cc2ab495ecc908959ae5a0e2f54ee65cd184cbcac223653bd35eed2638b5c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-mixed-insensitive-unfocused@2.png": {
+      "sha256": "a3befb2cb72a95008f25610971e2caa4a7495602d1950ae63cf0fbd1aa2264c6"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-mixed-insensitive.png": {
+      "sha256": "eb0cc2ab495ecc908959ae5a0e2f54ee65cd184cbcac223653bd35eed2638b5c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-mixed-insensitive@2.png": {
+      "sha256": "a3befb2cb72a95008f25610971e2caa4a7495602d1950ae63cf0fbd1aa2264c6"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-mixed-unfocused.png": {
+      "sha256": "5d800e0a790bcbec195a95eb5b0bf2a52ea08ba5c5289d0b5d3ed8ee3b4cc1f2"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-mixed-unfocused@2.png": {
+      "sha256": "79a890078bae715da3fb48161739178df024edf875ef42dfb4bd13c779364210"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-mixed.png": {
+      "sha256": "5d800e0a790bcbec195a95eb5b0bf2a52ea08ba5c5289d0b5d3ed8ee3b4cc1f2"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-mixed@2.png": {
+      "sha256": "79a890078bae715da3fb48161739178df024edf875ef42dfb4bd13c779364210"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-unchecked-insensitive-unfocused.png": {
+      "sha256": "bd553ef1d85b755ebfae6ecdced05e751488d4fce2b6949da44815b674cfaeb0"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-unchecked-insensitive-unfocused@2.png": {
+      "sha256": "4d46b2a61fa90dd63aa9bebd470375fd4f58d4ced5c929ebfd67165783c64890"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-unchecked-insensitive.png": {
+      "sha256": "bd553ef1d85b755ebfae6ecdced05e751488d4fce2b6949da44815b674cfaeb0"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-unchecked-insensitive@2.png": {
+      "sha256": "4d46b2a61fa90dd63aa9bebd470375fd4f58d4ced5c929ebfd67165783c64890"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-unchecked-unfocused.png": {
+      "sha256": "b213a07521707c5f32b075c6abcef7c7ea7880ecf3cc17e3e2e553328485954d"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-unchecked-unfocused@2.png": {
+      "sha256": "42b083157c7f843f616750dae7b08d62a3b8cfdf415ef1fc0c38cac365b1bcac"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-unchecked.png": {
+      "sha256": "b213a07521707c5f32b075c6abcef7c7ea7880ecf3cc17e3e2e553328485954d"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/checkbox-unchecked@2.png": {
+      "sha256": "42b083157c7f843f616750dae7b08d62a3b8cfdf415ef1fc0c38cac365b1bcac"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/close-active.png": {
+      "sha256": "370bc804153b3cdb1af358599c311beec260d350bec5e761b9555e0ec71d60ef"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/close-backdrop.png": {
+      "sha256": "e2437eb98e0e06e6426dc2ed469c80a2d94e97274482a1ed3d6d2844db02f3f6"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/close-hover.png": {
+      "sha256": "e06e71c28b2fd8abb6198df70beb6615d3dd18ef465d29ef44f8c242a22d6cba"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/close-normal.png": {
+      "sha256": "b92df23e6c8dd5a81341bf102aa1607031f268db25e297db1d54058ffa77c3b6"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/maximize-active.png": {
+      "sha256": "0f7f0cf3bb8cf2a378566e1bffb274c5f8c7c859972958afbe202e5fc11ea40e"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/maximize-backdrop.png": {
+      "sha256": "5f23df73ae37cfe36f3009784f197b4ae719a6775e855f580d8df9cfd628abaf"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/maximize-hover.png": {
+      "sha256": "7597cbdbb333faaa1968382d07b9131440eea8d5b8ae9cc9850232f60dfdf0d7"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/maximize-normal.png": {
+      "sha256": "f6e72f681a6757ea6f3b6ef6831a9a97ef210c2ef3c8692a48194cf93abfc87e"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/minimize-active.png": {
+      "sha256": "496804802914113c691f069f9205187f24b38f4474f865e8962844f55726e0c6"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/minimize-backdrop.png": {
+      "sha256": "310749309f813ea3f808ef69e7a3e620028aa8b7bdf1d1386e35d576fbecd7c1"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/minimize-hover.png": {
+      "sha256": "89cec5ac9bb81a28ded0d4bc3a9531543ff02cb6a963e84b8b09d1ce0a50420e"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/minimize-normal.png": {
+      "sha256": "ac0795425207c2514f0e4adcda1e849e1e41cbfd3e257054699bda3a5cbc9e82"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-checked-insensitive-unfocused.png": {
+      "sha256": "5ef4184f0f3af84eb74cf69f71a254073106427aa589110c314a8c2f74c84610"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-checked-insensitive-unfocused@2.png": {
+      "sha256": "98ed5a1c3f0d2abe338faf17c33bc7ac6083b01ae2efd3cb29ed61c9471d793f"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-checked-insensitive.png": {
+      "sha256": "5ef4184f0f3af84eb74cf69f71a254073106427aa589110c314a8c2f74c84610"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-checked-insensitive@2.png": {
+      "sha256": "98ed5a1c3f0d2abe338faf17c33bc7ac6083b01ae2efd3cb29ed61c9471d793f"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-checked-unfocused.png": {
+      "sha256": "2306e465253e763b22a3bff438d91bfaa8b3c640d3f6e66d37af0c8e30273add"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-checked-unfocused@2.png": {
+      "sha256": "75329226a4b17fa4e45f53634e0858eadf9ba10b23ae8219d5e2e7ddfbe4d751"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-checked.png": {
+      "sha256": "2306e465253e763b22a3bff438d91bfaa8b3c640d3f6e66d37af0c8e30273add"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-checked@2.png": {
+      "sha256": "75329226a4b17fa4e45f53634e0858eadf9ba10b23ae8219d5e2e7ddfbe4d751"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-mixed-insensitive-unfocused.png": {
+      "sha256": "8facd3f2f822de9e7a09807225a56a271ff3a831a718c8e2297353ed8f6723fa"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-mixed-insensitive-unfocused@2.png": {
+      "sha256": "71ee6ccdd35f11eaa4ca1a0e9ada97820be085357b68032b59bb1215c2fffc0c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-mixed-insensitive.png": {
+      "sha256": "8facd3f2f822de9e7a09807225a56a271ff3a831a718c8e2297353ed8f6723fa"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-mixed-insensitive@2.png": {
+      "sha256": "71ee6ccdd35f11eaa4ca1a0e9ada97820be085357b68032b59bb1215c2fffc0c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-mixed-unfocused.png": {
+      "sha256": "448e919013bd9d3ac4d767aa4aef562df42eb2cbad4c578fc33491fcb631be82"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-mixed-unfocused@2.png": {
+      "sha256": "280c57de8b935ffc24e78eb3d2566c2bb50d2dbfdecb57a706bed7d3cffcb716"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-mixed.png": {
+      "sha256": "448e919013bd9d3ac4d767aa4aef562df42eb2cbad4c578fc33491fcb631be82"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-mixed@2.png": {
+      "sha256": "280c57de8b935ffc24e78eb3d2566c2bb50d2dbfdecb57a706bed7d3cffcb716"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-unchecked-insensitive-unfocused.png": {
+      "sha256": "1a47ed3b1abdad3d98031c136d2533b791653171d700b18126784508f1273aa6"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-unchecked-insensitive-unfocused@2.png": {
+      "sha256": "823e938dde69c087fa79a640cebd7a1be49ec684dc129f641e3c56de1dfcaa09"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-unchecked-insensitive.png": {
+      "sha256": "1a47ed3b1abdad3d98031c136d2533b791653171d700b18126784508f1273aa6"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-unchecked-insensitive@2.png": {
+      "sha256": "823e938dde69c087fa79a640cebd7a1be49ec684dc129f641e3c56de1dfcaa09"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-unchecked-unfocused.png": {
+      "sha256": "003fdc7a5e0c0d60b34b61e689f3f6217bc2ddf99f7f76372e2b10816fcfd168"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-unchecked-unfocused@2.png": {
+      "sha256": "c5d141924cbaac000c6adde174ab25b21c86a3c4b23b3f7a3d4cbfc80a386806"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-unchecked.png": {
+      "sha256": "003fdc7a5e0c0d60b34b61e689f3f6217bc2ddf99f7f76372e2b10816fcfd168"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/radio-unchecked@2.png": {
+      "sha256": "c5d141924cbaac000c6adde174ab25b21c86a3c4b23b3f7a3d4cbfc80a386806"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/restore-active.png": {
+      "sha256": "0f7f0cf3bb8cf2a378566e1bffb274c5f8c7c859972958afbe202e5fc11ea40e"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/restore-backdrop.png": {
+      "sha256": "2e71dda8de957c77b9b892e9907057622a6659f72efe393a96d4beb4dac65d33"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/restore-hover.png": {
+      "sha256": "7597cbdbb333faaa1968382d07b9131440eea8d5b8ae9cc9850232f60dfdf0d7"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/restore-normal.png": {
+      "sha256": "f6e72f681a6757ea6f3b6ef6831a9a97ef210c2ef3c8692a48194cf93abfc87e"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/stepper-down.png": {
+      "sha256": "2f6686168288bc2d092eed13d49a531564d9078a58f54114e74c169157f9f06a"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/stepper-left.png": {
+      "sha256": "429b2f43e906bf6043d4e71c7350cd9b70153df023e197a8ea6667d2d54c28f7"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/stepper-right.png": {
+      "sha256": "34996e7a3d7d4562d0292eaef082f42b25e3e061b272693f344c6db7541cc1ff"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/aqua/stepper-up.png": {
+      "sha256": "e7aaa726afe97017fae6cf09c65472b38e7112ae357784ceedcf7ddc15ebb2f7"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-checked-dark.svg": {
+      "sha256": "b72933e300719f9509a6146ff12dec1e37e408b5c93229de8371f42c08e99615"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-checked-dark@2.svg": {
+      "sha256": "d791fad520760aa4ce6ac085d559cd5a16effaffd744eda9ac12c27c879f886b"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-checked-insensitive-dark.svg": {
+      "sha256": "fbac8e4f4e3989c53c36d8c5e8af5ca57d51c7ca35f7f7c2b93e9d69ac81e1a7"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-checked-insensitive-dark@2.svg": {
+      "sha256": "44d9adfb530082dd5494bd2ec62e88e1c656c3ec455159cc3a653e8e2235cee4"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-checked-insensitive-selected.svg": {
+      "sha256": "fbac8e4f4e3989c53c36d8c5e8af5ca57d51c7ca35f7f7c2b93e9d69ac81e1a7"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-checked-insensitive-selected@2.svg": {
+      "sha256": "44d9adfb530082dd5494bd2ec62e88e1c656c3ec455159cc3a653e8e2235cee4"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-checked-selected.svg": {
+      "sha256": "b72933e300719f9509a6146ff12dec1e37e408b5c93229de8371f42c08e99615"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-checked-selected@2.svg": {
+      "sha256": "d791fad520760aa4ce6ac085d559cd5a16effaffd744eda9ac12c27c879f886b"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-mixed-dark.svg": {
+      "sha256": "7c9601633fc02183bba00bb8e920c0e1804ddc987d6aea6de246a683b03e544b"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-mixed-dark@2.svg": {
+      "sha256": "3797880b28d834f32c1aff2dd803f2c6859e5dad37ec28176e9bfa43ba2d5e19"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-mixed-insensitive-dark.svg": {
+      "sha256": "bdf97351744355dc6644b8b7b75ae4bf5d50da6f1f70ff87c2ba85650cf321cf"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-mixed-insensitive-dark@2.svg": {
+      "sha256": "02c623c9f8c2895dc1b893f5bdd92528c945631c539d6397c9e8ebfc39c51112"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-mixed-insensitive-selected.svg": {
+      "sha256": "bdf97351744355dc6644b8b7b75ae4bf5d50da6f1f70ff87c2ba85650cf321cf"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-mixed-insensitive-selected@2.svg": {
+      "sha256": "02c623c9f8c2895dc1b893f5bdd92528c945631c539d6397c9e8ebfc39c51112"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-mixed-selected.svg": {
+      "sha256": "7c9601633fc02183bba00bb8e920c0e1804ddc987d6aea6de246a683b03e544b"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-mixed-selected@2.svg": {
+      "sha256": "3797880b28d834f32c1aff2dd803f2c6859e5dad37ec28176e9bfa43ba2d5e19"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-unchecked-dark.svg": {
+      "sha256": "bf4f3855830717d05a07420155979053a74af1f7728e2ab4088ed5baec33fb11"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-unchecked-dark@2.svg": {
+      "sha256": "b93a86f98655f03b2045893001f5dcba5980c5eda3c056430e353997f8e3e7c0"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-unchecked-insensitive-dark.svg": {
+      "sha256": "bf4f3855830717d05a07420155979053a74af1f7728e2ab4088ed5baec33fb11"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-unchecked-insensitive-dark@2.svg": {
+      "sha256": "b93a86f98655f03b2045893001f5dcba5980c5eda3c056430e353997f8e3e7c0"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-unchecked-insensitive-selected.svg": {
+      "sha256": "bf4f3855830717d05a07420155979053a74af1f7728e2ab4088ed5baec33fb11"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-unchecked-insensitive-selected@2.svg": {
+      "sha256": "b93a86f98655f03b2045893001f5dcba5980c5eda3c056430e353997f8e3e7c0"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-unchecked-selected.svg": {
+      "sha256": "bf4f3855830717d05a07420155979053a74af1f7728e2ab4088ed5baec33fb11"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/checkbox-unchecked-selected@2.svg": {
+      "sha256": "b93a86f98655f03b2045893001f5dcba5980c5eda3c056430e353997f8e3e7c0"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/pane-separator-vertical.svg": {
+      "sha256": "3c1655e584b671a078af9e56f00f0e5a91302b953af9201aeb27a56c6c305a2e"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/pane-separator-vertical@2.svg": {
+      "sha256": "4a5fb9d0d414ac5ed2f06959f454f436aa12cbf72aa671847a13e7683092bf0c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/pane-separator.svg": {
+      "sha256": "3c1655e584b671a078af9e56f00f0e5a91302b953af9201aeb27a56c6c305a2e"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/pane-separator@2.svg": {
+      "sha256": "4a5fb9d0d414ac5ed2f06959f454f436aa12cbf72aa671847a13e7683092bf0c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-checked-dark.svg": {
+      "sha256": "82ea125ba8e99322db336fdd22fb2587ce08737d263a4f949a2e51e7b131e1ad"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-checked-dark@2.svg": {
+      "sha256": "4d08ab0866e70ed325514cd9adce4e9966caa5245290e487afd1022458872ea8"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-checked-insensitive-dark.svg": {
+      "sha256": "b535d2f5c921ac0fbe48a3d7b6dfd8689d24ca0499f134ab16c5723c6d71dc8c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-checked-insensitive-dark@2.svg": {
+      "sha256": "aadf12bccd35ff58e499eb740025ab67693e805d531144c7155d1e8b7d10f8d6"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-checked-insensitive-selected.svg": {
+      "sha256": "b535d2f5c921ac0fbe48a3d7b6dfd8689d24ca0499f134ab16c5723c6d71dc8c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-checked-insensitive-selected@2.svg": {
+      "sha256": "aadf12bccd35ff58e499eb740025ab67693e805d531144c7155d1e8b7d10f8d6"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-checked-selected.svg": {
+      "sha256": "82ea125ba8e99322db336fdd22fb2587ce08737d263a4f949a2e51e7b131e1ad"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-checked-selected@2.svg": {
+      "sha256": "4d08ab0866e70ed325514cd9adce4e9966caa5245290e487afd1022458872ea8"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-mixed-dark.svg": {
+      "sha256": "af155d6f652b128bba0789694bfaa87926f7058a3792a9fc2e413010f6e64e30"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-mixed-dark@2.svg": {
+      "sha256": "5628021df8b2dbe60d5b255e6dd0ed2f82829446046d676815294c9e2d0f2744"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-mixed-insensitive-dark.svg": {
+      "sha256": "2548f7de598c4c20c396db0e923878d0b67e88fcba2b5ca5c27bda7a599bb4b8"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-mixed-insensitive-dark@2.svg": {
+      "sha256": "625b4c9eeb02bc34ea18e85d959900417c0d37550091f8ef9aee68d82518af19"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-mixed-insensitive-selected.svg": {
+      "sha256": "2548f7de598c4c20c396db0e923878d0b67e88fcba2b5ca5c27bda7a599bb4b8"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-mixed-insensitive-selected@2.svg": {
+      "sha256": "625b4c9eeb02bc34ea18e85d959900417c0d37550091f8ef9aee68d82518af19"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-mixed-selected.svg": {
+      "sha256": "af155d6f652b128bba0789694bfaa87926f7058a3792a9fc2e413010f6e64e30"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-mixed-selected@2.svg": {
+      "sha256": "5628021df8b2dbe60d5b255e6dd0ed2f82829446046d676815294c9e2d0f2744"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-unchecked-dark.svg": {
+      "sha256": "b03783055cb3b699f5df22e6fc7ae645e88ac54888bd3a0e1f2a60fc7bde2b88"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-unchecked-dark@2.svg": {
+      "sha256": "8d54440b33a70d018dd98d1d30e21e4790005577e1079828c0667203c78ce9e0"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-unchecked-insensitive-dark.svg": {
+      "sha256": "b03783055cb3b699f5df22e6fc7ae645e88ac54888bd3a0e1f2a60fc7bde2b88"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-unchecked-insensitive-dark@2.svg": {
+      "sha256": "8d54440b33a70d018dd98d1d30e21e4790005577e1079828c0667203c78ce9e0"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-unchecked-insensitive-selected.svg": {
+      "sha256": "b03783055cb3b699f5df22e6fc7ae645e88ac54888bd3a0e1f2a60fc7bde2b88"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-unchecked-insensitive-selected@2.svg": {
+      "sha256": "8d54440b33a70d018dd98d1d30e21e4790005577e1079828c0667203c78ce9e0"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-unchecked-selected.svg": {
+      "sha256": "b03783055cb3b699f5df22e6fc7ae645e88ac54888bd3a0e1f2a60fc7bde2b88"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/radio-unchecked-selected@2.svg": {
+      "sha256": "8d54440b33a70d018dd98d1d30e21e4790005577e1079828c0667203c78ce9e0"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-active-dark.svg": {
+      "sha256": "acc213561bcd9337952a1508814358d5d67037d5336a8cebeed87d9a9d88ce10"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-active-dark@2.svg": {
+      "sha256": "c350adca1fa44d8b0a92b9e60407fa8ec889390d2baa7a61d680515540cee82c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-active-header-dark.svg": {
+      "sha256": "acc213561bcd9337952a1508814358d5d67037d5336a8cebeed87d9a9d88ce10"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-active-header-dark@2.svg": {
+      "sha256": "c350adca1fa44d8b0a92b9e60407fa8ec889390d2baa7a61d680515540cee82c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-active-insensitive-dark.svg": {
+      "sha256": "28f4e08ad59b1412c53aea890630c9fc4f73c4d68cd62b807a189522e552ba0f"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-active-insensitive-dark@2.svg": {
+      "sha256": "a09c9781bf3f5917e6b033779102f2e5a057a01a9a462991a84870e28eb4a51b"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-active-insensitive-header-dark.svg": {
+      "sha256": "28f4e08ad59b1412c53aea890630c9fc4f73c4d68cd62b807a189522e552ba0f"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-active-insensitive-header-dark@2.svg": {
+      "sha256": "a09c9781bf3f5917e6b033779102f2e5a057a01a9a462991a84870e28eb4a51b"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-active-insensitive-selected.svg": {
+      "sha256": "28f4e08ad59b1412c53aea890630c9fc4f73c4d68cd62b807a189522e552ba0f"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-active-insensitive-selected@2.svg": {
+      "sha256": "a09c9781bf3f5917e6b033779102f2e5a057a01a9a462991a84870e28eb4a51b"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-active-selected.svg": {
+      "sha256": "acc213561bcd9337952a1508814358d5d67037d5336a8cebeed87d9a9d88ce10"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-active-selected@2.svg": {
+      "sha256": "c350adca1fa44d8b0a92b9e60407fa8ec889390d2baa7a61d680515540cee82c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-dark.svg": {
+      "sha256": "8620923f76b84c7757aba1cd4ebe128dee036a70fb178a391a0228bd1369f87c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-dark@2.svg": {
+      "sha256": "7610239dd85c49e7daa4537547c8d8e62c11f0935dd819d815d5bd8d63181e6c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-header-dark.svg": {
+      "sha256": "8620923f76b84c7757aba1cd4ebe128dee036a70fb178a391a0228bd1369f87c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-header-dark@2.svg": {
+      "sha256": "7610239dd85c49e7daa4537547c8d8e62c11f0935dd819d815d5bd8d63181e6c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-insensitive-dark.svg": {
+      "sha256": "8620923f76b84c7757aba1cd4ebe128dee036a70fb178a391a0228bd1369f87c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-insensitive-dark@2.svg": {
+      "sha256": "7610239dd85c49e7daa4537547c8d8e62c11f0935dd819d815d5bd8d63181e6c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-insensitive-header-dark.svg": {
+      "sha256": "8620923f76b84c7757aba1cd4ebe128dee036a70fb178a391a0228bd1369f87c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-insensitive-header-dark@2.svg": {
+      "sha256": "7610239dd85c49e7daa4537547c8d8e62c11f0935dd819d815d5bd8d63181e6c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-insensitive-selected.svg": {
+      "sha256": "8620923f76b84c7757aba1cd4ebe128dee036a70fb178a391a0228bd1369f87c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-insensitive-selected@2.svg": {
+      "sha256": "7610239dd85c49e7daa4537547c8d8e62c11f0935dd819d815d5bd8d63181e6c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-selected.svg": {
+      "sha256": "8620923f76b84c7757aba1cd4ebe128dee036a70fb178a391a0228bd1369f87c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/assets/switch-selected@2.svg": {
+      "sha256": "7610239dd85c49e7daa4537547c8d8e62c11f0935dd819d815d5bd8d63181e6c"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/gtk-dark.css": {
+      "sha256": "41c5ee6000b1fb7e9d648392aaa7ea0fd9241b1e3c7ffeabd1ea6f3ca9d99669"
+    },
+    "files/GNU-Darwin Aqua/gtk-4.0/gtk.css": {
+      "sha256": "7bf4770bdb686262b35a6833db4db7a801259fa3612f1903d1691dac33e18825"
+    },
+    "files/GNU-Darwin Aqua/index.theme": {
+      "sha256": "124290e6a566040b23ef7ef11d30018d0df2d3a3454f03b07f55c4e0eb739f11"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/button-bg.svg": {
+      "sha256": "f7b337d197b3cc29d64575c849ca47455b5f76dbcaa45a27966d0ae31a4ddb26"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/close-active.png": {
+      "sha256": "370bc804153b3cdb1af358599c311beec260d350bec5e761b9555e0ec71d60ef"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/close-backdrop.png": {
+      "sha256": "e2437eb98e0e06e6426dc2ed469c80a2d94e97274482a1ed3d6d2844db02f3f6"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/close-hover.png": {
+      "sha256": "e06e71c28b2fd8abb6198df70beb6615d3dd18ef465d29ef44f8c242a22d6cba"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/close-icon.svg": {
+      "sha256": "4f463e2fa3c6a089d96c281048d824320c98a05bab978ac0bddfe102a555586e"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/close-normal.png": {
+      "sha256": "b92df23e6c8dd5a81341bf102aa1607031f268db25e297db1d54058ffa77c3b6"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/max-icon.svg": {
+      "sha256": "bee7d9885bf216007752fec7f1a593fc3e5bddb4a7fbf3cfaf4ad51c2391feba"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/maximize-active.png": {
+      "sha256": "0f7f0cf3bb8cf2a378566e1bffb274c5f8c7c859972958afbe202e5fc11ea40e"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/maximize-backdrop.png": {
+      "sha256": "5f23df73ae37cfe36f3009784f197b4ae719a6775e855f580d8df9cfd628abaf"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/maximize-hover.png": {
+      "sha256": "7597cbdbb333faaa1968382d07b9131440eea8d5b8ae9cc9850232f60dfdf0d7"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/maximize-normal.png": {
+      "sha256": "f6e72f681a6757ea6f3b6ef6831a9a97ef210c2ef3c8692a48194cf93abfc87e"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/menu-icon.svg": {
+      "sha256": "18a6258a4eed252d9bb3d91d74f663e33ae7aae4aa4991d908e0d238db3264b4"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/metacity-theme-3.xml": {
+      "sha256": "7aad4d647720252955b6b09b5605be53bc11e5ea21c7ccf2121a3c69b8d67887"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/min-icon.svg": {
+      "sha256": "ef878a2b14236d1588d16136fefb3c376d1c0f483d4c9e665e0da4c771859207"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/minimize-active.png": {
+      "sha256": "496804802914113c691f069f9205187f24b38f4474f865e8962844f55726e0c6"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/minimize-backdrop.png": {
+      "sha256": "310749309f813ea3f808ef69e7a3e620028aa8b7bdf1d1386e35d576fbecd7c1"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/minimize-hover.png": {
+      "sha256": "89cec5ac9bb81a28ded0d4bc3a9531543ff02cb6a963e84b8b09d1ce0a50420e"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/minimize-normal.png": {
+      "sha256": "ac0795425207c2514f0e4adcda1e849e1e41cbfd3e257054699bda3a5cbc9e82"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/restore-active.png": {
+      "sha256": "0f7f0cf3bb8cf2a378566e1bffb274c5f8c7c859972958afbe202e5fc11ea40e"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/restore-backdrop.png": {
+      "sha256": "2e71dda8de957c77b9b892e9907057622a6659f72efe393a96d4beb4dac65d33"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/restore-hover.png": {
+      "sha256": "7597cbdbb333faaa1968382d07b9131440eea8d5b8ae9cc9850232f60dfdf0d7"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/restore-icon.svg": {
+      "sha256": "64e1e0d762583d9099a2e420d3a745db9537319109a55d88e70e8fe8827ad0eb"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/restore-normal.png": {
+      "sha256": "f6e72f681a6757ea6f3b6ef6831a9a97ef210c2ef3c8692a48194cf93abfc87e"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/shade-icon.svg": {
+      "sha256": "8fea5e7cfddfdb75a5a0ecfe68cd8a28dfcde5fd71bb114e405e28284c51474f"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/stick-icon.svg": {
+      "sha256": "621728674b0347003222498b9aa1da4a9b2efae8bc119a7d4a860f8439deabf9"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/thumbnail.png": {
+      "sha256": "e5b5ab505ffdc22e229f2a7bee9c76ff5aab4f782fe5791a593834ebfe4564e8"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/unshade-icon.svg": {
+      "sha256": "f47aa5cf3aee0aac020263f45d12e3c7bd6e9cbcff8568562434592fd1b7ed04"
+    },
+    "files/GNU-Darwin Aqua/metacity-1/unstick-icon.svg": {
+      "sha256": "37b338f440adc930f628a2b33700b7eb184f212969ba08c1e45c7ccd74c70470"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-running.svg": {
+      "sha256": "0f0fbfd1876c0eed1e2db7e6b9b681a25623cbd044f3867b19ab28c51d1d620d"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-separator.svg": {
+      "sha256": "cb110bd863bff66004a1895632efb612905f2585be4768e32704a89c701a7b09"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-1.svg": {
+      "sha256": "385cbc87ebaed5cd2f64d0647458530d412bb10115581059618dc636cf363d9a"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-10.svg": {
+      "sha256": "a4c01e0cf0c1139cdc24fd6a604a3f539c30d920aa703ea96429688caa5dc7bb"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-11.svg": {
+      "sha256": "fd8390f0cbf94a5f2fc8f68c3af718139730a7a02421adfa1924ba483971fde2"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-12.svg": {
+      "sha256": "d587d44f47f265dbb8a9a9d84eced3d31d09faf6ddb3f9e5b1d793d16be3eaf7"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-13.svg": {
+      "sha256": "0037d238076fa0fc608ec13f883ffcafa6fe452c612e5355440dc568ecd83102"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-14.svg": {
+      "sha256": "0037d238076fa0fc608ec13f883ffcafa6fe452c612e5355440dc568ecd83102"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-15.svg": {
+      "sha256": "534655c5190694a272bf800bd72e01c225ab14116f56b3959ab31f762d6a41d1"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-16.svg": {
+      "sha256": "6c1774c7a0237c1bc88d588f408ced9cec4652519219db029a11e376ded60d5e"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-17.svg": {
+      "sha256": "094283b7ed35eec79518ccc5e5f0b4caa9d76df5cc9a1176cbce34bdda6460fd"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-18.svg": {
+      "sha256": "959ff369256c29122adb4f21c4ec0deffb8fbef1275bec137526cf72c5cc4b14"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-19.svg": {
+      "sha256": "959ff369256c29122adb4f21c4ec0deffb8fbef1275bec137526cf72c5cc4b14"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-2.svg": {
+      "sha256": "33de26f9d19a11578ca5e2a12649cfe7f1da3478413d827523191a047fa44ad9"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-20.svg": {
+      "sha256": "571a4ccd79109275779466201e8b4c19c53f98e311c438b80d2a41d2de8a15d9"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-21.svg": {
+      "sha256": "075d160d985ff23d54ef2a02164eb842123663d345b5b10d22c4c39a66511bcd"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-22.svg": {
+      "sha256": "9a034af5b41ffe7fec952987a63cd8b1650e5874dbc7ad9b490bd552f5a76500"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-23.svg": {
+      "sha256": "be89a541cae04f01f30664e2dec1760f50ef009434ff4fe056be006bc1f0fb9e"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-24.svg": {
+      "sha256": "08aab124e5b37a03a5ce6542c6c6fca7d5aeae869f9e9e10151866b1581e781c"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-25.svg": {
+      "sha256": "08aab124e5b37a03a5ce6542c6c6fca7d5aeae869f9e9e10151866b1581e781c"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-26.svg": {
+      "sha256": "2b5038021635ce46213c6ce9bb9cc6606e2b37f960cbbe33390555b45462eaeb"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-27.svg": {
+      "sha256": "f57992698fb3e5ad063fdd2e0b6f03d925769fb484a591904364448a10acc49a"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-28.svg": {
+      "sha256": "c391301fc0f13e808f2e2160bec4588bdfc8f7e0a3eb831c6987d22c4dafe917"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-29.svg": {
+      "sha256": "25b6e4b1d6f2472dbb082ac7be72f9c5d8a0b6828fd343b2b64efb9d50833b17"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-3.svg": {
+      "sha256": "33de26f9d19a11578ca5e2a12649cfe7f1da3478413d827523191a047fa44ad9"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-30.svg": {
+      "sha256": "25b6e4b1d6f2472dbb082ac7be72f9c5d8a0b6828fd343b2b64efb9d50833b17"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-31.svg": {
+      "sha256": "efef7cd13bbbbb3ed5d95b91e5638ccc5901e6cd4fed0e86eb7f530e384a9598"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-32.svg": {
+      "sha256": "c8824aab48f3f0c20be034351ea27174a3f055b98e40595f8d54ae74ec49508c"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-33.svg": {
+      "sha256": "cb922825939ca5c38a622b702c8d1d71c0959505fc1719cc51c8aa251bc647ec"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-34.svg": {
+      "sha256": "52a72bb123eb1f2e1fa207a1d6e3d9b9f681f5fc0f54adafd32d4e0ad816f5b9"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-35.svg": {
+      "sha256": "52a72bb123eb1f2e1fa207a1d6e3d9b9f681f5fc0f54adafd32d4e0ad816f5b9"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-36.svg": {
+      "sha256": "1f612e1cff56e42ce1cbe685863b1ce63bddeeee928a434f095b27dacbd5555f"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-37.svg": {
+      "sha256": "6480dac67198bb0f00cb6711d025809788bae4c972f775604316efcdbbb3fbc4"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-38.svg": {
+      "sha256": "1f32d3c893a158043de04c39e2a8b008421921f22e6494c59c1e7a97fbd31282"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-39.svg": {
+      "sha256": "35192c1ed47be245fe449e936564f28c9216cd964a67bc5f9e949e5f6c702208"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-4.svg": {
+      "sha256": "590c8dbdf756370259b9911a5fcf7d83854e7ceb6a9007ff26f8b26062c94d8b"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-40.svg": {
+      "sha256": "62286f193af1e4bbecb704967e6af37b734acb706ee1c3b85ee78deed6822450"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-41.svg": {
+      "sha256": "62286f193af1e4bbecb704967e6af37b734acb706ee1c3b85ee78deed6822450"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-42.svg": {
+      "sha256": "63255cb88907e3924fb7bc2dfc67d82db843d23f9d911deeec68d16be31fcfc9"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-43.svg": {
+      "sha256": "fe990888b4316352f8c58cc4789a80b133352bcc72644bf96192796352573a47"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-44.svg": {
+      "sha256": "6610bc64d9a550a33725b1f214d259c34c4777d27f5f78f6798a9924e71b5a81"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-45.svg": {
+      "sha256": "60692c79d9b951c128b7dd0031f3f98566462b19323ab77965d21661b4b02c25"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-46.svg": {
+      "sha256": "60692c79d9b951c128b7dd0031f3f98566462b19323ab77965d21661b4b02c25"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-47.svg": {
+      "sha256": "a4a5448101a02b0934c8d1d6b8b9628d33bf1a0a422a1cab84a9269a1ce4fe6e"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-48.svg": {
+      "sha256": "2223193c4d347ef2d115babf9aad58a864299c0cf49ed41c5305817432c62f91"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-49.svg": {
+      "sha256": "a497b9a8fbd145c6105483321ba5974366703c60f053c46a27b0d1ddffab0921"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-5.svg": {
+      "sha256": "10d4c54b3bd38a433e60159144b34d7f73b6f5539c657a5f3ffbf6f1b1475e6a"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-50.svg": {
+      "sha256": "90f6441603e48bd7dcfe3f5788e6178e9a8c0ed005e8b892927e84f7eff64efb"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-51.svg": {
+      "sha256": "90f6441603e48bd7dcfe3f5788e6178e9a8c0ed005e8b892927e84f7eff64efb"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-52.svg": {
+      "sha256": "7ec3b05b1639b19dbfad8d610550b6792c448a6d5e64b868054159b16c0a05dd"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-53.svg": {
+      "sha256": "43664b9bbda2e8fff9f80020b9a4ede5abb6d1eb86dc2864c5b1eecd5949a652"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-54.svg": {
+      "sha256": "c5408bff6d0ecc1836d2e4a31b3bda4e3679a6a4dadc4655ab8d2242d26a28d9"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-55.svg": {
+      "sha256": "cd2ddeed228da79d4cf0b54237e1c02f724ef0f91bf50d73ceda648078fe4c73"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-56.svg": {
+      "sha256": "59c4f2b2316cd154ce1242ba7eaccb335991b04a31776269fad19de2ccf86fc6"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-57.svg": {
+      "sha256": "59c4f2b2316cd154ce1242ba7eaccb335991b04a31776269fad19de2ccf86fc6"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-58.svg": {
+      "sha256": "64032b455cc8d9bdd862b00c4b711cf185985be7dd2728bdaf4287381a08aaf6"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-59.svg": {
+      "sha256": "f60bc5db961f5c8b64b3a3d3b29996a6b9259e675778666b27fd7e299a38fc4e"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-6.svg": {
+      "sha256": "1bcd260332d24ac74bda1a59260d9f027b90f919901943b240e7ede7e1505720"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-60.svg": {
+      "sha256": "394d7c2fe65c83e32d78e664c546c5e360e7f445947ead5ed88d73142a99aa33"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-61.svg": {
+      "sha256": "5f5129abfe9d4dcedf7312af021c1d95e7834c8ec295abeadf90c24e98220687"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-62.svg": {
+      "sha256": "5f5129abfe9d4dcedf7312af021c1d95e7834c8ec295abeadf90c24e98220687"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-63.svg": {
+      "sha256": "9e9ef18ee8c42946db8dcfbbe8bbd94b514470c92d4c2ebf374921bbf90e750f"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-7.svg": {
+      "sha256": "3a947fb699e3c64130eb56e3aede63180ec4a2686370b07e85cda29547dd40be"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-8.svg": {
+      "sha256": "9f254cbe7049ff15ff7142fc9ec31bafc3cf42646496f8403db1408330d53e73"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf-9.svg": {
+      "sha256": "9f254cbe7049ff15ff7142fc9ec31bafc3cf42646496f8403db1408330d53e73"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/assets/dock-shelf.svg": {
+      "sha256": "7ece401631de790df1e516d36293bad47437271cfec52cdc7c2693797157d10d"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/config.json": {
+      "sha256": "caecacc768e6fac30b70dea7e9f5b38fa89365dd798d68c8515b1414f0550f64"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/extension.js": {
+      "sha256": "42c5d4295b374662c47100ef043f38e79881f1a70fa43ca192457a49aad31c91"
+    },
+    "companions/extensions/snow-leopard-dock@desktop-theme-studio/metadata.json": {
+      "sha256": "654b90ec7fc2ecaebb2979f9eef1eee1f1f9b57517180778af7821ba53397cfd"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/accessories-text-editor.png": {
+      "sha256": "f283fccd9a02716d944871b2d10bd97a7c97a87b96aef6970f5aab6577e0f9a7"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/cs-themes.png": {
+      "sha256": "0000800e090f2157a53a9fe93811f4721f8c44d34d3ea899cf41bdff09830805"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/file-manager.png": {
+      "sha256": "cd747cb6fbbe259ea078caf5dd7e60c20acb00a609bf5ac07be8cb9e353377c6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/gnome-terminal.png": {
+      "sha256": "f2f9b96585ffaae5b73a195d4c0fc5568605352902840cfbf7beec2d4ccf379e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/kitty.png": {
+      "sha256": "f2f9b96585ffaae5b73a195d4c0fc5568605352902840cfbf7beec2d4ccf379e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/nemo.png": {
+      "sha256": "cd747cb6fbbe259ea078caf5dd7e60c20acb00a609bf5ac07be8cb9e353377c6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/org.gnome.SystemMonitor.png": {
+      "sha256": "cf0db33b418c37312510d36f371a414a1c7a3139139eb4aec32981b19ef56d52"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/org.gnome.Terminal.png": {
+      "sha256": "f2f9b96585ffaae5b73a195d4c0fc5568605352902840cfbf7beec2d4ccf379e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/org.kde.konsole.png": {
+      "sha256": "f2f9b96585ffaae5b73a195d4c0fc5568605352902840cfbf7beec2d4ccf379e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/preferences-desktop.png": {
+      "sha256": "0000800e090f2157a53a9fe93811f4721f8c44d34d3ea899cf41bdff09830805"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/preferences-system.png": {
+      "sha256": "0000800e090f2157a53a9fe93811f4721f8c44d34d3ea899cf41bdff09830805"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/system-file-manager.png": {
+      "sha256": "cd747cb6fbbe259ea078caf5dd7e60c20acb00a609bf5ac07be8cb9e353377c6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/systemsettings.png": {
+      "sha256": "0000800e090f2157a53a9fe93811f4721f8c44d34d3ea899cf41bdff09830805"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/text-editor.png": {
+      "sha256": "f283fccd9a02716d944871b2d10bd97a7c97a87b96aef6970f5aab6577e0f9a7"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/utilities-system-monitor.png": {
+      "sha256": "cf0db33b418c37312510d36f371a414a1c7a3139139eb4aec32981b19ef56d52"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/apps/utilities-terminal.png": {
+      "sha256": "f2f9b96585ffaae5b73a195d4c0fc5568605352902840cfbf7beec2d4ccf379e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/devices/computer.png": {
+      "sha256": "0605638518f8492d146330a50e9a35b6e16f39cfb49804efb47bade3d458d807"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/devices/drive-harddisk.png": {
+      "sha256": "48166b163e6b2dd750e0797e9536d59253a672eb60cb43b861c7b81794ab026b"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/devices/drive-optical.png": {
+      "sha256": "a7e8b5dccf00530e27a3019b8e114f8f79a61bef54263cf164799e8e8511b9c7"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/devices/drive-removable-media.png": {
+      "sha256": "25b012381bb54dbe1ec19ba6130b411ea0c37c11e4f2856b953252bf202d28ad"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/devices/input-keyboard.png": {
+      "sha256": "5f8c5596a4ed20bd0cab404f102d1ce34fa2100b39c06c418fe96060d428f27b"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/devices/input-mouse.png": {
+      "sha256": "8c663083b9e45cddd0faa4ef4014da1c8b4176340fbbe2a057caae795a62ff69"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/devices/media-flash.png": {
+      "sha256": "cf4407e0f76bb7160643233fb783816ef8093ef248c442d44fd7a1f3d469a270"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/devices/network-wireless.png": {
+      "sha256": "ce8b96b2ee55be1ac234b9411573e1fd3c9f40d8c308a576d7075dfcdf7e58a2"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/devices/phone.png": {
+      "sha256": "d081789776a9315eaa39b2fe1f10c265512e4700524b6e089fb4fc55c1a4a92e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/devices/printer.png": {
+      "sha256": "92e1cdfd529a91cc242751a5b96ac222920b182f7e657792b6a5ba01cabc2f73"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/mimetypes/application-pdf.png": {
+      "sha256": "d1aec3129ce21d7c4e2ce884c8dddb2f7d82b11dbef7b9a5fbc26df81cc22527"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/mimetypes/audio-x-generic.png": {
+      "sha256": "434b30b673e974f5681ff0180b42f514d2adca244a646a2b086e80c5b610cd08"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/mimetypes/image-x-generic.png": {
+      "sha256": "88123cee784292c2557771fe5f9e2d348533a1875c02ae4ba8270de0bfc06cd5"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/mimetypes/text-plain.png": {
+      "sha256": "90655749704d0ac69e44c7df0321daa8636b3c67b6a37681793536395b4c4e5a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/mimetypes/text-x-generic.png": {
+      "sha256": "90655749704d0ac69e44c7df0321daa8636b3c67b6a37681793536395b4c4e5a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/mimetypes/video-x-generic.png": {
+      "sha256": "753bd5d6c11ce7134218742dab9d710169e234dd7bb24eebca7d79edce657545"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/mimetypes/x-office-document.png": {
+      "sha256": "b6e3345737129d0aaeda5284eb6a7d031861469747ee17c87b6dbbbedc3608ad"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/mimetypes/x-office-presentation.png": {
+      "sha256": "ca37a1699f64e64d730a863a776f0b4364185a30171e0b8fc7390807eb41ab53"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/mimetypes/x-office-spreadsheet.png": {
+      "sha256": "120eb6a21c3c1b28517c406333c267cd01bab26c0f71edf1c773b967d2710b3f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-desktop.png": {
+      "sha256": "3866dea535c077459a3ecabcb353b324c5c1b57094a18b3daee0f72598a033bb"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-documents.png": {
+      "sha256": "63f49132e310d62be54eb2be9af4de03403241b0ce4507d09ff54662b413d907"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-download.png": {
+      "sha256": "2e938432a756e33e283e26da3b087566b515a039286f8a99d8b98a664dca7350"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-downloads.png": {
+      "sha256": "2e938432a756e33e283e26da3b087566b515a039286f8a99d8b98a664dca7350"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-home.png": {
+      "sha256": "0845a76fd616077234e4c6046148c2d74b8caaafa31346c13cb4f94ece99b463"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-music.png": {
+      "sha256": "ca049b9106cafe015c51f66bd1cd0ef083fff8924df288ba5b42937cf1c9a46a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-network.png": {
+      "sha256": "6674b3ce2de98bb9637d48cd0c6b6df7823ab764f55d48e2acd9db7fb2ba3b0c"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-open.png": {
+      "sha256": "2445523cd8915c9c2e04ac6a9aaf70ab3b36df4bcbd82679fa1c1a74008053fd"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-pictures.png": {
+      "sha256": "2993e90fec3de3bd50221090b6c4066ea0bfacea670930de0d4bbcb1c2683db2"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-publicshare.png": {
+      "sha256": "15e025d00679b8625e13e4bd3f6e8369d5ec1023f1495ba5e6c0d245ed5bb967"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-remote.png": {
+      "sha256": "6674b3ce2de98bb9637d48cd0c6b6df7823ab764f55d48e2acd9db7fb2ba3b0c"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-templates.png": {
+      "sha256": "8841bf82defdf0986f58bf0389e4cb58d7253e06a4c8340ccd202df0fcccbf53"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-trash.png": {
+      "sha256": "6b4b3f958aa3ec92e493e3b176cd4e3cc3da606c4f8b40d8050938b4705f5fb8"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder-videos.png": {
+      "sha256": "dbffeb226b12f1a2aba9bef335eef85515c720fb1ec745b7e5d69c429b7c9030"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/folder.png": {
+      "sha256": "2445523cd8915c9c2e04ac6a9aaf70ab3b36df4bcbd82679fa1c1a74008053fd"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/user-bookmarks.png": {
+      "sha256": "33e46a0c641536e907dfddf79848049a139cf59b83af4c22702bfa432d7102e6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/user-desktop.png": {
+      "sha256": "3866dea535c077459a3ecabcb353b324c5c1b57094a18b3daee0f72598a033bb"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/user-home.png": {
+      "sha256": "0845a76fd616077234e4c6046148c2d74b8caaafa31346c13cb4f94ece99b463"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/user-trash-full.png": {
+      "sha256": "b13adbcad214dde00228d0f3ca778e9575df7eb040c13a244f077f5e374d36d2"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/128x128/places/user-trash.png": {
+      "sha256": "6b4b3f958aa3ec92e493e3b176cd4e3cc3da606c4f8b40d8050938b4705f5fb8"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/mimetypes/application-pdf.png": {
+      "sha256": "7f92146f8b07bada1da31b281b88ce878ae602c2b6b91b16cf232d88434effea"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/mimetypes/audio-x-generic.png": {
+      "sha256": "90cd0a0099d527e4de405a5d791e4b87c1c24dffd81772ffb93d6943e8fb8cc9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/mimetypes/image-x-generic.png": {
+      "sha256": "844059b6d1da437e826b085401c453ca829ba92d5db3cf33c6a372c7b7a68d56"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/mimetypes/text-plain.png": {
+      "sha256": "2a1d2dde60a2d7f2543f92ca417304ddd1acb29772514c340e7a7160e50936bf"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/mimetypes/text-x-generic.png": {
+      "sha256": "2a1d2dde60a2d7f2543f92ca417304ddd1acb29772514c340e7a7160e50936bf"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/mimetypes/video-x-generic.png": {
+      "sha256": "686596aaced073080102804630151fe2ea5c309cf60364b44fd9be4d4e9f41e5"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/mimetypes/x-office-document.png": {
+      "sha256": "ccb2580658e5429a2edfa47597af54304031b77fc72c00f95d3b72ee53e2c928"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/mimetypes/x-office-presentation.png": {
+      "sha256": "ddda30f588f77a280b0ebc943945c381caee4e2b9b19b9a899e853cc7827c9b3"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/mimetypes/x-office-spreadsheet.png": {
+      "sha256": "5b21e8ee6d4163806544ba688c5fa96156c6c26ab3f0610cd98ab52393213c8d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-desktop.png": {
+      "sha256": "254ca8aac5ec6474dcfb257b53cad149220f7a87e687f4af3b6aff68e3451172"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-documents.png": {
+      "sha256": "933504b005bcc693faf44fda9986e131782b1a1acee301796139c98c3a0af1e3"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-download.png": {
+      "sha256": "66afe9b690c92e26eb23380786209d9bde705fbb6e7284d27201e1ddc9859476"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-downloads.png": {
+      "sha256": "66afe9b690c92e26eb23380786209d9bde705fbb6e7284d27201e1ddc9859476"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-home.png": {
+      "sha256": "c2e73cfe0b30a590fcbb1181eb0b452a22925cf68ddf26f725b5d8e0fd2665dd"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-music.png": {
+      "sha256": "7e3be68aa5f175fecc204bdcb7e90be22410a7c931f6619ceaa28b21a6a26388"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-network.png": {
+      "sha256": "7cb4c7480573389834203939f5162b3b038a490b2e01ebafb69adc9defe48861"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-open.png": {
+      "sha256": "7cb4c7480573389834203939f5162b3b038a490b2e01ebafb69adc9defe48861"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-pictures.png": {
+      "sha256": "a8841593bd59ff8a68906ecb0a33d71f432e2986734f125e5a6e29e1f902efd1"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-publicshare.png": {
+      "sha256": "7cb4c7480573389834203939f5162b3b038a490b2e01ebafb69adc9defe48861"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-remote.png": {
+      "sha256": "7cb4c7480573389834203939f5162b3b038a490b2e01ebafb69adc9defe48861"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-templates.png": {
+      "sha256": "56f736409fcdc6554d0fa4d862b5ff3a36d8af14076cb5cbb0b2f7a052f03f2e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-trash.png": {
+      "sha256": "6f0447529ad2e36d07772f3b0c2979b5f68fe436effccf2293d0962722f68205"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder-videos.png": {
+      "sha256": "95efdf8f63518a89897c6b679b253e75a5bd9006caa4b75a4dd84aef97094c54"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/folder.png": {
+      "sha256": "7cb4c7480573389834203939f5162b3b038a490b2e01ebafb69adc9defe48861"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/user-desktop.png": {
+      "sha256": "254ca8aac5ec6474dcfb257b53cad149220f7a87e687f4af3b6aff68e3451172"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/user-home.png": {
+      "sha256": "c2e73cfe0b30a590fcbb1181eb0b452a22925cf68ddf26f725b5d8e0fd2665dd"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/user-trash-full.png": {
+      "sha256": "4a47bfb963191882cb1e8bc812e0dfb772dd4f522d6abbc0f2eb21fe5f081965"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/16x16/places/user-trash.png": {
+      "sha256": "6f0447529ad2e36d07772f3b0c2979b5f68fe436effccf2293d0962722f68205"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/48x48/apps/gnome-terminal.png": {
+      "sha256": "923c49792c8dccf42c5fea9e94da37872c0b76584881ce3e2ea86a4e466e98b3"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/48x48/apps/kitty.png": {
+      "sha256": "923c49792c8dccf42c5fea9e94da37872c0b76584881ce3e2ea86a4e466e98b3"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/48x48/apps/org.gnome.Terminal.png": {
+      "sha256": "923c49792c8dccf42c5fea9e94da37872c0b76584881ce3e2ea86a4e466e98b3"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/48x48/apps/org.kde.konsole.png": {
+      "sha256": "923c49792c8dccf42c5fea9e94da37872c0b76584881ce3e2ea86a4e466e98b3"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/48x48/apps/utilities-terminal.png": {
+      "sha256": "923c49792c8dccf42c5fea9e94da37872c0b76584881ce3e2ea86a4e466e98b3"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/48x48/places/folder-open.png": {
+      "sha256": "1f347ee116adb0a986b1d16214f40bebee069b87ef9a236ce640256ca0544566"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/48x48/places/folder.png": {
+      "sha256": "1f347ee116adb0a986b1d16214f40bebee069b87ef9a236ce640256ca0544566"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/PAPIRUS-COPYRIGHT": {
+      "sha256": "a37755c4db819ae5a33b0030841cdb063366d72ab08a9dab7eb2c29e5365d713"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/PERIOD-SOURCE.json": {
+      "sha256": "a36ade776e41be1b05b75d25f8d25d80fbed61833c23ca13a83082bd63292fc7"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/SOURCE.md": {
+      "sha256": "8756a926205aa3166a826a9c6751d13151f3f5e18196a401a3498456f93a6bca"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/index.theme": {
+      "sha256": "494a44de70ebc9ea82056ae35245f48c2533fb8888656decf84ca83c071f0063"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/Acetino2.svg": {
+      "sha256": "cf82782d687e3158325e0539c067cb2ead8134ff15e5f6704560ca24b09ab58e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/MidnightCommander.svg": {
+      "sha256": "1c7847a2b4bafc8799ae66d454fc7512ee022246bfa448deb798378bcab8076d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/accessories-calculator.svg": {
+      "sha256": "070513016b24c6e42bae39684bdd6427cc79bf2317d85153f48c5c23f98c8d47"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/accessories-character-map.svg": {
+      "sha256": "7284b8b8f8525483b7a15ec2c0d2678381690f75c7662cbb4388064564c56cb9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/akregator.svg": {
+      "sha256": "afbebb471000e565fc323e989e02dbc45010bfcf5c6e58f2f3bd340be3e447db"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/alacarte.svg": {
+      "sha256": "af3ecc36adcee71e4a346850fb5e9f49bc0bace096494656956251c208320c3d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/app.devsuite.Ptyxis.svg": {
+      "sha256": "9fff2bf3a274bf7435b77dca7abf81cbe29c2d9c56ec0d86e3d2ef68944c2c00"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/application-x-executable.svg": {
+      "sha256": "abb41899d8125cd44dd5d78779f1c71b256b045d53abd22100217e0375c6d09a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/applications-multimedia.svg": {
+      "sha256": "4da46a6dc5bac43ec9300085fa60ac52ee794927df19c65b41253fd292df7373"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/applications-other.svg": {
+      "sha256": "b81c7fd305f4c159de107de7a2897d4e689fe2baed7fee7e2847d16f644a00be"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ark.svg": {
+      "sha256": "640e1a1290a1cbdf9875382eff9d06e39a908846fbdd962159292213351f1709"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/artikulate.svg": {
+      "sha256": "796f52baaf904f414b84804417cc081d887da45dc07d318a42ecdd32bfbb5c7f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/bleachbit.svg": {
+      "sha256": "6271a99677a0f6281aaac94ecaab23070ae169a5709c29e04c0be57297cd3f8a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/blender.svg": {
+      "sha256": "5110b63574043fd5da5de69733aefa3df4e2036a6a5206455ee3002854c53907"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/blinken.svg": {
+      "sha256": "e06a51e24f0398ac627df6c7862c6e03e4b8fc6254a999487161e372a6037f97"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/blueman-device.svg": {
+      "sha256": "a62e5c1d86be916f8d3a588c79a9dedc1a98dfb70094277c2905ce1e01d9f5f6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/blueman.svg": {
+      "sha256": "a62e5c1d86be916f8d3a588c79a9dedc1a98dfb70094277c2905ce1e01d9f5f6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/bomber.svg": {
+      "sha256": "a40f8d5a12f9f20e77ce051bfbbf5ba736b98785eea3416766d02e51ac58a033"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/bovo.svg": {
+      "sha256": "dcf0eefa0b4843896a50d8afea77ab4cf090068fdef802f893d31092049028af"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/bulky.svg": {
+      "sha256": "37966f27f230f5cad28d26bc0850d65c867127c65523083f724d9ab753feae8e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/camera-photo.svg": {
+      "sha256": "af645d4a9b03b74197ff7497a69398cf33c4cfb1d439c220094b6f73b8470567"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cantor.svg": {
+      "sha256": "39d1612c7279782bdad03c3a288a935cd524674e3f71d5d6919c9f0ee5c33aaf"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cervisia.svg": {
+      "sha256": "6e0f4f4969bb7991e76ce5a809a418650d14d0624f1ca8c775dbdea0d1662b3e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cinnamon-virtual-keyboard.svg": {
+      "sha256": "a6607c46e4e999f9359557273e70c63ac1619766e351e0e8dc295addd702d7b7"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/com.discordapp.Discord.svg": {
+      "sha256": "6d6a9aba3ebb1549d75db71950eb3f92499ed02a7fb6e6f862da328050426705"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/com.github.Matoking.protontricks.svg": {
+      "sha256": "2ecf20a75317532f260cdad0738efd502968b62395985bfccd050238e634b63d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/com.github.jeromerobert.pdfarranger.svg": {
+      "sha256": "c03f8f8cb374ea6e96fabe1c8f9d15477f74588ce9bdc102f1384309b5abc35c"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/com.github.maoschanz.drawing.svg": {
+      "sha256": "2d102e99921d198ef71fa948a4b96259232c8f334430f3ed8fd7b19562d6c22e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/com.ranfdev.DistroShelf.svg": {
+      "sha256": "a360805c07c7501954e3bd471e494abb7a4d65ee4708d487d7cda01a71ef0045"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-actions.svg": {
+      "sha256": "7e205b30e574250b6a118c622d57cfb668c12010d4c5dea08e8bfe7c7353854a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-applets.svg": {
+      "sha256": "756b4855d0ae56874ef0f2268c894be469789f4ece2dc90ecdc6077010e6ad42"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-backgrounds.svg": {
+      "sha256": "0b2e3bedccb0d3027171f76c4d41b22dd82205982ce963ff5aa0af8f063a7603"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-color.svg": {
+      "sha256": "51291b9e3d06ded2abb385c35a9c4aff7d6eb397d8649a9f55f5e6473b29d91d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-date-time.svg": {
+      "sha256": "7c0abac1a3f3f43ed237c67d95b13a44b0636f69875f5173c8bcf88e481ae15e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-default-applications.svg": {
+      "sha256": "02e33f6b5d21ef33b12237291f046e77c889dbe49271a95a84c278a4540779b0"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-desklets.svg": {
+      "sha256": "4ea839b0ad56f01fcdc85a6ac1980cee036ce45e4aa79ba815178817f8633ae8"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-desktop-effects.svg": {
+      "sha256": "91efb5c3550bad30775bdf6c9ecb27c3ce5fab27c31c30f5b786cbdad0da7df5"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-desktop.svg": {
+      "sha256": "2b485c52ed534fefbbefc67d976a6f32f8f79891c42835827d96a85ff97f2cb2"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-display.svg": {
+      "sha256": "2493ab08444aec1ee57f83314840900f201de92af6bcef1cfe0fb3b839288baa"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-extensions.svg": {
+      "sha256": "e08ceaadafb0033b5f6a1827fff903654954a225f353edd420f629cd21e82d69"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-fonts.svg": {
+      "sha256": "01a7ea1e55a6ae5d36127c8329ddfe61f07146dbd977a077f4da917355ed5600"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-general.svg": {
+      "sha256": "a2de9626a2b810635ece725ea7f3b109871c18ae0a04440536d32ac7ad744a9f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-gestures.svg": {
+      "sha256": "6aacdf02bf777348e5e2f754c0d7183b57f4b1a06a69a65301698616a1aad7c9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-keyboard.svg": {
+      "sha256": "f8d1f0a8897391a7b6190049f8e196fd7f23e493b8831957b8248937a9796c71"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-mouse.svg": {
+      "sha256": "94b841adbdad076616def40d84ce319381e3f03144f4bf69539d77944025a00e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-network.svg": {
+      "sha256": "51403236f17e045a48bf4b2ec68c776ea020609042b9fc7fb1e4af06033b4c3e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-notifications.svg": {
+      "sha256": "db28c6fbfc4b86bb816a961685dc655e6402f6d88c9151020703dd93fa6cac30"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-overview.svg": {
+      "sha256": "7fa4de89fca59f68e5fe5490d3a4e78c894446f32a30c18d088456304409a428"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-panel.svg": {
+      "sha256": "9d06c5c83da1aa4026510e90743a73e1d48416cbaf334304a9f5f18d425bbaa1"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-power.svg": {
+      "sha256": "cc299db1942b24dc16af8afa9624c16a7ce6ebb4c786eec3032a9e1e77abee0d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-privacy.svg": {
+      "sha256": "d714a17bedf93e4b98a25ed10c3116d81c090e06212c189679ec5b48409437ae"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-screensaver.svg": {
+      "sha256": "594c76c46a5166e82575d5fc2403b3a5accede275b744750417ee32d056d407d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-sound.svg": {
+      "sha256": "001327f9053e6b3ced5eab8e4e42c7a7c7229d1173294f8a861013a44c5505f4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-startup-programs.svg": {
+      "sha256": "ce348e6276bbe7ee20dd80904090aef6870b5c9cb815733fd41eb2c6b7643152"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-tablet.svg": {
+      "sha256": "de1222bf3a2ab3dc8af992b9db5d991652cd491a62ef8d6f918254c86d78303f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-universal-access.svg": {
+      "sha256": "e084316e710d1211a3ebb9fba36bcb9e51b878589a2dbd0a50f3df208beea4e0"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-user.svg": {
+      "sha256": "7528b11984ee8498903e208692ff901ffcfd2c9c38edc0aa1cd0ebdaaab380c1"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-windows.svg": {
+      "sha256": "423e902194b383e33d15aefa29117ecbbf30ef1950206ed46ce36d3d4a74a511"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/cs-workspaces.svg": {
+      "sha256": "de1879ce4302c5ff4a8f634e052e2bd4bbb7ff3c211c23e8129f1fdaf919aa08"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/dev.geopjr.Calligraphy.svg": {
+      "sha256": "f24d817e363215769798a54394623f84753d3c8e683bc4fafdaa8f1c49d93105"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/dialog-information.svg": {
+      "sha256": "9eb5b067e437a38cea0cc3f4f29cdd68086f13ff30d1e86b0622a70c76ac05a4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/dialog-password.svg": {
+      "sha256": "d57c5c816dfa240cbfe197bf0d3d80e4aea22954623b521a4b534a6d478f8b61"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/display-im6.q16.svg": {
+      "sha256": "874da3e64ccf105400ffa72e54c556ca36c64566d8194eca92b5bd5db676391d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/dosbox.svg": {
+      "sha256": "e7515e00cafe0eb33c7c1761a6344afbcfc06b6f2dc22d64e06d9066118ae588"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/dragonplayer.svg": {
+      "sha256": "76cae027bb2a7580e9bb1f7e6594363d76708c247e6fbdca36e1727e12a3ae89"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/elisa.svg": {
+      "sha256": "8ae8b603d5dce536430368688a4667880d12414299716d5fa4991136dd361067"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/filelight.svg": {
+      "sha256": "ca2637e7029a9d2de93f86f7ca5d45d18cd8387ca0e41a4c71a413611af90321"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/fingwit.svg": {
+      "sha256": "a2bb2a9015e51160d62b8666f8039a94104e442028f4ceb9243f460e33569636"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/firefox.svg": {
+      "sha256": "ed40fc73b2c3a14c166f363eadb11021fec18975fe4a3499c602be19e2320d9d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/giggle.svg": {
+      "sha256": "41ac9c8338b2115aa715a26c2c5cdbc0aaea8880f22bd48516f1d02876836d9a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/gimp.svg": {
+      "sha256": "0c54c17a3344ab860a10a9030e69d57104102066560bd2f5d819419c9c662bc6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/gnome-online-accounts-gtk.svg": {
+      "sha256": "b0113f61649c29580cf09b84b101106188ae4e636699a6bd1bbdec92105d5121"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/gnugo48.svg": {
+      "sha256": "32d61455a262826ec68fa6905fa69fca6098e3fa36fbae940168cf6a49f9d8b1"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/granatier.svg": {
+      "sha256": "dad3da11faf194aaf88d112fc7c39d8581bfa6184f7bb9bd3a6f09d8155f65d3"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/gufw.svg": {
+      "sha256": "f4827c6330de607f1c380b4fcf0b45ff995ac44f714bd94617509b681a9bcd57"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/gvim.svg": {
+      "sha256": "a6d97fca2c694d61e96a77c219df2d6db4d892143762d360cf9df7ae8b7c9594"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/gwenview.svg": {
+      "sha256": "e80ca21e34e9c56f09e1b1d8c903d9053e99aa826ba1a5cb7c904bd86fe3fd86"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/help-browser.svg": {
+      "sha256": "d33dceaad18f135befa54fa65ab25d50cecee6483a3f808303dea8ffe312514f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/htop.svg": {
+      "sha256": "cce59e5d6ccb3c1e9b6f9dd2d02df453912d314c20667232484a0337e9bca640"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/hwinfo.svg": {
+      "sha256": "957663fe932a88e7302a404be78b8b1a0fed303f7aa22dcc0acdf6f04c368799"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/hwloc.svg": {
+      "sha256": "c97a89a4740175a2efd30af7b541aeb566ae8c9a12289d417a802fe521d3efae"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/hypnotix.svg": {
+      "sha256": "a028d054f13d8625511f8285b83f3aee9a9fefce2278fc51847b717b321b3963"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ibus-setup.svg": {
+      "sha256": "3fa03e6dd16fdd2f093b161f30fea16cf2c1f19293e288e53f680d92bddcc7c2"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ibus.svg": {
+      "sha256": "3fa03e6dd16fdd2f093b161f30fea16cf2c1f19293e288e53f680d92bddcc7c2"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/io.freetubeapp.FreeTube.svg": {
+      "sha256": "249f2709587b251a054ae2d605511192c222b6edbac35522da1b02c0d3a03379"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/io.github.DenysMb.Kontainer.svg": {
+      "sha256": "e62badb7b99fc8bbf4e2b0287dcbc002a3a4036d6d6643cf9f59c3dc68342724"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/io.github.celluloid_player.Celluloid.svg": {
+      "sha256": "6d68b3cdffed5b5a065c52d04b89a6f18b4a9691b027aa7f16c465b6e49c82a8"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/io.github.nokse22.asciidraw.svg": {
+      "sha256": "3077ce41f6b13be6dd84c949f40c6e43bff93d1faeb556f91675f946da63b128"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/jockey.svg": {
+      "sha256": "19b7864b0f113ee8542f635a4507815cb12ffab155a27cc68e6fdd3d89342ec9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/juk.svg": {
+      "sha256": "fa6d931212aa86fb49c9e6db5860441c8deea068e636c2c5167ff847f381589a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kaddressbook.svg": {
+      "sha256": "ef0320a725028bb9113cd72a14c7115356ec0a46a5fc13cad1b914cf1a62e256"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kajongg.svg": {
+      "sha256": "4aa45f97ded8fd4ada8697f38ab3891f32a9b62a45f599d759d92d3a798ef075"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kalarm.svg": {
+      "sha256": "72ac3c48a7cdd0ff9dcc903cf7804ee072305eeb588b4d0468ce2d0b9914f108"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kalgebra.svg": {
+      "sha256": "4a5ab162601ab198bb93d244b572135c74199e650d4f711d8c5825484b5edbac"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kalzium.svg": {
+      "sha256": "e0a35ca8393812ed4b694d360ab6addeb752c442729a9c6fbb2ea82360f6bac5"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kanagram.svg": {
+      "sha256": "1b92a5e5924b8cf71f7b69747a1deac77070fdd3af8ab88a090d7f88f7dd17bf"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kapman.svg": {
+      "sha256": "07a7cc220c73167b9471d65624c36211f2c550a6b362115a525206070a28d183"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kapptemplate.svg": {
+      "sha256": "5dba8ad784194cca4a87194c8ca085ef0f0eeacc3151d40c295edad1b4d52b8a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kate.svg": {
+      "sha256": "1a23b46dabc0d4b3b552d9ced0bfa9ba89d2e72ced16e8facc91eb36b9d13495"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/katomic.svg": {
+      "sha256": "3216695ddb64da895a4d4b55b17b3e19a9761e0d2ff178b083253f2696345133"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kblackbox.svg": {
+      "sha256": "86c359777e6a60d1a43b764bb164cf003cf831ff158a7a76ad8b33fa1ad25ed6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kblocks.svg": {
+      "sha256": "d8d6e302f3ceb5392d06b1365d1404c6f1eca37c3d7041670e2f5ff8151cdcef"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kbounce.svg": {
+      "sha256": "5bd0e9b4d06eb8fd89b88a85be719fe559d65c39462d5ea9fa5778237bbe18c8"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kbreakout.svg": {
+      "sha256": "11565bb77f8b23cbf362acd340450124c14d35ef4dc12d19993b48dc5c808356"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kbruch.svg": {
+      "sha256": "a9689d109b05289ae49152515db7784d87574652c2ebb52789b557a071f288a3"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kcachegrind.svg": {
+      "sha256": "7e281da9986200695eebec8d5dd83011f10ca7841e8e5bc410c0374ea98f4110"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kcolorchooser.svg": {
+      "sha256": "1cbf528ec2af285562d2e685900c633e5e9090d560cb4aac179b63bfe4cd0ee1"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kde-frameworks.svg": {
+      "sha256": "6d67272bbe5e91cb4388e21c90624dd6090ff8bf40c600dd10e3172ff80c5402"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kde.svg": {
+      "sha256": "61c032bb37ab20c77c1c1d7ea5cf586800f5c31b4af48d79770091cc84fa659e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kdeconnect.svg": {
+      "sha256": "fad583a85de7f5a9d4c011f8fb326f83e15f67885f215d08592d610a9c854e02"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kdevelop.svg": {
+      "sha256": "906a0f2f2bb511d13afcb26b03a4742781e7debb94e66a88612a556649e1aa39"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kdf.svg": {
+      "sha256": "da282bc3bf1f825ffc1f43de1ace19c82c63087b40dff24cf7f7e3cbfd5a475d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kdiamond.svg": {
+      "sha256": "25c6b63efa24a3eca51e9824d410bd540e7cadf1eb6072b3335b39fcf6427246"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kfind.svg": {
+      "sha256": "055cd07d1b0471c7999b579bc1141aa98c4b119841abcc1581f51eb530de5090"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kfontview.svg": {
+      "sha256": "01a7ea1e55a6ae5d36127c8329ddfe61f07146dbd977a077f4da917355ed5600"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kfourinline.svg": {
+      "sha256": "0b9983aa331279653c49893287f6356c0f309cf4c8fb77f30f5094f590a31131"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kgeography.svg": {
+      "sha256": "c2a91a5802d1e9ac0d8863bae75dc5157d43f16f6b3381c616d999c2d101fd67"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kget.svg": {
+      "sha256": "d5d71b14c2531902b4f1972905fb4220a32570ae0b13f308ef8faad98257a0db"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kgoldrunner.svg": {
+      "sha256": "d9b751a9d6016b7d3a9b206c763a2ac6a48483ee2eb768381000f758a49a86e8"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kgpg.svg": {
+      "sha256": "648526f3f74cac1cbf95f26581ddf26945a132b04c4055702194c8d8a6b1bfea"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/khangman.svg": {
+      "sha256": "a8989a61a55171619c9180d6e096da787238918bd2877193119d8c8f35fb50f6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kig.svg": {
+      "sha256": "baa75ba0f0fad0d9d5f97cc61a51ae8886fa35c5ede1f68f26de8a75bfe23949"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kigo.svg": {
+      "sha256": "49824dc9d2c9b25ba9fa72e10c8a5addfde8ee662cd59b6d2ec6f53344e1e2f8"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/killbots.svg": {
+      "sha256": "d73e310b829bd7d2461c45c396dc4351da57fd497597e5b6fce8fbdcbb0ab5f9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kimagemapeditor.svg": {
+      "sha256": "8b471551c8dd8ee22d4b63061b3d176c0db45137c9b56a60462e8f8fb096aebf"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kiriki.svg": {
+      "sha256": "43a1286cd5d10256d5813d4cac2d7911bf245a2363217482e47dbad6b0a51742"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kiten.svg": {
+      "sha256": "7cadeac4f2613cbd2fbdd2a4444f23a38baf17fd00993daec621bc4ace5cf18a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kjumpingcube.svg": {
+      "sha256": "3b02fa1991fa6c0487dfcb44917b39be6b19eadb8606903f796c9d06f903fab5"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kleopatra.svg": {
+      "sha256": "cbab7358a3373a48c1ec67117edb6901d930965d23099733f956b02993d7a6ff"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/klettres.svg": {
+      "sha256": "c8f9e19b6afd6f327b9a09b2368c51d56d25d7fb0bea6074f60f5295efdbb326"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/klickety.svg": {
+      "sha256": "e8681fbc689bc7d03f297c5cffada5a140de0823aa97ca35d03dfe131216a409"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/klines.svg": {
+      "sha256": "3c0c957752cec21b56870715f45b8b31fbeb81e7fe8fbe44feab04c423923657"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/klipper.svg": {
+      "sha256": "7781ffbfdb2498d2d8f6634edf858c36ffa1f65ed2517b8c0a15d0c3b0e071cb"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kmag.svg": {
+      "sha256": "055cd07d1b0471c7999b579bc1141aa98c4b119841abcc1581f51eb530de5090"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kmahjongg.svg": {
+      "sha256": "5b15f90475011f8405391dd56ae623b83d22894f54b3eb53239c6c0e97e16ee4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kmail.svg": {
+      "sha256": "91a9087f22d61ed4c8cfc9bfaa480c8408b4fdaa3ed854c97c63eac95e3f977f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kmenuedit.svg": {
+      "sha256": "af3ecc36adcee71e4a346850fb5e9f49bc0bace096494656956251c208320c3d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kmines.svg": {
+      "sha256": "ef3723c3b96e1c8e1dbe0307b27a622a5c6c8b0ef5942bbf6ba480abb93b9f4c"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kmix.svg": {
+      "sha256": "400da177b6ec522d21221030727c30ecb492d922e114dae924ff1c31c64923af"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kmousetool.svg": {
+      "sha256": "94b841adbdad076616def40d84ce319381e3f03144f4bf69539d77944025a00e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kmouth.svg": {
+      "sha256": "e4f818db8fbb42d2ffdf26b2d0cf9a047a22890d358f8c46dd3a81239bededca"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kmplot.svg": {
+      "sha256": "3c8cd7351c12414da9e9493c9dc661421b09dd62020e4d2390898fb88601f2d6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/knavalbattle.svg": {
+      "sha256": "db428ea2d8be1cce36fc72054103c45d21b82274e26e5207e0ccddcc47ad62cf"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/knetattach.svg": {
+      "sha256": "51403236f17e045a48bf4b2ec68c776ea020609042b9fc7fb1e4af06033b4c3e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/knetwalk.svg": {
+      "sha256": "51403236f17e045a48bf4b2ec68c776ea020609042b9fc7fb1e4af06033b4c3e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/knights.svg": {
+      "sha256": "42e0042c5c259d5dd730f3e31b024129463a838b1090dc34f768f95fa0f1ed98"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/knotes.svg": {
+      "sha256": "1470d26e5d0f5323693663e1e49f5f4f7aa584bdaa56c713ac1c8b8ecfcdf0f3"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kolf.svg": {
+      "sha256": "f0b17641d8f5635b8e743543f1d6d9bb79f344c0dba1b3c2e942e0b6f3ad1fc2"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kollision.svg": {
+      "sha256": "78f0a8c693a5c0846eb59a379c836e30e81e1ce5641720ab41a1ca3daad23f76"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kolourpaint.svg": {
+      "sha256": "a4adf4891e7c482578729046be79ed73bdaa8ca764e901f943acb6f54931fbbf"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kompare.svg": {
+      "sha256": "f02f745e30fbafd0c8461c064fcc89a695a3022bee441200e36f7a2135fd806a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/konquest.svg": {
+      "sha256": "e80a47bf92772121f38c55876eb8d12bbc69a1494688aee2454a279a66aafa55"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/konsolekalendar.svg": {
+      "sha256": "5f0438105d49f7aecf7afcf22517a424d8619f9a50926ebd814f5d45caa7a608"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kontact-import-wizard.svg": {
+      "sha256": "e2f60c7f4523288f3ded22e33e8ac2b5314415aec208f82220b5cc0837e9d904"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kontact.svg": {
+      "sha256": "6049abcfa3fdc8be00b3c409f60ab8422a968439e7ab53ce8b816d0a6f923dfe"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/korganizer.svg": {
+      "sha256": "dc6173ab6d260e9ba055aacd6fd6d6eed192924dc58318df1f783a34cb07c50a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kpat.svg": {
+      "sha256": "2d49137731485daeef563a876be44d97fcf990cbaa0a98506205bd5d69126af1"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/krdc.svg": {
+      "sha256": "a962d02eed16aabd61774402ef3df506cd7af1db8a1a8f7ea6c42a90b0f1a221"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kreversi.svg": {
+      "sha256": "ae98e671cb306107aa7b41ad34dfa0a7cd25802dea7668adc2666615002b1108"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/krfb.svg": {
+      "sha256": "47e5d9a779c9b5c58b0a53447dc38048748ede88554956aaf5f54112c954d279"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/krita.svg": {
+      "sha256": "b79019be46beefde8875525175340fbd8b4f40ebcc212acca61924db159f4fd1"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kruler.svg": {
+      "sha256": "19061508757dfe1cdcdc7aa2bdbfb290f838b36cc9cdeda2989938a1144e4214"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/krunner.svg": {
+      "sha256": "e2c59063d7a4982faeeb97773aa3aaecad1e1fe08bd3bb56ee4880bd12f9e18b"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ksame.svg": {
+      "sha256": "01fe5c15d4012b9f7445356becee534c9cc2a1a317de7dc60106415dd0aa3df4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kshisen.svg": {
+      "sha256": "bf3cc06fedc448949df8fd9c00c9e4d3e57333d80b7bf967312d9c27bba201a6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ksirk.svg": {
+      "sha256": "7d03f454d036254a8190065053ae2c84423391cb96beeab68ff6e738b48dd7d6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ksnakeduel.svg": {
+      "sha256": "c5fb2c07ecccaf50a48b8680a8137c3872a8ef38281f8ecd16ec2dcb5b55a684"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kspaceduel.svg": {
+      "sha256": "1f9aa2193b9d383f3cb0b44a5b68f2af1a20c065d0391e6fbd5f1fa99c26f105"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ksquares.svg": {
+      "sha256": "7dd203af069ae831dded23d49e9e7f70b995f570e3f1b38efebc3be30a5672a4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ksudoku.svg": {
+      "sha256": "3e5b5625fd2868e186c1333fc90927f0937c78ac27351cd5ad72ad4d99737543"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kteatime.svg": {
+      "sha256": "21ebbff9c64b6db7dd0ab35a83ce0eee2371b1ffef1e2cdcfc195b46de0a57f3"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ktimer.svg": {
+      "sha256": "454bb864ad64512580f0dafd6650359e24c9b9c4c312f2c1f1b31080fcc7102d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ktip.svg": {
+      "sha256": "957663fe932a88e7302a404be78b8b1a0fed303f7aa22dcc0acdf6f04c368799"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ktnef.svg": {
+      "sha256": "e2f60c7f4523288f3ded22e33e8ac2b5314415aec208f82220b5cc0837e9d904"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ktouch.svg": {
+      "sha256": "f8d1f0a8897391a7b6190049f8e196fd7f23e493b8831957b8248937a9796c71"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/ktuberling.svg": {
+      "sha256": "72b708c221a48fbb8f699ed16e5b982b728292975a785140ffa1bf8c746c98fa"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kturtle.svg": {
+      "sha256": "db7aad7a82894bb92b8accdf22923ad82d8f65c64434008246b1456b5f66f502"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kubrick.svg": {
+      "sha256": "d76d8de9215b580a3d2459d4cc40543fee37e4956a41585eeda12b7b0eb0d1dd"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kuiviewer.svg": {
+      "sha256": "a9cee17634673c725cbb7cb989999b59d97b13698a148d4219372092b654e36f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kwalletmanager.svg": {
+      "sha256": "caa16fff44291e912f2990dc1610c7946d9d42622261558a9b6a576cd7a49594"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kwikdisk.svg": {
+      "sha256": "da282bc3bf1f825ffc1f43de1ace19c82c63087b40dff24cf7f7e3cbfd5a475d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/kwrite.svg": {
+      "sha256": "331ae74383709c8570e78734d9eb231f8596bc7e7ba144149e79d468d0e040e1"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/lazarus-3.0.svg": {
+      "sha256": "92644155f9048d807606e96a3c3e78412ea0a33dfc214a0ed604b1a557cb0b0b"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/libreoffice-calc.svg": {
+      "sha256": "c92d30d963e3280cd8127bcc2723aa246b60dbe3098090d1e3ee672cb9939a1e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/libreoffice-draw.svg": {
+      "sha256": "cc99043a8155f115eb02a1c8c6e7e718506f74ab08ff01756fd164ea4fb346f0"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/libreoffice-impress.svg": {
+      "sha256": "fc4528ad4c290c4e173b316f89c0a3dbc256f77565c5079060d4a9d7d3269b9a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/libreoffice-startcenter.svg": {
+      "sha256": "861ee72e843c60aa9d1f28481583d5d0ca6e10a4429eb0343ead8b0fa70a1a6e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/libreoffice-writer.svg": {
+      "sha256": "13477fb74d629140ae8ee14dc5c9e81d64bed39bf4ceb01ed5d95614537240c8"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/lightdm-settings.svg": {
+      "sha256": "43d54604d306e0a936218c8b973d6bc52d3e22a09389f2b4a04f1d678589956d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/lokalize.svg": {
+      "sha256": "c8f9e19b6afd6f327b9a09b2368c51d56d25d7fb0bea6074f60f5295efdbb326"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/lskat.svg": {
+      "sha256": "4b4d4794cf99e243ab315dcd072846e945f08fe492b4100a5c9d4c99d847899f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/lyx.svg": {
+      "sha256": "de01d1b077dcda67056046f0ec5dd78ef82c8cf920e208437191de74f47104ee"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/marble.svg": {
+      "sha256": "9ff8ca1f3bd05707ae9e74291dca12f34126b3bc3e261daa04fa8a0e72807611"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mate-desktop.svg": {
+      "sha256": "259adbad70b444eb90a9867b5c4734572421320faa93870abf5e990cd80e9ea5"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mate-panel.svg": {
+      "sha256": "9d06c5c83da1aa4026510e90743a73e1d48416cbaf334304a9f5f18d425bbaa1"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/md.obsidian.Obsidian.svg": {
+      "sha256": "7284b1a9873c8329c4dbe099814ffb728dafb2c42eab38b7d670a8aea9c3473e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/media-optical-audio.svg": {
+      "sha256": "278dd13801fdacdeadfbcfca8b22ebca1aa111e99b682ec423ac20520261d3f4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mintbackup.svg": {
+      "sha256": "5172aa8d7b1bde3fc561a42e29d0699749e7e8175e7e05e54855dd005e52fc9b"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mintchat.svg": {
+      "sha256": "8e88116dae7088cc9f825fc3c80bcc84804e98c53494aa40c8954d21dcded584"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mintdrivers.svg": {
+      "sha256": "19b7864b0f113ee8542f635a4507815cb12ffab155a27cc68e6fdd3d89342ec9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mintinstall.svg": {
+      "sha256": "29c83a671265fd6afce5548f47cc49c9968ff5f3e4eb50645d05dd9be195cfdc"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mintlocale-im.svg": {
+      "sha256": "86aa947455b398cac59d874ec8b1f5c7990b67fb117433246a6c895195de61a9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mintreport.svg": {
+      "sha256": "37edeceb8ecad22a76d5723a5ad97aefd9d9f86e73ead2a63582a67fb79e8c73"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mintsources.svg": {
+      "sha256": "c58fcedc33f54f57e9862a1a1a694c99f6aed50a69f0027456d8674115b51a92"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mintstick.svg": {
+      "sha256": "8dd310299796f8098583807377c9045d09ba33bf50c64d77aaf3fbeaef6c5f27"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mintsysadm.svg": {
+      "sha256": "c9e0fd960bf816603ac870a3a14907da839b817d3fb51ff167b044a3ef76ced0"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mintupdate.svg": {
+      "sha256": "dba31e97e1d876bce76ffa785af6cd9bf2fffa6d6ca09a28a4b0c2688019505e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mintwelcome.svg": {
+      "sha256": "9e2c8ee112a96829fa47bec864d75e1dabd5814a241c62e31739e7f1f6dd2604"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/minuet.svg": {
+      "sha256": "31d7123769ed71c45214e5aabc927e78421b23e00863ac933ee486f47b0d25e9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/mpv.svg": {
+      "sha256": "79e88b6caf14ba5a68b7b2f84cabd05d7784e7398da951b80e9d1c48228ec8f6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/net.davidotek.pupgui2.svg": {
+      "sha256": "945c9d33020d3c054181233ff12d6e8639c0cb3d407e357dfbbaf73c211ad80d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/network-server.svg": {
+      "sha256": "096406863ac1d61edf108528569704195410261e9dcb46b6baf7263a3dce31bc"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/nm-device-wireless.svg": {
+      "sha256": "b7f8d6c43bf37cc171354e678bec484af12f44ebcf19c6325a2b1a44d3f73326"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/nvidia-settings.svg": {
+      "sha256": "4345000be3ce837f2dd237d19712634366540ad4ec0d6407d4d258ec4654058e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/obconf.svg": {
+      "sha256": "423e902194b383e33d15aefa29117ecbbf30ef1950206ed46ce36d3d4a74a511"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/okteta.svg": {
+      "sha256": "728a3808b34ae2af7a79bd67660b1b93afb0825eb50d2a8918124126c5def96b"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/okular.svg": {
+      "sha256": "9e35971aea08aaee4763fb1825f67f1474676726627a337c858dceeba8bf3c0a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/onboard.svg": {
+      "sha256": "c6149d010109be979ab76ec919e500721d24b0296196dcbc03b0609be5007360"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/openbox.svg": {
+      "sha256": "fb06c2d6c2c0d5b0e208945d9b55a06fdb2be390a91d9892c16a59d9f6d0547c"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/openjdk-21.svg": {
+      "sha256": "45b80cc531ae539c86cfaf7a3e354ad3481b5f102f1c6b540e4ffadc35121feb"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/openttd.svg": {
+      "sha256": "feb080f56a504407719c1684ed314baedb2b67b543c10e23854dbdf3618b6aeb"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.Builder.svg": {
+      "sha256": "fc5b8d6f9999680ab39b0ffca4064dffed0773875664ed0c9d26de434c954c7e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.Calculator.svg": {
+      "sha256": "3174aef1f76572b5da246afa914b7070ee85b75b26310dfdac20dfffb58d366f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.Calendar.svg": {
+      "sha256": "5f0438105d49f7aecf7afcf22517a424d8619f9a50926ebd814f5d45caa7a608"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.Devhelp.svg": {
+      "sha256": "399c296478801c1cef8a56cf4fe72e303319b5ae48b971adccf18f89dfc10ca3"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.DiskUtility.svg": {
+      "sha256": "adfcc48b48584740068f7cafd12616d231707c86051368340afb12e5ada939a4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.Evolution-alarm-notify.svg": {
+      "sha256": "a6474c47779abc29bf41a69ce7aca52064d79d4ab68df4593c4930201639047b"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.FileRoller.svg": {
+      "sha256": "640e1a1290a1cbdf9875382eff9d06e39a908846fbdd962159292213351f1709"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.Glade.svg": {
+      "sha256": "4c6a4a4dec3f137b539b4fe056769eee63c200a862962b1c12898289995a6c1e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.PowerStats.svg": {
+      "sha256": "ed4542cfb95187f25de1a7695f1d6ad1236cfdac450e6f57a49d88897349cbdf"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.Rhythmbox3.svg": {
+      "sha256": "cc72d1e4ef2effd9564f9bf28ab90385099699d27d29aa39a1035091890cf108"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.Screenshot.svg": {
+      "sha256": "31750114835307ca7842ecce69cf0133e90459bf879165e95cc92272422a078d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.SimpleScan.svg": {
+      "sha256": "ba01aa47449a4efeb6d9aa8eccb034f91a81f86f91737e217ed3d884b28326c7"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.Terminal.Preferences.svg": {
+      "sha256": "2fc06a8666f1d04170934e6a5dd2565db47f63952bb2f288fc2ca0c079c3c157"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.Yelp.svg": {
+      "sha256": "edc578f2400dff44fb71b632b97d7910e7750893d8029dd54d2314677bd5535d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.baobab.svg": {
+      "sha256": "e28b3dd70bf40e4543a9846afbc755935f2b821b4137f877d6621cbd443a1b40"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.font-viewer.svg": {
+      "sha256": "6c03071899372a41786cc57088602b6e7bc5fe3dbcc4ac7d9f2353666823fad7"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.seahorse.Application.svg": {
+      "sha256": "fec561f0ed31e9af1a52e2825641940fdccdc9edb09cfd3269ef12febc62bdf6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gnome.tweaks.svg": {
+      "sha256": "a8ce6ed920df1755e84cffe7cb6bb3d68b70b42e57dec01123019f146b2d20fc"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.gtkhash.gtkhash.svg": {
+      "sha256": "66e8a869cd35619ea3fd27a8bf0ccc6f0a01f41ac560cec2a489d92d19488ecf"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.kde.kontrast.svg": {
+      "sha256": "1b25098b56084e4ba0f592c2c175ee5eb029ba58daba03b4c7b7b0a1961f5013"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.kde.kwordquiz.svg": {
+      "sha256": "58eb00019b5972c4b2c7a370c5eec599d08c11860f82481c99fe17f2fb7c1623"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.remmina.Remmina.svg": {
+      "sha256": "4f128d9d20991a3224198020287d9c68c89445a444484f979b14c33497ba94ed"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.wireshark.Wireshark.svg": {
+      "sha256": "d767beefbce9a6944452a493446eb9dfabac02ba055cf75e38f7977934b8879c"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/org.x.Warpinator.svg": {
+      "sha256": "09dfc292901edae802e214ad8fd2f7df96eea196f20d11b615a7a5a0de6ddbcc"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/package-x-generic.svg": {
+      "sha256": "d7c8dcbd854c7bd2186b94060eb3b17322576bd083f9c3d0c1fc24ef89c2542d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/package.svg": {
+      "sha256": "ab02823f60accfaa2e960d4811fd8cc4c2613afbdf9cb141f79f2662cb8f8d0e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/palapeli.svg": {
+      "sha256": "cbd8e3994d799bc7c8cd926b1d37459c2ab1615f9e33bda425fc2ae55b1a9f3f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/parley.svg": {
+      "sha256": "6a6d3621784f2caec4811daceda4cc751b0121bc523115e1b4daacf05eed325d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/partitionmanager.svg": {
+      "sha256": "078043b72c548a585ddebd811f7d95ab373c5b7b88c25104767ad63b353817a4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/pasaffe.svg": {
+      "sha256": "751e12feb6991fea722378541a7dde569d7f65201e3dabce8a9a77c37a6aad9c"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/pix.svg": {
+      "sha256": "aeb3cec5043ff94c0b19b4fbbc861a0b433c85d167add71290a030602f5d641c"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/plasma-search.svg": {
+      "sha256": "e2c59063d7a4982faeeb97773aa3aaecad1e1fe08bd3bb56ee4880bd12f9e18b"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/plasma.svg": {
+      "sha256": "7b140ab49b96660ef35bb180399c8e2816f607cdc49289a511cda24128296ab4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/plasmadiscover.svg": {
+      "sha256": "0d6b4e7ed0bb0b23082a5672acf3db752e935ce7b47f821b8d0fb25edaec83aa"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/plasmashell.svg": {
+      "sha256": "7b140ab49b96660ef35bb180399c8e2816f607cdc49289a511cda24128296ab4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/playonlinux.svg": {
+      "sha256": "62b5c40adc180f6e976975a155b04a20decabfa0255c925823ad395adc2b43f6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-accessibility.svg": {
+      "sha256": "e084316e710d1211a3ebb9fba36bcb9e51b878589a2dbd0a50f3df208beea4e0"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-activities.svg": {
+      "sha256": "ce1a8a0a933af3b6c7f22da7f14b1fb385f6b5bf37683f1ab43b34fbc0e22903"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-baloo.svg": {
+      "sha256": "055cd07d1b0471c7999b579bc1141aa98c4b119841abcc1581f51eb530de5090"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-color.svg": {
+      "sha256": "51291b9e3d06ded2abb385c35a9c4aff7d6eb397d8649a9f55f5e6473b29d91d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-cursors.svg": {
+      "sha256": "e8a6119339eff09cec59e00560291bca8e4c6462c2e17079765d4e03ec8b3984"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-default-applications.svg": {
+      "sha256": "02e33f6b5d21ef33b12237291f046e77c889dbe49271a95a84c278a4540779b0"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-effects.svg": {
+      "sha256": "91efb5c3550bad30775bdf6c9ecb27c3ce5fab27c31c30f5b786cbdad0da7df5"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-emoticons.svg": {
+      "sha256": "09d2cee38736b1e9e27d2fe9795bde2eecf6d765ca5ac0c2db0372c5085433fc"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-feedback.svg": {
+      "sha256": "513988f01b8b77f136e17cad923e45547d87ea9c959c8c9c7a926567fe6c0727"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-filetype-association.svg": {
+      "sha256": "a2de9626a2b810635ece725ea7f3b109871c18ae0a04440536d32ac7ad744a9f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-font-installer.svg": {
+      "sha256": "01a7ea1e55a6ae5d36127c8329ddfe61f07146dbd977a077f4da917355ed5600"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-font.svg": {
+      "sha256": "01a7ea1e55a6ae5d36127c8329ddfe61f07146dbd977a077f4da917355ed5600"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-gaming.svg": {
+      "sha256": "d5697c0fb133e196964d617a2e694a2f4892ed6a379564acaa62b3b7edd48684"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-icons.svg": {
+      "sha256": "ddf516b4ab8bb633bbc9fa5d44ce47b8430093e9e1b8c0c36ff58e51afa70c79"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-keyboard.svg": {
+      "sha256": "f8d1f0a8897391a7b6190049f8e196fd7f23e493b8831957b8248937a9796c71"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-locale.svg": {
+      "sha256": "c8f9e19b6afd6f327b9a09b2368c51d56d25d7fb0bea6074f60f5295efdbb326"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-mouse.svg": {
+      "sha256": "94b841adbdad076616def40d84ce319381e3f03144f4bf69539d77944025a00e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-notification-bell.svg": {
+      "sha256": "8debd1981605c32f934c2b635bce4fb15ad53de6cf098d87fe066e38ae7ce4ab"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-tablet.svg": {
+      "sha256": "de1222bf3a2ab3dc8af992b9db5d991652cd491a62ef8d6f918254c86d78303f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-theme-applications.svg": {
+      "sha256": "434b566768e906a850eb73ea31fd83eeebb420a8916d14a18d9e523515e43dd5"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-theme-global.svg": {
+      "sha256": "d5463462fcf86ca7894cbce76d239fa484e873f5a9da6d36b73d761938953ff9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-theme-windowdecorations.svg": {
+      "sha256": "c4d3703df1d9c092ecb229c7afa339836872564f75559e98e21e923b303311e8"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-theme.svg": {
+      "sha256": "d5463462fcf86ca7894cbce76d239fa484e873f5a9da6d36b73d761938953ff9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-thunderbolt.svg": {
+      "sha256": "99a34e81a0aaf6695a0c1d3293cafdf53ee0085752d2cc5cf2073f269f82b622"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-touchpad.svg": {
+      "sha256": "2309d259bc74692ddbd79766565a04f13dc2f9ce04ef48f596b7ba655c9e45db"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-touchscreen.svg": {
+      "sha256": "6aacdf02bf777348e5e2f754c0d7183b57f4b1a06a69a65301698616a1aad7c9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-user-password.svg": {
+      "sha256": "648526f3f74cac1cbf95f26581ddf26945a132b04c4055702194c8d8a6b1bfea"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-desktop-virtual.svg": {
+      "sha256": "de1879ce4302c5ff4a8f634e052e2bd4bbb7ff3c211c23e8129f1fdaf919aa08"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-devices-printer.svg": {
+      "sha256": "2a023d3464e15d31c16aa2bb3e08c485d01b5e4095b80e7f1181697332a54388"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-kde-connect.svg": {
+      "sha256": "fad583a85de7f5a9d4c011f8fb326f83e15f67885f215d08592d610a9c854e02"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-other.svg": {
+      "sha256": "b81c7fd305f4c159de107de7a2897d4e689fe2baed7fee7e2847d16f644a00be"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-security-firewall.svg": {
+      "sha256": "f7302f2da1035a35e1bd9598029bd7ac16a983c0da8cdccf0feff44b5fff49c9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-system-bluetooth.svg": {
+      "sha256": "a62e5c1d86be916f8d3a588c79a9dedc1a98dfb70094277c2905ce1e01d9f5f6"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-system-login.svg": {
+      "sha256": "ce348e6276bbe7ee20dd80904090aef6870b5c9cb815733fd41eb2c6b7643152"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-system-network.svg": {
+      "sha256": "ea01222f7ab86e0d3456869330fa71ae65210372e275fb282160e73554958d00"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-system-power-management.svg": {
+      "sha256": "cc299db1942b24dc16af8afa9624c16a7ce6ebb4c786eec3032a9e1e77abee0d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-system-session-services.svg": {
+      "sha256": "a2de9626a2b810635ece725ea7f3b109871c18ae0a04440536d32ac7ad744a9f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-system-splash.svg": {
+      "sha256": "022f54d9307287ab1eaa03302df03b9fad77a71eb7b0f2a923b50bfb169c98db"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-system-tabbox.svg": {
+      "sha256": "26b09191e8a7fb23f3a43427d1cb2735d3b83187b529c5b9f12c684aec86a13f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-system-time.svg": {
+      "sha256": "7c0abac1a3f3f43ed237c67d95b13a44b0636f69875f5173c8bcf88e481ae15e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-system-users.svg": {
+      "sha256": "7528b11984ee8498903e208692ff901ffcfd2c9c38edc0aa1cd0ebdaaab380c1"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-system-windows-actions.svg": {
+      "sha256": "423e902194b383e33d15aefa29117ecbbf30ef1950206ed46ce36d3d4a74a511"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/preferences-system-windows.svg": {
+      "sha256": "423e902194b383e33d15aefa29117ecbbf30ef1950206ed46ce36d3d4a74a511"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/qemu.svg": {
+      "sha256": "819a1221e6390f598fce5c2e5f10c28558b54552301b381e27c03d386e3e1449"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/rocs.svg": {
+      "sha256": "ec8597baae136f3f4999f58ed2c4ba815588a1dbe5277f31a7023385ab2a1134"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/security-medium.svg": {
+      "sha256": "00eccdbd20d1179bb3b4acf5c769a8034a782431546e22f3e19cf811ad87a1c7"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/software-properties-mint.svg": {
+      "sha256": "29c83a671265fd6afce5548f47cc49c9968ff5f3e4eb50645d05dd9be195cfdc"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/spectacle.svg": {
+      "sha256": "31750114835307ca7842ecce69cf0133e90459bf879165e95cc92272422a078d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/steam.svg": {
+      "sha256": "e5ff86303c4e193bde8316926c060e864e48d5d72607d22e4295ad7193167c3a"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/steam_icon_8930.svg": {
+      "sha256": "9cf669eb3cd44498130287ebc8e5c2340043a8c57b4e8281617b4184a963405d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/step.svg": {
+      "sha256": "5b841463c24780017d6eb0eed2684db9be51284d98f32f8d3c50658f9f4ff2fc"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/sticky.svg": {
+      "sha256": "9411ee7f59fbe776ce4c50b1861bdd8206ab8586b559886610e6eaa514990636"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/sweeper.svg": {
+      "sha256": "a29e7dda12db019fc7b46d9f9fa3035ccf9e6e6a823a036f23076854f7b0ea8f"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/synapse.svg": {
+      "sha256": "b120963ea0d837a23007540ae6025465f0481a3fb05d6c310af2a1376c3ed82d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/system-log-out.svg": {
+      "sha256": "8ff23ae95564f3c1f64c46687b493aa6c7ab7eef5873f547240170729ba8d80c"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/system-software-update.svg": {
+      "sha256": "dba31e97e1d876bce76ffa785af6cd9bf2fffa6d6ca09a28a4b0c2688019505e"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/system-users.svg": {
+      "sha256": "7528b11984ee8498903e208692ff901ffcfd2c9c38edc0aa1cd0ebdaaab380c1"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/thingy.svg": {
+      "sha256": "9f667f6f54720a14af6839e5944cfcc31716dc9124f82e763f76c4208b0985a4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/thunderbird.svg": {
+      "sha256": "f3b2623c927b2c5086b4ffa9a05b36f4e7c66d4e72d283fcf6dd17ea15798a32"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/tilda.svg": {
+      "sha256": "f67a1fafbe1a5c5eb626f259fdd3538782d1c3d8ff3d49f06c386de7735ee7d0"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/timeshift.svg": {
+      "sha256": "bf79ec5836ded52591f1dd34225ddcdcf69eaa4bbbe2e63de32be2470e3b41e7"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/transmission.svg": {
+      "sha256": "0ef9233322a1a431976f381b9508bbae4a64bdc3823182a1cbf4c12f78852e04"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/umbrello.svg": {
+      "sha256": "046e155414db473b855c120d9b777d42f55feb68d65cf4aaf0a35e939d5e3cb2"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/utilities-log-viewer.svg": {
+      "sha256": "fc58d19677f956034658cdfca49437f76a89fdd39a0759948ff78dd23d9c869c"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/virtualbox.svg": {
+      "sha256": "2c8c57a99b1bb45334fb998a9813403228bf430f43513d8ac58d8eac4256cc29"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/vlc.svg": {
+      "sha256": "765da807a99122b43cfa8e36bab1b616f72a14e901ca41c0044302657cca1944"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/webapp-manager.svg": {
+      "sha256": "050c93f8c3dd1d4b9b22dbfbc1a493798bbd10961fec85dbdee669849fefc9b9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/xorg.svg": {
+      "sha256": "35d6bf3f5f0061fbdb3df42ef0b47dd953e16f016f646446791c99b64b4546e4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/xreader.svg": {
+      "sha256": "19904e28f7d778b5103dc474b93eaed7d6a514665f72c51be1bb4bebbb914c8c"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/apps/xviewer.svg": {
+      "sha256": "1bae366b7ebee2a5e95939e6ded6f161d987eec7c2dfa1e005941b0509abf169"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/devices/audio-card.svg": {
+      "sha256": "19b7864b0f113ee8542f635a4507815cb12ffab155a27cc68e6fdd3d89342ec9"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/devices/audio-headphones.svg": {
+      "sha256": "6f59533e0f32debb5704163f09cc1d4ba58a99e212a5f12a96a059d24a451218"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/devices/audio-speakers.svg": {
+      "sha256": "001327f9053e6b3ced5eab8e4e42c7a7c7229d1173294f8a861013a44c5505f4"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/devices/computer-laptop.svg": {
+      "sha256": "68f8157644d8949247e71ac13b66ef62289d002232d652d69a6b4702ab0ed901"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/devices/media-flash-sd-mmc.svg": {
+      "sha256": "d062e1fa9a58acc0529d2ba110a11aaca9c93734c1da753ab714a6439c0765ff"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/devices/network-wired.svg": {
+      "sha256": "ea01222f7ab86e0d3456869330fa71ae65210372e275fb282160e73554958d00"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/mimetypes/application-x-zerosize.svg": {
+      "sha256": "281be682862a4b266c519ca9bfd4bdf41ba41461a4a40d89e98e4724ac1ee002"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/places/folder-cloud.svg": {
+      "sha256": "c100ad45b5702d7c0bfe587f7ee3113d77cef2ec54af046a64c78103e5e6ef7d"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/places/folder-development.svg": {
+      "sha256": "f59b8da23568b48f6dd8d357d49cd0d7144fa1f80c18d156d484432316d01317"
+    },
+    "companions/icons/GNU-Darwin Aqua icons/scalable/places/folder-locked.svg": {
+      "sha256": "fed2dde8f538736b74d8759f6fe5ddcbc91b5791b6efe3ca083e4bf139a5b8a8"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "GNU-Darwin Aqua",
+  "source": {
+    "url": "https://media.512pixels.net/downloads/macos-wallpapers-6k/10-6-6k.jpg",
+    "path": "source/10-6-6k.jpg",
+    "sha256": "38c0966e16ac12c2b461fdf80538649fcc42260bbad03b9b329796a62dfdf0d6",
+    "dimensions": [
+      6016,
+      3760
+    ],
+    "preserved_byte_identical": true
+  },
+  "transform": {
+    "output": "wallpaper.png",
+    "dimensions": [
+      2880,
+      1800
+    ],
+    "crop_box": [
+      0.0,
+      0.0,
+      6016.0,
+      3760.0
+    ],
+    "scale": 0.4787234042553192,
+    "resampling": "Pillow LANCZOS",
+    "color_adjustment": false,
+    "branding_overlay": false
+  },
+  "rights": "Wallpaper remains third-party Apple artwork used for the requested local personal desktop. No public redistribution license is asserted; release packaging must account for this asset separately.",
+  "record_scope": "Historical source provenance excerpt for the two shipped artwork files. Dock refinement did not modify these images.",
+  "source_record_design_sha256": "9d5a845b7e48c3759c8738fd85bd543735afc0bc5bb60768d9ddc0d1378c8e41",
+  "period_marks": {
+    "menu-logo.png": {
+      "source": "source/period-apple.png",
+      "source_sha256": "7fdcd3421ff7e42d8253d8b17edc8fe41b703d511fc395fee51d3eec888e89d8",
+      "alpha_preserved": true,
+      "design_ink": "#1C1C1C",
+      "transform": "source alpha retained",
+      "provenance": "B00merang-Artwork/Mac-OS-X-Lion at 42c0ade506b5f2a0aff90d23a38543ffa1614a58; source reproduction, not authenticated Apple-original resource"
+    }
+  },
+  "files": {
+    "wallpaper.png": {
+      "sha256": "e90cf3659735c402eb75ab15769eba5037b940f64a9a8db6f15e9db7aa4d3ee8",
+      "size": [
+        2880,
+        1800
+      ]
+    },
+    "menu-logo.png": {
+      "sha256": "ff45ddb25cb717e4b1dabb99ea4f6e22dff1fac694b1e7b09b4d953343f79a34",
+      "size": [
+        128,
+        128
+      ]
+    }
+  }
+}

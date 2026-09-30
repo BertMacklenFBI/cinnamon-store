@@ -1,0 +1,178 @@
+{
+  "schema": 1,
+  "uuid": "snow-leopard-dock@desktop-theme-studio",
+  "design_sha256": "7a651a5161e05fa4239c338091346f10bccd73cb0e558fa8f4aaa8c802ed925f",
+  "theme_name": "GNU-Darwin Aqua",
+  "target": {
+    "applet_uuid": "grouped-window-list@cinnamon.org",
+    "instance_id": 16,
+    "panel_id": 2
+  },
+  "geometry": {
+    "panel_height": 22,
+    "panel_position": "panel1 top; panel2 bottom",
+    "panel_groups": "panel1:left exact le cinabon menu; panel1:right compact monochrome status and calendar. panel2:center grouped-window-list only; no center clock island.",
+    "app_radius": 5,
+    "widget_radius": 4,
+    "spacing": [
+      3,
+      6,
+      9,
+      12,
+      18
+    ],
+    "cursor_size": 24,
+    "bottom_panel_height": 84,
+    "geometry_note": "All sizes are Cinnamon logical pixels. 22px top panel and titlebar, 22px controls, 16px status icons; 84px transparent bottom actor with 64px dock icon canvases at 66px center pitch and a 52px perspective shelf at its base; icon baseline 20px above screen bottom; mirror visible 18px below baseline. Traffic lights use 4px top inset. Verify actual rendered native-scale geometry; inherited GTK/CSD padding must not inflate the titlebar.",
+    "composition": "A slim continuous gray menu/status bar frames the archived purple aurora. White file panes sit beside pale blue-gray sidebars under unified gray titlebar/toolbars, with no texture or pinstripes. Centered regular-weight titles accompany three tiny bright circular controls at the left. The dock is a centered trapezoidal glass shelf under colorful free-standing icons, with a narrow front lip, actual vertically mirrored icon reflections and small luminous blue-white round running indicators; a segmented perspective separator precedes the document/trash endcap. Its surrounding full-width actor is transparent. Popovers and dialogs remain light and compact.",
+    "top_icon_size": 16,
+    "dock_icon_size": 64,
+    "button_layout": "close,minimize,maximize:",
+    "titlebar_height": 22,
+    "control_height": 22,
+    "dock_radius": 2,
+    "traffic_light_diameter": 13,
+    "traffic_light_spacing": 7,
+    "traffic_light_left_inset": 8,
+    "traffic_light_top_inset": 4,
+    "sidebar_width": 135,
+    "dock_shelf_height": 52,
+    "dock_front_lip_height": 3,
+    "dock_perspective_inset": 28,
+    "dock_icon_gap": 2,
+    "dock_padding_horizontal": 32,
+    "dock_icon_baseline_from_bottom": 20,
+    "dock_reflection_height": 18,
+    "dock_indicator_center_from_bottom": 8,
+    "dock_indicator_core_width": 8,
+    "dock_indicator_core_height": 4,
+    "dock_indicator_halo_width": 20,
+    "dock_indicator_halo_height": 12,
+    "dock_separator_width": 32
+  },
+  "materials": {
+    "status": "Design target; acceptance requires fresh runtime evidence, not static CSS presence.",
+    "icon_source": "Clone or render the same icon artwork actually displayed by each launcher/window group; preserve original artwork alpha and update both main icon and reflection together.",
+    "reflection": {
+      "transform": "vertical flip of full-size 64px icon at native width; no vertical compression",
+      "visible_height": 18,
+      "peak_opacity": 0.3,
+      "opacity_confidence": "Visual estimate from composited screenshot, not an extracted original opacity value.",
+      "fade": "linear alpha ramp from 0.30 at the icon baseline to 0 at 18px; preserve source alpha; the front lip may occlude the final pixel",
+      "interactive": false,
+      "clip": "Below icon baseline and inside the glass-plane polygon; never paint a second click target."
+    },
+    "running_indicator": {
+      "shape": "elliptical luminous round dot",
+      "core_color": "#FDFEFF",
+      "shoulder_color": "#D3EDFE",
+      "halo_color": "#92B6E0",
+      "core_width": 8,
+      "core_height": 4,
+      "halo_width": 20,
+      "halo_height": 12,
+      "center_from_bottom": 8,
+      "placement": "Center beneath each running application icon; draw above its reflection; absent for nonrunning favorites and nonapplication endcaps.",
+      "count_rule": "One light per running application group, not one per window.",
+      "interactive": false
+    },
+    "separator": {
+      "kind": "segmented perspective glass rail",
+      "slot_width": 32,
+      "rear_width": 8,
+      "front_width": 24,
+      "bands_from_actor_top": [
+        [
+          35,
+          37
+        ],
+        [
+          38,
+          40
+        ],
+        [
+          41,
+          43
+        ],
+        [
+          45,
+          47
+        ],
+        [
+          49,
+          52
+        ],
+        [
+          55,
+          58
+        ],
+        [
+          62,
+          66
+        ],
+        [
+          71,
+          77
+        ]
+      ],
+      "band_note": "Half-open logical-pixel intervals translated from visible source bands; widening toward viewer.",
+      "fill": "Pale neutral highlight at approximately 0.28 alpha; tune against reference composite; do not use an upright dark divider.",
+      "placement": "Between application groups and the document/trash endcap; no duplicate separator when endcap is empty."
+    },
+    "magnification": {
+      "enabled_by_default": false,
+      "optional_max_scale": 1.6,
+      "optional_curve": "If implemented, smooth raised cosine versus horizontal pointer distance over two icon pitches, scale returns to1 beyond influence radius.",
+      "evidence": "The reference screenshot is idle; it does not establish the source magnification preference, maximum size, timing or distance curve. Optional magnification must have independent interaction evidence and must update icon/reflection together."
+    },
+    "layout_scaling": {
+      "base_icon_canvas": 64,
+      "factor": "s = configured icon canvas / 64; scale all dock metrics together, then round consistently to device pixels.",
+      "unmagnified_actor_height": "84*s",
+      "icon_center_pitch": "66*s",
+      "baseline_from_bottom": "20*s",
+      "shelf_height": "52*s",
+      "front_lip_height": "3*s",
+      "perspective_inset": "28*s",
+      "horizontal_padding": "32*s each side",
+      "separator_slot_width": "32*s",
+      "ideal_outer_width": "2*32*s + icon_count*64*s + max(0,icon_count-1)*2*s + (32*s when endcap separator exists)",
+      "overflow": "If the complete favorite/running/endcap row exceeds monitor width, apply one uniform scale to icon and shelf geometry; preserve order and center alignment, never remove favorites."
+    },
+    "glass_plane": {
+      "fill": "#FFFFFF",
+      "alpha_stops": [
+        [
+          0.0,
+          0.35
+        ],
+        [
+          0.35,
+          0.46
+        ],
+        [
+          0.5,
+          0.38
+        ],
+        [
+          1.0,
+          0.43
+        ]
+      ],
+      "stop_axis": "0 at rear edge,1 at front edge",
+      "opacity_confidence": "Estimated white-overlay fit from nearby outside/inside screenshot pixels; typical fitted alpha0.39-0.46; original compositing unknown. Tune against full reference at matching wallpaper coordinates.",
+      "rear_edge": "fine diffuse highlight; avoid heavy opaque outline",
+      "front_seam": {
+        "height": 1,
+        "fill": "#000000",
+        "alpha": 0.3
+      },
+      "front_bevel": {
+        "height": 2,
+        "fill": "#FFFFFF",
+        "alpha": 0.76
+      },
+      "clip": "All plane layers stay inside the perspective polygon; width follows the icon row."
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "uuid": "snow-leopard-dock@desktop-theme-studio",
+  "name": "GNU-Darwin Aqua dock",
+  "description": "Measured Snow Leopard dock rendering around the existing grouped window list, with real icon reflections and a Trash endcap.",
+  "version": 1,
+  "cinnamon-version": ["6.6"],
+  "max-instances": 1
+}

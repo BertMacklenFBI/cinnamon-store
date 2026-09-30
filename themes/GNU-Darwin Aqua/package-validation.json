@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "package": "themes/GNU-Darwin Aqua",
+  "theme_name": "GNU-Darwin Aqua",
+  "status": "PASS",
+  "errors": [],
+  "warnings": [
+    {
+      "code": "icon-size",
+      "detail": "Icon convention is256x256; actual [128, 128]"
+    },
+    {
+      "code": "spices-all-name",
+      "detail": "Upstream validate-spice --all rejects whitespace paths; per-theme validation accepts this exact Cinnamon name. A future upstream submission needs a separately reconciled directory naming decision."
+    }
+  ],
+  "external_dependencies": [
+    [
+      "cursor-theme",
+      "bibata-modern-classic"
+    ],
+    [
+      "font",
+      "liberation mono"
+    ],
+    [
+      "font",
+      "lucida grande"
+    ],
+    [
+      "gtk-engine",
+      "murrine"
+    ],
+    [
+      "icon-theme",
+      "gnu-darwin aqua icons"
+    ],
+    [
+      "icon-theme",
+      "hicolor"
+    ],
+    [
+      "icon-theme",
+      "papirus"
+    ]
+  ],
+  "payload_fingerprint": "0b3ad4b98fed550f65a3290af5d1b03e053512a2584bac4f3a5c6ad19eb0d2f0",
+  "scope": "Packaging/static asset closure only; native/release/workstation/root acceptance remains separate.",
+  "reference_count": 347,
+  "additional_companions_verified": "874-file payload manifest and 7 installer fixtures"
+}
