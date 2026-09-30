@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Part of the Pixelcart theme. SPDX-License-Identifier: GPL-3.0-or-later -->
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="200" viewBox="0 0 36 200" shape-rendering="crispEdges">
+  <rect x="0" y="0" width="36" height="2" fill="#FFF1E8"/>
+  <rect x="0" y="2" width="2" height="198" fill="#FFF1E8"/>
+  <rect x="2" y="2" width="34" height="90" fill="#7E2553"/>
+  <rect x="2" y="92" width="14" height="6" fill="#7E2553"/>
+  <rect x="16" y="92" width="4" height="16" fill="#FFF1E8"/>
+  <rect x="20" y="92" width="16" height="6" fill="#7E2553"/>
+  <rect x="2" y="98" width="8" height="100" fill="#7E2553"/>
+  <rect x="10" y="98" width="6" height="4" fill="#FFF1E8"/>
+  <rect x="20" y="98" width="6" height="4" fill="#FFF1E8"/>
+  <rect x="26" y="98" width="10" height="100" fill="#7E2553"/>
+  <rect x="10" y="102" width="6" height="96" fill="#7E2553"/>
+  <rect x="20" y="102" width="6" height="96" fill="#7E2553"/>
+  <rect x="16" y="108" width="4" height="90" fill="#7E2553"/>
+  <rect x="2" y="198" width="34" height="2" fill="#FFF1E8"/>
+</svg>

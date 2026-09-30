@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Part of the Pixelcart theme. SPDX-License-Identifier: GPL-3.0-or-later -->
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="104" viewBox="0 0 104 104" shape-rendering="crispEdges">
+  <rect x="44" y="0" width="16" height="12" fill="#FFF1E8"/>
+  <rect x="32" y="4" width="12" height="8" fill="#FFF1E8"/>
+  <rect x="60" y="4" width="12" height="8" fill="#FFF1E8"/>
+  <rect x="24" y="8" width="8" height="8" fill="#FFF1E8"/>
+  <rect x="72" y="8" width="8" height="8" fill="#FFF1E8"/>
+  <rect x="20" y="12" width="4" height="12" fill="#FFF1E8"/>
+  <rect x="32" y="12" width="4" height="4" fill="#FFF1E8"/>
+  <rect x="36" y="12" width="32" height="80" fill="#29ADFF"/>
+  <rect x="68" y="12" width="4" height="4" fill="#FFF1E8"/>
+  <rect x="80" y="12" width="4" height="12" fill="#FFF1E8"/>
+  <rect x="16" y="16" width="4" height="12" fill="#FFF1E8"/>
+  <rect x="24" y="16" width="4" height="4" fill="#FFF1E8"/>
+  <rect x="28" y="16" width="8" height="72" fill="#29ADFF"/>
+  <rect x="68" y="16" width="8" height="72" fill="#29ADFF"/>
+  <rect x="76" y="16" width="4" height="4" fill="#FFF1E8"/>
+  <rect x="84" y="16" width="4" height="12" fill="#FFF1E8"/>
+  <rect x="12" y="20" width="4" height="16" fill="#FFF1E8"/>
+  <rect x="24" y="20" width="4" height="64" fill="#29ADFF"/>
+  <rect x="76" y="20" width="4" height="64" fill="#29ADFF"/>
+  <rect x="88" y="20" width="4" height="16" fill="#FFF1E8"/>
+  <rect x="8" y="24" width="4" height="56" fill="#FFF1E8"/>
+  <rect x="20" y="24" width="4" height="56" fill="#29ADFF"/>
+  <rect x="80" y="24" width="4" height="56" fill="#29ADFF"/>
+  <rect x="92" y="24" width="4" height="56" fill="#FFF1E8"/>
+  <rect x="16" y="28" width="4" height="48" fill="#29ADFF"/>
+  <rect x="84" y="28" width="4" height="48" fill="#29ADFF"/>
+  <rect x="4" y="32" width="4" height="40" fill="#FFF1E8"/>
+  <rect x="96" y="32" width="4" height="40" fill="#FFF1E8"/>
+  <rect x="12" y="36" width="4" height="32" fill="#29ADFF"/>
+  <rect x="88" y="36" width="4" height="32" fill="#29ADFF"/>
+  <rect x="0" y="44" width="4" height="16" fill="#FFF1E8"/>
+  <rect x="100" y="44" width="4" height="16" fill="#FFF1E8"/>
+  <rect x="12" y="68" width="4" height="16" fill="#FFF1E8"/>
+  <rect x="88" y="68" width="4" height="16" fill="#FFF1E8"/>
+  <rect x="16" y="76" width="4" height="12" fill="#FFF1E8"/>
+  <rect x="84" y="76" width="4" height="12" fill="#FFF1E8"/>
+  <rect x="20" y="80" width="4" height="12" fill="#FFF1E8"/>
+  <rect x="80" y="80" width="4" height="12" fill="#FFF1E8"/>
+  <rect x="24" y="84" width="4" height="12" fill="#FFF1E8"/>
+  <rect x="76" y="84" width="4" height="12" fill="#FFF1E8"/>
+  <rect x="28" y="88" width="8" height="8" fill="#FFF1E8"/>
+  <rect x="68" y="88" width="8" height="8" fill="#FFF1E8"/>
+  <rect x="36" y="92" width="32" height="8" fill="#FFF1E8"/>
+  <rect x="32" y="96" width="4" height="4" fill="#FFF1E8"/>
+  <rect x="68" y="96" width="4" height="4" fill="#FFF1E8"/>
+  <rect x="44" y="100" width="16" height="4" fill="#FFF1E8"/>
+</svg>

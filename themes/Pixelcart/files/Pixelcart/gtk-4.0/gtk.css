@@ -1,0 +1,4357 @@
+/*
+ * Pixelcart - GTK 4 theme
+ * Part of the Pixelcart theme for the Cinnamon desktop.
+ * A dark, 8-bit fantasy-console look: square corners, 2px borders,
+ * hard offset shadows, instant state changes.
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/*
+ * Palette legend (the sixteen fantasy-console colours)
+ *
+ *   black    #000000    red      #FF004D
+ *   navy     #1D2B53    orange   #FFA300
+ *   plum     #7E2553    yellow   #FFEC27
+ *   forest   #008751    green    #00E436
+ *   brown    #AB5236    blue     #29ADFF
+ *   slate    #5F574F    lavender #83769C
+ *   silver   #C2C3C7    white    #FFF1E8
+ *   pink     #FF77A8    peach    #FFCCAA
+ *
+ * Roles: navy = window surfaces and bars, black = views / title bars / troughs,
+ * white = text, silver = strong border, slate = standard border,
+ * plum = hover, blue = selected / checked, yellow = keyboard focus,
+ * green = suggested / progress, red = destructive / error,
+ * orange = warning, lavender = disabled text and borders, backdrop titles.
+ * Text on red, blue, green, orange and yellow is always black.
+ */
+
+
+/* ==========================================================================
+   1. Colour definitions
+   Literal colour values appear only in this section.
+   ========================================================================== */
+
+/* 1.1 Palette */
+@define-color pc_black #000000;
+@define-color pc_navy #1D2B53;
+@define-color pc_plum #7E2553;
+@define-color pc_forest #008751;
+@define-color pc_brown #AB5236;
+@define-color pc_slate #5F574F;
+@define-color pc_silver #C2C3C7;
+@define-color pc_white #FFF1E8;
+@define-color pc_red #FF004D;
+@define-color pc_orange #FFA300;
+@define-color pc_yellow #FFEC27;
+@define-color pc_green #00E436;
+@define-color pc_blue #29ADFF;
+@define-color pc_lavender #83769C;
+@define-color pc_pink #FF77A8;
+@define-color pc_peach #FFCCAA;
+
+/* 1.2 Scrims and drop shadows (black with alpha, the only blended values) */
+@define-color pc_shadow rgba(0, 0, 0, 0.5);
+@define-color pc_scrim rgba(0, 0, 0, 0.7);
+
+/* 1.3 Pixelcart roles */
+@define-color pc_border @pc_slate;
+@define-color pc_border_strong @pc_silver;
+@define-color pc_border_disabled @pc_lavender;
+@define-color pc_hover_bg @pc_plum;
+@define-color pc_hover_fg @pc_white;
+@define-color pc_focus @pc_yellow;
+@define-color pc_link @pc_blue;
+@define-color pc_link_visited @pc_pink;
+@define-color pc_trough @pc_black;
+@define-color pc_handle @pc_silver;
+@define-color pc_backdrop_selected_bg @pc_lavender;
+@define-color pc_backdrop_selected_fg @pc_black;
+
+/* 1.4 Standard GTK named colours */
+@define-color theme_bg_color @pc_navy;
+@define-color theme_fg_color @pc_white;
+@define-color theme_base_color @pc_black;
+@define-color theme_text_color @pc_white;
+@define-color theme_selected_bg_color @pc_blue;
+@define-color theme_selected_fg_color @pc_black;
+@define-color insensitive_bg_color @pc_navy;
+@define-color insensitive_fg_color @pc_lavender;
+@define-color insensitive_base_color @pc_navy;
+@define-color theme_unfocused_bg_color @pc_navy;
+@define-color theme_unfocused_fg_color @pc_white;
+@define-color theme_unfocused_base_color @pc_black;
+@define-color theme_unfocused_text_color @pc_white;
+@define-color theme_unfocused_selected_bg_color @pc_lavender;
+@define-color theme_unfocused_selected_fg_color @pc_black;
+@define-color unfocused_insensitive_color @pc_lavender;
+@define-color borders @pc_slate;
+@define-color unfocused_borders @pc_slate;
+@define-color warning_color @pc_orange;
+@define-color error_color @pc_red;
+@define-color success_color @pc_green;
+@define-color destructive_color @pc_red;
+@define-color placeholder_text_color @pc_lavender;
+@define-color link_color @pc_blue;
+@define-color visited_link_color @pc_pink;
+@define-color content_view_bg @pc_black;
+@define-color text_view_bg @pc_black;
+@define-color wm_title @pc_white;
+@define-color wm_unfocused_title @pc_lavender;
+@define-color wm_bg @pc_black;
+@define-color wm_unfocused_bg @pc_navy;
+@define-color wm_highlight @pc_black;
+@define-color wm_borders_edge @pc_silver;
+
+/* 1.5 Named colours used by newer GTK 4 applications */
+@define-color accent_color @pc_blue;
+@define-color accent_bg_color @pc_blue;
+@define-color accent_fg_color @pc_black;
+@define-color destructive_bg_color @pc_red;
+@define-color destructive_fg_color @pc_black;
+@define-color success_bg_color @pc_green;
+@define-color success_fg_color @pc_black;
+@define-color warning_bg_color @pc_orange;
+@define-color warning_fg_color @pc_black;
+@define-color error_bg_color @pc_red;
+@define-color error_fg_color @pc_black;
+@define-color window_bg_color @pc_navy;
+@define-color window_fg_color @pc_white;
+@define-color view_bg_color @pc_black;
+@define-color view_fg_color @pc_white;
+@define-color headerbar_bg_color @pc_black;
+@define-color headerbar_fg_color @pc_white;
+@define-color headerbar_border_color @pc_silver;
+@define-color headerbar_backdrop_color @pc_navy;
+@define-color headerbar_shade_color @pc_black;
+@define-color headerbar_darker_shade_color @pc_black;
+@define-color sidebar_bg_color @pc_navy;
+@define-color sidebar_fg_color @pc_white;
+@define-color sidebar_backdrop_color @pc_navy;
+@define-color sidebar_border_color @pc_slate;
+@define-color sidebar_shade_color @pc_black;
+@define-color secondary_sidebar_bg_color @pc_navy;
+@define-color secondary_sidebar_fg_color @pc_white;
+@define-color secondary_sidebar_backdrop_color @pc_navy;
+@define-color secondary_sidebar_border_color @pc_slate;
+@define-color secondary_sidebar_shade_color @pc_black;
+@define-color card_bg_color @pc_black;
+@define-color card_fg_color @pc_white;
+@define-color card_shade_color @pc_slate;
+@define-color dialog_bg_color @pc_navy;
+@define-color dialog_fg_color @pc_white;
+@define-color popover_bg_color @pc_navy;
+@define-color popover_fg_color @pc_white;
+@define-color popover_shade_color @pc_black;
+@define-color thumbnail_bg_color @pc_black;
+@define-color thumbnail_fg_color @pc_white;
+@define-color shade_color @pc_black;
+@define-color scrollbar_outline_color @pc_slate;
+
+
+/* ==========================================================================
+   2. Base
+   ========================================================================== */
+
+* {
+  outline: 0 solid transparent;
+  outline-offset: 0;
+  -gtk-icon-size: 16px;
+}
+
+/* Keyboard focus: a hard yellow 2px frame drawn just inside the widget.
+   :focus limits it to the focused widget itself, not its ancestors. */
+*:focus:focus-visible {
+  outline: 2px solid @pc_focus;
+  outline-offset: -2px;
+}
+
+/* Containers and text surfaces never take the frame themselves. */
+window:focus:focus-visible,
+popover:focus:focus-visible,
+textview:focus:focus-visible,
+textview > text:focus:focus-visible,
+entry > text:focus:focus-visible,
+spinbutton > text:focus:focus-visible,
+editablelabel > stack > text:focus:focus-visible,
+label:focus:focus-visible,
+scrolledwindow:focus:focus-visible,
+viewport:focus:focus-visible,
+listview:focus:focus-visible,
+gridview:focus:focus-visible,
+columnview:focus:focus-visible,
+list:focus:focus-visible,
+notebook:focus:focus-visible,
+stack:focus:focus-visible {
+  outline: 0 solid transparent;
+}
+
+.background {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+:disabled {
+  color: @insensitive_fg_color;
+}
+
+image:disabled,
+picture:disabled {
+  -gtk-icon-style: symbolic;
+}
+
+selection {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+:backdrop selection {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+}
+
+.large-icons {
+  -gtk-icon-size: 32px;
+}
+
+.normal-icons {
+  -gtk-icon-size: 16px;
+}
+
+.lowres-icon {
+  -gtk-icon-shadow: none;
+}
+
+
+/* ==========================================================================
+   3. Typography helpers
+   No font family is ever set; the user's chosen fonts are respected.
+   The .monospace class is therefore left to the application's own font.
+   ========================================================================== */
+
+label {
+  caret-color: @pc_white;
+}
+
+label:disabled {
+  color: @insensitive_fg_color;
+}
+
+label > selection {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.title,
+.heading {
+  font-weight: bold;
+}
+
+.title-1 {
+  font-weight: bold;
+  font-size: 200%;
+}
+
+.title-2 {
+  font-weight: bold;
+  font-size: 160%;
+}
+
+.title-3 {
+  font-weight: bold;
+  font-size: 140%;
+}
+
+.title-4 {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.large-title {
+  font-weight: bold;
+  font-size: 240%;
+}
+
+.subtitle,
+.caption {
+  font-size: 90%;
+}
+
+.caption-heading {
+  font-size: 90%;
+  font-weight: bold;
+}
+
+.body {
+  font-weight: normal;
+}
+
+.dim-label,
+.subtitle {
+  color: @pc_silver;
+}
+
+.dim-label:disabled,
+.subtitle:disabled {
+  color: @insensitive_fg_color;
+}
+
+.numeric {
+  font-feature-settings: "tnum";
+}
+
+.accent {
+  color: @accent_color;
+}
+
+.success {
+  color: @success_color;
+}
+
+.warning {
+  color: @warning_color;
+}
+
+/* Red text on navy is too faint to read, so error text uses pink. */
+.error {
+  color: @pc_pink;
+}
+
+/* Links */
+link,
+button.link,
+button.link > label {
+  color: @pc_link;
+  text-decoration: underline;
+}
+
+link:visited,
+button.link:visited,
+button.link:visited > label {
+  color: @pc_link_visited;
+}
+
+link:hover,
+button.link:hover > label {
+  color: @pc_white;
+}
+
+link:disabled,
+button.link:disabled > label {
+  color: @insensitive_fg_color;
+}
+
+:selected link,
+:selected link:visited {
+  color: @pc_black;
+}
+
+
+/* ==========================================================================
+   4. Windows and client-side decorations
+   ========================================================================== */
+
+window {
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+}
+
+window.csd {
+  border: 2px solid @pc_border_strong;
+  box-shadow: 4px 4px 0 0 @pc_shadow;
+}
+
+window.csd:backdrop {
+  border-color: @pc_border;
+  box-shadow: 4px 4px 0 0 transparent;
+}
+
+window.solid-csd {
+  border: 2px solid @pc_border_strong;
+  box-shadow: none;
+}
+
+window.solid-csd:backdrop {
+  border-color: @pc_border;
+}
+
+window.csd.maximized,
+window.csd.fullscreen,
+window.solid-csd.maximized,
+window.solid-csd.fullscreen {
+  border-width: 0;
+  box-shadow: none;
+}
+
+window.csd.tiled,
+window.csd.tiled-top,
+window.csd.tiled-right,
+window.csd.tiled-bottom,
+window.csd.tiled-left {
+  box-shadow: none;
+}
+
+window.popup,
+window.csd.popup {
+  border: 2px solid @pc_border_strong;
+  box-shadow: none;
+}
+
+window.dialog.csd {
+  border-color: @pc_border_strong;
+}
+
+/* Drag-and-drop icon windows */
+window.dnd,
+.dnd {
+  background-color: @pc_navy;
+  color: @pc_white;
+  border: 2px solid @pc_border_strong;
+  box-shadow: 4px 4px 0 0 @pc_shadow;
+}
+
+dnd {
+  color: @pc_white;
+}
+
+
+/* ==========================================================================
+   5. Header bars and window controls
+   ========================================================================== */
+
+headerbar {
+  min-height: 40px;
+  padding: 0 6px;
+  background-color: @headerbar_bg_color;
+  color: @headerbar_fg_color;
+  border-bottom: 2px solid @pc_border;
+}
+
+headerbar:backdrop {
+  background-color: @headerbar_backdrop_color;
+  color: @pc_lavender;
+  border-bottom-color: @pc_border;
+}
+
+/* A header bar used as the window's title bar gets the blue accent rule. */
+headerbar.titlebar,
+.titlebar:not(headerbar) > headerbar {
+  border-bottom-color: @accent_bg_color;
+}
+
+headerbar.titlebar:backdrop,
+.titlebar:not(headerbar) > headerbar:backdrop {
+  border-bottom-color: @pc_border;
+}
+
+headerbar > windowhandle > box {
+  padding: 4px 0;
+}
+
+headerbar > windowhandle > box > box.start,
+headerbar > windowhandle > box > box.end {
+  border-spacing: 6px;
+}
+
+headerbar > windowhandle > box > box.start {
+  margin-right: 6px;
+}
+
+headerbar > windowhandle > box > box.end {
+  margin-left: 6px;
+}
+
+headerbar .title {
+  padding: 0 12px;
+  font-weight: bold;
+  color: @pc_white;
+}
+
+headerbar .subtitle {
+  padding: 0 12px;
+  font-size: 90%;
+  color: @pc_silver;
+}
+
+headerbar:backdrop .title,
+headerbar:backdrop .subtitle {
+  color: @pc_lavender;
+}
+
+headerbar.default-decoration {
+  min-height: 28px;
+  padding: 0 4px;
+}
+
+headerbar.default-decoration > windowhandle > box {
+  padding: 2px 0;
+}
+
+headerbar separator {
+  background-color: @pc_border;
+}
+
+/* Buttons on an inactive title bar follow its lavender text. */
+headerbar:backdrop button {
+  color: @pc_lavender;
+  border-color: @pc_border;
+}
+
+headerbar:backdrop button.flat,
+headerbar:backdrop menubutton.flat > button {
+  border-color: transparent;
+}
+
+headerbar:backdrop button:checked {
+  color: @pc_backdrop_selected_fg;
+}
+
+headerbar:backdrop button.suggested-action,
+headerbar:backdrop button.destructive-action {
+  background-color: @headerbar_backdrop_color;
+  color: @pc_lavender;
+}
+
+.titlebar:not(headerbar) {
+  background-color: @headerbar_bg_color;
+  color: @headerbar_fg_color;
+}
+
+.titlebar:not(headerbar):backdrop {
+  background-color: @headerbar_backdrop_color;
+  color: @pc_lavender;
+}
+
+window.devel headerbar {
+  border-bottom-color: @pc_orange;
+}
+
+/* Window controls: the themed icon is hidden and replaced by pixel glyphs.
+   Idle buttons are bare glyphs on the bar; hover is plum, pressed is blue
+   with a black glyph. Close is red with a black glyph when hovered or
+   pressed. */
+windowcontrols {
+  border-spacing: 6px;
+}
+
+windowcontrols > button {
+  min-width: 20px;
+  min-height: 20px;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border: 2px solid transparent;
+  box-shadow: none;
+}
+
+windowcontrols > button > image {
+  opacity: 0;
+}
+
+windowcontrols > icon {
+  margin: 0 4px;
+}
+
+windowcontrols > button.close {
+  background-image: -gtk-scaled(url("assets/titlebutton-close.svg"),
+                                url("assets/titlebutton-close-2x.svg"));
+}
+
+windowcontrols > button.maximize {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize.svg"),
+                                url("assets/titlebutton-maximize-2x.svg"));
+}
+
+window.maximized windowcontrols > button.maximize {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore.svg"),
+                                url("assets/titlebutton-restore-2x.svg"));
+}
+
+windowcontrols > button.minimize {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize.svg"),
+                                url("assets/titlebutton-minimize-2x.svg"));
+}
+
+windowcontrols > button:backdrop {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+windowcontrols > button.close:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop.svg"),
+                                url("assets/titlebutton-close-backdrop-2x.svg"));
+}
+
+windowcontrols > button.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop.svg"),
+                                url("assets/titlebutton-maximize-backdrop-2x.svg"));
+}
+
+window.maximized windowcontrols > button.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop.svg"),
+                                url("assets/titlebutton-restore-backdrop-2x.svg"));
+}
+
+windowcontrols > button.minimize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop.svg"),
+                                url("assets/titlebutton-minimize-backdrop-2x.svg"));
+}
+
+windowcontrols > button:hover {
+  background-color: @pc_hover_bg;
+  border-color: @pc_border_strong;
+}
+
+windowcontrols > button.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize.svg"),
+                                url("assets/titlebutton-maximize-2x.svg"));
+}
+
+window.maximized windowcontrols > button.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore.svg"),
+                                url("assets/titlebutton-restore-2x.svg"));
+}
+
+windowcontrols > button.minimize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize.svg"),
+                                url("assets/titlebutton-minimize-2x.svg"));
+}
+
+windowcontrols > button:active {
+  background-color: @pc_blue;
+  border-color: @pc_border_strong;
+  box-shadow: none;
+}
+
+windowcontrols > button.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active.svg"),
+                                url("assets/titlebutton-maximize-active-2x.svg"));
+}
+
+window.maximized windowcontrols > button.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active.svg"),
+                                url("assets/titlebutton-restore-active-2x.svg"));
+}
+
+windowcontrols > button.minimize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active.svg"),
+                                url("assets/titlebutton-minimize-active-2x.svg"));
+}
+
+windowcontrols > button.close:hover,
+windowcontrols > button.close:active {
+  background-color: @pc_red;
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active.svg"),
+                                url("assets/titlebutton-close-active-2x.svg"));
+  border-color: @pc_border_strong;
+}
+
+
+/* ==========================================================================
+   6. Buttons
+   ========================================================================== */
+
+button {
+  min-height: 20px;
+  min-width: 16px;
+  padding: 4px 8px;
+  background-color: @pc_navy;
+  color: @pc_white;
+  border: 2px solid @pc_border_strong;
+  box-shadow: 2px 2px 0 0 @pc_black;
+}
+
+/* Inactive windows keep their colours but drop the bevel and the bright frame. */
+button:backdrop {
+  border-color: @pc_border;
+  box-shadow: none;
+}
+
+button:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+  border-color: @pc_white;
+}
+
+button:active,
+button.keyboard-activating {
+  background-color: @pc_blue;
+  color: @pc_black;
+  border-color: @pc_border_strong;
+  box-shadow: inset 2px 2px 0 0 @pc_black;
+}
+
+button:checked {
+  background-color: @pc_blue;
+  color: @pc_black;
+  border-color: @pc_border_strong;
+  box-shadow: none;
+}
+
+button:checked:hover {
+  border-color: @pc_white;
+}
+
+button:disabled {
+  background-color: @insensitive_bg_color;
+  color: @insensitive_fg_color;
+  border-color: @pc_border_disabled;
+  box-shadow: none;
+}
+
+button:checked:disabled {
+  background-color: @pc_slate;
+  color: @pc_silver;
+  border-color: @pc_border_disabled;
+  box-shadow: none;
+}
+
+button.text-button {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+button.image-button {
+  min-width: 20px;
+  padding: 4px;
+}
+
+button.text-button.image-button {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+button.text-button.image-button > box,
+button.image-text-button > box,
+button > box {
+  border-spacing: 6px;
+}
+
+button.arrow-button {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Default (activates on Enter) and suggested action */
+button.default,
+button.suggested-action {
+  background-color: @pc_green;
+  color: @pc_black;
+  border-color: @pc_white;
+  font-weight: bold;
+}
+
+button.default:backdrop,
+button.suggested-action:backdrop {
+  border-color: @pc_border;
+}
+
+button.default:hover,
+button.suggested-action:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+  border-color: @pc_green;
+}
+
+/* Destructive action: black on red, never white on red */
+button.destructive-action {
+  background-color: @pc_red;
+  color: @pc_black;
+  border-color: @pc_white;
+  font-weight: bold;
+}
+
+button.destructive-action:backdrop {
+  border-color: @pc_border;
+}
+
+button.destructive-action:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+  border-color: @pc_red;
+}
+
+button.default:active,
+button.default.keyboard-activating,
+button.suggested-action:active,
+button.suggested-action.keyboard-activating,
+button.suggested-action:checked,
+button.destructive-action:active,
+button.destructive-action.keyboard-activating,
+button.destructive-action:checked {
+  background-color: @pc_blue;
+  color: @pc_black;
+  border-color: @pc_border_strong;
+}
+
+button.default:disabled,
+button.suggested-action:disabled,
+button.destructive-action:disabled {
+  background-color: @insensitive_bg_color;
+  color: @insensitive_fg_color;
+  border-color: @pc_border_disabled;
+  font-weight: normal;
+}
+
+/* Opaque: always filled, used over content */
+button.opaque {
+  background-color: @pc_silver;
+  color: @pc_black;
+  border-color: @pc_white;
+}
+
+button.opaque:hover {
+  background-color: @pc_white;
+  color: @pc_black;
+}
+
+button.opaque:active,
+button.opaque:checked {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+button.opaque:disabled {
+  background-color: @pc_slate;
+  color: @pc_silver;
+  border-color: @pc_border_disabled;
+}
+
+/* Flat: no chrome until interacted with */
+button.flat {
+  background-color: transparent;
+  color: inherit;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+button.flat:backdrop {
+  border-color: transparent;
+}
+
+button.flat:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+  border-color: @pc_border_strong;
+}
+
+button.flat:active,
+button.flat.keyboard-activating {
+  background-color: @pc_blue;
+  color: @pc_black;
+  border-color: @pc_border_strong;
+}
+
+button.flat:checked {
+  background-color: @pc_blue;
+  color: @pc_black;
+  border-color: @pc_border_strong;
+}
+
+button.flat:disabled {
+  background-color: transparent;
+  color: @insensitive_fg_color;
+  border-color: transparent;
+}
+
+button.flat:checked:disabled {
+  background-color: @pc_slate;
+  color: @pc_silver;
+  border-color: @pc_border_disabled;
+}
+
+/* Circular and pill keep the square Pixelcart silhouette */
+button.circular {
+  min-width: 24px;
+  min-height: 24px;
+  padding: 2px;
+}
+
+button.pill {
+  padding: 8px 32px;
+}
+
+/* On-screen display buttons */
+button.osd {
+  background-color: @pc_black;
+  color: @pc_white;
+  border-color: @pc_border_strong;
+  box-shadow: none;
+}
+
+button.osd:hover {
+  background-color: @pc_hover_bg;
+  border-color: @pc_white;
+}
+
+button.osd:active,
+button.osd:checked {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+button.osd:disabled {
+  background-color: @pc_black;
+  color: @insensitive_fg_color;
+  border-color: @pc_border_disabled;
+}
+
+/* Link buttons */
+button.link {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+button.link:hover,
+button.link:active {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Attention marker */
+button.needs-attention {
+  border-color: @pc_orange;
+}
+
+stackswitcher > button.needs-attention > label,
+stackswitcher > button.needs-attention > image {
+  color: @pc_orange;
+}
+
+stackswitcher > button.needs-attention:checked > label,
+stackswitcher > button.needs-attention:checked > image {
+  color: @pc_black;
+}
+
+/* Drop target */
+button:drop(active) {
+  border-color: @pc_green;
+}
+
+/* Menu buttons, split buttons, drop-downs, colour and font buttons */
+menubutton > button > box,
+dropdown > button > box,
+combobox > box > button > box {
+  border-spacing: 6px;
+}
+
+menubutton.circular > button {
+  min-width: 24px;
+  min-height: 24px;
+  padding: 2px;
+}
+
+menubutton.flat > button {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+menubutton.flat > button:hover {
+  background-color: @pc_hover_bg;
+  border-color: @pc_border_strong;
+}
+
+menubutton.flat > button:checked,
+menubutton.flat > button:active {
+  background-color: @pc_blue;
+  color: @pc_black;
+  border-color: @pc_border_strong;
+}
+
+menubutton.osd > button {
+  background-color: @pc_black;
+  box-shadow: none;
+}
+
+splitbutton {
+  border-spacing: 0;
+}
+
+splitbutton > button {
+  border-right-width: 0;
+}
+
+splitbutton > separator {
+  min-width: 2px;
+  background-color: @pc_border_strong;
+}
+
+splitbutton > menubutton > button {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+dropdown > button,
+combobox > box > button {
+  padding-left: 8px;
+  padding-right: 6px;
+}
+
+dropdown > popover.menu > contents,
+combobox > popover.menu > contents {
+  padding: 2px;
+}
+
+dropdown > popover listview > row,
+combobox > popover listview > row {
+  min-height: 16px;
+  padding: 6px 8px;
+}
+
+dropdown > popover listview > row > box,
+combobox > popover listview > row > box {
+  border-spacing: 8px;
+}
+
+/* Drop-down lists behave like menus: the highlighted row is blue with
+   black text; the current item is marked by its tick, not by a fill. */
+dropdown > popover listview > row:selected,
+combobox > popover listview > row:selected {
+  background-color: transparent;
+  color: @popover_fg_color;
+}
+
+dropdown > popover listview > row:hover,
+dropdown > popover listview > row:selected:hover,
+dropdown > popover listview > row:focus:focus-visible,
+combobox > popover listview > row:hover,
+combobox > popover listview > row:selected:hover,
+combobox > popover listview > row:focus:focus-visible {
+  background-color: @pc_blue;
+  color: @pc_black;
+  outline: 0 solid transparent;
+}
+
+dropdown > popover .dropdown-searchbar {
+  padding: 6px;
+  border-bottom: 2px solid @pc_border;
+}
+
+colorbutton > button,
+colordialogbutton > button {
+  padding: 4px;
+}
+
+colorbutton > button > colorswatch,
+colordialogbutton > button > colorswatch {
+  min-width: 24px;
+  min-height: 16px;
+  border: 2px solid @pc_black;
+  box-shadow: none;
+}
+
+fontbutton > button > box,
+fontdialogbutton > button > box {
+  border-spacing: 6px;
+}
+
+fontbutton > button > box > box > separator,
+fontdialogbutton > button > box > box > separator {
+  min-width: 2px;
+  margin: 0 4px;
+  background-color: @pc_border;
+}
+
+/* Pixel arrows for built-in arrow nodes */
+arrow,
+arrow.down,
+menubutton arrow.none {
+  min-width: 16px;
+  min-height: 16px;
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down.svg"),
+                                url("assets/arrow-down-2x.svg"));
+}
+
+arrow.up {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-up.svg"),
+                                url("assets/arrow-up-2x.svg"));
+}
+
+arrow.left {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left.svg"),
+                                url("assets/arrow-left-2x.svg"));
+}
+
+arrow.right {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right.svg"),
+                                url("assets/arrow-right-2x.svg"));
+}
+
+/* Black arrows wherever the button face is light (blue, green, red, silver);
+   the hover face is plum, so the arrow turns white again there. */
+button:active arrow,
+button:checked arrow,
+button.suggested-action arrow,
+button.destructive-action arrow,
+button.opaque arrow,
+button:active arrow.down,
+button:checked arrow.down,
+button.suggested-action arrow.down,
+button.destructive-action arrow.down,
+button.opaque arrow.down {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down-active.svg"),
+                                url("assets/arrow-down-active-2x.svg"));
+}
+
+button:active arrow.up,
+button:checked arrow.up,
+button.suggested-action arrow.up,
+button.destructive-action arrow.up,
+button.opaque arrow.up {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-up-active.svg"),
+                                url("assets/arrow-up-active-2x.svg"));
+}
+
+button:active arrow.left,
+button:checked arrow.left,
+button.suggested-action arrow.left,
+button.destructive-action arrow.left,
+button.opaque arrow.left {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left-active.svg"),
+                                url("assets/arrow-left-active-2x.svg"));
+}
+
+button:active arrow.right,
+button:checked arrow.right,
+button.suggested-action arrow.right,
+button.destructive-action arrow.right,
+button.opaque arrow.right {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right-active.svg"),
+                                url("assets/arrow-right-active-2x.svg"));
+}
+
+button.suggested-action:hover:not(:active):not(:checked) arrow,
+button.destructive-action:hover:not(:active):not(:checked) arrow,
+button.suggested-action:hover:not(:active):not(:checked) arrow.down,
+button.destructive-action:hover:not(:active):not(:checked) arrow.down {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down.svg"),
+                                url("assets/arrow-down-2x.svg"));
+}
+
+button.suggested-action:hover:not(:active):not(:checked) arrow.up,
+button.destructive-action:hover:not(:active):not(:checked) arrow.up {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-up.svg"),
+                                url("assets/arrow-up-2x.svg"));
+}
+
+button.suggested-action:hover:not(:active):not(:checked) arrow.left,
+button.destructive-action:hover:not(:active):not(:checked) arrow.left {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left.svg"),
+                                url("assets/arrow-left-2x.svg"));
+}
+
+button.suggested-action:hover:not(:active):not(:checked) arrow.right,
+button.destructive-action:hover:not(:active):not(:checked) arrow.right {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right.svg"),
+                                url("assets/arrow-right-2x.svg"));
+}
+
+arrow:disabled,
+arrow.down:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down-dim.svg"),
+                                url("assets/arrow-down-dim-2x.svg"));
+}
+
+arrow.up:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-up-dim.svg"),
+                                url("assets/arrow-up-dim-2x.svg"));
+}
+
+arrow.left:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left-dim.svg"),
+                                url("assets/arrow-left-dim-2x.svg"));
+}
+
+arrow.right:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right-dim.svg"),
+                                url("assets/arrow-right-dim-2x.svg"));
+}
+
+/* Linked groups share their inner borders */
+.linked:not(.vertical) > button:not(:last-child),
+.linked:not(.vertical) > entry:not(:last-child),
+.linked:not(.vertical) > spinbutton:not(:last-child),
+.linked:not(.vertical) > menubutton:not(:last-child) > button,
+.linked:not(.vertical) > dropdown:not(:last-child) > button,
+.linked:not(.vertical) > colorbutton:not(:last-child) > button,
+.linked:not(.vertical) > fontbutton:not(:last-child) > button {
+  border-right-width: 0;
+}
+
+.linked.vertical > button:not(:last-child),
+.linked.vertical > entry:not(:last-child),
+.linked.vertical > spinbutton:not(:last-child),
+.linked.vertical > menubutton:not(:last-child) > button,
+.linked.vertical > dropdown:not(:last-child) > button,
+.linked.vertical > colorbutton:not(:last-child) > button,
+.linked.vertical > fontbutton:not(:last-child) > button {
+  border-bottom-width: 0;
+}
+
+/* Stack switcher */
+stackswitcher > button.text-button {
+  min-width: 80px;
+}
+
+stackswitcher > button.image-button {
+  min-width: 24px;
+}
+
+stackswitcher > button > label {
+  padding: 0 6px;
+}
+
+stackswitcher > button > image {
+  padding: 2px 6px;
+}
+
+
+/* ==========================================================================
+   7. Entries and editable text
+   ========================================================================== */
+
+entry,
+spinbutton {
+  min-height: 20px;
+  padding: 4px 8px;
+  border-spacing: 6px;
+  background-color: @view_bg_color;
+  color: @view_fg_color;
+  border: 2px solid @pc_border_strong;
+  caret-color: @pc_white;
+}
+
+entry:focus-within,
+spinbutton:focus-within {
+  border-color: @pc_focus;
+}
+
+entry:disabled,
+spinbutton:disabled {
+  background-color: @insensitive_base_color;
+  color: @insensitive_fg_color;
+  border-color: @pc_border_disabled;
+}
+
+entry.flat,
+entry.flat:hover,
+entry.flat:disabled {
+  min-height: 0;
+  padding: 2px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+entry > text,
+spinbutton > text {
+  color: inherit;
+  caret-color: @pc_white;
+  -gtk-secondary-caret-color: @pc_orange;
+}
+
+entry > text > selection,
+spinbutton > text > selection,
+editablelabel > stack > text > selection {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+entry:backdrop > text > selection,
+spinbutton:backdrop > text > selection {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+}
+
+entry > text > placeholder,
+text > placeholder {
+  color: @placeholder_text_color;
+}
+
+entry > text > block-cursor,
+text > block-cursor {
+  background-color: @pc_white;
+  color: @pc_black;
+}
+
+entry > text > cursor-handle,
+text > cursor-handle {
+  color: @pc_white;
+}
+
+entry > image {
+  min-width: 16px;
+  min-height: 16px;
+  color: @pc_silver;
+}
+
+entry > image:hover {
+  color: @pc_white;
+}
+
+entry > image:active {
+  color: @pc_blue;
+}
+
+entry > image:disabled {
+  color: @insensitive_fg_color;
+}
+
+/* Progress shown inside an entry */
+entry > progress {
+  margin-bottom: -2px;
+}
+
+entry > progress > trough > progress {
+  min-height: 2px;
+  background-color: @pc_green;
+  border-width: 0;
+}
+
+entry:backdrop > progress > trough > progress {
+  background-color: @pc_forest;
+}
+
+/* Validation states */
+entry.error {
+  color: @pc_red;
+  border-color: @pc_red;
+}
+
+entry.error > text > selection {
+  background-color: @pc_red;
+  color: @pc_black;
+}
+
+entry.warning {
+  border-color: @pc_orange;
+}
+
+entry.warning > text > selection {
+  background-color: @pc_orange;
+  color: @pc_black;
+}
+
+entry.success {
+  border-color: @pc_green;
+}
+
+entry.success > text > selection {
+  background-color: @pc_green;
+  color: @pc_black;
+}
+
+/* A focused entry in a validation state keeps its colour and gains the
+   yellow focus frame just inside it. */
+entry.error:focus-within,
+entry.warning:focus-within,
+entry.success:focus-within {
+  box-shadow: inset 0 0 0 2px @pc_focus;
+}
+
+entry:drop(active) {
+  border-color: @pc_green;
+}
+
+/* Password entry */
+entry.password image.caps-lock-indicator {
+  color: @pc_orange;
+}
+
+/* Search entry and search bar */
+entry.search > image {
+  color: @pc_silver;
+}
+
+searchbar > revealer > box {
+  padding: 6px;
+  border-spacing: 6px;
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+  border-bottom: 2px solid @pc_border;
+}
+
+searchbar > revealer > box .close {
+  min-width: 20px;
+  min-height: 20px;
+  padding: 0;
+}
+
+/* Spin button */
+spinbutton {
+  min-height: 0;
+  padding: 0;
+  border-spacing: 0;
+}
+
+spinbutton > text {
+  min-width: 28px;
+  min-height: 20px;
+  padding: 4px 8px;
+}
+
+spinbutton > button {
+  min-width: 20px;
+  min-height: 16px;
+  padding: 0 4px;
+  background-color: @pc_navy;
+  color: @pc_white;
+  border-width: 0;
+  border-left: 2px solid @pc_border;
+  box-shadow: none;
+}
+
+spinbutton > button:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+}
+
+spinbutton > button:active {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+spinbutton > button:disabled {
+  background-color: @insensitive_bg_color;
+  color: @insensitive_fg_color;
+}
+
+spinbutton:disabled > button {
+  border-color: @pc_border_disabled;
+}
+
+spinbutton.vertical > text {
+  min-height: 28px;
+  min-width: 32px;
+  padding: 0;
+}
+
+spinbutton.vertical > button {
+  min-width: 32px;
+  min-height: 24px;
+  padding: 0;
+  border-left-width: 0;
+}
+
+spinbutton.vertical > button.up {
+  border-bottom: 2px solid @pc_border;
+}
+
+spinbutton.vertical > button.down {
+  border-top: 2px solid @pc_border;
+}
+
+/* Editable label */
+editablelabel > stack > text {
+  padding: 2px 6px;
+  background-color: @view_bg_color;
+  color: @view_fg_color;
+  caret-color: @pc_white;
+}
+
+editablelabel.editing {
+  outline: 2px solid @pc_focus;
+  outline-offset: 0;
+}
+
+/* Text view */
+textview {
+  background-color: @view_bg_color;
+  color: @view_fg_color;
+  caret-color: @pc_white;
+  -gtk-secondary-caret-color: @pc_orange;
+}
+
+textview > text {
+  background-color: transparent;
+  color: inherit;
+}
+
+textview > text > selection {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+textview:backdrop > text > selection {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+}
+
+textview:disabled {
+  background-color: @insensitive_base_color;
+  color: @insensitive_fg_color;
+}
+
+textview > border {
+  background-color: @pc_navy;
+  color: @pc_silver;
+}
+
+textview:drop(active) {
+  caret-color: @pc_green;
+}
+
+/* Touch selection handles and the magnifier bubble */
+cursor-handle {
+  min-width: 16px;
+  min-height: 16px;
+  background-color: @pc_yellow;
+  border: 2px solid @pc_black;
+}
+
+cursor-handle.insertion-cursor {
+  background-color: @pc_white;
+}
+
+magnifier {
+  background-color: @pc_black;
+  border: 2px solid @pc_border_strong;
+}
+
+
+/* ==========================================================================
+   8. Check boxes and radio buttons (pixel-art assets)
+   ========================================================================== */
+
+checkbutton {
+  padding: 2px;
+  border-spacing: 4px;
+  color: @pc_white;
+}
+
+checkbutton.text-button {
+  padding: 2px 4px;
+}
+
+checkbutton:disabled {
+  color: @insensitive_fg_color;
+}
+
+checkbutton.grouped {
+  border-spacing: 4px;
+}
+
+/* Every asset comes in two sizes: "name.svg" for standard displays and
+   "name-2x.svg" for HiDPI, so the pixel art is never interpolated when the
+   desktop runs at 2x scale. */
+check,
+radio {
+  min-width: 16px;
+  min-height: 16px;
+  margin: 0;
+  -gtk-icon-size: 16px;
+}
+
+check {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.svg"),
+                                url("assets/checkbox-unchecked-2x.svg"));
+}
+
+check:hover,
+checkbutton:hover > check {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-hover.svg"),
+                                url("assets/checkbox-unchecked-hover-2x.svg"));
+}
+
+check:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.svg"),
+                                url("assets/checkbox-checked-2x.svg"));
+}
+
+check:checked:hover,
+checkbutton:hover > check:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover.svg"),
+                                url("assets/checkbox-checked-hover-2x.svg"));
+}
+
+check:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.svg"),
+                                url("assets/checkbox-mixed-2x.svg"));
+}
+
+check:indeterminate:hover,
+checkbutton:hover > check:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-hover.svg"),
+                                url("assets/checkbox-mixed-hover-2x.svg"));
+}
+
+check:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-disabled.svg"),
+                                url("assets/checkbox-unchecked-disabled-2x.svg"));
+}
+
+check:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-disabled.svg"),
+                                url("assets/checkbox-checked-disabled-2x.svg"));
+}
+
+check:indeterminate:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-disabled.svg"),
+                                url("assets/checkbox-mixed-disabled-2x.svg"));
+}
+
+radio {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.svg"),
+                                url("assets/radio-unchecked-2x.svg"));
+}
+
+radio:hover,
+checkbutton:hover > radio {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-hover.svg"),
+                                url("assets/radio-unchecked-hover-2x.svg"));
+}
+
+radio:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked.svg"),
+                                url("assets/radio-checked-2x.svg"));
+}
+
+radio:checked:hover,
+checkbutton:hover > radio:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-hover.svg"),
+                                url("assets/radio-checked-hover-2x.svg"));
+}
+
+radio:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.svg"),
+                                url("assets/radio-mixed-2x.svg"));
+}
+
+radio:indeterminate:hover,
+checkbutton:hover > radio:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-hover.svg"),
+                                url("assets/radio-mixed-hover-2x.svg"));
+}
+
+radio:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-disabled.svg"),
+                                url("assets/radio-unchecked-disabled-2x.svg"));
+}
+
+radio:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-disabled.svg"),
+                                url("assets/radio-checked-disabled-2x.svg"));
+}
+
+radio:indeterminate:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-disabled.svg"),
+                                url("assets/radio-mixed-disabled-2x.svg"));
+}
+
+
+/* ==========================================================================
+   9. Switches
+   ========================================================================== */
+
+switch {
+  min-width: 48px;
+  min-height: 20px;
+  background-color: @pc_trough;
+  color: @pc_silver;
+  border: 2px solid @pc_border_strong;
+}
+
+switch:backdrop {
+  border-color: @pc_border;
+}
+
+switch:hover {
+  border-color: @pc_white;
+}
+
+switch:checked {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+switch:disabled {
+  background-color: @insensitive_bg_color;
+  color: @insensitive_fg_color;
+  border-color: @pc_border_disabled;
+}
+
+switch > slider {
+  min-width: 20px;
+  min-height: 20px;
+  background-color: @pc_handle;
+  border: 2px solid @pc_black;
+}
+
+switch:hover > slider {
+  background-color: @pc_white;
+}
+
+switch:checked > slider {
+  background-color: @pc_white;
+}
+
+switch:disabled > slider {
+  background-color: @pc_slate;
+  border-color: @pc_navy;
+}
+
+switch > image {
+  color: inherit;
+}
+
+row:selected switch {
+  border-color: @pc_black;
+}
+
+
+/* ==========================================================================
+   10. Scales
+   ========================================================================== */
+
+scale {
+  min-width: 16px;
+  min-height: 16px;
+  padding: 10px;
+}
+
+scale > trough {
+  min-width: 4px;
+  min-height: 4px;
+  background-color: @pc_trough;
+  border: 2px solid @pc_border;
+}
+
+scale > trough > highlight {
+  background-color: @pc_blue;
+}
+
+scale > trough > fill {
+  background-color: @pc_slate;
+}
+
+scale > trough > slider {
+  min-width: 12px;
+  min-height: 12px;
+  margin: -6px;
+  background-color: @pc_handle;
+  border: 2px solid @pc_black;
+}
+
+scale > trough > slider:hover {
+  background-color: @pc_white;
+}
+
+scale > trough > slider:active {
+  background-color: @pc_blue;
+}
+
+scale:disabled > trough {
+  background-color: @insensitive_bg_color;
+  border-color: @pc_border_disabled;
+}
+
+scale:disabled > trough > highlight {
+  background-color: @pc_lavender;
+}
+
+scale:disabled > trough > slider {
+  background-color: @pc_slate;
+  border-color: @pc_navy;
+}
+
+scale:backdrop > trough > highlight {
+  background-color: @pc_backdrop_selected_bg;
+}
+
+scale.fine-tune > trough > slider {
+  background-color: @pc_yellow;
+}
+
+scale > value {
+  color: @pc_silver;
+  font-feature-settings: "tnum";
+}
+
+scale.horizontal > value.top,
+scale.horizontal > value.bottom {
+  margin: 2px 0;
+}
+
+scale.vertical > value.left,
+scale.vertical > value.right {
+  margin: 0 2px;
+}
+
+scale > marks {
+  color: @pc_silver;
+}
+
+scale > marks > mark > label {
+  font-size: 90%;
+}
+
+scale > marks > mark > indicator {
+  background-color: @pc_lavender;
+}
+
+scale.horizontal > marks > mark > indicator {
+  min-width: 2px;
+  min-height: 6px;
+}
+
+scale.vertical > marks > mark > indicator {
+  min-width: 6px;
+  min-height: 2px;
+}
+
+scale.horizontal > marks.top {
+  margin-bottom: 6px;
+}
+
+scale.horizontal > marks.bottom {
+  margin-top: 6px;
+}
+
+scale.vertical > marks.top {
+  margin-right: 6px;
+}
+
+scale.vertical > marks.bottom {
+  margin-left: 6px;
+}
+
+scale.color {
+  padding: 0;
+}
+
+scale.color > trough {
+  min-height: 16px;
+  min-width: 16px;
+  border-color: @pc_border_strong;
+}
+
+scale.color > trough > slider {
+  margin: -4px;
+}
+
+
+/* ==========================================================================
+   11. Progress bars and level bars
+   ========================================================================== */
+
+progressbar {
+  color: @pc_silver;
+  font-size: 90%;
+}
+
+progressbar > text {
+  margin: 2px 0;
+}
+
+progressbar > trough {
+  background-color: @pc_trough;
+  border: 2px solid @pc_border;
+}
+
+progressbar.horizontal > trough {
+  min-width: 128px;
+  min-height: 8px;
+}
+
+progressbar.vertical > trough {
+  min-width: 8px;
+  min-height: 80px;
+}
+
+progressbar.horizontal > trough > progress {
+  min-height: 8px;
+}
+
+progressbar.vertical > trough > progress {
+  min-width: 8px;
+}
+
+progressbar > trough > progress {
+  background-color: @pc_green;
+}
+
+progressbar:disabled > trough > progress {
+  background-color: @pc_lavender;
+}
+
+progressbar:disabled > trough {
+  background-color: @insensitive_bg_color;
+  border-color: @pc_border_disabled;
+}
+
+progressbar:backdrop > trough > progress {
+  background-color: @pc_forest;
+}
+
+progressbar.osd {
+  min-width: 4px;
+  min-height: 4px;
+}
+
+progressbar.osd > trough {
+  background-color: transparent;
+  border-width: 0;
+}
+
+progressbar.osd.horizontal > trough > progress {
+  min-height: 4px;
+}
+
+progressbar.osd.vertical > trough > progress {
+  min-width: 4px;
+}
+
+levelbar.horizontal > trough > block {
+  min-height: 8px;
+  min-width: 32px;
+}
+
+levelbar.vertical > trough > block {
+  min-width: 8px;
+  min-height: 32px;
+}
+
+levelbar > trough {
+  padding: 2px;
+  background-color: @pc_trough;
+  border: 2px solid @pc_border;
+}
+
+levelbar > trough > block {
+  background-color: @pc_blue;
+}
+
+levelbar > trough > block.low {
+  background-color: @pc_red;
+}
+
+levelbar > trough > block.high {
+  background-color: @pc_blue;
+}
+
+levelbar > trough > block.full {
+  background-color: @pc_green;
+}
+
+levelbar > trough > block.empty {
+  background-color: @pc_navy;
+}
+
+levelbar:backdrop > trough > block.filled {
+  background-color: @pc_backdrop_selected_bg;
+}
+
+levelbar:disabled > trough > block.filled {
+  background-color: @pc_slate;
+}
+
+/* Discrete level bars read as separate cartridge-style blocks */
+levelbar.discrete.horizontal > trough > block {
+  min-width: 12px;
+  margin: 0 2px 0 0;
+}
+
+levelbar.discrete.horizontal > trough > block:last-child {
+  margin: 0;
+}
+
+levelbar.discrete.vertical > trough > block {
+  min-height: 12px;
+  margin: 0 0 2px 0;
+}
+
+levelbar.discrete.vertical > trough > block:last-child {
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   12. Scrollbars and scrolled windows
+   ========================================================================== */
+
+scrollbar {
+  background-color: @pc_trough;
+}
+
+scrollbar.vertical {
+  border-left: 2px solid @pc_border;
+}
+
+scrollbar.vertical:dir(rtl) {
+  border-left-width: 0;
+  border-right: 2px solid @pc_border;
+}
+
+scrollbar.horizontal {
+  border-top: 2px solid @pc_border;
+}
+
+scrollbar > range > trough {
+  background-color: transparent;
+}
+
+scrollbar > range > trough > slider {
+  min-width: 10px;
+  min-height: 10px;
+  margin: 2px;
+  background-color: @pc_handle;
+}
+
+scrollbar.vertical > range > trough > slider {
+  min-height: 32px;
+}
+
+scrollbar.horizontal > range > trough > slider {
+  min-width: 32px;
+}
+
+scrollbar > range > trough > slider:hover {
+  background-color: @pc_white;
+}
+
+scrollbar > range > trough > slider:active {
+  background-color: @pc_blue;
+}
+
+scrollbar > range > trough > slider:disabled {
+  background-color: @pc_slate;
+}
+
+scrollbar:backdrop > range > trough > slider {
+  background-color: @pc_lavender;
+}
+
+/* Overlay scrollbars: a thin solid bar that grows when the pointer is over it */
+scrollbar.overlay-indicator {
+  background-color: transparent;
+  border-width: 0;
+}
+
+scrollbar.overlay-indicator > range > trough > slider {
+  min-width: 4px;
+  min-height: 4px;
+  margin: 2px;
+  background-color: @pc_handle;
+  border: 2px solid @pc_black;
+}
+
+scrollbar.overlay-indicator.vertical > range > trough > slider {
+  min-height: 32px;
+}
+
+scrollbar.overlay-indicator.horizontal > range > trough > slider {
+  min-width: 32px;
+}
+
+scrollbar.overlay-indicator.hovering {
+  background-color: @pc_trough;
+}
+
+scrollbar.overlay-indicator.hovering > range > trough > slider {
+  min-width: 10px;
+  min-height: 10px;
+  border-width: 0;
+}
+
+scrollbar.overlay-indicator.hovering.vertical > range > trough > slider {
+  min-height: 32px;
+}
+
+scrollbar.overlay-indicator.hovering.horizontal > range > trough > slider {
+  min-width: 32px;
+}
+
+scrolledwindow {
+  border-width: 0;
+}
+
+scrolledwindow.frame {
+  border: 2px solid @pc_border;
+}
+
+/* Overshoot and undershoot: hard 2px edge markers */
+scrolledwindow > overshoot.top {
+  box-shadow: inset 0 2px 0 0 @pc_blue;
+}
+
+scrolledwindow > overshoot.bottom {
+  box-shadow: inset 0 -2px 0 0 @pc_blue;
+}
+
+scrolledwindow > overshoot.left {
+  box-shadow: inset 2px 0 0 0 @pc_blue;
+}
+
+scrolledwindow > overshoot.right {
+  box-shadow: inset -2px 0 0 0 @pc_blue;
+}
+
+scrolledwindow.undershoot-top > undershoot.top,
+scrolledwindow > undershoot.top {
+  box-shadow: inset 0 2px 0 0 @pc_border;
+}
+
+scrolledwindow.undershoot-bottom > undershoot.bottom,
+scrolledwindow > undershoot.bottom {
+  box-shadow: inset 0 -2px 0 0 @pc_border;
+}
+
+scrolledwindow > undershoot.left {
+  box-shadow: inset 2px 0 0 0 @pc_border;
+}
+
+scrolledwindow > undershoot.right {
+  box-shadow: inset -2px 0 0 0 @pc_border;
+}
+
+scrolledwindow > junction {
+  background-color: @pc_trough;
+  border-top: 2px solid @pc_border;
+  border-left: 2px solid @pc_border;
+}
+
+
+/* ==========================================================================
+   13. Views: text, lists, grids, columns, legacy tree view
+   ========================================================================== */
+
+.view,
+listview,
+gridview,
+columnview,
+iconview {
+  background-color: @view_bg_color;
+  color: @view_fg_color;
+}
+
+.view:disabled,
+listview:disabled,
+gridview:disabled,
+columnview:disabled {
+  background-color: @insensitive_base_color;
+  color: @insensitive_fg_color;
+}
+
+.view:selected,
+iconview:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.view:selected:backdrop,
+iconview:selected:backdrop {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+}
+
+/* List view */
+listview > row {
+  min-height: 24px;
+  padding: 2px 6px;
+  color: @view_fg_color;
+}
+
+listview > row:hover,
+listview > row.activatable:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+}
+
+listview > row:selected,
+listview > row:selected:hover {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+listview > row:selected:backdrop {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+}
+
+listview > row:disabled {
+  color: @insensitive_fg_color;
+}
+
+listview.separators > row,
+listview.horizontal.separators > row {
+  border-bottom: 2px solid @pc_border;
+}
+
+listview > header {
+  padding: 6px 6px 2px 6px;
+  color: @pc_silver;
+  font-weight: bold;
+}
+
+listview.navigation-sidebar {
+  padding: 4px 0;
+  background-color: @sidebar_bg_color;
+}
+
+listview.navigation-sidebar > row {
+  min-height: 28px;
+  padding: 2px 8px;
+}
+
+listview.rich-list > row {
+  min-height: 32px;
+  padding: 8px 12px;
+}
+
+listview.rich-list > header {
+  padding: 8px 12px;
+}
+
+/* Grid view */
+gridview {
+  padding: 4px;
+}
+
+gridview > child {
+  padding: 4px;
+  border: 2px solid transparent;
+}
+
+gridview > child:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+}
+
+gridview > child:selected,
+gridview > child:selected:hover {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+gridview > child:selected:backdrop {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+}
+
+gridview > child:disabled {
+  color: @insensitive_fg_color;
+}
+
+gridview > rubberband,
+gridview > child box {
+  border-spacing: 4px;
+}
+
+/* Column view */
+columnview > header {
+  background-color: @pc_navy;
+  border-bottom: 2px solid @pc_border;
+}
+
+columnview > header > button {
+  min-height: 20px;
+  padding: 2px 8px;
+  background-color: @pc_navy;
+  color: @pc_silver;
+  border-width: 0;
+  border-right: 2px solid @pc_border;
+  box-shadow: none;
+  font-weight: bold;
+}
+
+columnview > header > button:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+}
+
+columnview > header > button:active {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+columnview > header > button:disabled {
+  color: @insensitive_fg_color;
+}
+
+columnview > header > button > box {
+  border-spacing: 6px;
+}
+
+columnview > header > button sort-indicator {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+columnview > header > button sort-indicator.ascending {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-up.svg"),
+                                url("assets/arrow-up-2x.svg"));
+}
+
+columnview > header > button sort-indicator.descending {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down.svg"),
+                                url("assets/arrow-down-2x.svg"));
+}
+
+columnview > header > button:active sort-indicator.ascending {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-up-active.svg"),
+                                url("assets/arrow-up-active-2x.svg"));
+}
+
+columnview > header > button:active sort-indicator.descending {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down-active.svg"),
+                                url("assets/arrow-down-active-2x.svg"));
+}
+
+columnview > header > button.dnd,
+columnview > header > button.dnd:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+  border: 2px solid @pc_border_strong;
+  box-shadow: none;
+}
+
+columnview > listview > row {
+  min-height: 24px;
+  padding: 0;
+}
+
+columnview > listview > row > cell {
+  padding: 4px 8px;
+}
+
+columnview.column-separators > listview > row > cell {
+  border-right: 2px solid @pc_border;
+}
+
+columnview.row-separators > listview > row {
+  border-bottom: 2px solid @pc_border;
+}
+
+columnview.data-table > listview > row > cell {
+  padding: 2px 6px;
+}
+
+columnview.rich-list > listview > row > cell {
+  padding: 8px 12px;
+}
+
+columnview > listview > row > cell:focus:focus-visible {
+  outline: 2px solid @pc_focus;
+  outline-offset: -2px;
+}
+
+/* Tree expander used inside list and column views */
+treeexpander {
+  border-spacing: 4px;
+}
+
+treeexpander > indent {
+  min-width: 16px;
+}
+
+treeexpander > expander {
+  min-width: 16px;
+  min-height: 16px;
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right.svg"),
+                                url("assets/arrow-right-2x.svg"));
+}
+
+treeexpander > expander:dir(rtl) {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left.svg"),
+                                url("assets/arrow-left-2x.svg"));
+}
+
+treeexpander > expander:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down.svg"),
+                                url("assets/arrow-down-2x.svg"));
+}
+
+row:selected treeexpander > expander {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right-active.svg"),
+                                url("assets/arrow-right-active-2x.svg"));
+}
+
+row:selected treeexpander > expander:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down-active.svg"),
+                                url("assets/arrow-down-active-2x.svg"));
+}
+
+/* Legacy tree view */
+treeview.view {
+  background-color: @view_bg_color;
+  color: @view_fg_color;
+  border-left-color: @pc_border;
+  border-top-color: @pc_border;
+}
+
+treeview.view:hover {
+  background-color: @view_bg_color;
+}
+
+treeview.view:selected,
+treeview.view:selected:focus {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+treeview.view:selected:backdrop {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+}
+
+treeview.view:disabled {
+  color: @insensitive_fg_color;
+}
+
+treeview.view.separator {
+  min-height: 6px;
+  color: @pc_border;
+}
+
+treeview.view > dndtarget:drop(active) {
+  border: 2px solid @pc_green;
+}
+
+treeview.view > dndtarget.after:drop(active) {
+  border-width: 0 0 2px 0;
+}
+
+treeview.view > dndtarget.before:drop(active) {
+  border-width: 2px 0 0 0;
+}
+
+treeview.view.expander {
+  min-width: 16px;
+  min-height: 16px;
+  color: @pc_white;
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right.svg"),
+                                url("assets/arrow-right-2x.svg"));
+}
+
+treeview.view.expander:dir(rtl) {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left.svg"),
+                                url("assets/arrow-left-2x.svg"));
+}
+
+treeview.view.expander:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down.svg"),
+                                url("assets/arrow-down-2x.svg"));
+}
+
+treeview.view.expander:selected {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right-active.svg"),
+                                url("assets/arrow-right-active-2x.svg"));
+}
+
+treeview.view.expander:selected:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down-active.svg"),
+                                url("assets/arrow-down-active-2x.svg"));
+}
+
+treeview.view.progressbar {
+  background-color: @pc_green;
+  color: @pc_black;
+  border: 2px solid @pc_border;
+}
+
+treeview.view.progressbar:backdrop {
+  background-color: @pc_forest;
+}
+
+treeview.view.trough {
+  background-color: @pc_trough;
+  color: @pc_white;
+  border: 2px solid @pc_border;
+}
+
+treeview.view > header > button {
+  min-height: 20px;
+  padding: 2px 8px;
+  background-color: @pc_navy;
+  color: @pc_silver;
+  border-width: 0;
+  border-right: 2px solid @pc_border;
+  border-bottom: 2px solid @pc_border;
+  box-shadow: none;
+  font-weight: bold;
+}
+
+treeview.view > header > button:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+}
+
+treeview.view > header > button:active {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+treeview.view > header > button:disabled {
+  color: @insensitive_fg_color;
+}
+
+treeview.view > header > button.dnd {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+  border: 2px solid @pc_border_strong;
+  box-shadow: none;
+}
+
+treeview.view acceleditor > label {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+treeview entry,
+treeview entry:focus-within {
+  min-height: 0;
+  padding: 0 4px;
+  border-color: @pc_yellow;
+}
+
+/* Icon view */
+iconview:hover {
+  background-color: @view_bg_color;
+}
+
+iconview > dndtarget:drop(active) {
+  border: 2px solid @pc_green;
+}
+
+/* Rubber band selection */
+rubberband,
+.rubberband,
+treeview.view > rubberband,
+gridview > rubberband,
+columnview > listview > rubberband,
+flowbox > rubberband {
+  background-color: transparent;
+  border: 2px solid @theme_selected_bg_color;
+}
+
+
+/* ==========================================================================
+   14. List boxes and flow boxes
+   ========================================================================== */
+
+list {
+  background-color: @view_bg_color;
+  color: @view_fg_color;
+  border-color: @pc_border;
+}
+
+list > row {
+  min-height: 24px;
+  padding: 2px 6px;
+  color: @view_fg_color;
+}
+
+list > row.activatable:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+}
+
+list > row.activatable:active {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+list > row:selected,
+list > row:selected:hover,
+list > row.activatable:selected:hover {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+list > row:selected:backdrop {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+}
+
+list > row:disabled {
+  color: @insensitive_fg_color;
+}
+
+list > row:drop(active) {
+  outline: 2px solid @pc_green;
+  outline-offset: -2px;
+}
+
+list > row.expander {
+  padding: 0;
+}
+
+list.separators > row:not(:last-child),
+list.separators.horizontal > row:not(:last-child) {
+  border-bottom: 2px solid @pc_border;
+}
+
+list > separator {
+  background-color: @pc_border;
+}
+
+/* Selected rows carry dark text, so dim and link colours follow. */
+row:selected .dim-label,
+row:selected .subtitle,
+row:selected label.dim-label {
+  color: @pc_black;
+}
+
+row:selected button.flat {
+  color: @pc_black;
+}
+
+/* Boxed list: a framed, separated list (also used as .content) */
+list.boxed-list,
+list.content {
+  background-color: @card_bg_color;
+  color: @card_fg_color;
+  border: 2px solid @pc_border;
+}
+
+list.boxed-list > row,
+list.content > row {
+  min-height: 32px;
+  padding: 4px 8px;
+}
+
+list.boxed-list > row:not(:last-child),
+list.content > row:not(:last-child) {
+  border-bottom: 2px solid @pc_border;
+}
+
+/* Navigation sidebar */
+list.navigation-sidebar,
+.navigation-sidebar {
+  padding: 4px 0;
+  background-color: @sidebar_bg_color;
+  color: @sidebar_fg_color;
+}
+
+list.navigation-sidebar > row,
+.navigation-sidebar > row {
+  min-height: 28px;
+  padding: 2px 8px;
+}
+
+.navigation-sidebar > row:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+}
+
+.navigation-sidebar > row:selected,
+.navigation-sidebar > row:selected:hover {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.navigation-sidebar > row:selected:backdrop {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+}
+
+/* Rich list: roomy rows */
+list.rich-list > row,
+.rich-list > row {
+  min-height: 32px;
+  padding: 8px 12px;
+}
+
+list.rich-list > row > box,
+.rich-list > row > box {
+  border-spacing: 12px;
+}
+
+/* Flow box */
+flowbox > flowboxchild {
+  padding: 4px;
+  color: @pc_white;
+}
+
+flowbox > flowboxchild:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+}
+
+flowbox > flowboxchild:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+flowbox > flowboxchild:selected:backdrop {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+}
+
+flowbox > flowboxchild:disabled {
+  color: @insensitive_fg_color;
+}
+
+
+/* ==========================================================================
+   15. Notebooks, stack switchers and sidebars
+   ========================================================================== */
+
+notebook {
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+}
+
+notebook.frame {
+  border: 2px solid @pc_border;
+}
+
+notebook > stack:not(:only-child) {
+  background-color: @window_bg_color;
+}
+
+notebook > header {
+  padding: 0;
+  background-color: @pc_black;
+  border: 0 solid @pc_border;
+}
+
+notebook > header.top {
+  border-bottom-width: 2px;
+}
+
+notebook > header.bottom {
+  border-top-width: 2px;
+}
+
+notebook > header.left {
+  border-right-width: 2px;
+}
+
+notebook > header.right {
+  border-left-width: 2px;
+}
+
+notebook > header > tabs > tab {
+  min-height: 24px;
+  min-width: 24px;
+  padding: 4px 12px;
+  background-color: transparent;
+  color: @pc_silver;
+  border: 0 solid @pc_border;
+  font-weight: normal;
+}
+
+notebook > header.top > tabs > tab,
+notebook > header.bottom > tabs > tab {
+  border-right-width: 2px;
+}
+
+notebook > header.left > tabs > tab,
+notebook > header.right > tabs > tab {
+  border-bottom-width: 2px;
+}
+
+notebook > header > tabs > tab:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+}
+
+notebook > header > tabs > tab:checked,
+notebook > header > tabs > tab:checked:hover {
+  background-color: @window_bg_color;
+  color: @pc_white;
+  font-weight: bold;
+}
+
+notebook > header.top > tabs > tab:checked {
+  box-shadow: inset 0 4px 0 0 @pc_blue;
+}
+
+notebook > header.bottom > tabs > tab:checked {
+  box-shadow: inset 0 -4px 0 0 @pc_blue;
+}
+
+notebook > header.left > tabs > tab:checked {
+  box-shadow: inset 4px 0 0 0 @pc_blue;
+}
+
+notebook > header.right > tabs > tab:checked {
+  box-shadow: inset -4px 0 0 0 @pc_blue;
+}
+
+notebook > header.top > tabs > tab:checked:backdrop {
+  box-shadow: inset 0 4px 0 0 @pc_lavender;
+}
+
+notebook > header.bottom > tabs > tab:checked:backdrop {
+  box-shadow: inset 0 -4px 0 0 @pc_lavender;
+}
+
+notebook > header.left > tabs > tab:checked:backdrop {
+  box-shadow: inset 4px 0 0 0 @pc_lavender;
+}
+
+notebook > header.right > tabs > tab:checked:backdrop {
+  box-shadow: inset -4px 0 0 0 @pc_lavender;
+}
+
+notebook > header > tabs > tab:disabled {
+  color: @insensitive_fg_color;
+}
+
+notebook > header > tabs > tab.needs-attention {
+  color: @pc_orange;
+}
+
+notebook > header > tabs > tab:drop(active) {
+  background-color: @pc_green;
+  color: @pc_black;
+}
+
+notebook > header > tabs > tab.dnd {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+  border: 2px solid @pc_border_strong;
+  box-shadow: none;
+}
+
+notebook > header > tabs > tab button.flat {
+  min-width: 16px;
+  min-height: 16px;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+notebook > header > tabs > tab button.flat:hover {
+  background-color: @pc_red;
+  color: @pc_black;
+  border-color: @pc_white;
+}
+
+notebook > header > tabs > tab button.flat:active {
+  background-color: @pc_blue;
+  color: @pc_black;
+  border-color: @pc_white;
+}
+
+notebook > header > tabs > tab button.flat:first-child {
+  margin-right: 6px;
+}
+
+notebook > header > tabs > tab button.flat:last-child {
+  margin-left: 6px;
+}
+
+/* Scroll arrows shown when tabs overflow */
+notebook > header > tabs > arrow {
+  min-width: 16px;
+  min-height: 16px;
+  padding: 4px;
+  background-color: transparent;
+  border: 0 solid @pc_border;
+}
+
+notebook > header > tabs > arrow.down {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left.svg"),
+                                url("assets/arrow-left-2x.svg"));
+}
+
+notebook > header > tabs > arrow.up {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right.svg"),
+                                url("assets/arrow-right-2x.svg"));
+}
+
+notebook > header.left > tabs > arrow.down,
+notebook > header.right > tabs > arrow.down {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-up.svg"),
+                                url("assets/arrow-up-2x.svg"));
+}
+
+notebook > header.left > tabs > arrow.up,
+notebook > header.right > tabs > arrow.up {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down.svg"),
+                                url("assets/arrow-down-2x.svg"));
+}
+
+notebook > header > tabs > arrow:hover {
+  background-color: @pc_hover_bg;
+}
+
+notebook > header > tabs > arrow:active {
+  background-color: @pc_blue;
+}
+
+notebook > header > tabs > arrow.down:active {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left-active.svg"),
+                                url("assets/arrow-left-active-2x.svg"));
+}
+
+notebook > header > tabs > arrow.up:active {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right-active.svg"),
+                                url("assets/arrow-right-active-2x.svg"));
+}
+
+notebook > header.left > tabs > arrow.down:active,
+notebook > header.right > tabs > arrow.down:active {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-up-active.svg"),
+                                url("assets/arrow-up-active-2x.svg"));
+}
+
+notebook > header.left > tabs > arrow.up:active,
+notebook > header.right > tabs > arrow.up:active {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down-active.svg"),
+                                url("assets/arrow-down-active-2x.svg"));
+}
+
+notebook > header > tabs > arrow.down:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left-dim.svg"),
+                                url("assets/arrow-left-dim-2x.svg"));
+}
+
+notebook > header > tabs > arrow.up:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right-dim.svg"),
+                                url("assets/arrow-right-dim-2x.svg"));
+}
+
+notebook > header.left > tabs > arrow.down:disabled,
+notebook > header.right > tabs > arrow.down:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-up-dim.svg"),
+                                url("assets/arrow-up-dim-2x.svg"));
+}
+
+notebook > header.left > tabs > arrow.up:disabled,
+notebook > header.right > tabs > arrow.up:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down-dim.svg"),
+                                url("assets/arrow-down-dim-2x.svg"));
+}
+
+/* Stack sidebar and generic sidebars */
+.sidebar,
+stacksidebar {
+  background-color: @sidebar_bg_color;
+  color: @sidebar_fg_color;
+  border: 0 solid @sidebar_border_color;
+}
+
+.sidebar:dir(ltr),
+stacksidebar:dir(ltr),
+.sidebar.left,
+stacksidebar.left {
+  border-right-width: 2px;
+  border-left-width: 0;
+}
+
+.sidebar:dir(rtl),
+stacksidebar:dir(rtl),
+.sidebar.right,
+stacksidebar.right {
+  border-left-width: 2px;
+  border-right-width: 0;
+}
+
+.sidebar list,
+stacksidebar list {
+  background-color: transparent;
+}
+
+stacksidebar list > row {
+  min-height: 24px;
+  padding: 6px 12px;
+}
+
+stacksidebar list > row.needs-attention > label {
+  color: @pc_orange;
+}
+
+stacksidebar list > row.needs-attention:selected > label {
+  color: @pc_black;
+}
+
+.sidebar-pane {
+  background-color: @sidebar_bg_color;
+  color: @sidebar_fg_color;
+}
+
+
+/* ==========================================================================
+   16. Popovers and menus
+   ========================================================================== */
+
+popover {
+  background-color: transparent;
+}
+
+popover > contents {
+  padding: 6px;
+  background-color: @popover_bg_color;
+  color: @popover_fg_color;
+  border: 2px solid @pc_border_strong;
+  box-shadow: 4px 4px 0 0 @pc_shadow;
+}
+
+popover > arrow {
+  background-color: @popover_bg_color;
+  border: 2px solid @pc_border_strong;
+}
+
+popover.background {
+  background-color: transparent;
+}
+
+popover.background > contents,
+popover.background > arrow {
+  background-color: @popover_bg_color;
+  color: @popover_fg_color;
+}
+
+popover:backdrop > contents {
+  border-color: @pc_border;
+  box-shadow: none;
+}
+
+popover:backdrop > arrow {
+  border-color: @pc_border;
+}
+
+popover > contents separator {
+  background-color: @pc_border;
+}
+
+popover.osd > contents,
+popover.touch-selection > contents,
+popover.magnifier > contents {
+  background-color: @pc_black;
+  color: @pc_white;
+}
+
+popover.osd > arrow,
+popover.touch-selection > arrow,
+popover.magnifier > arrow {
+  background-color: @pc_black;
+}
+
+popover.touch-selection > contents {
+  padding: 2px;
+}
+
+popover.entry-completion > contents {
+  padding: 0;
+}
+
+/* Menus */
+popover.menu > contents {
+  padding: 2px;
+}
+
+popover.menu box.inline-buttons {
+  padding: 0 6px;
+}
+
+popover.menu box.inline-buttons > button.image-button.model {
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+popover.menu box.inline-buttons > button.image-button.model:hover,
+popover.menu box.inline-buttons > button.image-button.model:selected,
+popover.menu box.inline-buttons > button.image-button.model:active {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+popover.menu box.circular-buttons {
+  padding: 6px;
+}
+
+popover.menu box.circular-buttons > button.circular.image-button.model {
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+}
+
+popover.menu > contents > scrolledwindow > viewport > stack > box > separator,
+popover.menu separator {
+  min-height: 2px;
+  margin: 4px 0;
+  background-color: @pc_border;
+}
+
+popover.menu label.title {
+  padding: 4px 8px;
+  color: @pc_silver;
+  font-weight: bold;
+}
+
+popover.menu list {
+  background-color: transparent;
+  color: inherit;
+}
+
+popover.menu list > row {
+  padding: 2px 8px;
+}
+
+popover.menu listview {
+  background-color: transparent;
+  color: inherit;
+}
+
+modelbutton {
+  min-height: 16px;
+  min-width: 40px;
+  padding: 6px 8px;
+  color: @popover_fg_color;
+  border-spacing: 6px;
+}
+
+/* The highlighted menu item (pointer or keyboard) is blue with black text. */
+modelbutton:hover,
+modelbutton:selected,
+modelbutton:active {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+modelbutton:disabled {
+  background-color: transparent;
+  color: @insensitive_fg_color;
+}
+
+modelbutton accelerator {
+  margin-left: 16px;
+  color: @pc_silver;
+}
+
+modelbutton:hover accelerator,
+modelbutton:selected accelerator,
+modelbutton:active accelerator {
+  color: @pc_black;
+}
+
+modelbutton:disabled accelerator {
+  color: @insensitive_fg_color;
+}
+
+modelbutton arrow.left {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left.svg"),
+                                url("assets/arrow-left-2x.svg"));
+}
+
+modelbutton arrow.right {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right.svg"),
+                                url("assets/arrow-right-2x.svg"));
+}
+
+modelbutton:hover arrow.left,
+modelbutton:selected arrow.left,
+modelbutton:active arrow.left {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left-active.svg"),
+                                url("assets/arrow-left-active-2x.svg"));
+}
+
+modelbutton:hover arrow.right,
+modelbutton:selected arrow.right,
+modelbutton:active arrow.right {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right-active.svg"),
+                                url("assets/arrow-right-active-2x.svg"));
+}
+
+modelbutton:disabled arrow.left {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left-dim.svg"),
+                                url("assets/arrow-left-dim-2x.svg"));
+}
+
+modelbutton:disabled arrow.right {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right-dim.svg"),
+                                url("assets/arrow-right-dim-2x.svg"));
+}
+
+modelbutton check,
+modelbutton radio {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+modelbutton check.left,
+modelbutton radio.left {
+  margin-right: 2px;
+}
+
+modelbutton check.right,
+modelbutton radio.right {
+  margin-left: 2px;
+}
+
+/* Check and radio marks on a blue bar: black frame so they stay legible.
+   Used for highlighted menu items and for selected list rows. */
+modelbutton:hover check,
+modelbutton:selected check,
+modelbutton:active check,
+row:selected check,
+row:selected checkbutton:hover > check {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-selected.svg"),
+                                url("assets/checkbox-unchecked-selected-2x.svg"));
+}
+
+modelbutton:hover check:checked,
+modelbutton:selected check:checked,
+modelbutton:active check:checked,
+row:selected check:checked,
+row:selected checkbutton:hover > check:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selected.svg"),
+                                url("assets/checkbox-checked-selected-2x.svg"));
+}
+
+modelbutton:hover check:indeterminate,
+modelbutton:selected check:indeterminate,
+modelbutton:active check:indeterminate,
+row:selected check:indeterminate,
+row:selected checkbutton:hover > check:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-selected.svg"),
+                                url("assets/checkbox-mixed-selected-2x.svg"));
+}
+
+modelbutton:hover radio,
+modelbutton:selected radio,
+modelbutton:active radio,
+row:selected radio,
+row:selected checkbutton:hover > radio {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-selected.svg"),
+                                url("assets/radio-unchecked-selected-2x.svg"));
+}
+
+modelbutton:hover radio:checked,
+modelbutton:selected radio:checked,
+modelbutton:active radio:checked,
+row:selected radio:checked,
+row:selected checkbutton:hover > radio:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-selected.svg"),
+                                url("assets/radio-checked-selected-2x.svg"));
+}
+
+modelbutton:hover radio:indeterminate,
+modelbutton:selected radio:indeterminate,
+modelbutton:active radio:indeterminate,
+row:selected radio:indeterminate,
+row:selected checkbutton:hover > radio:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-selected.svg"),
+                                url("assets/radio-mixed-selected-2x.svg"));
+}
+
+modelbutton check:disabled,
+row:selected check:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-disabled.svg"),
+                                url("assets/checkbox-unchecked-disabled-2x.svg"));
+}
+
+modelbutton check:checked:disabled,
+row:selected check:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-disabled.svg"),
+                                url("assets/checkbox-checked-disabled-2x.svg"));
+}
+
+modelbutton radio:disabled,
+row:selected radio:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-disabled.svg"),
+                                url("assets/radio-unchecked-disabled-2x.svg"));
+}
+
+modelbutton radio:checked:disabled,
+row:selected radio:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-disabled.svg"),
+                                url("assets/radio-checked-disabled-2x.svg"));
+}
+
+/* Menu bar */
+popovermenubar,
+menubar {
+  padding: 0;
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+  border-bottom: 2px solid @pc_border;
+}
+
+popovermenubar > item,
+menubar > item {
+  min-height: 16px;
+  padding: 4px 8px;
+  color: inherit;
+}
+
+popovermenubar > item:hover,
+popovermenubar > item:selected,
+popovermenubar > item:active,
+menubar > item:hover,
+menubar > item:selected,
+menubar > item:active {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+popovermenubar > item:disabled,
+menubar > item:disabled {
+  color: @insensitive_fg_color;
+}
+
+/* Emoji completion and entry completion lists */
+popover.emoji-completion > contents {
+  padding: 2px;
+}
+
+popover.emoji-completion > contents emoji-completion-row {
+  padding: 4px 8px;
+}
+
+popover.emoji-completion > contents emoji-completion-row:hover,
+popover.emoji-completion > contents emoji-completion-row:focus {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+popover.emoji-completion > contents emoji-completion-row > box {
+  border-spacing: 6px;
+}
+
+
+/* ==========================================================================
+   17. Tooltips
+   ========================================================================== */
+
+tooltip {
+  padding: 4px 8px;
+  background-color: @pc_black;
+  color: @pc_white;
+  border: 2px solid @pc_border_strong;
+  box-shadow: none;
+}
+
+tooltip.background {
+  background-color: @pc_black;
+  color: @pc_white;
+}
+
+tooltip > box {
+  border-spacing: 6px;
+}
+
+tooltip label {
+  color: @pc_white;
+}
+
+
+/* ==========================================================================
+   18. Spinner, expander, separators, panes, frames
+   ========================================================================== */
+
+/* An eight-frame chase drawn as pixel art. steps(8) lands exactly on each
+   keyframe, so frames are swapped whole: nothing is tweened or rotated. */
+@keyframes pixelcart-spin {
+  0% {
+    background-image: -gtk-scaled(url("assets/spinner-1.svg"),
+                                  url("assets/spinner-1-2x.svg"));
+  }
+
+  12.5% {
+    background-image: -gtk-scaled(url("assets/spinner-2.svg"),
+                                  url("assets/spinner-2-2x.svg"));
+  }
+
+  25% {
+    background-image: -gtk-scaled(url("assets/spinner-3.svg"),
+                                  url("assets/spinner-3-2x.svg"));
+  }
+
+  37.5% {
+    background-image: -gtk-scaled(url("assets/spinner-4.svg"),
+                                  url("assets/spinner-4-2x.svg"));
+  }
+
+  50% {
+    background-image: -gtk-scaled(url("assets/spinner-5.svg"),
+                                  url("assets/spinner-5-2x.svg"));
+  }
+
+  62.5% {
+    background-image: -gtk-scaled(url("assets/spinner-6.svg"),
+                                  url("assets/spinner-6-2x.svg"));
+  }
+
+  75% {
+    background-image: -gtk-scaled(url("assets/spinner-7.svg"),
+                                  url("assets/spinner-7-2x.svg"));
+  }
+
+  87.5% {
+    background-image: -gtk-scaled(url("assets/spinner-8.svg"),
+                                  url("assets/spinner-8-2x.svg"));
+  }
+
+  100% {
+    background-image: -gtk-scaled(url("assets/spinner-1.svg"),
+                                  url("assets/spinner-1-2x.svg"));
+  }
+}
+
+spinner {
+  min-width: 16px;
+  min-height: 16px;
+  background-color: transparent;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  opacity: 0;
+  -gtk-icon-source: none;
+}
+
+spinner:checked {
+  background-image: -gtk-scaled(url("assets/spinner-1.svg"),
+                                url("assets/spinner-1-2x.svg"));
+  opacity: 1;
+  animation: pixelcart-spin 800ms steps(8) infinite;
+}
+
+/* Expander */
+expander-widget > box > title {
+  padding: 2px 0;
+  border-spacing: 4px;
+  color: @pc_white;
+}
+
+expander-widget > box > title:hover {
+  color: @pc_white;
+}
+
+expander-widget > box > title:disabled {
+  color: @insensitive_fg_color;
+}
+
+expander {
+  min-width: 16px;
+  min-height: 16px;
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right.svg"),
+                                url("assets/arrow-right-2x.svg"));
+}
+
+expander:dir(rtl) {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-left.svg"),
+                                url("assets/arrow-left-2x.svg"));
+}
+
+expander:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down.svg"),
+                                url("assets/arrow-down-2x.svg"));
+}
+
+expander:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-right-dim.svg"),
+                                url("assets/arrow-right-dim-2x.svg"));
+}
+
+expander:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/arrow-down-dim.svg"),
+                                url("assets/arrow-down-dim-2x.svg"));
+}
+
+/* Separators */
+separator {
+  min-width: 2px;
+  min-height: 2px;
+  background-color: @pc_border;
+}
+
+separator.spacer {
+  background-color: transparent;
+}
+
+separator.spacer.horizontal {
+  min-width: 12px;
+}
+
+separator.spacer.vertical {
+  min-height: 12px;
+}
+
+/* Paned */
+paned > separator {
+  min-width: 2px;
+  min-height: 2px;
+  background-color: @pc_border;
+}
+
+paned > separator:hover {
+  background-color: @pc_border_strong;
+}
+
+paned > separator:active {
+  background-color: @pc_blue;
+}
+
+paned > separator.wide {
+  min-width: 8px;
+  min-height: 8px;
+  background-color: @pc_navy;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border: 0 solid @pc_border;
+}
+
+paned.horizontal > separator.wide {
+  border-left-width: 2px;
+  border-right-width: 2px;
+  background-image: -gtk-scaled(url("assets/pane-handle-vertical.svg"),
+                                url("assets/pane-handle-vertical-2x.svg"));
+}
+
+paned.vertical > separator.wide {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  background-image: -gtk-scaled(url("assets/pane-handle-horizontal.svg"),
+                                url("assets/pane-handle-horizontal-2x.svg"));
+}
+
+paned > separator.wide:hover {
+  background-color: @pc_hover_bg;
+}
+
+/* Frames */
+frame,
+.frame {
+  border: 2px solid @pc_border;
+}
+
+frame > label {
+  margin: 4px;
+  color: @pc_silver;
+}
+
+frame.flat,
+.frame.flat {
+  border-width: 0;
+}
+
+frame.view,
+.frame.view {
+  background-color: @view_bg_color;
+}
+
+/* Grid and box helpers */
+.spacer {
+  background-color: transparent;
+}
+
+.border-top {
+  border-top: 2px solid @pc_border;
+}
+
+.border-bottom {
+  border-bottom: 2px solid @pc_border;
+}
+
+
+/* ==========================================================================
+   19. Bars: toolbar, action bar, status bar, info bar
+   ========================================================================== */
+
+.toolbar {
+  padding: 4px;
+  border-spacing: 4px;
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+}
+
+.toolbar.osd {
+  padding: 8px;
+  background-color: @pc_black;
+  color: @pc_white;
+  border: 2px solid @pc_border_strong;
+}
+
+.toolbar > separator,
+.toolbar > box > separator {
+  margin: 2px 4px;
+}
+
+.toolbar.horizontal > separator {
+  min-width: 2px;
+}
+
+.inline-toolbar {
+  padding: 2px;
+  background-color: @window_bg_color;
+  border: 2px solid @pc_border;
+  border-top-width: 0;
+}
+
+actionbar > revealer > box {
+  padding: 6px;
+  border-spacing: 6px;
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+  border-top: 2px solid @pc_border;
+}
+
+.statusbar,
+statusbar {
+  padding: 2px 8px;
+  color: @pc_silver;
+}
+
+/* Info bars */
+infobar > revealer > box {
+  padding: 6px 8px;
+  border-spacing: 6px;
+  background-color: @pc_black;
+  color: @pc_white;
+  border-bottom: 2px solid @pc_black;
+}
+
+infobar.info > revealer > box {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+infobar.question > revealer > box {
+  background-color: @pc_plum;
+  color: @pc_white;
+}
+
+infobar.warning > revealer > box {
+  background-color: @pc_orange;
+  color: @pc_black;
+}
+
+infobar.error > revealer > box {
+  background-color: @pc_red;
+  color: @pc_black;
+}
+
+/* Labels inherit the bar's text colour. Links follow the bar text. */
+infobar.info link,
+infobar.warning link,
+infobar.error link,
+infobar.info link:visited,
+infobar.warning link:visited,
+infobar.error link:visited {
+  color: @pc_black;
+}
+
+infobar.question link,
+infobar.question link:visited {
+  color: @pc_white;
+}
+
+/* Buttons on a bar keep the dark button face, framed in black without the
+   drop shadow so they sit flat on the coloured strip. */
+infobar > revealer > box button {
+  border-color: @pc_black;
+  box-shadow: none;
+}
+
+infobar > revealer > box button:hover {
+  border-color: @pc_white;
+}
+
+/* The close button is flat, like the GTK 3 one. */
+infobar > revealer > box > button.close {
+  background-color: transparent;
+  color: inherit;
+  border-color: transparent;
+}
+
+infobar > revealer > box > button.close:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+  border-color: @pc_border_strong;
+}
+
+infobar > revealer > box > button.close:active {
+  background-color: @pc_blue;
+  color: @pc_black;
+  border-color: @pc_border_strong;
+}
+
+infobar.action:hover > revealer > box {
+  border-bottom-color: @pc_white;
+}
+
+/* In-app notifications */
+.app-notification,
+.app-notification.frame {
+  padding: 8px;
+  background-color: @pc_black;
+  color: @pc_white;
+  border: 2px solid @pc_border_strong;
+  border-top-width: 0;
+  box-shadow: 4px 4px 0 0 @pc_shadow;
+}
+
+.app-notification border {
+  border-width: 0;
+}
+
+
+/* ==========================================================================
+   20. Cards and on-screen display surfaces
+   ========================================================================== */
+
+.card {
+  background-color: @card_bg_color;
+  color: @card_fg_color;
+  border: 2px solid @pc_border;
+  box-shadow: 2px 2px 0 0 @pc_black;
+}
+
+.card.activatable:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+  border-color: @pc_white;
+}
+
+.card.activatable:active {
+  background-color: @pc_blue;
+  color: @pc_black;
+  box-shadow: none;
+}
+
+.osd {
+  background-color: @pc_black;
+  color: @pc_white;
+  border: 2px solid @pc_border_strong;
+}
+
+.osd label {
+  color: @pc_white;
+}
+
+button.osd label,
+.osd button label {
+  color: inherit;
+}
+
+.osd scale > trough {
+  border-color: @pc_border_strong;
+}
+
+.osd separator {
+  background-color: @pc_border;
+}
+
+/* Modal scrim behind sheets and dialogs drawn in-window */
+.dimming,
+dimming {
+  background-color: @pc_scrim;
+}
+
+/* Drop highlighting */
+:drop(active) {
+  box-shadow: inset 0 0 0 2px @pc_green;
+}
+
+.drop-target:drop(active) {
+  box-shadow: inset 0 0 0 2px @pc_green;
+}
+
+
+/* ==========================================================================
+   21. Calendar
+   ========================================================================== */
+
+calendar {
+  padding: 2px;
+  background-color: @view_bg_color;
+  color: @view_fg_color;
+  border: 2px solid @pc_border;
+}
+
+calendar > header {
+  padding: 2px;
+  border-bottom: 2px solid @pc_border;
+}
+
+calendar > header > button,
+calendar > header > button:backdrop {
+  min-width: 20px;
+  min-height: 20px;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+calendar > header > button:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+}
+
+calendar > header > button:active {
+  background-color: @pc_blue;
+  color: @pc_black;
+}
+
+calendar > grid {
+  margin: 2px;
+}
+
+calendar > grid > label.day-name,
+calendar > grid > label.week-number {
+  padding: 2px;
+  color: @pc_peach;
+}
+
+calendar > grid > label.day-number {
+  min-width: 24px;
+  min-height: 20px;
+  padding: 2px;
+  color: @pc_white;
+}
+
+calendar > grid > label.day-number:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+}
+
+calendar > grid > label.day-number.other-month {
+  color: @pc_lavender;
+}
+
+calendar > grid > label.day-number.today {
+  box-shadow: inset 0 0 0 2px @pc_green;
+  font-weight: bold;
+}
+
+calendar > grid > label.day-number:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+calendar > grid > label.day-number:selected:backdrop {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+}
+
+calendar > grid > label.day-number:disabled {
+  color: @insensitive_fg_color;
+}
+
+calendar:disabled {
+  color: @insensitive_fg_color;
+}
+
+
+/* ==========================================================================
+   22. Dialogs
+   ========================================================================== */
+
+window.dialog {
+  background-color: @dialog_bg_color;
+  color: @dialog_fg_color;
+}
+
+window.dialog > box.dialog-vbox,
+.dialog-vbox {
+  border-spacing: 0;
+}
+
+.dialog-action-area {
+  margin: 8px;
+  border-spacing: 8px;
+}
+
+.dialog-action-area > button {
+  min-width: 64px;
+}
+
+.dialog-action-box {
+  border-top: 2px solid @pc_border;
+}
+
+/* Message dialogs and alert dialogs */
+window.dialog.message,
+window.messagedialog {
+  background-color: @dialog_bg_color;
+  color: @dialog_fg_color;
+}
+
+window.dialog.message .titlebar,
+window.messagedialog .titlebar {
+  min-height: 24px;
+  background-color: @headerbar_bg_color;
+}
+
+window.dialog.message box.dialog-vbox.vertical,
+window.messagedialog box.dialog-vbox.vertical {
+  border-spacing: 12px;
+}
+
+window.dialog.message box.dialog-vbox.vertical > box,
+window.messagedialog box.dialog-vbox.vertical > box {
+  margin: 16px 16px 0 16px;
+  border-spacing: 12px;
+}
+
+window.dialog.message label.title,
+window.messagedialog label.title {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+window.dialog.message .dialog-action-area,
+window.messagedialog .dialog-action-area {
+  margin: 12px 16px 16px 16px;
+  border-spacing: 8px;
+}
+
+/* File chooser */
+filechooser {
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+}
+
+filechooser .dialog-action-box {
+  border-top: 2px solid @pc_border;
+}
+
+filechooser #pathbarbox {
+  padding: 6px;
+  background-color: @pc_navy;
+  border-bottom: 2px solid @pc_border;
+}
+
+filechooser .search-bar,
+filechooser searchbar > revealer > box {
+  background-color: @window_bg_color;
+}
+
+filechooserbutton > button > box {
+  border-spacing: 6px;
+}
+
+filechooserbutton:drop(active) {
+  box-shadow: none;
+}
+
+pathbar > button,
+.path-bar > button {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+pathbar > button.text-button,
+.path-bar > button.text-button {
+  min-width: 0;
+}
+
+pathbar > button.slider-button,
+.path-bar > button.slider-button {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+pathbar > button > box,
+.path-bar > button > box {
+  border-spacing: 4px;
+}
+
+/* Places sidebar */
+placessidebar {
+  background-color: @sidebar_bg_color;
+  color: @sidebar_fg_color;
+  border-right: 2px solid @sidebar_border_color;
+}
+
+placessidebar list {
+  background-color: transparent;
+}
+
+placessidebar list > row,
+placessidebar row {
+  min-height: 28px;
+  padding: 0 4px;
+}
+
+placessidebar row > revealer {
+  padding: 0 8px;
+}
+
+placessidebar row image.sidebar-icon {
+  color: @pc_silver;
+}
+
+placessidebar row image.sidebar-icon:dir(ltr) {
+  padding-right: 8px;
+}
+
+placessidebar row image.sidebar-icon:dir(rtl) {
+  padding-left: 8px;
+}
+
+placessidebar row label.sidebar-label:dir(ltr) {
+  padding-right: 2px;
+}
+
+placessidebar row label.sidebar-label:dir(rtl) {
+  padding-left: 2px;
+}
+
+placessidebar row:selected image.sidebar-icon {
+  color: @pc_black;
+}
+
+placessidebar row button.sidebar-button {
+  min-width: 20px;
+  min-height: 20px;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+placessidebar row button.sidebar-button:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+  border-color: @pc_border_strong;
+}
+
+placessidebar row.sidebar-placeholder-row {
+  min-height: 2px;
+  padding: 0;
+  background-color: @pc_green;
+}
+
+placessidebar row.sidebar-new-bookmark-row {
+  color: @pc_green;
+}
+
+placessidebar row:drop(active) {
+  background-color: @pc_green;
+  color: @pc_black;
+  box-shadow: none;
+}
+
+placesview .server-list-button > image {
+  -gtk-icon-transform: rotate(0turn);
+}
+
+placesview .server-list-button:checked > image {
+  -gtk-icon-transform: rotate(-0.5turn);
+}
+
+placesview > actionbar > revealer > box > box {
+  border-spacing: 6px;
+}
+
+/* Colour chooser */
+colorswatch {
+  min-width: 32px;
+  min-height: 32px;
+}
+
+colorswatch > overlay {
+  border: 2px solid @pc_black;
+}
+
+colorswatch:hover > overlay {
+  border-color: @pc_white;
+}
+
+colorswatch:selected > overlay {
+  border-color: @pc_white;
+  box-shadow: inset 0 0 0 2px @pc_black;
+}
+
+colorswatch.light > overlay {
+  color: @pc_black;
+}
+
+colorswatch.dark > overlay {
+  color: @pc_white;
+}
+
+colorswatch:drop(active) {
+  box-shadow: none;
+}
+
+colorswatch:drop(active) > overlay {
+  border-color: @pc_green;
+}
+
+colorswatch:disabled > overlay {
+  border-color: @pc_border_disabled;
+}
+
+colorswatch#add-color-button > overlay {
+  background-color: @pc_navy;
+  color: @pc_white;
+  border-color: @pc_border_strong;
+}
+
+colorswatch#add-color-button:hover > overlay {
+  background-color: @pc_hover_bg;
+  border-color: @pc_white;
+}
+
+colorswatch#editor-color-sample > overlay {
+  border-color: @pc_border_strong;
+}
+
+colorchooser .popover.osd {
+  border: 2px solid @pc_border_strong;
+}
+
+colorchooser > box > grid,
+colorchooser grid {
+  border-spacing: 2px;
+}
+
+plane {
+  border: 2px solid @pc_border_strong;
+}
+
+/* Font chooser */
+fontchooser {
+  border-spacing: 6px;
+}
+
+fontchooser list > row,
+fontchooser listview > row {
+  padding: 4px 8px;
+}
+
+fontchooser .font-preview,
+fontchooser entry.preview {
+  background-color: @view_bg_color;
+  color: @view_fg_color;
+}
+
+/* About dialog */
+window.aboutdialog image.large-icons {
+  -gtk-icon-size: 128px;
+}
+
+window.aboutdialog stack {
+  margin: 0 8px;
+}
+
+window.aboutdialog textview {
+  border: 2px solid @pc_border;
+}
+
+/* Shortcuts window */
+shortcuts-section {
+  margin: 16px;
+}
+
+shortcuts-section > box,
+shortcuts-group {
+  border-spacing: 8px;
+}
+
+shortcut {
+  border-spacing: 6px;
+}
+
+shortcut > .keycap,
+.keycap {
+  min-width: 20px;
+  min-height: 24px;
+  padding: 0 6px 2px;
+  background-color: @pc_navy;
+  color: @pc_white;
+  border: 2px solid @pc_border_strong;
+  box-shadow: 2px 2px 0 0 @pc_black;
+  font-size: 90%;
+  margin-top: 2px;
+}
+
+.shortcuts-search-results {
+  margin: 16px;
+  border-spacing: 16px;
+}
+
+/* Emoji chooser */
+popover.emoji-picker > contents {
+  padding: 0;
+}
+
+.emoji-searchbar {
+  padding: 6px;
+  border-spacing: 6px;
+  border-bottom: 2px solid @pc_border;
+}
+
+.emoji-toolbar {
+  padding: 4px;
+  border-spacing: 4px;
+  border-top: 2px solid @pc_border;
+}
+
+button.emoji-section {
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+button.emoji-section:hover {
+  background-color: @pc_hover_bg;
+  color: @pc_hover_fg;
+}
+
+button.emoji-section:checked {
+  background-color: @pc_blue;
+  color: @pc_black;
+  border-color: @pc_border_strong;
+}
+
+popover.emoji-picker emoji {
+  min-width: 32px;
+  min-height: 32px;
+  padding: 4px;
+  font-size: 140%;
+}
+
+popover.emoji-picker emoji:hover,
+popover.emoji-picker emoji:focus {
+  background-color: @pc_hover_bg;
+}
+
+emoji-completion-row > box {
+  border-spacing: 8px;
+}
+
+/* Print dialog */
+window.dialog.print drawing,
+printdialog drawing {
+  color: @pc_white;
+}
+
+window.dialog.print paper,
+printdialog paper {
+  padding: 0;
+  background-color: @pc_white;
+  color: @pc_black;
+  border: 2px solid @pc_border_strong;
+}
+
+window.dialog.print .dialog-action-box,
+printdialog .dialog-action-box {
+  margin: 12px;
+}
+
+window.dialog.print notebook,
+printdialog notebook {
+  border: 2px solid @pc_border;
+}
+
+/* Page setup and application chooser */
+.unix-print-dialog list,
+appchooser list {
+  border: 2px solid @pc_border;
+}
+
+
+/* ==========================================================================
+   23. Video and media controls
+   ========================================================================== */
+
+video {
+  background-color: @pc_black;
+  color: @pc_white;
+}
+
+video image.osd {
+  min-width: 64px;
+  min-height: 64px;
+  background-color: @pc_black;
+  color: @pc_white;
+  border: 2px solid @pc_border_strong;
+}
+
+video > overlay > revealer > controls,
+controls.toolbar,
+controls {
+  padding: 6px;
+  border-spacing: 6px;
+  background-color: @pc_black;
+  color: @pc_white;
+}
+
+video > overlay > revealer > controls {
+  border-top: 2px solid @pc_border_strong;
+}
+
+controls > box {
+  border-spacing: 6px;
+}
+
+controls scale {
+  padding: 8px 6px;
+}
+
+controls label {
+  color: @pc_white;
+  font-feature-settings: "tnum";
+}
+
+scalebutton > button {
+  min-width: 24px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+scalebutton > popover > contents {
+  padding: 6px;
+}
+
+volumebutton > button {
+  min-width: 24px;
+}
+
+
+/* ==========================================================================
+   24. Backdrop (inactive window) summary
+   Inactive windows keep their surface and text colours so content stays
+   readable. What changes, deliberately: the title bar turns navy with
+   lavender text and a slate rule, button bevels flatten and button, entry
+   and switch frames drop to slate, selections, checked toggle buttons,
+   switches and scale highlights turn lavender, progress fills and the
+   calendar's today marker turn forest, scrollbar handles dim, and text
+   carets are hidden. Check and radio artwork is unchanged.
+   ========================================================================== */
+
+window:backdrop entry,
+window:backdrop spinbutton,
+window:backdrop textview,
+window:backdrop entry > text,
+window:backdrop spinbutton > text {
+  caret-color: transparent;
+}
+
+window:backdrop entry,
+window:backdrop spinbutton {
+  border-color: @pc_border;
+}
+
+window:backdrop switch:checked {
+  background-color: @pc_backdrop_selected_bg;
+}
+
+window:backdrop button:checked {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+  border-color: @pc_border;
+}
+
+window:backdrop button.suggested-action:checked {
+  background-color: @pc_backdrop_selected_bg;
+  color: @pc_backdrop_selected_fg;
+}
+
+window:backdrop calendar > grid > label.day-number.today {
+  box-shadow: inset 0 0 0 2px @pc_forest;
+}

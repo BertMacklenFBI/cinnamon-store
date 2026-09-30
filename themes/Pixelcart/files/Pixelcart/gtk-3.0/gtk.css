@@ -1,0 +1,4557 @@
+/*
+ * Pixelcart - GTK 3 theme (GTK 3.24)
+ * Part of the Pixelcart theme: a dark 8-bit / fantasy-console look for the
+ * Cinnamon desktop.
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * This file is hand-written and self-contained: it imports no other theme and
+ * needs no build step. Every colour below the palette block is referenced by
+ * name, so the whole theme can be re-tinted from one place.
+ */
+
+/*
+ * Palette legend - the 16 fantasy-console colours
+ *
+ *   black    #000000   views, entries, troughs, titlebars, tooltips
+ *   navy     #1D2B53   window, dialog and menu background
+ *   plum     #7E2553   hover background
+ *   forest   #008751   progress fill in unfocused windows
+ *   brown    #AB5236   reserved (defined for completeness, unused here)
+ *   slate    #5F574F   standard border, separators
+ *   silver   #C2C3C7   strong border, secondary text, slider handles
+ *   white    #FFF1E8   primary text
+ *   red      #FF004D   destructive action, error, close button (black text)
+ *   orange   #FFA300   warning, needs-attention
+ *   yellow   #FFEC27   keyboard focus indicator
+ *   green    #00E436   suggested action, success, progress fill
+ *   blue     #29ADFF   selection, active, checked, links
+ *   lavender #83769C   disabled text and borders, unfocused selection
+ *   pink     #FF77A8   visited links, error text on navy
+ *   peach    #FFCCAA   calendar day names
+ */
+
+/* ==========================================================================
+   1. Named colours
+   ========================================================================== */
+
+/* --- The palette (the only literal colour values in this file) ----------- */
+@define-color pc_black #000000;
+@define-color pc_navy #1D2B53;
+@define-color pc_plum #7E2553;
+@define-color pc_forest #008751;
+@define-color pc_brown #AB5236;
+@define-color pc_slate #5F574F;
+@define-color pc_silver #C2C3C7;
+@define-color pc_white #FFF1E8;
+@define-color pc_red #FF004D;
+@define-color pc_orange #FFA300;
+@define-color pc_yellow #FFEC27;
+@define-color pc_green #00E436;
+@define-color pc_blue #29ADFF;
+@define-color pc_lavender #83769C;
+@define-color pc_pink #FF77A8;
+@define-color pc_peach #FFCCAA;
+
+/* Hard drop shadow cast by floating surfaces (menus, popovers, windows). */
+@define-color pc_shadow rgba(0, 0, 0, 0.5);
+
+/* --- Pixelcart semantic roles -------------------------------------------- */
+@define-color hover_bg_color @pc_plum;
+@define-color hover_fg_color @pc_white;
+@define-color focus_color @pc_yellow;
+@define-color strong_border_color @pc_silver;
+@define-color trough_color @pc_black;
+@define-color slider_color @pc_silver;
+@define-color slider_hover_color @pc_white;
+@define-color shadow_color @pc_black;
+@define-color secondary_fg_color @pc_silver;
+@define-color suggested_bg_color @pc_green;
+@define-color suggested_fg_color @pc_black;
+@define-color destructive_bg_color @pc_red;
+@define-color destructive_fg_color @pc_black;
+@define-color warning_fg_color @pc_black;
+@define-color headerbar_bg_color @pc_black;
+@define-color headerbar_fg_color @pc_white;
+@define-color menu_bg_color @pc_navy;
+@define-color menu_fg_color @pc_white;
+@define-color menu_hover_bg_color @pc_blue;
+@define-color menu_hover_fg_color @pc_black;
+@define-color titlebar_accent_color @pc_blue;
+
+/* --- Standard GTK names (used by applications and Mint tools) ------------ */
+@define-color theme_bg_color @pc_navy;
+@define-color theme_fg_color @pc_white;
+@define-color theme_base_color @pc_black;
+@define-color theme_text_color @pc_white;
+@define-color theme_selected_bg_color @pc_blue;
+@define-color theme_selected_fg_color @pc_black;
+
+@define-color insensitive_bg_color @pc_navy;
+@define-color insensitive_fg_color @pc_lavender;
+@define-color insensitive_base_color @pc_navy;
+
+@define-color theme_unfocused_bg_color @pc_navy;
+@define-color theme_unfocused_fg_color @pc_white;
+@define-color theme_unfocused_base_color @pc_black;
+@define-color theme_unfocused_text_color @pc_white;
+@define-color theme_unfocused_selected_bg_color @pc_lavender;
+@define-color theme_unfocused_selected_fg_color @pc_black;
+@define-color unfocused_insensitive_color @pc_lavender;
+
+@define-color borders @pc_slate;
+@define-color unfocused_borders @pc_slate;
+
+@define-color warning_color @pc_orange;
+@define-color error_color @pc_red;
+@define-color success_color @pc_green;
+@define-color destructive_color @pc_red;
+
+@define-color content_view_bg @pc_black;
+@define-color text_view_bg @pc_black;
+@define-color placeholder_text_color @pc_lavender;
+@define-color link_color @pc_blue;
+@define-color visited_link_color @pc_pink;
+
+/* --- Window-manager names (client-side and Metacity fallbacks) ----------- */
+@define-color wm_title @pc_white;
+@define-color wm_unfocused_title @pc_lavender;
+@define-color wm_highlight @pc_black;
+@define-color wm_bg @pc_black;
+@define-color wm_unfocused_bg @pc_navy;
+@define-color wm_borders_edge @pc_silver;
+@define-color wm_button_close_bg @pc_red;
+@define-color wm_button_close_hover_bg @pc_red;
+@define-color wm_button_close_active_bg @pc_red;
+@define-color wm_icon_close_bg @pc_black;
+@define-color wm_button_hover_color_a @pc_plum;
+@define-color wm_button_hover_color_b @pc_plum;
+@define-color wm_button_active_color_a @pc_blue;
+@define-color wm_button_active_color_b @pc_blue;
+@define-color wm_button_active_color_c @pc_blue;
+
+/* --- Legacy GTK 2 / early GTK 3 names ------------------------------------ */
+@define-color bg_color @pc_navy;
+@define-color fg_color @pc_white;
+@define-color base_color @pc_black;
+@define-color text_color @pc_white;
+@define-color selected_bg_color @pc_blue;
+@define-color selected_fg_color @pc_black;
+@define-color tooltip_bg_color @pc_black;
+@define-color tooltip_fg_color @pc_white;
+@define-color theme_tooltip_bg_color @pc_black;
+@define-color theme_tooltip_fg_color @pc_white;
+@define-color insensitive_border_color @pc_lavender;
+@define-color menu_color @pc_navy;
+@define-color scrollbar_bg_color @pc_black;
+@define-color osd_bg @pc_black;
+@define-color osd_fg @pc_white;
+@define-color info_bg_color @pc_blue;
+@define-color info_fg_color @pc_black;
+@define-color question_bg_color @pc_plum;
+@define-color question_fg_color @pc_white;
+@define-color warning_bg_color @pc_orange;
+@define-color error_bg_color @pc_red;
+@define-color error_fg_color @pc_black;
+@define-color success_bg_color @pc_green;
+@define-color success_fg_color @pc_black;
+
+/* ==========================================================================
+   2. Reset and global defaults
+   ========================================================================== */
+
+* {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background-clip: border-box;
+  -gtk-icon-shadow: none;
+  -gtk-icon-style: requested;
+
+  /* Keyboard focus: a solid 2px yellow frame drawn inside the widget. */
+  outline-color: @focus_color;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: -2px;
+  -gtk-outline-radius: 0;
+
+  -gtk-secondary-caret-color: @pc_blue;
+
+  -GtkScrollbar-has-backward-stepper: false;
+  -GtkScrollbar-has-forward-stepper: false;
+  -GtkTextView-error-underline-color: @error_color;
+  -GtkToolButton-icon-spacing: 4;
+  -GtkWidget-text-handle-width: 16;
+  -GtkWidget-text-handle-height: 16;
+}
+
+/* ==========================================================================
+   3. Windows and base surfaces
+   ========================================================================== */
+
+.background {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+.background:backdrop {
+  background-color: @theme_unfocused_bg_color;
+  color: @theme_unfocused_fg_color;
+}
+
+*:disabled {
+  -gtk-icon-effect: dim;
+}
+
+.gtkstyle-fallback {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+.gtkstyle-fallback:hover {
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+.gtkstyle-fallback:active,
+.gtkstyle-fallback:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.gtkstyle-fallback:disabled {
+  background-color: @insensitive_bg_color;
+  color: @insensitive_fg_color;
+}
+
+/* --- Generic views -------------------------------------------------------- */
+.view,
+iconview,
+textview text {
+  background-color: @theme_base_color;
+  color: @theme_text_color;
+  caret-color: @theme_text_color;
+}
+
+.view:backdrop,
+iconview:backdrop,
+textview text:backdrop {
+  background-color: @theme_unfocused_base_color;
+  color: @theme_unfocused_text_color;
+}
+
+.view:disabled,
+iconview:disabled,
+textview text:disabled {
+  background-color: @insensitive_base_color;
+  color: @insensitive_fg_color;
+}
+
+.view:selected,
+iconview:selected,
+textview text:selected,
+.view text:selected,
+textview text selection,
+.view text selection {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.view:selected:backdrop,
+iconview:selected:backdrop,
+textview text selection:backdrop,
+.view text selection:backdrop {
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+textview border {
+  background-color: @theme_bg_color;
+  color: @secondary_fg_color;
+}
+
+iconview:drop(active),
+.view:drop(active) {
+  border: 2px solid @success_color;
+}
+
+/* --- Rubber-band selection ------------------------------------------------ */
+rubberband,
+.rubberband,
+.content-view rubberband,
+.content-view .rubberband,
+treeview.view rubberband,
+flowbox rubberband {
+  border: 2px solid @theme_selected_bg_color;
+  background-color: transparent;
+}
+
+/* --- Selected text -------------------------------------------------------- */
+selection,
+label selection,
+entry selection,
+spinbutton selection {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+selection:backdrop,
+label selection:backdrop,
+entry selection:backdrop,
+spinbutton selection:backdrop {
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+/* --- Drag and drop -------------------------------------------------------- */
+*:drop(active) {
+  outline-color: @success_color;
+}
+
+.dnd {
+  border: 2px solid @strong_border_color;
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+/* --- Touch text handles --------------------------------------------------- */
+cursor-handle {
+  min-width: 16px;
+  min-height: 16px;
+  border: 2px solid @shadow_color;
+  background-color: @focus_color;
+  background-image: none;
+  -gtk-icon-source: none;
+}
+
+cursor-handle:hover {
+  background-color: @slider_hover_color;
+}
+
+cursor-handle:active {
+  background-color: @theme_selected_bg_color;
+}
+
+/* ==========================================================================
+   4. Labels and links
+   ========================================================================== */
+
+label {
+  caret-color: currentColor;
+}
+
+label:disabled {
+  color: @insensitive_fg_color;
+}
+
+label.separator {
+  color: @secondary_fg_color;
+}
+
+.dim-label,
+label.dim-label,
+.subtitle,
+.titlebar .subtitle,
+headerbar .subtitle {
+  color: @secondary_fg_color;
+}
+
+.dim-label:disabled,
+label.dim-label:disabled {
+  color: @insensitive_fg_color;
+}
+
+/* Status text. Red on navy is too faint to read, so error text uses pink. */
+label.success {
+  color: @success_color;
+}
+
+label.warning {
+  color: @warning_color;
+}
+
+label.error {
+  color: @pc_pink;
+}
+
+.large-title {
+  font-weight: bold;
+  font-size: 240%;
+}
+
+.title-1 {
+  font-weight: bold;
+  font-size: 200%;
+}
+
+.title-2 {
+  font-weight: bold;
+  font-size: 160%;
+}
+
+.title-3 {
+  font-weight: bold;
+  font-size: 140%;
+}
+
+.title-4 {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+.caption,
+.caption-heading {
+  font-size: 90%;
+}
+
+.caption-heading {
+  font-weight: bold;
+}
+
+*:link,
+button:link,
+button:link > label,
+label link,
+link {
+  color: @link_color;
+}
+
+*:visited,
+button:visited,
+button:visited > label,
+label link:visited,
+link:visited {
+  color: @visited_link_color;
+}
+
+*:link:hover,
+button:link:hover > label,
+*:visited:hover,
+button:visited:hover > label {
+  color: @hover_fg_color;
+}
+
+*:link:disabled,
+*:visited:disabled,
+button:link:disabled > label,
+button:visited:disabled > label {
+  color: @insensitive_fg_color;
+}
+
+button:link > label,
+button:visited > label {
+  text-decoration-line: underline;
+}
+
+/* Links on a selected (blue) row must stay readable. */
+*:selected *:link,
+*:selected *:visited,
+row:selected label link {
+  color: @theme_selected_fg_color;
+}
+
+/* ==========================================================================
+   5. Buttons
+   ========================================================================== */
+
+button {
+  min-width: 16px;
+  min-height: 20px;
+  padding: 4px 8px;
+  border: 2px solid @strong_border_color;
+  background-color: @theme_bg_color;
+  background-image: none;
+  color: @theme_fg_color;
+  box-shadow: 2px 2px 0 0 @shadow_color;
+}
+
+button:backdrop {
+  border-color: @unfocused_borders;
+  color: @theme_unfocused_fg_color;
+  box-shadow: none;
+}
+
+button:hover {
+  border-color: @pc_white;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+button:active {
+  border-color: @strong_border_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+  box-shadow: inset 2px 2px 0 0 @shadow_color;
+}
+
+button:checked {
+  border-color: @strong_border_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+  box-shadow: none;
+}
+
+button:checked:hover {
+  border-color: @pc_white;
+}
+
+button:checked:backdrop {
+  border-color: @unfocused_borders;
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+button:disabled {
+  border-color: @insensitive_border_color;
+  background-color: @insensitive_bg_color;
+  color: @insensitive_fg_color;
+  box-shadow: none;
+}
+
+button:checked:disabled {
+  border-color: @insensitive_border_color;
+  background-color: @pc_slate;
+  color: @pc_silver;
+}
+
+button:drop(active) {
+  border-color: @success_color;
+}
+
+/* --- Content-dependent padding ------------------------------------------- */
+button.text-button {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+button.image-button {
+  min-width: 20px;
+  padding: 4px;
+}
+
+button.text-button.image-button {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+button.text-button.image-button label {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* Circular buttons stay square in an 8-bit world. */
+button.circular,
+button.circular.image-button {
+  min-width: 24px;
+  min-height: 24px;
+  padding: 2px;
+  border-radius: 0;
+}
+
+button.small-button,
+button.small {
+  min-height: 16px;
+  padding: 2px 6px;
+}
+
+/* --- Default button ------------------------------------------------------- */
+/*
+ * Bold only, not green: GTK 3 hands the "default" class to whichever button
+ * currently has keyboard focus, so a green fill would jump to Cancel as soon
+ * as it is focused. Applications mark the real primary action with
+ * "suggested-action", which is green.
+ */
+button.default,
+button.text-button.default {
+  font-weight: bold;
+}
+
+/* --- Suggested action ----------------------------------------------------- */
+button.suggested-action {
+  border-color: @pc_white;
+  background-color: @suggested_bg_color;
+  color: @suggested_fg_color;
+  font-weight: bold;
+}
+
+button.suggested-action:backdrop {
+  border-color: @unfocused_borders;
+  background-color: @suggested_bg_color;
+  color: @suggested_fg_color;
+}
+
+button.suggested-action:hover {
+  border-color: @suggested_bg_color;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+button.suggested-action:active,
+button.suggested-action:checked {
+  border-color: @strong_border_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+/* --- Destructive action --------------------------------------------------- */
+button.destructive-action {
+  border-color: @pc_white;
+  background-color: @destructive_bg_color;
+  color: @destructive_fg_color;
+  font-weight: bold;
+}
+
+button.destructive-action:backdrop {
+  border-color: @unfocused_borders;
+  background-color: @destructive_bg_color;
+  color: @destructive_fg_color;
+}
+
+button.destructive-action:hover {
+  border-color: @destructive_bg_color;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+button.destructive-action:active,
+button.destructive-action:checked {
+  border-color: @strong_border_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+button.suggested-action:disabled,
+button.destructive-action:disabled {
+  border-color: @insensitive_border_color;
+  background-color: @insensitive_bg_color;
+  color: @insensitive_fg_color;
+  font-weight: normal;
+}
+
+/* --- Flat buttons --------------------------------------------------------- */
+button.flat {
+  border-color: transparent;
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+
+button.flat:backdrop {
+  border-color: transparent;
+  color: inherit;
+}
+
+button.flat:hover {
+  border-color: @strong_border_color;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+button.flat:active,
+button.flat:checked {
+  border-color: @strong_border_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+  box-shadow: none;
+}
+
+button.flat:checked:backdrop {
+  border-color: @unfocused_borders;
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+button.flat:disabled {
+  border-color: transparent;
+  background-color: transparent;
+  color: @insensitive_fg_color;
+}
+
+button.flat:checked:disabled {
+  border-color: @insensitive_border_color;
+  background-color: @pc_slate;
+  color: @pc_silver;
+}
+
+/* --- Buttons that carry urgent state -------------------------------------- */
+button.needs-attention {
+  border-color: @warning_color;
+}
+
+button.needs-attention > label,
+button.needs-attention > image {
+  color: @warning_color;
+}
+
+button.needs-attention:checked > label,
+button.needs-attention:checked > image,
+button.needs-attention:active > label,
+button.needs-attention:active > image {
+  color: @theme_selected_fg_color;
+}
+
+/* --- OSD buttons ---------------------------------------------------------- */
+button.osd,
+.osd button {
+  border-color: @strong_border_color;
+  background-color: @osd_bg;
+  color: @osd_fg;
+  box-shadow: none;
+}
+
+button.osd:hover,
+.osd button:hover {
+  border-color: @pc_white;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+button.osd:active,
+button.osd:checked,
+.osd button:active,
+.osd button:checked {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+button.osd:disabled,
+.osd button:disabled {
+  border-color: @insensitive_border_color;
+  background-color: @osd_bg;
+  color: @insensitive_fg_color;
+}
+
+/* --- Menu, colour, font and file-chooser buttons -------------------------- */
+button.font separator,
+button.file separator {
+  min-width: 2px;
+  margin: 0 2px;
+  background-color: @borders;
+}
+
+button.color {
+  padding: 4px;
+}
+
+button.color colorswatch:only-child {
+  min-width: 24px;
+  min-height: 16px;
+  border: 2px solid @shadow_color;
+  box-shadow: none;
+}
+
+button.color colorswatch:only-child overlay {
+  border-style: none;
+}
+
+/* --- Linked groups -------------------------------------------------------- */
+.linked:not(.vertical) > button:not(:last-child),
+.linked:not(.vertical) > entry:not(:last-child),
+.linked:not(.vertical) > spinbutton:not(.vertical):not(:last-child),
+.linked:not(.vertical) > combobox:not(:last-child) > box > button.combo,
+.linked:not(.vertical) > menubutton:not(:last-child) > button {
+  border-right-style: none;
+}
+
+.linked:not(.vertical) > button:dir(rtl):not(:last-child),
+.linked:not(.vertical) > entry:dir(rtl):not(:last-child),
+.linked:not(.vertical) > spinbutton:not(.vertical):dir(rtl):not(:last-child),
+.linked:not(.vertical) > combobox:dir(rtl):not(:last-child) > box > button.combo,
+.linked:not(.vertical) > menubutton:dir(rtl):not(:last-child) > button {
+  border-right-style: solid;
+  border-left-style: none;
+}
+
+.linked.vertical > button:not(:last-child),
+.linked.vertical > entry:not(:last-child),
+.linked.vertical > spinbutton:not(.vertical):not(:last-child),
+.linked.vertical > combobox:not(:last-child) > box > button.combo,
+.linked.vertical > menubutton:not(:last-child) > button {
+  border-bottom-style: none;
+}
+
+/* A focused entry inside a linked group keeps its full yellow frame. */
+.linked:not(.vertical) > entry:focus:not(:last-child) {
+  box-shadow: inset -2px 0 0 0 @focus_color;
+}
+
+.linked:not(.vertical) > entry:focus:dir(rtl):not(:last-child) {
+  box-shadow: inset 2px 0 0 0 @focus_color;
+}
+
+.linked.vertical > entry:focus:not(:last-child) {
+  box-shadow: inset 0 -2px 0 0 @focus_color;
+}
+
+/* --- Inline toolbar buttons ------------------------------------------------ */
+.inline-toolbar button,
+.inline-toolbar toolbutton > button {
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   6. Entries
+   ========================================================================== */
+
+entry {
+  min-height: 20px;
+  padding: 4px 8px;
+  border: 2px solid @strong_border_color;
+  background-color: @theme_base_color;
+  background-image: none;
+  color: @theme_text_color;
+  caret-color: @theme_text_color;
+}
+
+entry:backdrop {
+  border-color: @unfocused_borders;
+  background-color: @theme_unfocused_base_color;
+  color: @theme_unfocused_text_color;
+}
+
+entry:focus {
+  border-color: @focus_color;
+}
+
+entry:disabled {
+  border-color: @insensitive_border_color;
+  background-color: @insensitive_base_color;
+  color: @insensitive_fg_color;
+}
+
+entry:drop(active) {
+  border-color: @success_color;
+}
+
+entry.flat {
+  min-height: 0;
+  padding: 2px;
+  border-style: none;
+  background-color: transparent;
+}
+
+entry.flat:focus {
+  box-shadow: inset 0 -2px 0 0 @focus_color;
+}
+
+entry placeholder,
+entry.search placeholder {
+  color: @placeholder_text_color;
+}
+
+entry image {
+  min-width: 16px;
+  min-height: 16px;
+  color: @secondary_fg_color;
+}
+
+entry image:hover {
+  color: @pc_white;
+}
+
+entry image:active {
+  color: @theme_selected_bg_color;
+}
+
+entry image:disabled {
+  color: @insensitive_fg_color;
+}
+
+entry image.left {
+  margin-right: 6px;
+}
+
+entry image.right {
+  margin-left: 6px;
+}
+
+/* --- Validation states ---------------------------------------------------- */
+entry.error {
+  border-color: @error_color;
+  color: @error_color;
+}
+
+entry.error image {
+  color: @error_color;
+}
+
+entry.error selection {
+  background-color: @error_color;
+  color: @error_fg_color;
+}
+
+entry.warning {
+  border-color: @warning_color;
+  color: @warning_color;
+}
+
+entry.warning image {
+  color: @warning_color;
+}
+
+entry.warning selection {
+  background-color: @warning_color;
+  color: @warning_fg_color;
+}
+
+entry.success {
+  border-color: @success_color;
+  color: @success_color;
+}
+
+entry.success image {
+  color: @success_color;
+}
+
+entry.success selection {
+  background-color: @success_color;
+  color: @success_fg_color;
+}
+
+/* A focused entry in a validation state keeps its colour and gains the
+   yellow focus frame just inside it. */
+entry.error:focus,
+entry.warning:focus,
+entry.success:focus {
+  box-shadow: inset 0 0 0 2px @focus_color;
+}
+
+/* --- Progress inside an entry --------------------------------------------- */
+entry progress {
+  margin: 0 -6px;
+  border-style: none none solid;
+  border-width: 0 0 4px;
+  border-color: @success_color;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+
+entry progress:backdrop {
+  border-color: @pc_forest;
+}
+
+/* --- Entries in special places -------------------------------------------- */
+entry.search {
+  padding-left: 6px;
+}
+
+.osd entry {
+  border-color: @strong_border_color;
+  background-color: @osd_bg;
+  color: @osd_fg;
+}
+
+.osd entry:focus {
+  border-color: @focus_color;
+}
+
+treeview entry,
+treeview entry.flat {
+  min-height: 0;
+  padding: 0 4px;
+  border: 2px solid @focus_color;
+  background-color: @theme_base_color;
+  color: @theme_text_color;
+}
+
+/* ==========================================================================
+   7. Spin buttons
+   ========================================================================== */
+
+spinbutton:not(.vertical) {
+  padding: 0;
+  border: 2px solid @strong_border_color;
+  background-color: @theme_base_color;
+  color: @theme_text_color;
+  caret-color: @theme_text_color;
+}
+
+spinbutton:not(.vertical):backdrop {
+  border-color: @unfocused_borders;
+  color: @theme_unfocused_text_color;
+}
+
+spinbutton:not(.vertical):focus {
+  border-color: @focus_color;
+}
+
+spinbutton:not(.vertical):disabled {
+  border-color: @insensitive_border_color;
+  background-color: @insensitive_base_color;
+  color: @insensitive_fg_color;
+}
+
+spinbutton:not(.vertical) entry {
+  min-width: 28px;
+  min-height: 20px;
+  margin: 0;
+  border-style: none;
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+
+spinbutton:not(.vertical) button {
+  min-width: 20px;
+  min-height: 16px;
+  margin: 0;
+  padding: 0 4px;
+  border-style: none none none solid;
+  border-width: 2px;
+  border-color: @borders;
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+  box-shadow: none;
+}
+
+spinbutton:not(.vertical) button:dir(rtl) {
+  border-style: none solid none none;
+}
+
+spinbutton:not(.vertical) button:backdrop {
+  color: @theme_unfocused_fg_color;
+}
+
+spinbutton:not(.vertical) button:hover {
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+spinbutton:not(.vertical) button:active {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+spinbutton:not(.vertical) button:disabled {
+  border-color: @insensitive_border_color;
+  background-color: @insensitive_bg_color;
+  color: @insensitive_fg_color;
+}
+
+spinbutton.vertical {
+  padding: 0;
+  border-style: none;
+  background-color: transparent;
+}
+
+spinbutton.vertical entry {
+  min-width: 32px;
+  min-height: 28px;
+  padding: 0;
+  border: 2px solid @strong_border_color;
+  background-color: @theme_base_color;
+  color: @theme_text_color;
+}
+
+spinbutton.vertical:backdrop entry {
+  border-color: @unfocused_borders;
+  color: @theme_unfocused_text_color;
+}
+
+spinbutton.vertical:focus entry {
+  border-color: @focus_color;
+}
+
+spinbutton.vertical:disabled entry {
+  border-color: @insensitive_border_color;
+  background-color: @insensitive_base_color;
+  color: @insensitive_fg_color;
+}
+
+spinbutton.vertical button {
+  min-width: 32px;
+  min-height: 24px;
+  padding: 0;
+  box-shadow: none;
+}
+
+spinbutton.vertical button.up {
+  border-bottom-style: none;
+}
+
+spinbutton.vertical button.down {
+  border-top-style: none;
+}
+
+/* ==========================================================================
+   8. Combo boxes
+   ========================================================================== */
+
+combobox arrow {
+  min-width: 16px;
+  min-height: 16px;
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-down-symbolic.svg"));
+}
+
+combobox button.combo {
+  padding-left: 8px;
+  padding-right: 6px;
+}
+
+combobox button.combo cellview {
+  color: inherit;
+}
+
+combobox:drop(active) button.combo {
+  border-color: @success_color;
+}
+
+/* "Appears as list" popups */
+combobox window.popup {
+  border: 2px solid @strong_border_color;
+  background-color: @menu_bg_color;
+}
+
+combobox window.popup treeview.view {
+  background-color: @menu_bg_color;
+  color: @menu_fg_color;
+}
+
+combobox window.popup treeview.view:hover {
+  background-color: @menu_hover_bg_color;
+  color: @menu_hover_fg_color;
+}
+
+combobox window.popup treeview.view:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+/* ==========================================================================
+   9. Check boxes and radio buttons
+   ========================================================================== */
+
+checkbutton,
+radiobutton {
+  padding: 2px;
+}
+
+checkbutton.text-button,
+radiobutton.text-button {
+  padding: 2px 4px 2px 2px;
+}
+
+checkbutton label:not(:only-child):first-child,
+radiobutton label:not(:only-child):first-child {
+  margin-left: 4px;
+}
+
+checkbutton label:not(:only-child):last-child,
+radiobutton label:not(:only-child):last-child {
+  margin-right: 4px;
+}
+
+check,
+radio {
+  min-width: 16px;
+  min-height: 16px;
+  margin: 0 4px;
+  border-style: none;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+
+check:only-child,
+radio:only-child {
+  margin: 0;
+}
+
+/* --- Check box art --------------------------------------------------------- */
+/*
+ * Every bitmap-style asset comes in two sizes: "name.svg" for standard
+ * displays and "name-2x.svg" for HiDPI, so the pixel art is never
+ * interpolated when the desktop runs at 2x scale.
+ */
+check {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.svg"),
+                                url("assets/checkbox-unchecked-2x.svg"));
+}
+
+check:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-hover.svg"),
+                                url("assets/checkbox-unchecked-hover-2x.svg"));
+}
+
+check:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.svg"),
+                                url("assets/checkbox-checked-2x.svg"));
+}
+
+check:checked:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover.svg"),
+                                url("assets/checkbox-checked-hover-2x.svg"));
+}
+
+check:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.svg"),
+                                url("assets/checkbox-mixed-2x.svg"));
+}
+
+check:indeterminate:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-hover.svg"),
+                                url("assets/checkbox-mixed-hover-2x.svg"));
+}
+
+check:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-disabled.svg"),
+                                url("assets/checkbox-unchecked-disabled-2x.svg"));
+  -gtk-icon-effect: none;
+}
+
+check:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-disabled.svg"),
+                                url("assets/checkbox-checked-disabled-2x.svg"));
+}
+
+check:indeterminate:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-disabled.svg"),
+                                url("assets/checkbox-mixed-disabled-2x.svg"));
+}
+
+/* --- Radio button art ------------------------------------------------------ */
+radio {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.svg"),
+                                url("assets/radio-unchecked-2x.svg"));
+}
+
+radio:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-hover.svg"),
+                                url("assets/radio-unchecked-hover-2x.svg"));
+}
+
+radio:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked.svg"),
+                                url("assets/radio-checked-2x.svg"));
+}
+
+radio:checked:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-hover.svg"),
+                                url("assets/radio-checked-hover-2x.svg"));
+}
+
+radio:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.svg"),
+                                url("assets/radio-mixed-2x.svg"));
+}
+
+radio:indeterminate:hover {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-hover.svg"),
+                                url("assets/radio-mixed-hover-2x.svg"));
+}
+
+radio:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-disabled.svg"),
+                                url("assets/radio-unchecked-disabled-2x.svg"));
+  -gtk-icon-effect: none;
+}
+
+radio:checked:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-disabled.svg"),
+                                url("assets/radio-checked-disabled-2x.svg"));
+}
+
+radio:indeterminate:disabled {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-disabled.svg"),
+                                url("assets/radio-mixed-disabled-2x.svg"));
+}
+
+/* --- On a selected (blue) row: black-framed variants ----------------------- */
+row:selected check,
+treeview.view check:selected,
+iconview check:selected,
+flowboxchild:selected check {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-selected.svg"),
+                                url("assets/checkbox-unchecked-selected-2x.svg"));
+}
+
+row:selected check:checked,
+treeview.view check:selected:checked,
+iconview check:selected:checked,
+flowboxchild:selected check:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selected.svg"),
+                                url("assets/checkbox-checked-selected-2x.svg"));
+}
+
+row:selected check:indeterminate,
+treeview.view check:selected:indeterminate,
+iconview check:selected:indeterminate,
+flowboxchild:selected check:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-selected.svg"),
+                                url("assets/checkbox-mixed-selected-2x.svg"));
+}
+
+row:selected radio,
+treeview.view radio:selected,
+iconview radio:selected,
+flowboxchild:selected radio {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-selected.svg"),
+                                url("assets/radio-unchecked-selected-2x.svg"));
+}
+
+row:selected radio:checked,
+treeview.view radio:selected:checked,
+iconview radio:selected:checked,
+flowboxchild:selected radio:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-selected.svg"),
+                                url("assets/radio-checked-selected-2x.svg"));
+}
+
+row:selected radio:indeterminate,
+treeview.view radio:selected:indeterminate,
+iconview radio:selected:indeterminate,
+flowboxchild:selected radio:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-selected.svg"),
+                                url("assets/radio-mixed-selected-2x.svg"));
+}
+
+/* --- Inside menus and model buttons ---------------------------------------- */
+menu menuitem check,
+menu menuitem radio {
+  margin: 0 6px 0 0;
+}
+
+menu menuitem check:dir(rtl),
+menu menuitem radio:dir(rtl) {
+  margin: 0 0 0 6px;
+}
+
+modelbutton.flat check:first-child,
+modelbutton.flat radio:first-child {
+  margin: 0 8px 0 0;
+}
+
+modelbutton.flat check:last-child,
+modelbutton.flat radio:last-child {
+  margin: 0 0 0 8px;
+}
+
+/* The highlighted menu item is blue, so its indicator uses the black-framed art. */
+menu menuitem:hover check,
+modelbutton.flat:hover check,
+modelbutton.flat:selected check {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-selected.svg"),
+                                url("assets/checkbox-unchecked-selected-2x.svg"));
+}
+
+menu menuitem:hover check:checked,
+modelbutton.flat:hover check:checked,
+modelbutton.flat:selected check:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selected.svg"),
+                                url("assets/checkbox-checked-selected-2x.svg"));
+}
+
+menu menuitem:hover check:indeterminate,
+modelbutton.flat:hover check:indeterminate,
+modelbutton.flat:selected check:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-selected.svg"),
+                                url("assets/checkbox-mixed-selected-2x.svg"));
+}
+
+menu menuitem:hover radio,
+modelbutton.flat:hover radio,
+modelbutton.flat:selected radio {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-selected.svg"),
+                                url("assets/radio-unchecked-selected-2x.svg"));
+}
+
+menu menuitem:hover radio:checked,
+modelbutton.flat:hover radio:checked,
+modelbutton.flat:selected radio:checked {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-selected.svg"),
+                                url("assets/radio-checked-selected-2x.svg"));
+}
+
+menu menuitem:hover radio:indeterminate,
+modelbutton.flat:hover radio:indeterminate,
+modelbutton.flat:selected radio:indeterminate {
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-selected.svg"),
+                                url("assets/radio-mixed-selected-2x.svg"));
+}
+
+/* ==========================================================================
+   10. Switches
+   ========================================================================== */
+
+switch {
+  min-width: 48px;
+  min-height: 20px;
+  border: 2px solid @strong_border_color;
+  background-color: @trough_color;
+  color: @secondary_fg_color;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+switch:backdrop {
+  border-color: @unfocused_borders;
+}
+
+switch:hover {
+  border-color: @pc_white;
+}
+
+switch:checked {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+switch:checked:backdrop {
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+switch:disabled {
+  border-color: @insensitive_border_color;
+  background-color: @insensitive_bg_color;
+  color: @insensitive_fg_color;
+}
+
+switch slider {
+  min-width: 20px;
+  min-height: 20px;
+  border: 2px solid @shadow_color;
+  background-color: @slider_color;
+}
+
+switch:hover slider {
+  background-color: @slider_hover_color;
+}
+
+switch:checked slider {
+  background-color: @pc_white;
+}
+
+switch:disabled slider {
+  border-color: @insensitive_bg_color;
+  background-color: @pc_slate;
+}
+
+row:selected switch {
+  border-color: @shadow_color;
+}
+
+/* ==========================================================================
+   11. Scales
+   ========================================================================== */
+
+scale {
+  min-width: 16px;
+  min-height: 16px;
+  padding: 10px;
+}
+
+scale trough {
+  min-width: 4px;
+  min-height: 4px;
+  border: 2px solid @borders;
+  background-color: @trough_color;
+}
+
+scale trough:disabled {
+  border-color: @insensitive_border_color;
+  background-color: @insensitive_bg_color;
+}
+
+scale highlight {
+  background-color: @theme_selected_bg_color;
+}
+
+scale highlight:backdrop {
+  background-color: @theme_unfocused_selected_bg_color;
+}
+
+scale highlight:disabled {
+  background-color: @pc_lavender;
+}
+
+scale fill {
+  background-color: @pc_slate;
+}
+
+scale slider {
+  min-width: 12px;
+  min-height: 12px;
+  margin: -6px;
+  border: 2px solid @shadow_color;
+  background-color: @slider_color;
+}
+
+scale slider:hover {
+  background-color: @slider_hover_color;
+}
+
+scale slider:active {
+  background-color: @theme_selected_bg_color;
+}
+
+scale slider:disabled {
+  border-color: @insensitive_bg_color;
+  background-color: @pc_slate;
+}
+
+scale.fine-tune slider {
+  background-color: @focus_color;
+}
+
+scale value {
+  color: @secondary_fg_color;
+}
+
+scale marks {
+  color: @secondary_fg_color;
+}
+
+scale marks.top {
+  margin-bottom: 6px;
+}
+
+scale marks.bottom {
+  margin-top: 6px;
+}
+
+scale.vertical marks.top {
+  margin-bottom: 0;
+  margin-right: 6px;
+}
+
+scale.vertical marks.bottom {
+  margin-top: 0;
+  margin-left: 6px;
+}
+
+scale.horizontal mark indicator {
+  min-width: 2px;
+  min-height: 6px;
+  color: @pc_lavender;
+}
+
+scale.vertical mark indicator {
+  min-width: 6px;
+  min-height: 2px;
+  color: @pc_lavender;
+}
+
+/* Colour-chooser scales sit on top of a rendered gradient strip. */
+scale.color {
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+}
+
+scale.color trough {
+  border: 2px solid @strong_border_color;
+  background-image: none;
+}
+
+scale.color.horizontal slider {
+  margin: -6px 0;
+}
+
+scale.color.vertical slider {
+  margin: 0 -6px;
+}
+
+/* ==========================================================================
+   12. Progress bars and level bars
+   ========================================================================== */
+
+progressbar {
+  color: @secondary_fg_color;
+  font-size: 90%;
+}
+
+progressbar.horizontal trough {
+  min-width: 128px;
+  min-height: 8px;
+}
+
+progressbar.horizontal progress {
+  min-height: 8px;
+}
+
+progressbar.vertical trough {
+  min-width: 8px;
+  min-height: 80px;
+}
+
+progressbar.vertical progress {
+  min-width: 8px;
+}
+
+progressbar trough {
+  border: 2px solid @borders;
+  background-color: @trough_color;
+}
+
+progressbar progress {
+  background-color: @success_color;
+  background-image: none;
+}
+
+progressbar:backdrop progress {
+  background-color: @pc_forest;
+}
+
+progressbar trough:disabled {
+  border-color: @insensitive_border_color;
+  background-color: @insensitive_bg_color;
+}
+
+progressbar progress:disabled {
+  background-color: @pc_lavender;
+}
+
+progressbar.osd {
+  min-width: 4px;
+  min-height: 4px;
+  background-color: transparent;
+}
+
+progressbar.osd trough {
+  min-height: 0;
+  border-style: none;
+  background-color: transparent;
+}
+
+progressbar.osd.horizontal progress {
+  min-height: 4px;
+}
+
+progressbar.osd.vertical progress {
+  min-width: 4px;
+}
+
+/* --- Level bars: discrete cartridge-style blocks --------------------------- */
+levelbar.horizontal block {
+  min-width: 32px;
+  min-height: 8px;
+}
+
+levelbar.vertical block {
+  min-width: 8px;
+  min-height: 32px;
+}
+
+levelbar.horizontal.discrete block {
+  min-width: 12px;
+  margin: 0 2px 0 0;
+}
+
+levelbar.horizontal.discrete block:last-child {
+  margin: 0;
+}
+
+levelbar.vertical.discrete block {
+  min-height: 12px;
+  margin: 0 0 2px;
+}
+
+levelbar.vertical.discrete block:last-child {
+  margin: 0;
+}
+
+levelbar trough {
+  padding: 2px;
+  border: 2px solid @borders;
+  background-color: @trough_color;
+}
+
+levelbar block {
+  border-style: none;
+  background-color: @theme_selected_bg_color;
+}
+
+levelbar block.low {
+  background-color: @error_color;
+}
+
+levelbar block.high {
+  background-color: @theme_selected_bg_color;
+}
+
+levelbar block.full {
+  background-color: @success_color;
+}
+
+levelbar block.empty {
+  background-color: @pc_navy;
+}
+
+levelbar:backdrop block:not(.empty) {
+  background-color: @theme_unfocused_selected_bg_color;
+}
+
+levelbar:disabled block:not(.empty) {
+  background-color: @pc_slate;
+}
+
+/* ==========================================================================
+   13. Scrollbars and scrolled windows
+   ========================================================================== */
+
+scrollbar {
+  border: 0 solid @borders;
+  background-color: @scrollbar_bg_color;
+}
+
+scrollbar.vertical {
+  border-left-width: 2px;
+}
+
+scrollbar.vertical:dir(rtl) {
+  border-left-width: 0;
+  border-right-width: 2px;
+}
+
+scrollbar.horizontal {
+  border-top-width: 2px;
+}
+
+scrollbar slider {
+  min-width: 10px;
+  min-height: 10px;
+  border: 2px solid @scrollbar_bg_color;
+  background-color: @slider_color;
+}
+
+scrollbar.vertical slider {
+  min-height: 32px;
+}
+
+scrollbar.horizontal slider {
+  min-width: 32px;
+}
+
+scrollbar slider:backdrop {
+  background-color: @pc_lavender;
+}
+
+scrollbar slider:hover {
+  background-color: @slider_hover_color;
+}
+
+scrollbar slider:active {
+  background-color: @theme_selected_bg_color;
+}
+
+scrollbar slider:disabled {
+  background-color: @pc_slate;
+}
+
+/* Stepper buttons are off by default; styled in case they are re-enabled. */
+scrollbar button {
+  min-width: 10px;
+  min-height: 10px;
+  padding: 2px;
+  border-style: none;
+  background-color: @scrollbar_bg_color;
+  color: @slider_color;
+  box-shadow: none;
+}
+
+scrollbar button:hover {
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+scrollbar button:active {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+scrollbar button:disabled {
+  color: @pc_slate;
+}
+
+scrollbar.vertical button.up {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-up-symbolic.svg"));
+}
+
+scrollbar.vertical button.down {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-down-symbolic.svg"));
+}
+
+scrollbar.horizontal button.up {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-left-symbolic.svg"));
+}
+
+scrollbar.horizontal button.down {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-right-symbolic.svg"));
+}
+
+/* --- Overlay scrollbars ---------------------------------------------------- */
+scrollbar.overlay-indicator {
+  border-style: none;
+  background-color: transparent;
+}
+
+scrollbar.overlay-indicator slider {
+  margin: 2px;
+  border-color: @shadow_color;
+}
+
+scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
+  min-width: 4px;
+  min-height: 4px;
+}
+
+scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) slider {
+  min-height: 32px;
+}
+
+scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) slider {
+  min-width: 32px;
+}
+
+scrollbar.overlay-indicator.dragging,
+scrollbar.overlay-indicator.hovering {
+  background-color: @scrollbar_bg_color;
+}
+
+scrollbar.overlay-indicator.dragging slider,
+scrollbar.overlay-indicator.hovering slider {
+  margin: 0;
+  border-color: @scrollbar_bg_color;
+}
+
+/* --- Scrolled windows ------------------------------------------------------ */
+scrolledwindow viewport.frame {
+  border-style: none;
+}
+
+scrolledwindow overshoot.top {
+  box-shadow: inset 0 2px 0 0 @theme_selected_bg_color;
+}
+
+scrolledwindow overshoot.bottom {
+  box-shadow: inset 0 -2px 0 0 @theme_selected_bg_color;
+}
+
+scrolledwindow overshoot.left {
+  box-shadow: inset 2px 0 0 0 @theme_selected_bg_color;
+}
+
+scrolledwindow overshoot.right {
+  box-shadow: inset -2px 0 0 0 @theme_selected_bg_color;
+}
+
+scrolledwindow undershoot.top {
+  box-shadow: inset 0 2px 0 0 @borders;
+}
+
+scrolledwindow undershoot.bottom {
+  box-shadow: inset 0 -2px 0 0 @borders;
+}
+
+scrolledwindow undershoot.left {
+  box-shadow: inset 2px 0 0 0 @borders;
+}
+
+scrolledwindow undershoot.right {
+  box-shadow: inset -2px 0 0 0 @borders;
+}
+
+scrolledwindow junction {
+  border: 0 solid @borders;
+  border-width: 2px 0 0 2px;
+  background-color: @scrollbar_bg_color;
+}
+
+scrolledwindow junction:dir(rtl) {
+  border-width: 2px 2px 0 0;
+}
+
+/* ==========================================================================
+   14. Frames, separators and panes
+   ========================================================================== */
+
+frame > border,
+.frame {
+  border: 2px solid @borders;
+  box-shadow: none;
+}
+
+frame > border.flat,
+frame.flat > border {
+  border-style: none;
+}
+
+frame > label {
+  color: @secondary_fg_color;
+}
+
+actionbar > revealer > box,
+.bottom-bar {
+  padding: 6px;
+  border-top: 2px solid @borders;
+  background-color: @theme_bg_color;
+}
+
+separator {
+  min-width: 2px;
+  min-height: 2px;
+  background-color: @borders;
+}
+
+separator.spacer {
+  background-color: transparent;
+}
+
+paned > separator {
+  min-width: 2px;
+  min-height: 2px;
+  background-color: transparent;
+  background-image: image(@borders);
+  background-size: 2px 2px;
+  -gtk-icon-source: none;
+}
+
+paned > separator:hover {
+  background-image: image(@strong_border_color);
+}
+
+paned > separator:active {
+  background-image: image(@theme_selected_bg_color);
+}
+
+/* The visible line is 2px; the rest of the box is an invisible grab area. */
+paned.horizontal > separator {
+  margin: 0 -6px 0 0;
+  padding: 0 6px 0 0;
+  background-repeat: repeat-y;
+  background-position: left;
+}
+
+paned.horizontal > separator:dir(rtl) {
+  margin: 0 0 0 -6px;
+  padding: 0 0 0 6px;
+  background-position: right;
+}
+
+paned.vertical > separator {
+  margin: 0 0 -6px;
+  padding: 0 0 6px;
+  background-repeat: repeat-x;
+  background-position: top;
+}
+
+paned > separator.wide {
+  min-width: 8px;
+  min-height: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0 solid @borders;
+  background-color: @theme_bg_color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+paned.horizontal > separator.wide {
+  border-width: 0 2px;
+  background-image: -gtk-scaled(url("assets/pane-handle-vertical.svg"),
+                                url("assets/pane-handle-vertical-2x.svg"));
+}
+
+paned.vertical > separator.wide {
+  border-width: 2px 0;
+  background-image: -gtk-scaled(url("assets/pane-handle-horizontal.svg"),
+                                url("assets/pane-handle-horizontal-2x.svg"));
+}
+
+paned > separator.wide:hover {
+  background-color: @hover_bg_color;
+}
+
+/* ==========================================================================
+   15. Header bars and title bars
+   ========================================================================== */
+
+headerbar,
+.titlebar:not(headerbar) > headerbar {
+  min-height: 40px;
+  padding: 0 6px;
+  border: 0 solid @borders;
+  border-bottom-width: 2px;
+  background-color: @headerbar_bg_color;
+  background-image: none;
+  color: @headerbar_fg_color;
+  box-shadow: none;
+}
+
+headerbar:backdrop {
+  border-color: @unfocused_borders;
+  background-color: @wm_unfocused_bg;
+  color: @wm_unfocused_title;
+}
+
+/* A header bar used as the window's title bar gets the blue accent rule. */
+headerbar.titlebar,
+.titlebar:not(headerbar) > headerbar {
+  border-bottom-color: @titlebar_accent_color;
+}
+
+headerbar.titlebar:backdrop,
+.titlebar:not(headerbar) > headerbar:backdrop {
+  border-bottom-color: @unfocused_borders;
+}
+
+headerbar .title {
+  padding: 0 12px;
+  color: @wm_title;
+  font-weight: bold;
+}
+
+headerbar .subtitle {
+  padding: 0 12px;
+  font-size: 90%;
+}
+
+headerbar:backdrop .title,
+headerbar:backdrop .subtitle {
+  color: @wm_unfocused_title;
+}
+
+headerbar > separator {
+  min-width: 2px;
+  margin: 8px 4px;
+  background-color: @borders;
+}
+
+/* The divider GTK inserts before the window controls is not drawn. */
+headerbar separator.titlebutton {
+  min-width: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+headerbar entry,
+headerbar spinbutton,
+headerbar button,
+headerbar switch,
+headerbar stackswitcher {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+headerbar:backdrop button:not(.titlebutton) {
+  border-color: @unfocused_borders;
+  color: @wm_unfocused_title;
+}
+
+headerbar:backdrop button.flat:not(.titlebutton) {
+  border-color: transparent;
+}
+
+headerbar:backdrop button:checked:not(.titlebutton) {
+  color: @theme_unfocused_selected_fg_color;
+}
+
+headerbar:backdrop button.suggested-action,
+headerbar:backdrop button.destructive-action {
+  background-color: @wm_unfocused_bg;
+  color: @wm_unfocused_title;
+}
+
+/* --- Selection mode -------------------------------------------------------- */
+headerbar.selection-mode {
+  border-color: @pc_white;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+headerbar.selection-mode .title,
+headerbar.selection-mode .subtitle {
+  color: @theme_selected_fg_color;
+}
+
+headerbar.selection-mode:backdrop {
+  border-color: @unfocused_borders;
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+headerbar.selection-mode:backdrop .title,
+headerbar.selection-mode:backdrop .subtitle {
+  color: @theme_unfocused_selected_fg_color;
+}
+
+headerbar.selection-mode button:not(.suggested-action):not(.destructive-action):not(.titlebutton) {
+  border-color: @shadow_color;
+}
+
+headerbar.selection-mode button.flat {
+  border-color: transparent;
+  color: @theme_selected_fg_color;
+}
+
+headerbar.selection-mode button.flat:hover {
+  border-color: @shadow_color;
+  color: @hover_fg_color;
+}
+
+headerbar.selection-mode .selection-menu {
+  border-color: transparent;
+  background-color: transparent;
+  color: @theme_selected_fg_color;
+  box-shadow: none;
+}
+
+headerbar.selection-mode .selection-menu:hover {
+  border-color: @shadow_color;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+/* --- Title bars that are not header bars ----------------------------------- */
+.titlebar:not(headerbar) {
+  background-color: @headerbar_bg_color;
+  color: @headerbar_fg_color;
+}
+
+.titlebar:not(headerbar):backdrop {
+  background-color: @wm_unfocused_bg;
+  color: @wm_unfocused_title;
+}
+
+.titlebar:not(headerbar) > separator {
+  background-color: @borders;
+}
+
+window.csd > .titlebar:not(headerbar) {
+  padding: 0;
+  background-color: transparent;
+  background-image: none;
+  border-style: none;
+  box-shadow: none;
+}
+
+/* Title bar GTK adds to an undecorated-by-WM window. */
+headerbar.default-decoration,
+.titlebar.default-decoration {
+  min-height: 28px;
+  padding: 2px 4px;
+}
+
+headerbar.default-decoration button.titlebutton,
+.titlebar.default-decoration button.titlebutton {
+  min-width: 20px;
+  min-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Window control buttons ------------------------------------------------ */
+headerbar button.titlebutton,
+.titlebar button.titlebutton {
+  min-width: 20px;
+  min-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  border: 2px solid transparent;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  color: @wm_title;
+  box-shadow: none;
+}
+
+headerbar button.titlebutton:backdrop,
+.titlebar button.titlebutton:backdrop {
+  border-color: transparent;
+  color: @wm_unfocused_title;
+}
+
+headerbar button.titlebutton:hover,
+.titlebar button.titlebutton:hover {
+  border-color: @strong_border_color;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+headerbar button.titlebutton:active,
+.titlebar button.titlebutton:active {
+  border-color: @strong_border_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+/*
+ * Close, maximise and minimise use Pixelcart's own pixel glyphs as a
+ * background image; the icon-theme symbol underneath is made transparent.
+ */
+headerbar button.titlebutton.close,
+headerbar button.titlebutton.maximize,
+headerbar button.titlebutton.minimize,
+.titlebar button.titlebutton.close,
+.titlebar button.titlebutton.maximize,
+.titlebar button.titlebutton.minimize,
+headerbar button.titlebutton.close:backdrop,
+headerbar button.titlebutton.maximize:backdrop,
+headerbar button.titlebutton.minimize:backdrop,
+.titlebar button.titlebutton.close:backdrop,
+.titlebar button.titlebutton.maximize:backdrop,
+.titlebar button.titlebutton.minimize:backdrop,
+headerbar button.titlebutton.close:hover,
+headerbar button.titlebutton.maximize:hover,
+headerbar button.titlebutton.minimize:hover,
+.titlebar button.titlebutton.close:hover,
+.titlebar button.titlebutton.maximize:hover,
+.titlebar button.titlebutton.minimize:hover,
+headerbar button.titlebutton.close:active,
+headerbar button.titlebutton.maximize:active,
+headerbar button.titlebutton.minimize:active,
+.titlebar button.titlebutton.close:active,
+.titlebar button.titlebutton.maximize:active,
+.titlebar button.titlebutton.minimize:active {
+  color: transparent;
+}
+
+headerbar button.titlebutton.close,
+.titlebar button.titlebutton.close {
+  background-image: -gtk-scaled(url("assets/titlebutton-close.svg"),
+                                url("assets/titlebutton-close-2x.svg"));
+}
+
+headerbar button.titlebutton.maximize,
+.titlebar button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize.svg"),
+                                url("assets/titlebutton-maximize-2x.svg"));
+}
+
+.maximized headerbar button.titlebutton.maximize,
+.maximized .titlebar button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore.svg"),
+                                url("assets/titlebutton-restore-2x.svg"));
+}
+
+headerbar button.titlebutton.minimize,
+.titlebar button.titlebutton.minimize {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize.svg"),
+                                url("assets/titlebutton-minimize-2x.svg"));
+}
+
+headerbar button.titlebutton.close:backdrop,
+.titlebar button.titlebutton.close:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop.svg"),
+                                url("assets/titlebutton-close-backdrop-2x.svg"));
+}
+
+headerbar button.titlebutton.maximize:backdrop,
+.titlebar button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop.svg"),
+                                url("assets/titlebutton-maximize-backdrop-2x.svg"));
+}
+
+.maximized headerbar button.titlebutton.maximize:backdrop,
+.maximized .titlebar button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop.svg"),
+                                url("assets/titlebutton-restore-backdrop-2x.svg"));
+}
+
+headerbar button.titlebutton.minimize:backdrop,
+.titlebar button.titlebutton.minimize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop.svg"),
+                                url("assets/titlebutton-minimize-backdrop-2x.svg"));
+}
+
+/* Close: red with a black glyph (white on red is not legible enough). */
+headerbar button.titlebutton.close:hover,
+.titlebar button.titlebutton.close:hover {
+  border-color: @strong_border_color;
+  background-color: @destructive_bg_color;
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active.svg"),
+                                url("assets/titlebutton-close-active-2x.svg"));
+}
+
+headerbar button.titlebutton.maximize:hover,
+.titlebar button.titlebutton.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize.svg"),
+                                url("assets/titlebutton-maximize-2x.svg"));
+}
+
+.maximized headerbar button.titlebutton.maximize:hover,
+.maximized .titlebar button.titlebutton.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore.svg"),
+                                url("assets/titlebutton-restore-2x.svg"));
+}
+
+headerbar button.titlebutton.minimize:hover,
+.titlebar button.titlebutton.minimize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize.svg"),
+                                url("assets/titlebutton-minimize-2x.svg"));
+}
+
+headerbar button.titlebutton.close:active,
+.titlebar button.titlebutton.close:active {
+  border-color: @strong_border_color;
+  background-color: @destructive_bg_color;
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active.svg"),
+                                url("assets/titlebutton-close-active-2x.svg"));
+}
+
+headerbar button.titlebutton.maximize:active,
+.titlebar button.titlebutton.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active.svg"),
+                                url("assets/titlebutton-maximize-active-2x.svg"));
+}
+
+.maximized headerbar button.titlebutton.maximize:active,
+.maximized .titlebar button.titlebutton.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active.svg"),
+                                url("assets/titlebutton-restore-active-2x.svg"));
+}
+
+headerbar button.titlebutton.minimize:active,
+.titlebar button.titlebutton.minimize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active.svg"),
+                                url("assets/titlebutton-minimize-active-2x.svg"));
+}
+
+/* On the blue selection-mode bar the glyphs switch to black. */
+headerbar.selection-mode button.titlebutton.close,
+headerbar.selection-mode button.titlebutton.close:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active.svg"),
+                                url("assets/titlebutton-close-active-2x.svg"));
+}
+
+headerbar.selection-mode button.titlebutton.maximize,
+headerbar.selection-mode button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active.svg"),
+                                url("assets/titlebutton-maximize-active-2x.svg"));
+}
+
+.maximized headerbar.selection-mode button.titlebutton.maximize,
+.maximized headerbar.selection-mode button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active.svg"),
+                                url("assets/titlebutton-restore-active-2x.svg"));
+}
+
+headerbar.selection-mode button.titlebutton.minimize,
+headerbar.selection-mode button.titlebutton.minimize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active.svg"),
+                                url("assets/titlebutton-minimize-active-2x.svg"));
+}
+
+headerbar.selection-mode button.titlebutton:hover {
+  border-color: @shadow_color;
+}
+
+headerbar.selection-mode button.titlebutton.close:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active.svg"),
+                                url("assets/titlebutton-close-active-2x.svg"));
+}
+
+headerbar.selection-mode button.titlebutton.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize.svg"),
+                                url("assets/titlebutton-maximize-2x.svg"));
+}
+
+.maximized headerbar.selection-mode button.titlebutton.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore.svg"),
+                                url("assets/titlebutton-restore-2x.svg"));
+}
+
+headerbar.selection-mode button.titlebutton.minimize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize.svg"),
+                                url("assets/titlebutton-minimize-2x.svg"));
+}
+
+headerbar.selection-mode button.titlebutton:active {
+  border-color: @shadow_color;
+  background-color: @pc_white;
+}
+
+headerbar.selection-mode button.titlebutton.close:active {
+  background-color: @pc_white;
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active.svg"),
+                                url("assets/titlebutton-close-active-2x.svg"));
+}
+
+headerbar.selection-mode button.titlebutton.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active.svg"),
+                                url("assets/titlebutton-maximize-active-2x.svg"));
+}
+
+.maximized headerbar.selection-mode button.titlebutton.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active.svg"),
+                                url("assets/titlebutton-restore-active-2x.svg"));
+}
+
+headerbar.selection-mode button.titlebutton.minimize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active.svg"),
+                                url("assets/titlebutton-minimize-active-2x.svg"));
+}
+
+/* ==========================================================================
+   16. Window decorations (client-side and server-side)
+   ========================================================================== */
+
+/* --- Client-side decorations ------------------------------------------------ */
+
+/*
+ * GTK sizes the resize/shadow margin from the decoration's box-shadow and
+ * margin. The frame is a 2px zero-blur ring; the drop shadow is a hard
+ * 4px offset block. Nothing here uses a blur radius.
+ */
+decoration {
+  margin: 8px;
+  border-radius: 0;
+  box-shadow: 0 0 0 2px @wm_borders_edge,
+              6px 6px 0 0 @pc_shadow;
+}
+
+decoration:backdrop {
+  box-shadow: 0 0 0 2px @unfocused_borders,
+              6px 6px 0 0 transparent;
+}
+
+.maximized decoration,
+.fullscreen decoration,
+.tiled decoration,
+.tiled-top decoration,
+.tiled-right decoration,
+.tiled-bottom decoration,
+.tiled-left decoration {
+  margin: 0;
+  box-shadow: none;
+}
+
+.popup decoration {
+  margin: 0;
+  box-shadow: none;
+}
+
+.csd.popup decoration {
+  margin: 6px;
+  box-shadow: 4px 4px 0 0 @pc_shadow;
+}
+
+tooltip.csd decoration {
+  margin: 0;
+  box-shadow: none;
+}
+
+messagedialog.csd decoration {
+  box-shadow: 0 0 0 2px @wm_borders_edge,
+              6px 6px 0 0 @pc_shadow;
+}
+
+/* Non-composited screens: a plain square frame, no shadow. */
+.solid-csd decoration {
+  margin: 0;
+  padding: 0;
+  border: 2px solid @wm_borders_edge;
+  background-color: @headerbar_bg_color;
+  box-shadow: none;
+}
+
+.solid-csd decoration:backdrop {
+  border-color: @unfocused_borders;
+  background-color: @wm_unfocused_bg;
+}
+
+window.background.csd {
+  background-color: @theme_bg_color;
+}
+
+/* --- Server-side decorations (Cinnamon 5.4 and later) ----------------------- */
+
+/*
+ * Since Cinnamon 5.4 the window manager (Muffin) draws the frame of every
+ * window that does not decorate itself from this stylesheet, using these
+ * nodes (":backdrop" is set on all of them when the window is unfocused):
+ *
+ *   window.background.ssd[.maximized|.tiled]
+ *     decoration
+ *       headerbar.titlebar.horizontal.default-decoration
+ *         label.title
+ *         button.titlebutton[.close|.maximize|.minimize]
+ *           image
+ *
+ * - The decoration's border is the frame around the client area. Its
+ *   background has to be opaque: Muffin builds the frame's visible shape
+ *   from rendered backgrounds, so a border over a transparent background
+ *   would be clipped away.
+ * - The title bar is painted over the top of the decoration, edge to edge,
+ *   so it draws the top and side frame lines itself. The accent rule is an
+ *   inset shadow (zero blur) so that it ends squarely at the side lines.
+ * - Title-bar height: 2px frame + 2px gap + 24px buttons + 2px gap + 2px rule.
+ * - No box-shadow on the decoration: Muffin adds its own window shadow.
+ */
+.ssd decoration {
+  margin: 0;
+  border: 2px solid @wm_borders_edge;
+  background-color: @theme_bg_color;
+  box-shadow: none;
+}
+
+.ssd decoration:backdrop {
+  border-color: @unfocused_borders;
+  background-color: @theme_unfocused_bg_color;
+  box-shadow: none;
+}
+
+/* Maximised windows reach the screen edges: no frame lines at all. */
+.ssd.maximized decoration,
+.ssd.maximized decoration:backdrop {
+  border-width: 0;
+}
+
+.ssd headerbar.titlebar {
+  min-height: 24px;
+  padding: 0 4px 4px;
+  border: 2px solid @wm_borders_edge;
+  border-bottom-width: 0;
+  background-color: @wm_bg;
+  color: @wm_title;
+  box-shadow: inset 0 -2px 0 0 @titlebar_accent_color;
+}
+
+.ssd headerbar.titlebar:backdrop {
+  border-color: @unfocused_borders;
+  background-color: @wm_unfocused_bg;
+  color: @wm_unfocused_title;
+  box-shadow: inset 0 -2px 0 0 @unfocused_borders;
+}
+
+.ssd.maximized headerbar.titlebar,
+.ssd.maximized headerbar.titlebar:backdrop {
+  padding-top: 2px;
+  border-width: 0;
+}
+
+.ssd headerbar.titlebar .title {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * The window manager sets the backdrop state on the title node itself; the
+ * state of the header bar above it is not part of the title's own path, so
+ * the unfocused colour has to be matched on the title directly.
+ */
+.ssd headerbar.titlebar .title:backdrop {
+  color: @wm_unfocused_title;
+}
+
+/*
+ * Muffin tints the icon theme's symbolic window icons with the button's
+ * "color". Close, maximise and minimise are already made transparent above
+ * and replaced by pixel glyphs; the optional window-menu button (the one
+ * without a function class) gets the same treatment here.
+ */
+.ssd headerbar.titlebar button.titlebutton:not(.close):not(.maximize):not(.minimize) {
+  background-image: -gtk-scaled(url("assets/titlebutton-menu.svg"),
+                                url("assets/titlebutton-menu-2x.svg"));
+  color: transparent;
+}
+
+.ssd headerbar.titlebar button.titlebutton:not(.close):not(.maximize):not(.minimize):backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-menu-backdrop.svg"),
+                                url("assets/titlebutton-menu-backdrop-2x.svg"));
+}
+
+.ssd headerbar.titlebar button.titlebutton:not(.close):not(.maximize):not(.minimize):hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-menu.svg"),
+                                url("assets/titlebutton-menu-2x.svg"));
+}
+
+.ssd headerbar.titlebar button.titlebutton:not(.close):not(.maximize):not(.minimize):active {
+  background-image: -gtk-scaled(url("assets/titlebutton-menu-active.svg"),
+                                url("assets/titlebutton-menu-active-2x.svg"));
+}
+
+/* ==========================================================================
+   17. Menus
+   ========================================================================== */
+
+menubar,
+.menubar {
+  padding: 0;
+  border: 0 solid @borders;
+  border-bottom-width: 2px;
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+  box-shadow: none;
+}
+
+menubar:backdrop,
+.menubar:backdrop {
+  color: @theme_unfocused_fg_color;
+}
+
+menubar > menuitem,
+.menubar > menuitem {
+  min-height: 16px;
+  padding: 4px 8px;
+}
+
+menubar > menuitem:hover,
+.menubar > menuitem:hover {
+  background-color: @menu_hover_bg_color;
+  color: @menu_hover_fg_color;
+}
+
+menubar > menuitem:disabled,
+.menubar > menuitem:disabled {
+  color: @insensitive_fg_color;
+}
+
+menubar > menuitem menu,
+.menubar > menuitem menu {
+  margin: 0;
+}
+
+menu,
+.menu,
+.context-menu {
+  margin: 0;
+  padding: 2px;
+  border: 2px solid @strong_border_color;
+  background-color: @menu_bg_color;
+  color: @menu_fg_color;
+}
+
+.csd menu,
+.csd .menu,
+.csd .context-menu {
+  border: 2px solid @strong_border_color;
+}
+
+menu menuitem,
+.menu menuitem,
+.context-menu menuitem {
+  min-width: 40px;
+  min-height: 16px;
+  padding: 6px 8px;
+  color: @menu_fg_color;
+}
+
+menu menuitem:hover,
+.menu menuitem:hover,
+.context-menu menuitem:hover {
+  background-color: @menu_hover_bg_color;
+  color: @menu_hover_fg_color;
+}
+
+menu menuitem:disabled,
+.menu menuitem:disabled,
+.context-menu menuitem:disabled {
+  background-color: transparent;
+  color: @insensitive_fg_color;
+}
+
+menu menuitem accelerator,
+.menu menuitem accelerator,
+.context-menu menuitem accelerator {
+  color: @secondary_fg_color;
+}
+
+menu menuitem:hover accelerator,
+.menu menuitem:hover accelerator,
+.context-menu menuitem:hover accelerator {
+  color: @menu_hover_fg_color;
+}
+
+menu menuitem:disabled accelerator,
+.menu menuitem:disabled accelerator,
+.context-menu menuitem:disabled accelerator {
+  color: @insensitive_fg_color;
+}
+
+menu menuitem arrow,
+.menu menuitem arrow,
+.context-menu menuitem arrow {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+menu menuitem arrow:dir(ltr),
+.menu menuitem arrow:dir(ltr),
+.context-menu menuitem arrow:dir(ltr) {
+  margin-left: 8px;
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-right-symbolic.svg"));
+}
+
+menu menuitem arrow:dir(rtl),
+.menu menuitem arrow:dir(rtl),
+.context-menu menuitem arrow:dir(rtl) {
+  margin-right: 8px;
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-left-symbolic.svg"));
+}
+
+menu menuitem label:dir(ltr),
+.menu menuitem label:dir(ltr) {
+  padding-right: 8px;
+}
+
+menu menuitem label:dir(rtl),
+.menu menuitem label:dir(rtl) {
+  padding-left: 8px;
+}
+
+menu separator,
+.menu separator,
+.context-menu separator {
+  min-height: 2px;
+  margin: 4px 0;
+  background-color: @borders;
+}
+
+/* Scroll arrows shown when a menu is taller than the screen. */
+menu > arrow,
+.menu > arrow {
+  min-width: 16px;
+  min-height: 16px;
+  padding: 4px;
+  border: 0 solid @borders;
+  background-color: @menu_bg_color;
+  color: @secondary_fg_color;
+}
+
+menu > arrow.top,
+.menu > arrow.top {
+  margin-top: -2px;
+  border-bottom-width: 2px;
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-up-symbolic.svg"));
+}
+
+menu > arrow.bottom,
+.menu > arrow.bottom {
+  margin-bottom: -2px;
+  border-top-width: 2px;
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-down-symbolic.svg"));
+}
+
+menu > arrow:hover,
+.menu > arrow:hover {
+  background-color: @menu_hover_bg_color;
+  color: @menu_hover_fg_color;
+}
+
+menu > arrow:disabled,
+.menu > arrow:disabled {
+  color: @insensitive_fg_color;
+}
+
+/* ==========================================================================
+   18. Popovers
+   ========================================================================== */
+
+popover,
+popover.background {
+  padding: 6px;
+  border: 2px solid @strong_border_color;
+  background-color: @menu_bg_color;
+  color: @menu_fg_color;
+  box-shadow: 4px 4px 0 0 @pc_shadow;
+}
+
+popover:backdrop,
+popover.background:backdrop {
+  border-color: @unfocused_borders;
+  color: @theme_unfocused_fg_color;
+  box-shadow: none;
+}
+
+popover.menu,
+popover.background.menu {
+  padding: 2px;
+}
+
+popover > list,
+popover > .view,
+popover > toolbar {
+  border-style: none;
+  background-color: transparent;
+}
+
+popover separator {
+  margin: 4px 0;
+}
+
+popover.osd,
+popover.touch-selection,
+popover.magnifier {
+  border-color: @strong_border_color;
+  background-color: @osd_bg;
+  color: @osd_fg;
+}
+
+popover.menu button,
+popover.menu modelbutton {
+  box-shadow: none;
+}
+
+/* --- Model buttons (menu items inside popovers) ---------------------------- */
+modelbutton.flat,
+.menuitem.button.flat {
+  min-width: 40px;
+  min-height: 16px;
+  padding: 6px 8px;
+  border-style: none;
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+
+modelbutton.flat:hover,
+.menuitem.button.flat:hover {
+  background-color: @menu_hover_bg_color;
+  color: @menu_hover_fg_color;
+}
+
+modelbutton.flat:active,
+modelbutton.flat:selected,
+.menuitem.button.flat:active,
+.menuitem.button.flat:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+modelbutton.flat:disabled,
+.menuitem.button.flat:disabled {
+  background-color: transparent;
+  color: @insensitive_fg_color;
+}
+
+modelbutton.flat arrow {
+  min-width: 16px;
+  min-height: 16px;
+  background-image: none;
+}
+
+modelbutton.flat arrow.left {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-left-symbolic.svg"));
+}
+
+modelbutton.flat arrow.right {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-right-symbolic.svg"));
+}
+
+/* ==========================================================================
+   19. Tooltips
+   ========================================================================== */
+
+tooltip,
+tooltip.background {
+  padding: 4px 8px;
+  border: 2px solid @strong_border_color;
+  background-color: @tooltip_bg_color;
+  color: @tooltip_fg_color;
+  box-shadow: none;
+}
+
+tooltip decoration {
+  background-color: transparent;
+}
+
+tooltip * {
+  background-color: transparent;
+  color: @tooltip_fg_color;
+}
+
+/* ==========================================================================
+   20. Notebooks
+   ========================================================================== */
+
+notebook {
+  background-color: @theme_bg_color;
+}
+
+notebook.frame {
+  border: 2px solid @borders;
+}
+
+notebook > header {
+  padding: 0;
+  border: 0 solid @borders;
+  background-color: @pc_black;
+}
+
+notebook > header.top {
+  border-bottom-width: 2px;
+}
+
+notebook > header.bottom {
+  border-top-width: 2px;
+}
+
+notebook > header.left {
+  border-right-width: 2px;
+}
+
+notebook > header.right {
+  border-left-width: 2px;
+}
+
+notebook > header tab {
+  min-width: 24px;
+  min-height: 24px;
+  padding: 4px 12px;
+  border: 0 solid @borders;
+  background-color: transparent;
+  color: @secondary_fg_color;
+  font-weight: normal;
+}
+
+notebook > header.top tab,
+notebook > header.bottom tab {
+  border-right-width: 2px;
+}
+
+notebook > header.left tab,
+notebook > header.right tab {
+  border-bottom-width: 2px;
+}
+
+notebook > header tab:hover {
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+notebook > header tab:checked {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+  font-weight: bold;
+}
+
+notebook > header tab:checked:backdrop {
+  color: @theme_unfocused_fg_color;
+}
+
+notebook > header tab:disabled {
+  color: @insensitive_fg_color;
+}
+
+/* Active-tab marker: a 4px blue bar on the outer edge of the tab. */
+notebook > header.top tab:checked {
+  box-shadow: inset 0 4px 0 0 @theme_selected_bg_color;
+}
+
+notebook > header.bottom tab:checked {
+  box-shadow: inset 0 -4px 0 0 @theme_selected_bg_color;
+}
+
+notebook > header.left tab:checked {
+  box-shadow: inset 4px 0 0 0 @theme_selected_bg_color;
+}
+
+notebook > header.right tab:checked {
+  box-shadow: inset -4px 0 0 0 @theme_selected_bg_color;
+}
+
+notebook > header.top tab:checked:backdrop {
+  box-shadow: inset 0 4px 0 0 @theme_unfocused_selected_bg_color;
+}
+
+notebook > header.bottom tab:checked:backdrop {
+  box-shadow: inset 0 -4px 0 0 @theme_unfocused_selected_bg_color;
+}
+
+notebook > header.left tab:checked:backdrop {
+  box-shadow: inset 4px 0 0 0 @theme_unfocused_selected_bg_color;
+}
+
+notebook > header.right tab:checked:backdrop {
+  box-shadow: inset -4px 0 0 0 @theme_unfocused_selected_bg_color;
+}
+
+notebook > header tab.needs-attention {
+  color: @warning_color;
+}
+
+notebook > header tab.reorderable-page {
+  border-color: @borders;
+}
+
+notebook > header tab.dnd {
+  border: 2px solid @strong_border_color;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+notebook > header tab label {
+  color: inherit;
+}
+
+/* Tab close buttons */
+notebook > header tab button.flat {
+  min-width: 16px;
+  min-height: 16px;
+  margin: 0;
+  padding: 0;
+  border-width: 2px;
+  color: inherit;
+}
+
+notebook > header tab button.flat:hover {
+  border-color: @pc_white;
+  background-color: @destructive_bg_color;
+  color: @destructive_fg_color;
+}
+
+notebook > header tab button.flat:active {
+  border-color: @pc_white;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+notebook > header tab button.flat:first-child {
+  margin-right: 6px;
+}
+
+notebook > header tab button.flat:last-child {
+  margin-left: 6px;
+}
+
+/* Overflow arrows */
+notebook > header > tabs > arrow {
+  min-width: 16px;
+  min-height: 16px;
+  padding: 4px;
+  border-style: none;
+  background-color: transparent;
+  color: @theme_fg_color;
+  box-shadow: none;
+}
+
+notebook > header > tabs > arrow:hover {
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+notebook > header > tabs > arrow:active {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+notebook > header > tabs > arrow:disabled {
+  color: @pc_slate;
+}
+
+notebook > header.top > tabs > arrow.down,
+notebook > header.bottom > tabs > arrow.down {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-left-symbolic.svg"));
+}
+
+notebook > header.top > tabs > arrow.up,
+notebook > header.bottom > tabs > arrow.up {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-right-symbolic.svg"));
+}
+
+notebook > header.left > tabs > arrow.down,
+notebook > header.right > tabs > arrow.down {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-up-symbolic.svg"));
+}
+
+notebook > header.left > tabs > arrow.up,
+notebook > header.right > tabs > arrow.up {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-down-symbolic.svg"));
+}
+
+notebook > stack:not(:only-child) {
+  background-color: @theme_bg_color;
+}
+
+/* ==========================================================================
+   21. Stack switchers and stack sidebars
+   ========================================================================== */
+
+stackswitcher button.text-button {
+  min-width: 80px;
+}
+
+stackswitcher button.image-button {
+  min-width: 24px;
+}
+
+stackswitcher button.needs-attention:checked {
+  border-color: @strong_border_color;
+}
+
+stacksidebar.sidebar row,
+stacksidebar row {
+  min-height: 24px;
+  padding: 6px 12px;
+}
+
+stacksidebar row.needs-attention > label {
+  color: @warning_color;
+}
+
+stacksidebar row.needs-attention:selected > label {
+  color: @theme_selected_fg_color;
+}
+
+/* ==========================================================================
+   22. Lists, list boxes, flow boxes and icon views
+   ========================================================================== */
+
+list {
+  border-color: @borders;
+  background-color: @theme_base_color;
+  color: @theme_text_color;
+}
+
+list:backdrop {
+  background-color: @theme_unfocused_base_color;
+  color: @theme_unfocused_text_color;
+}
+
+list:disabled {
+  background-color: @insensitive_base_color;
+  color: @insensitive_fg_color;
+}
+
+row {
+  background-color: transparent;
+}
+
+row.activatable:hover,
+list row.activatable:hover {
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+row.activatable:active,
+list row.activatable:active {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+row:selected,
+row:selected:hover,
+row.activatable:selected,
+row.activatable:selected:hover,
+list row:selected,
+list row.activatable:selected:hover {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+row:selected:backdrop,
+list row:selected:backdrop {
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+row:disabled,
+list row:disabled {
+  color: @insensitive_fg_color;
+}
+
+row:selected:disabled,
+list row:selected:disabled {
+  background-color: @pc_slate;
+  color: @pc_silver;
+}
+
+/* Secondary text and child labels on a selected row switch to black. */
+row:selected label,
+row:selected image,
+row:selected .dim-label,
+row:selected label.dim-label,
+row:selected .subtitle,
+.view:selected .dim-label,
+flowboxchild:selected label,
+flowboxchild:selected .dim-label {
+  color: @theme_selected_fg_color;
+}
+
+row:selected:disabled label,
+row:selected:disabled .dim-label {
+  color: @pc_silver;
+}
+
+row.activatable:hover .dim-label,
+row.activatable:hover .subtitle {
+  color: @hover_fg_color;
+}
+
+row.activatable:selected:hover .dim-label,
+row.activatable:selected:hover .subtitle {
+  color: @theme_selected_fg_color;
+}
+
+/* Buttons keep their own colours even on a selected row. */
+row:selected button:not(.flat) label,
+row:selected button:not(.flat) image {
+  color: inherit;
+}
+
+row:selected button:not(.flat) {
+  border-color: @shadow_color;
+}
+
+list separator,
+list row.separator {
+  min-height: 2px;
+  background-color: @borders;
+}
+
+list.horizontal separator {
+  min-width: 2px;
+}
+
+list.content,
+list.boxed-list {
+  border: 2px solid @borders;
+}
+
+list.content > row:not(:last-child),
+list.boxed-list > row:not(:last-child) {
+  border-bottom: 2px solid @borders;
+}
+
+row.expander {
+  padding: 0;
+}
+
+/* --- Flow boxes ------------------------------------------------------------ */
+flowbox {
+  background-color: transparent;
+}
+
+flowboxchild {
+  padding: 4px;
+}
+
+flowboxchild:hover {
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+flowboxchild:selected,
+flowboxchild:selected:hover {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+flowboxchild:selected:backdrop {
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+flowboxchild:disabled {
+  color: @insensitive_fg_color;
+}
+
+/* --- Icon views ------------------------------------------------------------ */
+iconview.cell:hover,
+iconview:hover {
+  color: @theme_text_color;
+}
+
+iconview:selected:focus {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.content-view {
+  background-color: @content_view_bg;
+}
+
+.content-view:hover {
+  -gtk-icon-effect: highlight;
+}
+
+/* ==========================================================================
+   23. Tree views
+   ========================================================================== */
+
+treeview.view {
+  border-left-color: @borders;
+  border-top-color: @borders;
+  background-color: @theme_base_color;
+  color: @theme_text_color;
+}
+
+treeview.view:backdrop {
+  background-color: @theme_unfocused_base_color;
+  color: @theme_unfocused_text_color;
+}
+
+treeview.view:hover {
+  background-color: @theme_base_color;
+}
+
+treeview.view:selected,
+treeview.view:selected:focus,
+treeview.view:selected:hover {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+treeview.view:selected:backdrop {
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+treeview.view:disabled {
+  background-color: @insensitive_base_color;
+  color: @insensitive_fg_color;
+}
+
+treeview.view:selected:disabled {
+  background-color: @pc_slate;
+  color: @pc_silver;
+}
+
+treeview.view.separator {
+  min-height: 6px;
+  color: @borders;
+}
+
+/* --- Drop targets ---------------------------------------------------------- */
+treeview.view:drop(active) {
+  border-style: solid none;
+  border-width: 2px;
+  border-color: @success_color;
+}
+
+treeview.view:drop(active).after {
+  border-top-style: none;
+}
+
+treeview.view:drop(active).before {
+  border-bottom-style: none;
+}
+
+/* --- Expanders -------------------------------------------------------------- */
+treeview.view.expander {
+  min-width: 16px;
+  min-height: 16px;
+  color: @theme_text_color;
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-right-symbolic.svg"));
+}
+
+treeview.view.expander:dir(rtl) {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-left-symbolic.svg"));
+}
+
+treeview.view.expander:checked {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-down-symbolic.svg"));
+}
+
+treeview.view.expander:selected,
+treeview.view.expander:selected:hover {
+  color: @theme_selected_fg_color;
+}
+
+treeview.view.expander:disabled {
+  color: @insensitive_fg_color;
+}
+
+/* --- Progress cells --------------------------------------------------------- */
+treeview.view.progressbar,
+treeview.view.progressbar:selected,
+treeview.view.progressbar:selected:focus {
+  border: 2px solid @borders;
+  background-color: @success_color;
+  background-image: none;
+  color: @pc_black;
+  box-shadow: none;
+}
+
+treeview.view.progressbar:backdrop {
+  background-color: @pc_forest;
+  color: @pc_black;
+}
+
+treeview.view.trough,
+treeview.view.trough:selected,
+treeview.view.trough:selected:focus {
+  border: 2px solid @borders;
+  background-color: @trough_color;
+  color: @theme_fg_color;
+}
+
+/* --- Column headers --------------------------------------------------------- */
+treeview.view header button {
+  min-height: 20px;
+  padding: 2px 8px;
+  border-style: none solid solid none;
+  border-width: 2px;
+  border-color: @borders;
+  background-color: @theme_bg_color;
+  color: @secondary_fg_color;
+  font-weight: bold;
+  box-shadow: none;
+}
+
+treeview.view header button:hover {
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+treeview.view header button:active {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+treeview.view header button:disabled {
+  color: @insensitive_fg_color;
+}
+
+treeview.view header button:last-child {
+  border-right-style: none;
+}
+
+treeview.view header button arrow {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+treeview.view header button.dnd,
+treeview.view button.dnd,
+treeview.view header.button.dnd {
+  border: 2px solid @strong_border_color;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+treeview.view acceleditor > label {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+/* ==========================================================================
+   24. Expanders and generic arrows
+   ========================================================================== */
+
+expander arrow {
+  min-width: 16px;
+  min-height: 16px;
+  color: @theme_fg_color;
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-right-symbolic.svg"));
+}
+
+expander arrow:dir(rtl) {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-left-symbolic.svg"));
+}
+
+expander arrow:checked {
+  -gtk-icon-source: -gtk-recolor(url("assets/arrow-down-symbolic.svg"));
+}
+
+expander arrow:disabled {
+  color: @insensitive_fg_color;
+}
+
+expander title:hover > label {
+  color: @pc_white;
+}
+
+/* ==========================================================================
+   25. Spinner
+   ========================================================================== */
+
+/*
+ * An eight-frame chase drawn as pixel art. steps(8) lands exactly on each
+ * keyframe, so frames are swapped whole - nothing is tweened or rotated.
+ */
+@keyframes pixelcart-spin {
+  0% {
+    background-image: -gtk-scaled(url("assets/spinner-1.svg"),
+                                  url("assets/spinner-1-2x.svg"));
+  }
+
+  12.5% {
+    background-image: -gtk-scaled(url("assets/spinner-2.svg"),
+                                  url("assets/spinner-2-2x.svg"));
+  }
+
+  25% {
+    background-image: -gtk-scaled(url("assets/spinner-3.svg"),
+                                  url("assets/spinner-3-2x.svg"));
+  }
+
+  37.5% {
+    background-image: -gtk-scaled(url("assets/spinner-4.svg"),
+                                  url("assets/spinner-4-2x.svg"));
+  }
+
+  50% {
+    background-image: -gtk-scaled(url("assets/spinner-5.svg"),
+                                  url("assets/spinner-5-2x.svg"));
+  }
+
+  62.5% {
+    background-image: -gtk-scaled(url("assets/spinner-6.svg"),
+                                  url("assets/spinner-6-2x.svg"));
+  }
+
+  75% {
+    background-image: -gtk-scaled(url("assets/spinner-7.svg"),
+                                  url("assets/spinner-7-2x.svg"));
+  }
+
+  87.5% {
+    background-image: -gtk-scaled(url("assets/spinner-8.svg"),
+                                  url("assets/spinner-8-2x.svg"));
+  }
+
+  100% {
+    background-image: -gtk-scaled(url("assets/spinner-1.svg"),
+                                  url("assets/spinner-1-2x.svg"));
+  }
+}
+
+spinner {
+  min-width: 16px;
+  min-height: 16px;
+  background-color: transparent;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  color: transparent;
+  opacity: 0;
+  -gtk-icon-source: none;
+}
+
+spinner:checked {
+  background-image: -gtk-scaled(url("assets/spinner-1.svg"),
+                                url("assets/spinner-1-2x.svg"));
+  opacity: 1;
+  animation: pixelcart-spin 800ms steps(8) infinite;
+}
+
+/* ==========================================================================
+   26. Toolbars, status bars, search bars and action bars
+   ========================================================================== */
+
+toolbar,
+.toolbar {
+  padding: 4px;
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+toolbar.horizontal separator,
+.toolbar.horizontal separator {
+  margin: 4px 2px;
+}
+
+toolbar.vertical separator,
+.toolbar.vertical separator {
+  margin: 2px 4px;
+}
+
+toolbar.primary-toolbar,
+.primary-toolbar {
+  border: 0 solid @borders;
+  border-bottom-width: 2px;
+  background-color: @theme_bg_color;
+}
+
+toolbar.inline-toolbar,
+.inline-toolbar {
+  padding: 2px;
+  border: 2px solid @borders;
+  border-top-style: none;
+  background-color: @theme_bg_color;
+}
+
+toolbar toolbutton > button,
+toolbar toolitem > button {
+  margin: 0 2px;
+}
+
+toolbar toolbutton > button.flat,
+toolbar toolbutton > button {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+toolbar toolbutton > button:hover {
+  border-color: @strong_border_color;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+toolbar toolbutton > button:active,
+toolbar toolbutton > button:checked {
+  border-color: @strong_border_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+toolbar toolbutton > button:checked:backdrop {
+  border-color: @unfocused_borders;
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+toolbar toolbutton > button:disabled {
+  border-color: transparent;
+  background-color: transparent;
+  color: @insensitive_fg_color;
+}
+
+toolbar.osd,
+.osd toolbar {
+  padding: 6px;
+  border: 2px solid @strong_border_color;
+  background-color: @osd_bg;
+  color: @osd_fg;
+}
+
+searchbar > revealer > box,
+.location-bar {
+  padding: 6px;
+  border: 0 solid @borders;
+  border-bottom-width: 2px;
+  background-color: @theme_bg_color;
+}
+
+statusbar {
+  padding: 2px 8px;
+  color: @secondary_fg_color;
+}
+
+/* ==========================================================================
+   27. Info bars
+   ========================================================================== */
+
+infobar {
+  border-style: none;
+}
+
+/* GTK gives the content and action areas of an info bar their own 8px and
+   6px borders, so the bar itself adds no padding. */
+
+infobar > revealer > box {
+  padding: 0;
+  border-bottom: 2px solid @shadow_color;
+  background-color: @pc_black;
+  color: @pc_white;
+}
+
+infobar.info,
+infobar.info > revealer > box {
+  background-color: @info_bg_color;
+  color: @info_fg_color;
+}
+
+infobar.question,
+infobar.question > revealer > box {
+  background-color: @question_bg_color;
+  color: @question_fg_color;
+}
+
+infobar.warning,
+infobar.warning > revealer > box {
+  background-color: @warning_bg_color;
+  color: @warning_fg_color;
+}
+
+infobar.error,
+infobar.error > revealer > box {
+  background-color: @error_bg_color;
+  color: @error_fg_color;
+}
+
+/* Buttons inside an info bar keep the standard dark button look. */
+infobar > revealer > box button {
+  border-color: @shadow_color;
+  box-shadow: none;
+}
+
+infobar > revealer > box button label,
+infobar > revealer > box button image {
+  color: inherit;
+}
+
+infobar > revealer > box button:hover {
+  border-color: @pc_white;
+}
+
+/* Links follow the bar text so they stay readable on the coloured strip. */
+infobar.info link,
+infobar.warning link,
+infobar.error link,
+infobar.info link:visited,
+infobar.warning link:visited,
+infobar.error link:visited {
+  color: @pc_black;
+}
+
+infobar.question link,
+infobar.question link:visited {
+  color: @pc_white;
+}
+
+/* ==========================================================================
+   28. Sidebars and places
+   ========================================================================== */
+
+.sidebar {
+  border: 0 solid @borders;
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+.sidebar:backdrop {
+  color: @theme_unfocused_fg_color;
+}
+
+.sidebar:dir(ltr),
+.sidebar.left,
+.sidebar.left:dir(rtl) {
+  border-right-width: 2px;
+  border-left-width: 0;
+}
+
+.sidebar:dir(rtl),
+.sidebar.right {
+  border-left-width: 2px;
+  border-right-width: 0;
+}
+
+.sidebar list,
+.sidebar .view,
+.sidebar treeview.view {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+.sidebar list:backdrop,
+.sidebar .view:backdrop,
+.sidebar treeview.view:backdrop {
+  color: @theme_unfocused_fg_color;
+}
+
+.sidebar row:selected,
+.sidebar .view:selected,
+.sidebar treeview.view:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.sidebar row:selected:backdrop,
+.sidebar .view:selected:backdrop,
+.sidebar treeview.view:selected:backdrop {
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+paned .sidebar.left,
+paned .sidebar.right,
+paned .sidebar.left:dir(rtl),
+paned .sidebar:dir(rtl),
+paned .sidebar:dir(ltr),
+paned .sidebar {
+  border-style: none;
+}
+
+placessidebar > viewport.frame {
+  border-style: none;
+}
+
+placessidebar list {
+  padding: 2px 0;
+}
+
+placessidebar row {
+  min-height: 28px;
+  padding: 0 4px;
+}
+
+placessidebar row > revealer {
+  padding: 0 8px;
+}
+
+placessidebar row image.sidebar-icon {
+  color: @secondary_fg_color;
+}
+
+placessidebar row image.sidebar-icon:dir(ltr) {
+  padding-right: 8px;
+}
+
+placessidebar row image.sidebar-icon:dir(rtl) {
+  padding-left: 8px;
+}
+
+placessidebar row label.sidebar-label:dir(ltr) {
+  padding-right: 2px;
+}
+
+placessidebar row label.sidebar-label:dir(rtl) {
+  padding-left: 2px;
+}
+
+placessidebar row.sidebar-placeholder-row {
+  min-height: 2px;
+  padding: 0 8px;
+  background-color: @success_color;
+}
+
+placessidebar row.sidebar-new-bookmark-row {
+  color: @success_color;
+}
+
+placessidebar row:drop(active):not(:disabled) {
+  background-color: @success_color;
+  color: @pc_black;
+}
+
+placessidebar row:drop(active):not(:disabled) label,
+placessidebar row:drop(active):not(:disabled) image {
+  color: @pc_black;
+}
+
+placessidebar row:selected image.sidebar-icon,
+placessidebar row.activatable:hover image.sidebar-icon {
+  color: inherit;
+}
+
+button.sidebar-button {
+  min-width: 20px;
+  min-height: 20px;
+  margin: 2px 0;
+  padding: 0;
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+button.sidebar-button:hover {
+  border-color: @strong_border_color;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+row:selected button.sidebar-button:not(:hover) {
+  border-color: transparent;
+  color: @theme_selected_fg_color;
+}
+
+placesview .server-list-button > image {
+  -gtk-icon-transform: rotate(0turn);
+}
+
+placesview .server-list-button:checked > image {
+  -gtk-icon-transform: rotate(-0.5turn);
+}
+
+placesview row.activatable:hover {
+  background-color: @hover_bg_color;
+}
+
+placesview > actionbar > revealer > box > label {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* ==========================================================================
+   29. Calendar
+   ========================================================================== */
+
+calendar {
+  padding: 2px;
+  border: 2px solid @borders;
+  background-color: @theme_base_color;
+  color: @theme_text_color;
+}
+
+calendar:backdrop {
+  color: @theme_unfocused_text_color;
+}
+
+calendar:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+calendar:selected:backdrop {
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+calendar:disabled {
+  color: @insensitive_fg_color;
+}
+
+calendar.header {
+  border-style: none none solid;
+  border-width: 2px;
+  border-color: @borders;
+  color: @theme_text_color;
+}
+
+calendar.button {
+  border-style: none;
+  background-color: transparent;
+  color: @secondary_fg_color;
+  box-shadow: none;
+}
+
+calendar.button:hover {
+  color: @pc_white;
+}
+
+calendar.button:active {
+  color: @theme_selected_bg_color;
+}
+
+calendar.button:disabled {
+  color: @pc_slate;
+}
+
+/* Day names and week numbers */
+calendar.highlight {
+  color: @pc_peach;
+}
+
+/* Days that belong to the previous or next month */
+calendar:indeterminate {
+  color: @pc_lavender;
+}
+
+/* ==========================================================================
+   30. Dialogs
+   ========================================================================== */
+
+dialog,
+messagedialog {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+.dialog-action-area {
+  margin: 0;
+  padding: 8px;
+}
+
+.dialog-action-area button {
+  min-width: 64px;
+}
+
+.dialog-vbox > box,
+.dialog-vbox > grid {
+  margin: 0;
+}
+
+messagedialog .titlebar {
+  min-height: 24px;
+  border-bottom-width: 2px;
+}
+
+messagedialog .dialog-action-area {
+  padding: 8px;
+  border-top: 2px solid @borders;
+}
+
+messagedialog.csd .dialog-action-area button {
+  margin: 0 2px;
+}
+
+/* --- File chooser ----------------------------------------------------------- */
+filechooser {
+  background-color: @theme_bg_color;
+}
+
+filechooser .dialog-action-box {
+  border-top: 2px solid @borders;
+}
+
+filechooser #pathbarbox {
+  padding: 6px;
+  border-bottom: 2px solid @borders;
+  background-color: @theme_bg_color;
+}
+
+filechooser .search-bar,
+filechooser searchbar {
+  border-bottom: 2px solid @borders;
+  background-color: @theme_bg_color;
+}
+
+filechooser paned > separator {
+  background-image: image(@borders);
+}
+
+filechooserbutton:drop(active) {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.path-bar button,
+.path-bar button.text-button,
+.path-bar button.image-button {
+  min-width: 16px;
+  padding: 4px 8px;
+}
+
+.path-bar button label:not(:only-child):first-child {
+  margin-left: 4px;
+}
+
+.path-bar button label:not(:only-child):last-child {
+  margin-right: 4px;
+}
+
+.path-bar button.slider-button {
+  padding: 4px;
+}
+
+/* --- Colour chooser --------------------------------------------------------- */
+colorswatch,
+colorswatch:drop(active) {
+  border-style: none;
+}
+
+colorswatch overlay {
+  border: 2px solid @shadow_color;
+}
+
+colorswatch:hover overlay {
+  border-color: @pc_white;
+}
+
+colorswatch:drop(active) overlay {
+  border-color: @success_color;
+}
+
+colorswatch:selected overlay {
+  border-color: @pc_white;
+  box-shadow: inset 0 0 0 2px @shadow_color;
+}
+
+colorswatch.light overlay {
+  color: @pc_black;
+}
+
+colorswatch.dark overlay {
+  color: @pc_white;
+}
+
+colorswatch:disabled overlay {
+  border-color: @insensitive_border_color;
+}
+
+colorswatch#add-color-button overlay {
+  border-color: @strong_border_color;
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+colorswatch#add-color-button:hover overlay {
+  border-color: @pc_white;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+colorswatch#editor-color-sample overlay {
+  border-color: @strong_border_color;
+}
+
+colorchooser .popover.osd {
+  border: 2px solid @strong_border_color;
+  background-color: @osd_bg;
+}
+
+/* --- Font chooser ----------------------------------------------------------- */
+fontchooser {
+  background-color: @theme_bg_color;
+}
+
+fontchooser .preview,
+fontchooser entry.preview {
+  min-height: 64px;
+}
+
+/* --- Print dialog ----------------------------------------------------------- */
+printdialog paper {
+  padding: 0;
+  border: 2px solid @strong_border_color;
+  background-color: @pc_white;
+  color: @pc_black;
+}
+
+printdialog .dialog-action-box {
+  margin: 12px;
+}
+
+/* --- Assistant -------------------------------------------------------------- */
+assistant {
+  background-color: @theme_bg_color;
+}
+
+assistant .sidebar {
+  padding: 4px 0;
+  border: 0 solid @borders;
+  border-right-width: 2px;
+  background-color: @theme_base_color;
+}
+
+assistant .sidebar:dir(rtl) {
+  border-right-width: 0;
+  border-left-width: 2px;
+}
+
+assistant .sidebar label {
+  padding: 6px 12px;
+  color: @secondary_fg_color;
+}
+
+assistant .sidebar label.highlight {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+  font-weight: bold;
+}
+
+assistant.csd .sidebar {
+  border-top-style: none;
+}
+
+/* --- About dialog ----------------------------------------------------------- */
+aboutdialog .titlebar stackswitcher {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* ==========================================================================
+   31. OSD and in-app notifications
+   ========================================================================== */
+
+.osd,
+.app-notification,
+.app-notification.frame {
+  padding: 8px;
+  border: 2px solid @strong_border_color;
+  background-color: @osd_bg;
+  background-image: none;
+  color: @osd_fg;
+}
+
+.app-notification,
+.app-notification.frame {
+  border-top-style: none;
+}
+
+.app-notification border {
+  border-style: none;
+}
+
+.osd label,
+.app-notification label {
+  color: @osd_fg;
+}
+
+.osd .dim-label,
+.app-notification .dim-label {
+  color: @secondary_fg_color;
+}
+
+.osd scale trough,
+.osd progressbar trough {
+  border-color: @strong_border_color;
+}
+
+/* ==========================================================================
+   32. Shortcuts window, emoji chooser and other helpers
+   ========================================================================== */
+
+.keycap {
+  min-width: 20px;
+  min-height: 24px;
+  margin-top: 2px;
+  padding: 0 6px 2px;
+  border: 2px solid @strong_border_color;
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+  font-size: 90%;
+  box-shadow: 2px 2px 0 0 @shadow_color;
+}
+
+:not(decoration):not(window):drop(active):focus,
+:not(decoration):not(window):drop(active) {
+  caret-color: @success_color;
+}
+
+stackswitcher.circular button.circular {
+  border-radius: 0;
+}
+
+popover.emoji-picker {
+  padding: 0;
+}
+
+.emoji-searchbar {
+  padding: 6px;
+  border: 0 solid @borders;
+  border-bottom-width: 2px;
+}
+
+.emoji-toolbar {
+  padding: 2px;
+  border: 0 solid @borders;
+  border-top-width: 2px;
+}
+
+button.emoji-section {
+  min-width: 28px;
+  min-height: 28px;
+  margin: 2px;
+  padding: 0;
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+button.emoji-section:hover {
+  border-color: @strong_border_color;
+  background-color: @hover_bg_color;
+}
+
+button.emoji-section:checked {
+  border-color: @strong_border_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+popover.emoji-picker .emoji {
+  min-width: 32px;
+  min-height: 32px;
+  font-size: 140%;
+}
+
+popover.emoji-picker .emoji :hover {
+  background-color: @hover_bg_color;
+}
+
+popover.emoji-completion arrow {
+  border-style: none;
+  background-image: none;
+}
+
+popover.emoji-completion contents row box {
+  padding: 2px 8px;
+}
+
+popover.emoji-completion .emoji:hover {
+  background-color: @hover_bg_color;
+}
+
+.view.monospace,
+textview.monospace text {
+  background-color: @theme_base_color;
+}
+
+/* ==========================================================================
+   33. Terminal (VTE)
+   ========================================================================== */
+
+vte-terminal {
+  padding: 2px;
+  background-color: @pc_black;
+  color: @pc_white;
+}
+
+terminal-window notebook > header tab,
+.terminal-window notebook > header tab {
+  padding: 2px 12px;
+}
+
+/* ==========================================================================
+   34. File managers: Nemo, Caja, Nautilus
+   ========================================================================== */
+
+/* --- Nemo (Cinnamon's file manager) ----------------------------------------- */
+.nemo-window .sidebar,
+.nemo-window .sidebar .view,
+.nemo-window .sidebar treeview.view,
+.nemo-window .nemo-places-sidebar,
+.nemo-window .places-treeview {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+.nemo-window .sidebar .view:hover,
+.nemo-window .places-treeview:hover {
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+.nemo-window .sidebar .view:selected,
+.nemo-window .sidebar .view:selected:hover,
+.nemo-window .places-treeview:selected,
+.nemo-window .places-treeview:selected:hover {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.nemo-window .sidebar .view:selected:backdrop,
+.nemo-window .places-treeview:selected:backdrop {
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+/* Disk-usage meters drawn under each volume in the sidebar. */
+.nemo-window .sidebar .places-treeview,
+.nemo-window .places-treeview {
+  -NemoPlacesTreeView-disk-full-bg-color: @pc_black;
+  -NemoPlacesTreeView-disk-full-fg-color: @pc_green;
+  -NemoPlacesTreeView-disk-full-bar-width: 4px;
+  -NemoPlacesTreeView-disk-full-bar-radius: 0;
+  -NemoPlacesTreeView-disk-full-bottom-padding: 2px;
+  -NemoPlacesTreeView-disk-full-max-length: 72px;
+}
+
+.nemo-window .sidebar .places-treeview:selected,
+.nemo-window .places-treeview:selected {
+  -NemoPlacesTreeView-disk-full-bg-color: @pc_black;
+  -NemoPlacesTreeView-disk-full-fg-color: @pc_white;
+}
+
+.nemo-window toolbar.primary-toolbar,
+.nemo-window .primary-toolbar {
+  padding: 4px 6px;
+  border-bottom: 2px solid @borders;
+  background-color: @theme_bg_color;
+}
+
+.nemo-window .primary-toolbar button,
+.nemo-window .primary-toolbar toolbutton > button {
+  border-color: @strong_border_color;
+  background-color: @theme_bg_color;
+}
+
+.nemo-window .primary-toolbar button:hover,
+.nemo-window .primary-toolbar toolbutton > button:hover {
+  border-color: @pc_white;
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+.nemo-window .primary-toolbar button:active,
+.nemo-window .primary-toolbar button:checked,
+.nemo-window .primary-toolbar toolbutton > button:active,
+.nemo-window .primary-toolbar toolbutton > button:checked {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.nemo-window .primary-toolbar button:disabled,
+.nemo-window .primary-toolbar toolbutton > button:disabled {
+  border-color: @insensitive_border_color;
+  background-color: @insensitive_bg_color;
+  color: @insensitive_fg_color;
+}
+
+.nemo-window .path-bar button,
+.nemo-window .primary-toolbar .path-bar button {
+  padding: 4px 8px;
+}
+
+.nemo-window .nemo-window-pane widget.entry {
+  border: 2px solid @focus_color;
+  background-color: @theme_base_color;
+  color: @theme_text_color;
+}
+
+.nemo-window .nemo-inactive-pane .view,
+.nemo-window .nemo-inactive-pane iconview,
+.nemo-inactive-pane .view {
+  background-color: @theme_bg_color;
+  color: @theme_unfocused_text_color;
+}
+
+.nemo-window .nemo-inactive-pane .view:selected,
+.nemo-inactive-pane .view:selected {
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+.nemo-window statusbar,
+.nemo-window .statusbar {
+  padding: 2px 8px;
+  border-top: 2px solid @borders;
+  background-color: @theme_bg_color;
+  color: @secondary_fg_color;
+}
+
+.nemo-window .floating-bar,
+.floating-bar {
+  padding: 2px 8px;
+  border: 2px solid @strong_border_color;
+  background-color: @tooltip_bg_color;
+  color: @tooltip_fg_color;
+}
+
+.floating-bar.bottom.left {
+  border-left-style: none;
+  border-bottom-style: none;
+}
+
+.floating-bar.bottom.right {
+  border-right-style: none;
+  border-bottom-style: none;
+}
+
+.floating-bar button {
+  min-width: 16px;
+  min-height: 16px;
+  padding: 0;
+  border-style: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.nemo-canvas-item,
+.nemo-window .nemo-canvas-item {
+  color: @theme_text_color;
+}
+
+.nemo-canvas-item:selected,
+.nemo-window .nemo-canvas-item:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.nemo-canvas-item:selected:backdrop {
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+.nemo-canvas-item.dim-label,
+.nemo-list-dim-label {
+  color: @secondary_fg_color;
+}
+
+.nemo-canvas-item.dim-label:selected,
+.nemo-list-dim-label:selected {
+  color: @theme_selected_fg_color;
+}
+
+/* Icon labels on the desktop: white text on the wallpaper. */
+.nemo-desktop,
+.nemo-desktop.nemo-canvas-item,
+.nemo-desktop .nemo-canvas-item {
+  color: @pc_white;
+}
+
+.nemo-desktop.nemo-canvas-item:hover,
+.nemo-desktop .nemo-canvas-item:hover {
+  background-color: @hover_bg_color;
+  color: @hover_fg_color;
+}
+
+.nemo-desktop.nemo-canvas-item:selected,
+.nemo-desktop .nemo-canvas-item:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.nemo-desktop-window,
+.nemo-desktop-window notebook {
+  background-color: transparent;
+}
+
+/* --- Caja -------------------------------------------------------------------- */
+.caja-navigation-window,
+.caja-side-pane {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+.caja-side-pane .view,
+.caja-side-pane treeview.view {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+.caja-side-pane .view:selected,
+.caja-side-pane treeview.view:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.caja-pathbar button {
+  padding: 4px 8px;
+}
+
+.caja-canvas-item {
+  color: @theme_text_color;
+}
+
+.caja-canvas-item:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.caja-desktop,
+.caja-desktop.caja-canvas-item {
+  color: @pc_white;
+}
+
+.caja-desktop.caja-canvas-item:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+/* --- Nautilus ---------------------------------------------------------------- */
+.nautilus-window,
+.nautilus-window .sidebar {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+.nautilus-canvas-item {
+  color: @theme_text_color;
+}
+
+.nautilus-canvas-item:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.nautilus-canvas-item.dim-label,
+.nautilus-list-dim-label {
+  color: @secondary_fg_color;
+}
+
+.nautilus-canvas-item.dim-label:selected,
+.nautilus-list-dim-label:selected {
+  color: @theme_selected_fg_color;
+}
+
+.nautilus-desktop,
+.nautilus-desktop.nautilus-canvas-item {
+  color: @pc_white;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.disk-space-display {
+  border: 2px solid @shadow_color;
+}
+
+.disk-space-display.unknown {
+  background-color: @pc_slate;
+}
+
+.disk-space-display.used {
+  background-color: @theme_selected_bg_color;
+}
+
+.disk-space-display.free {
+  background-color: @pc_black;
+}

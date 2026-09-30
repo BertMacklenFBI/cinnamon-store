@@ -1,0 +1,17 @@
+# Pixelcart :: theme index
+# Part of the Pixelcart theme for the Cinnamon desktop.
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# IconTheme and CursorTheme are intentionally not set: Pixelcart ships no
+# icon or cursor theme, so the user's current choices are left untouched.
+
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Pixelcart
+Comment=Dark 8-bit fantasy-console theme with square corners, chunky borders and a 16-colour palette
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+Name=Pixelcart
+GtkTheme=Pixelcart
+MetacityTheme=Pixelcart

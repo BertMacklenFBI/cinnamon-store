@@ -1,0 +1,622 @@
+# Pixelcart - GTK 2 legacy component (gtkrc)
+# Part of the Pixelcart theme
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# A flat, dark, dependable look for the few GTK 2 applications that still
+# run on a Cinnamon desktop. This file is self-contained: it uses no theme
+# engine, no image assets and no includes, so it cannot fail to load because
+# of a missing package. Everything is drawn by GTK 2's built-in style code,
+# whose hard two-pixel bevels suit the 8-bit look of the rest of the theme.
+#
+# Palette legend - the 16 fantasy-console colours (only these are used):
+#
+#   black     #000000    views, entries, troughs, tooltips
+#   navy      #1D2B53    window, dialog and menu background
+#   plum      #7E2553    hover background
+#   forest    #008751    (unused here)
+#   brown     #AB5236    (unused here)
+#   slate     #5F574F    button face, separators, unfocused selection
+#   silver    #C2C3C7    sliders, entry frame, secondary text
+#   white     #FFF1E8    primary text, text cursor
+#   red       #FF004D    spelling / error underline
+#   orange    #FFA300    (unused here)
+#   yellow    #FFEC27    (unused here)
+#   green     #00E436    progress fill
+#   blue      #29ADFF    selection, pressed state, links
+#   lavender  #83769C    disabled text
+#   pink      #FF77A8    visited links
+#   peach     #FFCCAA    (unused here)
+#
+# Notes on the built-in renderer:
+#   * bg[ACTIVE] doubles as the trough colour of every range widget and as
+#     the colour of unselected notebook tabs, which is why the default style
+#     sets it to black and only buttons override it with blue.
+#   * Bevel edges are derived by GTK from the bg[] colour of each widget, so
+#     widgets that need a strong silver edge (entries, sliders) are given a
+#     silver bg[] while their content area is painted from base[].
+
+# ---------------------------------------------------------------------------
+# Colour scheme exported to applications
+# ---------------------------------------------------------------------------
+
+gtk-color-scheme = "bg_color:#1D2B53\nfg_color:#FFF1E8\nbase_color:#000000\ntext_color:#FFF1E8\nselected_bg_color:#29ADFF\nselected_fg_color:#000000\ntooltip_bg_color:#000000\ntooltip_fg_color:#FFF1E8\nlink_color:#29ADFF"
+
+# ---------------------------------------------------------------------------
+# Default style
+# ---------------------------------------------------------------------------
+
+style "pixelcart-default"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#1D2B53"
+  bg[PRELIGHT]      = "#7E2553"
+  bg[ACTIVE]        = "#000000"
+  bg[SELECTED]      = "#29ADFF"
+  bg[INSENSITIVE]   = "#1D2B53"
+
+  fg[NORMAL]        = "#FFF1E8"
+  fg[PRELIGHT]      = "#FFF1E8"
+  fg[ACTIVE]        = "#FFF1E8"
+  fg[SELECTED]      = "#000000"
+  fg[INSENSITIVE]   = "#83769C"
+
+  base[NORMAL]      = "#000000"
+  base[PRELIGHT]    = "#7E2553"
+  base[ACTIVE]      = "#5F574F"
+  base[SELECTED]    = "#29ADFF"
+  base[INSENSITIVE] = "#1D2B53"
+
+  text[NORMAL]      = "#FFF1E8"
+  text[PRELIGHT]    = "#FFF1E8"
+  text[ACTIVE]      = "#FFF1E8"
+  text[SELECTED]    = "#000000"
+  text[INSENSITIVE] = "#83769C"
+
+  # Keyboard focus: solid two-pixel line (an empty dash pattern disables
+  # dashing; the line is drawn in the widget's foreground colour)
+  GtkWidget::focus-line-width       = 2
+  GtkWidget::focus-padding          = 0
+  GtkWidget::focus-line-pattern     = ""
+  GtkWidget::interior-focus         = 1
+
+  # Text cursor and links
+  GtkWidget::cursor-color           = "#FFF1E8"
+  GtkWidget::secondary-cursor-color = "#C2C3C7"
+  GtkWidget::cursor-aspect-ratio    = 0.1
+  GtkWidget::link-color             = "#29ADFF"
+  GtkWidget::visited-link-color     = "#FF77A8"
+
+  # Separators are solid two-pixel bars instead of etched hairlines
+  GtkWidget::wide-separators        = 1
+  GtkWidget::separator-width        = 2
+  GtkWidget::separator-height       = 2
+
+  GtkWidget::scroll-arrow-hlength   = 16
+  GtkWidget::scroll-arrow-vlength   = 16
+
+  # Dialog spacing on the 2px grid
+  GtkDialog::content-area-border    = 2
+  GtkDialog::content-area-spacing   = 8
+  GtkDialog::button-spacing         = 8
+  GtkDialog::action-area-border     = 8
+
+  GtkButtonBox::child-min-width     = 80
+  GtkButtonBox::child-min-height    = 24
+
+  GtkScrolledWindow::scrollbar-spacing = 2
+
+  GtkExpander::expander-size        = 12
+  GtkExpander::expander-spacing     = 2
+
+  GtkPaned::handle-size             = 6
+
+  GtkArrow::arrow-scaling           = 0.6
+}
+
+# ---------------------------------------------------------------------------
+# Buttons (push, toggle, default, colour / font / file chooser buttons)
+# ---------------------------------------------------------------------------
+# The built-in renderer cannot draw the flat silver outline that buttons have
+# in the GTK 3 / GTK 4 parts of the theme: it derives the bevel from bg[].
+# A slate face is used instead of navy so that buttons stay clearly distinct
+# from the navy window. Hover is plum, pressed is blue with black text.
+
+style "pixelcart-button"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#5F574F"
+  bg[PRELIGHT]      = "#7E2553"
+  bg[ACTIVE]        = "#29ADFF"
+  bg[SELECTED]      = "#29ADFF"
+  bg[INSENSITIVE]   = "#1D2B53"
+
+  fg[NORMAL]        = "#FFF1E8"
+  fg[PRELIGHT]      = "#FFF1E8"
+  fg[ACTIVE]        = "#000000"
+  fg[SELECTED]      = "#000000"
+  fg[INSENSITIVE]   = "#83769C"
+
+  text[NORMAL]      = "#FFF1E8"
+  text[PRELIGHT]    = "#FFF1E8"
+  text[ACTIVE]      = "#000000"
+  text[SELECTED]    = "#000000"
+  text[INSENSITIVE] = "#83769C"
+
+  GtkButton::default-border         = { 2, 2, 2, 2 }
+  GtkButton::default-outside-border = { 0, 0, 0, 0 }
+  GtkButton::inner-border           = { 4, 4, 2, 2 }
+  GtkButton::child-displacement-x   = 1
+  GtkButton::child-displacement-y   = 1
+  GtkButton::displace-focus         = 1
+  GtkButton::image-spacing          = 4
+}
+
+# Link buttons keep the window background so the blue / pink link text stays
+# readable; hover is shown by the text and focus line only.
+style "pixelcart-linkbutton"
+{
+  bg[NORMAL]        = "#1D2B53"
+  bg[PRELIGHT]      = "#1D2B53"
+  bg[ACTIVE]        = "#1D2B53"
+  bg[INSENSITIVE]   = "#1D2B53"
+
+  fg[NORMAL]        = "#29ADFF"
+  fg[PRELIGHT]      = "#29ADFF"
+  fg[ACTIVE]        = "#FF77A8"
+  fg[INSENSITIVE]   = "#83769C"
+}
+
+# ---------------------------------------------------------------------------
+# Check buttons and radio buttons
+# ---------------------------------------------------------------------------
+# The indicator box is filled from base[], outlined from fg[] and its mark is
+# drawn from text[]. The label sits directly on the window, so fg[] must stay
+# readable on navy in every state except PRELIGHT (plum hover bar).
+
+style "pixelcart-check"
+{
+  bg[NORMAL]        = "#1D2B53"
+  bg[PRELIGHT]      = "#7E2553"
+  bg[ACTIVE]        = "#1D2B53"
+  bg[SELECTED]      = "#29ADFF"
+  bg[INSENSITIVE]   = "#1D2B53"
+
+  fg[NORMAL]        = "#FFF1E8"
+  fg[PRELIGHT]      = "#FFF1E8"
+  fg[ACTIVE]        = "#FFF1E8"
+  fg[SELECTED]      = "#000000"
+  fg[INSENSITIVE]   = "#83769C"
+
+  base[NORMAL]      = "#000000"
+  base[PRELIGHT]    = "#000000"
+  base[ACTIVE]      = "#29ADFF"
+  base[SELECTED]    = "#29ADFF"
+  base[INSENSITIVE] = "#1D2B53"
+
+  text[NORMAL]      = "#FFF1E8"
+  text[PRELIGHT]    = "#FFF1E8"
+  text[ACTIVE]      = "#000000"
+  text[SELECTED]    = "#000000"
+  text[INSENSITIVE] = "#83769C"
+
+  GtkCheckButton::indicator-size    = 14
+  GtkCheckButton::indicator-spacing = 2
+}
+
+# ---------------------------------------------------------------------------
+# Entries, spin buttons, combo box entries
+# ---------------------------------------------------------------------------
+# bg[] colours the frame bevel and the spin button arrow panel; the editable
+# area itself is painted from base[] / text[].
+
+style "pixelcart-entry"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#C2C3C7"
+  bg[PRELIGHT]      = "#FFF1E8"
+  bg[ACTIVE]        = "#29ADFF"
+  bg[SELECTED]      = "#29ADFF"
+  bg[INSENSITIVE]   = "#1D2B53"
+
+  fg[NORMAL]        = "#000000"
+  fg[PRELIGHT]      = "#000000"
+  fg[ACTIVE]        = "#000000"
+  fg[SELECTED]      = "#000000"
+  fg[INSENSITIVE]   = "#83769C"
+
+  base[NORMAL]      = "#000000"
+  base[PRELIGHT]    = "#000000"
+  base[ACTIVE]      = "#5F574F"
+  base[SELECTED]    = "#29ADFF"
+  base[INSENSITIVE] = "#1D2B53"
+
+  text[NORMAL]      = "#FFF1E8"
+  text[PRELIGHT]    = "#FFF1E8"
+  text[ACTIVE]      = "#FFF1E8"
+  text[SELECTED]    = "#000000"
+  text[INSENSITIVE] = "#83769C"
+
+  GtkEntry::inner-border    = { 4, 4, 2, 2 }
+  GtkEntry::progress-border = { 2, 2, 2, 2 }
+}
+
+style "pixelcart-combobox"
+{
+  GtkComboBox::appears-as-list = 0
+  GtkComboBox::arrow-size      = 12
+}
+
+# ---------------------------------------------------------------------------
+# Text views, tree views, list views, icon views
+# ---------------------------------------------------------------------------
+
+style "pixelcart-view"
+{
+  base[NORMAL]      = "#000000"
+  base[PRELIGHT]    = "#7E2553"
+  base[ACTIVE]      = "#5F574F"
+  base[SELECTED]    = "#29ADFF"
+  base[INSENSITIVE] = "#1D2B53"
+
+  text[NORMAL]      = "#FFF1E8"
+  text[PRELIGHT]    = "#FFF1E8"
+  text[ACTIVE]      = "#FFF1E8"
+  text[SELECTED]    = "#000000"
+  text[INSENSITIVE] = "#83769C"
+
+  GtkTextView::error-underline-color = "#FF004D"
+
+  GtkTreeView::allow-rules          = 1
+  GtkTreeView::even-row-color       = "#000000"
+  GtkTreeView::odd-row-color        = "#1D2B53"
+  GtkTreeView::expander-size        = 12
+  GtkTreeView::horizontal-separator = 4
+  GtkTreeView::vertical-separator   = 2
+  GtkTreeView::grid-line-width      = 2
+  GtkTreeView::tree-line-width      = 2
+}
+
+# ---------------------------------------------------------------------------
+# Menu bar, menus, menu items
+# ---------------------------------------------------------------------------
+
+style "pixelcart-menubar"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#1D2B53"
+  fg[NORMAL]        = "#FFF1E8"
+
+  GtkMenuBar::shadow-type      = GTK_SHADOW_NONE
+  GtkMenuBar::internal-padding = 2
+}
+
+style "pixelcart-menu"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#1D2B53"
+  bg[INSENSITIVE]   = "#1D2B53"
+  fg[NORMAL]        = "#FFF1E8"
+
+  GtkMenu::horizontal-padding = 0
+  GtkMenu::vertical-padding   = 2
+  GtkMenu::horizontal-offset  = 0
+  GtkMenu::vertical-offset    = 0
+}
+
+# The highlighted item uses the PRELIGHT state: blue bar, black text.
+style "pixelcart-menuitem"
+{
+  xthickness = 4
+  ythickness = 4
+
+  bg[PRELIGHT]      = "#29ADFF"
+  bg[SELECTED]      = "#29ADFF"
+
+  fg[NORMAL]        = "#FFF1E8"
+  fg[PRELIGHT]      = "#000000"
+  fg[ACTIVE]        = "#FFF1E8"
+  fg[SELECTED]      = "#000000"
+  fg[INSENSITIVE]   = "#83769C"
+
+  base[NORMAL]      = "#000000"
+  base[PRELIGHT]    = "#29ADFF"
+  base[ACTIVE]      = "#000000"
+  base[SELECTED]    = "#29ADFF"
+  base[INSENSITIVE] = "#1D2B53"
+
+  text[NORMAL]      = "#FFF1E8"
+  text[PRELIGHT]    = "#000000"
+  text[ACTIVE]      = "#FFF1E8"
+  text[SELECTED]    = "#000000"
+  text[INSENSITIVE] = "#83769C"
+
+  GtkMenuItem::selected-shadow-type = GTK_SHADOW_NONE
+  GtkMenuItem::horizontal-padding   = 4
+  GtkMenuItem::toggle-spacing       = 6
+  GtkMenuItem::arrow-spacing        = 8
+
+  GtkCheckMenuItem::indicator-size  = 12
+}
+
+# ---------------------------------------------------------------------------
+# Separators (wide separators are filled from bg[NORMAL])
+# ---------------------------------------------------------------------------
+
+style "pixelcart-separator"
+{
+  xthickness = 0
+  ythickness = 0
+
+  bg[NORMAL]        = "#5F574F"
+  bg[INSENSITIVE]   = "#5F574F"
+}
+
+# ---------------------------------------------------------------------------
+# Tooltips
+# ---------------------------------------------------------------------------
+
+style "pixelcart-tooltip"
+{
+  xthickness = 6
+  ythickness = 4
+
+  bg[NORMAL]        = "#000000"
+  bg[SELECTED]      = "#000000"
+  fg[NORMAL]        = "#FFF1E8"
+  fg[SELECTED]      = "#FFF1E8"
+}
+
+# ---------------------------------------------------------------------------
+# Notebooks
+# ---------------------------------------------------------------------------
+# The current tab and the page share bg[NORMAL]; other tabs use bg[ACTIVE]
+# and their labels are drawn in the ACTIVE state.
+
+style "pixelcart-notebook"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#1D2B53"
+  bg[ACTIVE]        = "#000000"
+  bg[PRELIGHT]      = "#7E2553"
+
+  fg[NORMAL]        = "#FFF1E8"
+  fg[ACTIVE]        = "#C2C3C7"
+  fg[PRELIGHT]      = "#FFF1E8"
+  fg[INSENSITIVE]   = "#83769C"
+
+  GtkNotebook::tab-overlap   = 2
+  GtkNotebook::tab-curvature = 0
+  GtkNotebook::arrow-spacing = 2
+}
+
+# ---------------------------------------------------------------------------
+# Scrollbars
+# ---------------------------------------------------------------------------
+# Slider and steppers: silver, white on hover. Trough: black (bg[ACTIVE]).
+# Stepper arrows are drawn from fg[], so fg[] is black on the light states
+# and white on the black pressed state.
+
+style "pixelcart-scrollbar"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#C2C3C7"
+  bg[PRELIGHT]      = "#FFF1E8"
+  bg[ACTIVE]        = "#000000"
+  bg[SELECTED]      = "#29ADFF"
+  bg[INSENSITIVE]   = "#1D2B53"
+
+  fg[NORMAL]        = "#000000"
+  fg[PRELIGHT]      = "#000000"
+  fg[ACTIVE]        = "#FFF1E8"
+  fg[SELECTED]      = "#000000"
+  fg[INSENSITIVE]   = "#83769C"
+
+  GtkRange::slider-width         = 14
+  GtkRange::stepper-size         = 14
+  GtkRange::stepper-spacing      = 0
+  GtkRange::trough-border        = 2
+  GtkRange::arrow-displacement-x = 0
+  GtkRange::arrow-displacement-y = 0
+
+  GtkScrollbar::min-slider-length                  = 32
+  GtkScrollbar::has-backward-stepper               = 1
+  GtkScrollbar::has-forward-stepper                = 1
+  GtkScrollbar::has-secondary-backward-stepper     = 0
+  GtkScrollbar::has-secondary-forward-stepper      = 0
+}
+
+# ---------------------------------------------------------------------------
+# Scales
+# ---------------------------------------------------------------------------
+# Same slider and trough colours as scrollbars, but the value label is drawn
+# from fg[] straight onto the window, so fg[] stays white.
+
+style "pixelcart-scale"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#C2C3C7"
+  bg[PRELIGHT]      = "#FFF1E8"
+  bg[ACTIVE]        = "#000000"
+  bg[SELECTED]      = "#29ADFF"
+  bg[INSENSITIVE]   = "#1D2B53"
+
+  fg[NORMAL]        = "#FFF1E8"
+  fg[PRELIGHT]      = "#FFF1E8"
+  fg[ACTIVE]        = "#FFF1E8"
+  fg[SELECTED]      = "#FFF1E8"
+  fg[INSENSITIVE]   = "#83769C"
+
+  GtkRange::slider-width  = 14
+  GtkRange::trough-border = 2
+  GtkScale::slider-length = 16
+  GtkScale::value-spacing = 4
+}
+
+# ---------------------------------------------------------------------------
+# Progress bars
+# ---------------------------------------------------------------------------
+# Trough: bg[NORMAL] black. Fill: bg[PRELIGHT] green. Text over the trough is
+# fg[NORMAL] (white); text over the fill is fg[SELECTED] (black).
+
+style "pixelcart-progressbar"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#000000"
+  bg[PRELIGHT]      = "#00E436"
+  bg[ACTIVE]        = "#000000"
+  bg[SELECTED]      = "#00E436"
+  bg[INSENSITIVE]   = "#000000"
+
+  fg[NORMAL]        = "#FFF1E8"
+  fg[PRELIGHT]      = "#000000"
+  fg[ACTIVE]        = "#FFF1E8"
+  fg[SELECTED]      = "#000000"
+  fg[INSENSITIVE]   = "#83769C"
+
+  GtkProgressBar::xspacing                  = 2
+  GtkProgressBar::yspacing                  = 2
+  GtkProgressBar::min-horizontal-bar-height = 16
+  GtkProgressBar::min-vertical-bar-width    = 16
+}
+
+# ---------------------------------------------------------------------------
+# Frames, panes, handle boxes
+# ---------------------------------------------------------------------------
+
+style "pixelcart-frame"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#1D2B53"
+  fg[NORMAL]        = "#FFF1E8"
+  fg[INSENSITIVE]   = "#83769C"
+}
+
+style "pixelcart-handle"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#1D2B53"
+  bg[PRELIGHT]      = "#7E2553"
+  bg[ACTIVE]        = "#7E2553"
+  bg[SELECTED]      = "#29ADFF"
+}
+
+# ---------------------------------------------------------------------------
+# Toolbars and status bars
+# ---------------------------------------------------------------------------
+
+style "pixelcart-toolbar"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#1D2B53"
+  fg[NORMAL]        = "#FFF1E8"
+
+  GtkToolbar::shadow-type      = GTK_SHADOW_NONE
+  GtkToolbar::internal-padding = 2
+  GtkToolbar::space-size       = 8
+  GtkToolbar::button-relief    = GTK_RELIEF_NONE
+  GtkToolButton::icon-spacing  = 4
+}
+
+style "pixelcart-statusbar"
+{
+  xthickness = 2
+  ythickness = 2
+
+  bg[NORMAL]        = "#1D2B53"
+  fg[NORMAL]        = "#C2C3C7"
+
+  GtkStatusbar::shadow-type = GTK_SHADOW_NONE
+}
+
+# ===========================================================================
+# Matching rules
+# ===========================================================================
+# Precedence in GTK 2: widget > widget_class > class, and within one kind a
+# later line overrides an earlier one. Order below therefore matters.
+
+# --- By class --------------------------------------------------------------
+
+class "GtkWidget"          style "pixelcart-default"
+class "GtkWindow"          style "pixelcart-default"
+
+class "GtkEntry"           style "pixelcart-entry"
+class "GtkSpinButton"      style "pixelcart-entry"
+class "GtkOldEditable"     style "pixelcart-entry"
+
+class "GtkTextView"        style "pixelcart-view"
+class "GtkTreeView"        style "pixelcart-view"
+class "GtkIconView"        style "pixelcart-view"
+class "GtkCList"           style "pixelcart-view"
+class "GtkCTree"           style "pixelcart-view"
+class "GtkList"            style "pixelcart-view"
+
+class "GtkMenuBar"         style "pixelcart-menubar"
+class "GtkMenu"            style "pixelcart-menu"
+
+class "GtkSeparator"       style "pixelcart-separator"
+
+class "GtkNotebook"        style "pixelcart-notebook"
+
+class "GtkRange"           style "pixelcart-scrollbar"
+class "GtkScrollbar"       style "pixelcart-scrollbar"
+class "GtkScale"           style "pixelcart-scale"
+
+class "GtkProgressBar"     style "pixelcart-progressbar"
+class "GtkProgress"        style "pixelcart-progressbar"
+
+class "GtkFrame"           style "pixelcart-frame"
+class "GtkPaned"           style "pixelcart-handle"
+class "GtkHandleBox"       style "pixelcart-handle"
+
+class "GtkToolbar"         style "pixelcart-toolbar"
+class "GtkStatusbar"       style "pixelcart-statusbar"
+
+class "GtkComboBox"        style "pixelcart-combobox"
+
+# --- By widget class path (covers the widget and everything inside it) -----
+
+widget_class "*<GtkNotebook>.<GtkLabel>"            style "pixelcart-notebook"
+widget_class "*<GtkNotebook>.<GtkHBox>.<GtkLabel>"  style "pixelcart-notebook"
+
+widget_class "*<GtkStatusbar>*<GtkLabel>"           style "pixelcart-statusbar"
+
+widget_class "*<GtkFrame>.<GtkLabel>"               style "pixelcart-frame"
+
+# Buttons, then the button subclasses that must not inherit the button face.
+widget_class "*<GtkButton>*"                        style "pixelcart-button"
+widget_class "*<GtkCheckButton>*"                   style "pixelcart-check"
+widget_class "*<GtkLinkButton>*"                    style "pixelcart-linkbutton"
+
+# Menu items, their labels, accelerators, arrows and indicators.
+widget_class "*<GtkMenuItem>*"                      style "pixelcart-menuitem"
+widget_class "*<GtkSeparatorMenuItem>*"             style "pixelcart-separator"
+widget_class "*<GtkMenu>.<GtkTearoffMenuItem>"      style "pixelcart-menuitem"
+
+# --- By widget name --------------------------------------------------------
+
+widget "gtk-tooltip*"      style "pixelcart-tooltip"
+widget "gtk-tooltips*"     style "pixelcart-tooltip"

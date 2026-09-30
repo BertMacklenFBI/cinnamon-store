@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Pixelcart theme asset. SPDX-License-Identifier: GPL-3.0-or-later -->
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <rect x="0" y="0" width="16" height="16" fill="#C2C3C7"/>
+  <rect x="2" y="2" width="12" height="12" fill="#29ADFF"/>
+  <rect x="4" y="7" width="8" height="2" fill="#000000"/>
+</svg>

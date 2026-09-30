@@ -1,0 +1,11 @@
+/*
+ * Pixelcart - GTK 3 theme, dark-variant entry point
+ * Part of the Pixelcart theme.
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * Pixelcart is a dark theme throughout, so applications that ask for the
+ * dark variant receive exactly the same stylesheet.
+ */
+
+@import url("gtk.css");
