@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=GNU-Darwin Aqua
+Comment=OS X Snow Leopard 10.6: smooth unified neutral-gray chrome, glossy blue controls, small bright left traffic lights, a slim continuous menu bar, a reflective perspective glass dock and the archived purple aurora desktop.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=GNU-Darwin Aqua
+MetacityTheme=GNU-Darwin Aqua
+IconTheme=GNU-Darwin Aqua icons
+ButtonLayout=close,minimize,maximize:

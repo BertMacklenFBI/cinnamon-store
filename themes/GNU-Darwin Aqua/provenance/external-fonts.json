@@ -1,0 +1,20 @@
+{
+  "source_url": "https://secure-appldnld.apple.com/Safari3/061-4211.20071221.tGtgf/Safari304BetaSecUpdateSetup.exe",
+  "provenance": "Extracted by coordinator without running the official Apple Safari3 installer; copied byte-identical for scoped local fontconfig use.",
+  "rights": "Apple font software; no public redistribution license asserted.",
+  "files": [
+    {
+      "path": "Lucida Grande.ttf",
+      "sha256": "bc4635730c1b172305c013173abd64703d996d058cceeb85b868cee9bd869c89",
+      "bytes": 1129000,
+      "transform": "none"
+    },
+    {
+      "path": "Lucida Grande Bold.ttf",
+      "sha256": "1e47e725bb5f9d69341139e84f185ac897f039ea04cfd4f01c8f79a947c2216b",
+      "bytes": 1123660,
+      "transform": "none"
+    }
+  ],
+  "record_scope": "Reference provenance only. No font binaries are shipped in this package."
+}

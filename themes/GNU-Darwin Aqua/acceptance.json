@@ -1,0 +1,154 @@
+{
+  "schema": 1,
+  "scope": "desktop-theme-and-artwork with optional icons and dock extension",
+  "date": "2026-09-30",
+  "theme_name": "GNU-Darwin Aqua",
+  "native_status": "PASS",
+  "native_check_count": 28,
+  "native_checks": [
+    "private fontconfig resolves the verified staged Lucida Grande regular face",
+    "private shell started on the copied layout ['1:0:top', '2:0:bottom']",
+    "journaled dock runtime enabled and attached to the real grouped window list",
+    "exact top22/dock84 actors; full-width painted top; transparent bottom with centered compact painted dock",
+    "taskbar applets loaded in order: 10/10",
+    "calendar clock renders design format %a %-I:%M %p",
+    "calendar settings file accepted by Cinnamon byte-for-byte (md5 de90b5cca13fa5a4289009477b98b2f7)",
+    "removed multi-instance settings files deleted by Cinnamon: 3",
+    "actual single-line GTK client-side header height matches the reviewed design; subtitle reservation disabled by this probe",
+    "menu@cinnamon.org visibly open before and after capture; background strip verified",
+    "calendar@cinnamon.org visibly open before and after capture; background strip verified",
+    "notifications@cinnamon.org visibly open before and after capture; background strip verified",
+    "sound@cinnamon.org visibly open before and after capture; background strip verified",
+    "GTK model-button and list-row popover render",
+    "actual Nemo window render",
+    "Nemo maximized to exact work area and restored frame; private transient GTK modal mapped, captured and closed",
+    "GTK4 CSS parse",
+    "actual private pointer click on reflected dock restores the same native Nemo window",
+    "native dock context menu opens, populates and closes with original handlers",
+    "Trash receives keyboard focus with a separate visible focus treatment",
+    "every real app icon has a bound native-size reflection aligned to its baseline",
+    "actual pointer click on Trash opens and closes the private Nemo Trash window",
+    "real dock decorations rebind across a private workspace round trip",
+    "dock detaches from another theme and reattaches only to GNU-Darwin Aqua",
+    "dock disable removes owned actors/timers; re-enable is singular and pinned launchers stay exact",
+    "running lamps follow actual windows and extinguish after the last window closes",
+    "controller restore rehearsal: layout, zone arrays, desklets exact; settings files byte-exact; calendar file gone; next-applet-id kept",
+    "isolated shell selection restore"
+  ],
+  "payload_manifest_sha256": "cd254707a13eb6e251faaae17e7da2ddb348f4ac050a8e27c018e182b297e674",
+  "payload_file_count": 874,
+  "all_payload_files_match_private_native_input": true,
+  "private_native_report_sha256": "cf48c553e1174838e9a5ce150181059471ebc7aa39997a26c723b2770a65579a",
+  "source_design_sha256": "7a651a5161e05fa4239c338091346f10bccd73cb0e558fa8f4aaa8c802ed925f",
+  "test_harness_sha256": "c2b6d346969950843c4162f5e489038a6a8d3f816f8343267a446e18aaccbcba",
+  "environment": {
+    "cinnamon": "6.6.9",
+    "framebuffer": {
+      "width": 2880,
+      "height": 1800
+    },
+    "ui_scale": 1,
+    "fonts": "Externally supplied Lucida Grande regular/bold and Liberation Mono; not packaged.",
+    "cursor": "Externally supplied Bibata Modern Classic; not packaged.",
+    "wallpaper_method": "Private X root backdrop painted by feh --bg-fill; not native Cinnamon wallpaper verification"
+  },
+  "appearance": {
+    "ui_font": "Lucida Grande 10",
+    "document_font": "Lucida Grande 10",
+    "monospace_font": "Liberation Mono 10",
+    "title_font": "Lucida Grande 10",
+    "cursor_size": 24,
+    "prefer_dark": false,
+    "button_layout": "close,minimize,maximize:"
+  },
+  "geometry": {
+    "top_panel_height": 22,
+    "bottom_panel_height": 84,
+    "icon_size": 64,
+    "icon_center_pitch": 66,
+    "glass_shelf_height": 52,
+    "reflection_height": 18,
+    "reflection_count": 9,
+    "all_reflections_bound": true
+  },
+  "dock_cleanup": {
+    "enabled": false,
+    "attached": false,
+    "groupCount": 0,
+    "groups": [],
+    "workspaceIndex": 0,
+    "instanceId": null,
+    "panelId": null,
+    "endcapCount": 0,
+    "trashBox": null,
+    "trashUri": null,
+    "trashVisible": false,
+    "ownedActors": 0,
+    "timers": 0,
+    "signals": 0,
+    "rebindCount": 52,
+    "scale": 1,
+    "magnification": false,
+    "messages": [],
+    "cleanup": {
+      "methodsRestored": 220,
+      "methodConflicts": 0,
+      "centerStyleRestored": true
+    },
+    "scene_owned_actors": []
+  },
+  "keyboard_focus": {
+    "focused": true,
+    "pseudo": "last-child focus"
+  },
+  "native_context_menu": {
+    "open": true,
+    "visible": true,
+    "mapped": true,
+    "menuOpen": true
+  },
+  "lamp_extinguished_after_window_close": true,
+  "screenshots": {
+    "screenshot.png": {
+      "sha256": "0932bae539a8cb3064340ec521f09cea876cd5f61a5465d44998c50dbf2da9d5",
+      "source": "Unmodified private native dock-runtime screenshot"
+    },
+    "dock.png": {
+      "sha256": "8a64c0be7003d50f47b2649fc743d5408fd31589ece22bf99e9a8ca0d2094863",
+      "source": "Exact pixel crop of screenshot.png",
+      "crop_xyxy": [
+        1040,
+        1685,
+        1840,
+        1800
+      ]
+    }
+  },
+  "installer_fixtures": {
+    "status": "PASS",
+    "count": 7,
+    "command": "python3 -B -m unittest test_install.py",
+    "test_source_sha256": "1bd0541d1b4bdfda85dc41944f8e81158950f3287b7199e639b6242d43d4a46c",
+    "installer_sha256": "4070f32fbff609224606239ddbab66dac0ab2dfdbf9390a41b5b25c72e6814c5"
+  },
+  "harness_teardown": {
+    "native_checks": "PASS",
+    "native_check_count": 28,
+    "initial_harness_exit_code": 1,
+    "cause": "TemporaryDirectory cleanup raced with private document portal mount teardown after all checks and worker restore passed.",
+    "cleanup_resolution": "The private mount had detached, owned directory was removed, and recorded worker/session PIDs were absent.",
+    "private_temp_directory_removed": true
+  },
+  "known_environment_issue": {
+    "component": "Removed workspace-switcher@cinnamon.org applet, not bundled",
+    "source_sha256": "3c0cef31583358eaccb177c0f5bb731815b611ee9d9f221e8f79142c700d49a7",
+    "issue": "Its pre-existing workspace signal callback accessed deleted buttons during the workspace round trip; dock checks and cleanup passed."
+  },
+  "limits": [
+    "No host installation or activation performed.",
+    "No boot/login acceptance; those layers are excluded.",
+    "Magnification, Genie animation and overlapping-window reflections are not implemented.",
+    "Narrow-screen and HiDPI runtime acceptance remains outstanding.",
+    "Passing appearance/runtime checks does not resolve third-party redistribution rights."
+  ]
+}
