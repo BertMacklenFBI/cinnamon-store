@@ -1,0 +1,152 @@
+style "menubar" {
+
+  bg[NORMAL] = "#222725"
+  fg[NORMAL] = "#e7e1d3"
+  fg[PRELIGHT] = "#e7e1d3"
+  fg[ACTIVE] = "#e7e1d3"
+  fg[SELECTED] = @fg_color
+  fg[INSENSITIVE] = shade(0.7, "#e7e1d3")
+
+  xthickness = 0
+  ythickness = 0
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "menubar-borderless" {
+
+  bg[NORMAL] = "#222725"
+  fg[NORMAL] = "#e7e1d3"
+  fg[SELECTED] = @fg_color
+  fg[INSENSITIVE] = shade(0.7, "#e7e1d3")
+
+  xthickness = 0
+  ythickness = 0
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "menubar_item" {
+
+  xthickness = 2
+  ythickness = 4
+
+  fg[PRELIGHT] = @fg_color
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+# Text Style Menubar
+style "menubar-text" {
+
+  engine "murrine" {
+    rgba = FALSE
+    text_shade = 0.0
+    textstyle = 0
+  }
+}
+
+
+style "toolbar_text" {
+  fg[NORMAL] = "#e7e1d3"
+  fg[PRELIGHT] = "#e7e1d3"
+  fg[INSENSITIVE] = shade(0.7, "#e7e1d3")
+  fg[ACTIVE] = "#e7e1d3"
+
+  text[NORMAL] = "#e7e1d3"
+  text[PRELIGHT] = "#e7e1d3"
+  text[INSENSITIVE] = shade(0.7, "#e7e1d3")
+  text[ACTIVE] = "#e7e1d3"
+
+}
+
+style "toolbar_button" {
+
+  xthickness = 4
+  ythickness = 4
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "toolbar_entry" {
+  xthickness = 6
+
+  base[NORMAL] = "#222725"
+  base[INSENSITIVE] = "#222725"
+
+  text[NORMAL] = "#e7e1d3"
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+#Chromium
+style "chrome-gtk-frame" {
+
+  ChromeGtkFrame::frame-color = "#222725"
+  ChromeGtkFrame::inactive-frame-color = "#222725"
+
+  ChromeGtkFrame::frame-gradient-size = 0
+  ChromeGtkFrame::frame-gradient-color = shade(0.5, @bg_color)
+
+  ChromeGtkFrame::incognito-frame-color = shade(0.85, @bg_color)
+  ChromeGtkFrame::incognito-inactive-frame-color = @bg_color
+
+  ChromeGtkFrame::incognito-frame-gradient-color = @bg_color
+
+  ChromeGtkFrame::scrollbar-trough-color = shade(0.912, @bg_color)
+  ChromeGtkFrame::scrollbar-slider-prelight-color = shade(1.04, @bg_color)
+  ChromeGtkFrame::scrollbar-slider-normal-color = @bg_color
+
+}
+
+widget_class "*<GtkMenuBar>*"                                       style "menubar"
+widget_class "*<GtkMenuBar>.<GtkMenuItem>*"                         style "menubar_item"
+
+widget_class "*ThunarWindow*<GtkToolbar>"                           style "menubar"
+
+class "ChromeGtkFrame"                                              style "chrome-gtk-frame"
+
+widget_class "*<GtkMenuBar>*<GtkMenuItem>*<GtkAccelLabel>"          style "menubar-text"
+
+# Whitelist for dark toolbars
+widget_class "*ThunarWindow*<GtkMenuBar>"                                   style "menubar-borderless"
+widget_class "*ThunarWindow*<GtkToolbar>*<GtkEntry>"                        style "toolbar_entry"
+widget_class "*ThunarWindow*<GtkToolbar>*<GtkButton>"                       style "toolbar_button"
+widget_class "*ThunarWindow*<GtkToolbar>*<GtkWidget>"                       style "toolbar_text"
+widget_class "*ThunarWindow*<GtkToolbar>*<GtkButton>*<GtkLabel>"            style "menubar-text"
+

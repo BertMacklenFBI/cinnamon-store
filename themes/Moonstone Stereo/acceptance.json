@@ -1,0 +1,51 @@
+{
+  "boot_login_accepted": false,
+  "captures_sha256": {
+    "desktop.png": "2cba0d52ce7d9994807a084b095fdae1c3d464a998eb0cd782008820f187f4df",
+    "gtk2.png": "b22393d8b40219cdff453e7a6dd292e4d16c6448dc6220b14fb445d6588a36b2",
+    "gtk3.png": "8993ee80666457e760365e1a96082784893f87ebb7feb4bf47645dda9293507f",
+    "gtk4.png": "6e90fc50d478be4a5ba9875e574cb98f914357e092b55949ceaff81b057531b1",
+    "menu.png": "97ad782fa2ddea6651d81baca0273a305bbe956758126e6352b19e33fa5b6b43",
+    "notifications.png": "2c2877f4abb39a3d3d994b8b667695419a42eb06e6601a05f38a64010fe98156",
+    "sound.png": "19c417f65c642b234de2830e6ca903eadd2e74d822149671f0b66e33507002a3",
+    "wallpaper.png": "ce52ed020dec23db97a64e930d8fa2075ec362c94e264d1de508f2dce5f05509"
+  },
+  "checks": [
+    "Exact packaged theme installed in private HOME",
+    "Private 2880x1800 Cinnamon started with selected theme and stock applets",
+    "Workspace hit targets and labels fit actual allocations",
+    "Four stock workspace controls accept native pointer clicks",
+    "menu@cinnamon.org opens, paints within screen and closes",
+    "notifications@cinnamon.org opens, paints within screen and closes",
+    "sound@cinnamon.org opens, paints within screen and closes",
+    "GTK 2 selected theme, mapped controls and interaction states",
+    "GTK 3 selected theme, mapped controls and interaction states",
+    "GTK 4 selected theme, mapped controls and interaction states",
+    "Cinnamon theme reload"
+  ],
+  "full_workstation_accepted": false,
+  "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+  "independent_visual_review": "PASS_WITH_SCOPED_LIMITS",
+  "installed_tree_sha256": "1b90e6dcb067b9e4a700dd4a9c1908c6dbbdd912b8ee1a8407c3349ac4d7dc4b",
+  "live_installation_performed": false,
+  "package_integration": "PASS",
+  "package_scope": "desktop-theme-and-artwork",
+  "private_home_removed": true,
+  "public_artwork_provenance": "UNRESOLVED_ORIGINAL_ARTWORK_SOURCE_AND_GRANT",
+  "remaining_owned_private_processes": [],
+  "schema": 1,
+  "slug": "moonstone-stereo",
+  "source_native_report": "reports/cinnamon-store-readiness-2026-09-30/native/moonstone-stereo/20260930-123644/report.json",
+  "source_native_report_sha256": "549b083545edd111a5f8863114077b7ae4344eb767f15ae17d0ce275fa0aaf5a",
+  "source_theme_unchanged_after_native_test": true,
+  "status": "PASS_BOUNDED_DESKTOP_PACKAGE_NATIVE",
+  "test_harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
+  "theme_name": "Moonstone Stereo",
+  "workspace_native_pointer_visits": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "publication_authorized": true
+}

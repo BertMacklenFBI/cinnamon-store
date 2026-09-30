@@ -1,0 +1,51 @@
+{
+  "boot_login_accepted": false,
+  "captures_sha256": {
+    "desktop.png": "84b0e2316e8d1478593deea0b916827d26504f64d9275e65ddeee69a727d0eed",
+    "gtk2.png": "c7ce569ead064733e395def2203c4840dd6145d487342e2ebecb778558b0c6a9",
+    "gtk3.png": "eaefa377239bb54c28a990ffbfbd85e97470bbf88acac27c559be8e86d94b66c",
+    "gtk4.png": "0cc044b8ae30edb86bdd80a1cb95da1923c1b172c8d0ccf51a226e4e3f9dba80",
+    "menu.png": "913449755fe12f9a2692bac70ca53d70a0b3eedc59e5ea9413938134761adb86",
+    "notifications.png": "a347aa61e7f49c13a0fbfd082a6c19d2a75b0c4ddc808c25721dea0406a26527",
+    "sound.png": "06e7f4091e06b0007e5f726043243b1eb27f80b41ea4b6929c9808989a2e05de",
+    "wallpaper.png": "5f44e9ef8db6edb743c9ffe2a2100b20256421d602fd5c80de4b5e83ad85e17d"
+  },
+  "checks": [
+    "Exact packaged theme installed in private HOME",
+    "Private 2880x1800 Cinnamon started with selected theme and stock applets",
+    "Workspace hit targets and labels fit actual allocations",
+    "Four stock workspace controls accept native pointer clicks",
+    "menu@cinnamon.org opens, paints within screen and closes",
+    "notifications@cinnamon.org opens, paints within screen and closes",
+    "sound@cinnamon.org opens, paints within screen and closes",
+    "GTK 2 selected theme, mapped controls and interaction states",
+    "GTK 3 selected theme, mapped controls and interaction states",
+    "GTK 4 selected theme, mapped controls and interaction states",
+    "Cinnamon theme reload"
+  ],
+  "full_workstation_accepted": false,
+  "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+  "independent_visual_review": "PASS_WITH_SCOPED_LIMITS",
+  "installed_tree_sha256": "c697b708dbbd8ea7463975cfdf5afa2d367ab1d501ce7d6e6664a03b76464ce5",
+  "live_installation_performed": false,
+  "package_integration": "PASS",
+  "package_scope": "desktop-theme-and-artwork",
+  "private_home_removed": true,
+  "public_artwork_provenance": "UNRESOLVED_ORIGINAL_ARTWORK_SOURCE_AND_GRANT",
+  "remaining_owned_private_processes": [],
+  "schema": 1,
+  "slug": "plum-afterglow",
+  "source_native_report": "reports/cinnamon-store-readiness-2026-09-30/native/plum-afterglow/20260930-123844/report.json",
+  "source_native_report_sha256": "41b59c46fc204cebf11d6114d1767ee24dfb3d9e8dad2e211e9ee728d814e9e6",
+  "source_theme_unchanged_after_native_test": true,
+  "status": "PASS_BOUNDED_DESKTOP_PACKAGE_NATIVE",
+  "test_harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
+  "theme_name": "Plum Afterglow",
+  "workspace_native_pointer_visits": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "publication_authorized": true
+}

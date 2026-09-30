@@ -1,0 +1,113 @@
+{
+  "acceptance": {
+    "full_workstation": false,
+    "gtk2": "PASS",
+    "gtk3": "PASS",
+    "gtk4": "PASS",
+    "independent_visual_acceptance": "PASS_WITH_SCOPED_LIMITS",
+    "native_package": "PASS_BOUNDED_PRIVATE_DESKTOP_PACKAGE",
+    "package_integration": "PASS",
+    "public_provenance_review": "UNRESOLVED_ORIGINAL_ARTWORK_SOURCE_AND_GRANT",
+    "source_candidate_release_gates_changed": false,
+    "static_resource_closure": "PASS",
+    "store_package_ready": false,
+    "visual_review": "PASS_WITH_SCOPED_LIMITS"
+  },
+  "artwork": {
+    "files/Dusk-Ribbons/artwork/macklenmobile-logo-dusk-ribbons.png": "d27a7ef34cd2d067b2a6097aedd379a047022999abcd2dc081fec0b318daf7d7",
+    "files/Dusk-Ribbons/artwork/menu-logo.png": "d27a7ef34cd2d067b2a6097aedd379a047022999abcd2dc081fec0b318daf7d7",
+    "files/Dusk-Ribbons/artwork/wallpaper.png": "f1a60a8b3da127bfb37c02fc665cd0645f114d2367e004a13640b8be7667b52b"
+  },
+  "display_name": "Dusk Ribbons",
+  "excluded_layers": [
+    "icons",
+    "cursors",
+    "fonts",
+    "panel-arrangement",
+    "workspace-applet-runtime",
+    "Island/Eww",
+    "application-adapters",
+    "terminal-integrations",
+    "boot/login",
+    "activation/restore-controllers"
+  ],
+  "external_dependencies": [
+    {
+      "kind": "font",
+      "name": "Ubuntu",
+      "reason": "Named in shipped desktop CSS; fonts are installed separately."
+    },
+    {
+      "kind": "icon-theme",
+      "name": "Dusk-Ribbons-Icons",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    },
+    {
+      "kind": "cursor-theme",
+      "name": "Dusk-Ribbons-Cursors",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    },
+    {
+      "kind": "gtk-engine",
+      "name": "murrine",
+      "reason": "Native GTK2 control rendering in repaired store package; replaces stale inherited raster-control engine paint."
+    }
+  ],
+  "icon": {
+    "byte_exact_artwork_source": "files/Dusk-Ribbons/artwork/menu-logo.png",
+    "path": "icon.png",
+    "sha256": "d27a7ef34cd2d067b2a6097aedd379a047022999abcd2dc081fec0b318daf7d7"
+  },
+  "native_binding": {
+    "checks_passed": 11,
+    "harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
+    "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+    "installed_tree_sha256": "aded22cc16278fc5d48863dc7b704920b5e436375497a726cf3bfaf3d4fa0206",
+    "native_callback_scope": "Stock workspace controls received real private-session pointer visits; GTK fixtures invoked programmatic button/checkbox callbacks and checked mapped selected-theme readback.",
+    "owned_cleanup_complete": true,
+    "report": "reports/cinnamon-store-readiness-2026-09-30/native/dusk-ribbons/20260930-124303/report.json",
+    "report_sha256": "41ae2ca0a35059a886dd72cb677b7d8121731a5753676ea967e2669b544ceef6",
+    "source_unchanged": true
+  },
+  "package_scope": "desktop-theme-and-artwork",
+  "palette": {
+    "path": "files/Dusk-Ribbons/palette.json",
+    "preserved_from_source": true,
+    "sha256": "a379fc52dd631ac151bc347e0dbf1b0dddcbeaae667f4a31fd6ef44e03b58706"
+  },
+  "schema": 1,
+  "screenshot": {
+    "capture_name": "gtk3.png",
+    "contains_account_identity": false,
+    "context": "Private Cinnamon at 2880x1800; 78px top panel, stock applets, Adwaita icons and synthetic GTK3 acceptance controls.",
+    "full_composition_capture": false,
+    "genuine_private_package_capture": true,
+    "includes_optional_icons_and_panel_layout": true,
+    "path": "screenshot.png",
+    "sha256": "50dd726d48ffb973ffb2147fae10e6bb737b7afa49890d7b87952a6cf301c708",
+    "source_report": "reports/cinnamon-store-readiness-2026-09-30/native/dusk-ribbons/20260930-124303/report.json",
+    "source_report_sha256": "41ae2ca0a35059a886dd72cb677b7d8121731a5753676ea967e2669b544ceef6",
+    "status": "CURRENT_PACKAGED_THEME_CAPTURE"
+  },
+  "slug": "dusk-ribbons",
+  "store_only_rendering_repairs": [
+    "six-theme-enabled-scale-text-repair.json",
+    "dark-theme-enabled-controls-repair.json"
+  ],
+  "theme_name": "Dusk-Ribbons",
+  "publication": {
+    "status": "USER_AUTHORIZED_REPOSITORY_SUBMISSION",
+    "requested_on": "2026-09-30",
+    "scope": "desktop-theme-and-artwork",
+    "authorization": "User explicitly requested publication of the remaining six after being informed of the unresolved artwork record.",
+    "artwork_provenance_resolved": false
+  },
+  "review_bindings_sha256": {
+    "dusk-quiet-package-visual-review.json": "6a5b2f95aedac2d7e74d7eec13b757f29e401a51bebb55e7e53bce77fe5f25a2",
+    "local-eight-integration-review.json": "1a56849e8968015805e142c0877516fdd42b1ac51d24d40957f8c30c3733c693",
+    "local-eight-package-validation-final.json": "b8331f8b57df0adfffc88f0d0f1ce317f75f4ee9b426f2c72516389dd813fb6b",
+    "desktop-public-provenance-review.json": "e1cba196c77ede81d0e4a712fb08ffc119f7d03876cd9e18b22eb136f3a54298"
+  }
+}

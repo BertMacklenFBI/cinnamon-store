@@ -1,0 +1,745 @@
+style "default" {
+
+  xthickness = 1
+  ythickness = 1
+
+  # Style Properties
+
+  GtkWidget::focus-line-width = 1
+  GtkMenuBar::window-dragging = 1
+  GtkToolbar::window-dragging = 1
+  GtkToolbar::internal-padding = 4
+  GtkToolButton::icon-spacing = 4
+
+  GtkWidget::tooltip-radius = 5
+  GtkWidget::tooltip-alpha = 235
+  GtkWidget::new-tooltip-style = 1 #for compatibility
+
+  GtkSeparatorMenuItem::horizontal-padding = 3
+  GtkSeparatorMenuItem::wide-separators = 1
+  GtkSeparatorMenuItem::separator-height = 1
+
+  GtkButton::child-displacement-y = 0
+  GtkButton::default-border = { 0, 0, 0, 0 }
+  GtkButton::default-outside_border = { 0, 0, 0, 0 }
+
+  GtkEntry::state-hint = 1
+
+  GtkScrollbar::trough-border = 0
+  GtkRange::trough-border = 0
+  GtkRange::slider-width = 13
+  GtkRange::stepper-size = 0
+
+  GtkScrollbar::activate-slider = 1
+  GtkScrollbar::has-backward-stepper = 0  
+  GtkScrollbar::has-forward-stepper = 0
+  GtkScrollbar::min-slider-length = 32
+  GtkScrolledWindow::scrollbar-spacing = 0
+  GtkScrolledWindow::scrollbars-within-bevel = 1
+
+  GtkScale::slider_length = 15
+  GtkScale::slider_width = 15
+  GtkScale::trough-side-details = 1
+
+  GtkProgressBar::min-horizontal-bar-height = 8
+  GtkProgressBar::min-vertical-bar-width = 8
+
+  GtkStatusbar::shadow_type = GTK_SHADOW_NONE
+  GtkSpinButton::shadow_type = GTK_SHADOW_NONE
+  GtkMenuBar::shadow-type = GTK_SHADOW_NONE
+  GtkToolbar::shadow-type = GTK_SHADOW_NONE
+  GtkMenuBar::internal-padding = 0 #( every window is misaligned for the sake of menus ):
+  GtkMenu::horizontal-padding = 0
+  GtkMenu::vertical-padding = 0
+
+  GtkCheckButton::indicator_spacing = 3
+  GtkOptionMenu::indicator_spacing = { 8, 2, 0, 0 }
+
+  GtkTreeView::row_ending_details = 0
+  GtkTreeView::expander-size = 11
+  GtkTreeView::vertical-separator = 4
+  GtkTreeView::horizontal-separator = 4
+  GtkTreeView::allow-rules = 1
+
+  GtkExpander::expander-size = 11
+
+  GnomeHRef::link_color = @link_color
+  GtkHTML::link-color = @link_color
+  GtkIMHtmlr::hyperlink-color = @link_color
+  GtkIMHtml::hyperlink-color = @link_color
+  GtkWidget::link-color = @link_color
+  GtkWidget::visited-link-color = @text_color
+
+  # Colors
+
+  bg[NORMAL] = @bg_color
+  bg[PRELIGHT] = shade (1.02, @bg_color)
+  bg[SELECTED] = @selected_bg_color
+  bg[INSENSITIVE] = @insensitive_bg_color
+  bg[ACTIVE] = shade (0.9, @bg_color)
+
+  fg[NORMAL] = @text_color
+  fg[PRELIGHT] = @fg_color
+  fg[SELECTED] = @selected_fg_color
+  fg[INSENSITIVE] = @insensitive_fg_color
+  fg[ACTIVE] = @fg_color
+
+  text[NORMAL] = @text_color
+  text[PRELIGHT] = @text_color
+  text[SELECTED] = @selected_fg_color
+  text[INSENSITIVE] = @insensitive_fg_color
+  text[ACTIVE] = @selected_fg_color
+
+  base[NORMAL] = @base_color
+  base[PRELIGHT] = shade (0.95, @bg_color)
+  base[SELECTED] = @selected_bg_color
+  base[INSENSITIVE] = @bg_color
+  base[ACTIVE] = shade (0.9, @selected_bg_color)
+
+  # For succinctness, all reasonable pixmap options remain here
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+
+style "toplevel_hack" {
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "ooo_stepper_hack" {
+
+  GtkScrollbar::stepper-size = 0
+  GtkScrollbar::has-backward-stepper = 0
+  GtkScrollbar::has-forward-stepper = 0
+
+}
+
+style "scrollbar" {
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "menu" {
+
+  xthickness = 0
+  ythickness = 0
+
+  GtkMenuItem::arrow-scaling = 0.4
+
+  bg[NORMAL] = @menu_bg
+  bg[INSENSITIVE] = @menu_bg
+  bg[PRELIGHT] = @menu_bg
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "menu_item"
+{
+  xthickness = 2
+  ythickness = 4
+
+  # HACK: Gtk doesn't actually read this value
+  # while rendering the menu items, but Libreoffice
+  # does; setting this value equal to the one in
+  # fg[PRELIGHT] ensures a code path in the LO theming code
+  # that falls back to a dark text color for menu item text
+  # highlight. The price to pay is black text on menus as well,
+  # but at least it's readable.
+  # See https://bugs.freedesktop.org/show_bug.cgi?id=38038
+  bg[SELECTED] = @selected_fg_color
+
+	fg[NORMAL] = @fg_color
+	fg[SELECTED] = @fg_color
+  fg[PRELIGHT] = @fg_color
+
+  text[PRELIGHT] = @fg_color
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "button" {
+
+  xthickness = 4
+  ythickness = 4
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "checkbutton" {
+
+  fg[PRELIGHT] = @text_color
+  fg[ACTIVE] = @text_color
+
+}
+
+style "entry" {
+
+  # Keep focused entry on its opaque normal surface; selection retains accent/dark ink.
+  GtkEntry::state-hint = 0
+  text[NORMAL] = @text_color
+  text[SELECTED] = @selected_fg_color
+  base[NORMAL] = @base_color
+  base[SELECTED] = @selected_bg_color
+
+  xthickness = 6
+  ythickness = 4
+
+  base[NORMAL] = @base_color
+  base[INSENSITIVE] = @insensitive_bg_color
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "notebook_entry" {
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "notebook_tab_label" {
+
+ fg[ACTIVE] = @text_color
+
+}
+
+style "combobox_entry"
+{
+  xthickness = 3
+  ythickness = 4
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "notebook_combobox_entry" {
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "combobox_entry_button"
+{
+  xthickness = 6
+
+  fg[ACTIVE] = @text_color
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "spinbutton" {
+
+  bg[NORMAL] = @bg_color
+
+  xthickness = 6
+  ythickness = 4
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "gimp_spin_scale" {
+
+  bg[NORMAL] = @base_color
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "libreoffice_entry" {
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "standalone_entry" {
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "notebook" {
+
+  xthickness = 5
+  ythickness = 2
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "handlebox" {
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "combobox_separator" {
+
+  xthickness = 0
+  ythickness = 0
+  GtkWidget::wide-separators = 1
+
+}
+
+style "combobox" {
+
+  xthickness = 0
+  ythickness = 0
+
+}
+
+style "combobox_button" {
+
+  xthickness = 3
+  ythickness = 3
+
+}
+
+style "range" {
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "progressbar" {
+
+  xthickness = 1
+  ythickness = 1
+
+  fg[NORMAL] = @fg_color
+  fg[PRELIGHT] = @selected_fg_color
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "separator_menu_item" {
+
+  GtkSeparatorMenuItem::horizontal-padding = 0
+  GtkWidget::wide-separators = 1
+  GtkWidget::separator-width = 1
+  GtkWidget::separator-height = 7
+    
+  xthickness = 1
+  ythickness = 1
+    
+  bg[NORMAL] = @menu_separator_color
+    
+  engine "murrine" 
+  {
+    rgba = FALSE
+      separatorstyle = 0
+  }
+}
+
+style "treeview_header" {
+  ythickness = 1
+
+  fg[PRELIGHT] = mix(0.70, @text_color, @base_color)
+  font_name = "Bold"
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+# Treeview Rows
+
+style "treeview" {
+
+  xthickness = 2
+  ythickness = 0
+
+  base[NORMAL] = @base_color
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}    
+
+style "scrolled_window" {
+
+  xthickness = 1
+  ythickness = 1
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "frame" {
+
+  xthickness = 1
+  ythickness = 1
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "gimp_toolbox_frame" {
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "toolbar" {
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "inline_toolbar" {
+
+  GtkToolbar::button-relief = GTK_RELIEF_NORMAL
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+style "notebook_viewport" {
+
+  bg[NORMAL] = @notebook_bg
+}
+
+
+style "notebook_eventbox" {
+
+  bg[NORMAL] = @notebook_bg
+  bg[ACTIVE] = @bg_color
+}
+
+style "tooltips" {
+
+  xthickness = 8
+  ythickness = 4
+
+  bg[NORMAL] = @tooltip_bg_color
+  fg[NORMAL] = @tooltip_fg_color
+  bg[SELECTED] = @tooltip_bg_color
+
+}
+
+style "eclipse-tooltips" {
+
+  xthickness = 8
+  ythickness = 4
+
+  bg[NORMAL] = @tooltip_bg_color
+  fg[NORMAL] = @tooltip_fg_color
+  bg[SELECTED] = @tooltip_bg_color
+
+}
+
+style "xfdesktop-icon-view" {
+  XfdesktopIconView::label-alpha = 0
+  XfdesktopIconView::selected-label-alpha = 100
+  XfdesktopIconView::shadow-x-offset = 0
+  XfdesktopIconView::shadow-y-offset = 1
+  XfdesktopIconView::selected-shadow-x-offset = 0
+  XfdesktopIconView::selected-shadow-y-offset = 1
+  XfdesktopIconView::shadow-color = "#2d2c41"
+  XfdesktopIconView::selected-shadow-color = "#2d2c41"
+  XfdesktopIconView::shadow-blur-radius = 2
+  XfdesktopIconView::cell-spacing = 2
+  XfdesktopIconView::cell-padding = 6
+  XfdesktopIconView::cell-text-width-proportion = 1.9
+
+  fg[NORMAL] = @selected_fg_color
+  fg[ACTIVE] = @selected_fg_color
+}
+
+style "xfwm-tabwin" {
+  Xfwm4TabwinWidget::border-width = 1
+  Xfwm4TabwinWidget::border-alpha = 1.0
+  Xfwm4TabwinWidget::icon-size = 64
+  Xfwm4TabwinWidget::alpha = 1.0
+  Xfwm4TabwinWidget::border-radius = 2
+
+	bg[NORMAL] = @bg_color
+	bg[SELECTED] = @bg_color
+
+	fg[NORMAL] = @fg_color
+
+  engine "murrine" {
+    rgba = FALSE
+    contrast = 0.7
+    glazestyle = 0
+    glowstyle = 0
+    highlight_shade = 1.0
+    gradient_shades = {1.0,1.0,1.0,1.0}
+    border_shades = { 0.8, 0.8 }
+  }
+}
+
+style "xfwm-tabwin-button" {
+
+  font_name = "bold"
+  bg[SELECTED] = @selected_bg_color
+}
+
+# Chromium
+style "chrome_menu_item" {
+
+  bg[SELECTED] = @selected_bg_color
+
+}
+
+# Text Style
+style "text" {
+  engine "murrine" {
+    rgba = FALSE textstyle = 0 }
+}
+
+style "null" {
+
+  engine "murrine" {
+    rgba = FALSE
+    roundness = 4
+    contrast = 1.0
+    glazestyle = 0
+    glowstyle = 0
+    reliefstyle = 0
+  }
+}
+
+
+class "GtkWidget"                                                   style "default"
+class "GtkScrollbar"                                                style "scrollbar"
+class "GtkButton"                                                   style "button"
+class "GtkEntry"                                                    style "entry"
+class "GtkOldEditable"                                              style "entry"
+class "GtkSpinButton"                                               style "spinbutton"
+class "GtkNotebook"                                                 style "notebook"
+class "GtkRange"                                                    style "range"
+class "GtkProgressBar"                                              style "progressbar"
+class "GtkSeparatorMenuItem"                                        style "separator_menu_item"
+class "GtkScrolledWindow"                                           style "scrolled_window"
+class "GtkFrame"                                                    style "frame"
+class "GtkTreeView"                                                 style "treeview"
+class "GtkToolbar"                                                  style "toolbar"
+class "*HandleBox"                                                  style "toolbar"
+
+widget_class "*<GtkMenu>*"                                          style "menu"
+widget_class "*<GtkMenuItem>*"                                      style "menu_item"
+widget_class "*<GtkSeparatorMenuItem>*"                             style "separator_menu_item"
+widget_class "*<GtkCheckButton>*"                                   style "checkbutton"
+widget_class "*<GtkComboBox>"                                       style "combobox"
+widget_class "*<GtkComboBox>*<GtkButton>"                           style "combobox_button"
+widget_class "*<GtkComboBox>*<GtkSeparator>"                        style "combobox_separator"
+widget_class "*<GtkTreeView>*<GtkButton>*"                          style "treeview_header"
+widget_class "*<GtkFileChooserDefault>*<GtkToolbar>"                style "inline_toolbar"
+widget_class "*<GtkComboBoxEntry>*<GtkEntry>"                       style "combobox_entry"
+widget_class "*<GtkComboBoxEntry>*<GtkButton>"                      style "combobox_entry_button"
+widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>"     style "notebook_viewport"
+widget_class "*HandleBox"                                           style "toolbar"
+
+# Entries in notebooks draw with notebook's base color, but not if there's
+# something else in the middle that draws gray again
+widget_class "*<GtkNotebook>*<GtkEntry>"                                    style "notebook_entry"
+widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkEntry>"                      style "entry"
+
+widget_class "*<GtkNotebook>*<GtkComboBoxEntry>*<GtkEntry>"                 style "notebook_combobox_entry"
+widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkComboBoxEntry>*<GtkEntry>"   style "combobox_entry"
+
+# We also need to avoid changing fg color for the inactive notebook tab labels
+widget_class "*<GtkNotebook>.<GtkLabel>"                            style "notebook_tab_label"
+
+# GTK tooltips
+widget "gtk-tooltip*"                                               style "tooltips"
+
+#Fix GVim tabs
+widget_class "*<GtkNotebook>*<GtkEventBox>"                         style "notebook_eventbox"
+
+# Xchat special cases
+widget "*xchat-inputbox"                                            style "entry"
+
+# GIMP
+# Disable gradients completely for GimpSpinScale
+#class "GimpSpinScale"                                               style "gimp_spin_scale"
+
+# Remove borders from "Wilbert frame" in Gimp
+widget_class "*<GimpToolbox>*<GtkFrame>"                            style "gimp_toolbox_frame"
+
+# Chrome/Chromium
+widget_class "*Chrom*Button*"                                       style "button"
+widget_class "*<GtkCustomMenu>*<GtkCustomMenuItem>*"                style "chrome_menu_item"
+
+# Eclipse/SWT
+widget "gtk-tooltips*"                                              style "eclipse-tooltips"
+widget "*swt-toolbar-flat"                                          style "null"
+
+# Openoffice, Libreoffice
+class "GtkWindow"                                                   style "toplevel_hack"
+widget "*openoffice-toplevel*"                                      style "ooo_stepper_hack"
+
+# Xfce
+widget_class "*XfdesktopIconView*"                                  style "xfdesktop-icon-view"
+widget "xfwm4-tabwin*"                                              style "xfwm-tabwin"
+widget "xfwm4-tabwin*GtkButton*"                                    style "xfwm-tabwin-button"
+
+# Fixes ugly text shadows for insensitive text
+widget_class "*<GtkLabel>"                                          style "text" 
+widget_class "*<GtkComboBox>*<GtkCellLayout>"                       style "text"
+widget_class "*<GtkNotebook>*<GtkLabel>"                            style "text"
+widget_class "*<GtkNotebook>*<GtkCellLayout>"                       style "text"

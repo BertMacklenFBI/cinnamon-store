@@ -1,0 +1,113 @@
+{
+  "acceptance": {
+    "full_workstation": false,
+    "gtk2": "PASS",
+    "gtk3": "PASS",
+    "gtk4": "PASS",
+    "independent_visual_acceptance": "PASS_WITH_SCOPED_LIMITS",
+    "native_package": "PASS_BOUNDED_PRIVATE_DESKTOP_PACKAGE",
+    "package_integration": "PASS",
+    "public_provenance_review": "UNRESOLVED_ORIGINAL_ARTWORK_SOURCE_AND_GRANT",
+    "source_candidate_release_gates_changed": false,
+    "static_resource_closure": "PASS",
+    "store_package_ready": false,
+    "visual_review": "PASS_WITH_SCOPED_LIMITS"
+  },
+  "artwork": {
+    "files/Plum Afterglow/artwork/macklenmobile-logo-plum-afterglow.png": "12e4d7718f90a4627a33c9a3d4e84f725d52b36677d84a1187a4a6761d763a77",
+    "files/Plum Afterglow/artwork/menu-logo.png": "12e4d7718f90a4627a33c9a3d4e84f725d52b36677d84a1187a4a6761d763a77",
+    "files/Plum Afterglow/artwork/wallpaper.png": "5f44e9ef8db6edb743c9ffe2a2100b20256421d602fd5c80de4b5e83ad85e17d"
+  },
+  "display_name": "Plum Afterglow",
+  "excluded_layers": [
+    "icons",
+    "cursors",
+    "fonts",
+    "panel-arrangement",
+    "workspace-applet-runtime",
+    "Island/Eww",
+    "application-adapters",
+    "terminal-integrations",
+    "boot/login",
+    "activation/restore-controllers"
+  ],
+  "external_dependencies": [
+    {
+      "kind": "gtk-engine",
+      "name": "murrine",
+      "reason": "Referenced by GTK2 theme rules; required for GTK2 coverage."
+    },
+    {
+      "kind": "font",
+      "name": "Ubuntu",
+      "reason": "Named in shipped desktop CSS; fonts are installed separately."
+    },
+    {
+      "kind": "icon-theme",
+      "name": "Plum Afterglow icons",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    },
+    {
+      "kind": "cursor-theme",
+      "name": "Plum Afterglow cursors",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    }
+  ],
+  "icon": {
+    "byte_exact_artwork_source": "files/Plum Afterglow/artwork/menu-logo.png",
+    "path": "icon.png",
+    "sha256": "12e4d7718f90a4627a33c9a3d4e84f725d52b36677d84a1187a4a6761d763a77"
+  },
+  "native_binding": {
+    "checks_passed": 11,
+    "harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
+    "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+    "installed_tree_sha256": "c697b708dbbd8ea7463975cfdf5afa2d367ab1d501ce7d6e6664a03b76464ce5",
+    "native_callback_scope": "Stock workspace controls received real private-session pointer visits; GTK fixtures invoked programmatic button/checkbox callbacks and checked mapped selected-theme readback.",
+    "owned_cleanup_complete": true,
+    "report": "reports/cinnamon-store-readiness-2026-09-30/native/plum-afterglow/20260930-123844/report.json",
+    "report_sha256": "41b59c46fc204cebf11d6114d1767ee24dfb3d9e8dad2e211e9ee728d814e9e6",
+    "source_unchanged": true
+  },
+  "package_scope": "desktop-theme-and-artwork",
+  "palette": {
+    "path": "files/Plum Afterglow/palette.json",
+    "preserved_from_source": true,
+    "sha256": "6a72f1122d6d892f7752a00b0d7681dd1d4801d2de66394fbd33562050e5dd5f"
+  },
+  "schema": 1,
+  "screenshot": {
+    "capture_name": "gtk3.png",
+    "contains_account_identity": false,
+    "context": "Private Cinnamon at 2880x1800; 42px bottom panel, stock applets, Adwaita icons and synthetic GTK3 acceptance controls.",
+    "full_composition_capture": false,
+    "genuine_private_package_capture": true,
+    "includes_optional_icons_and_panel_layout": true,
+    "path": "screenshot.png",
+    "sha256": "eaefa377239bb54c28a990ffbfbd85e97470bbf88acac27c559be8e86d94b66c",
+    "source_report": "reports/cinnamon-store-readiness-2026-09-30/native/plum-afterglow/20260930-123844/report.json",
+    "source_report_sha256": "41b59c46fc204cebf11d6114d1767ee24dfb3d9e8dad2e211e9ee728d814e9e6",
+    "status": "CURRENT_PACKAGED_THEME_CAPTURE"
+  },
+  "slug": "plum-afterglow",
+  "store_only_rendering_repairs": [
+    "six-theme-enabled-scale-text-repair.json",
+    "dark-theme-enabled-controls-repair.json"
+  ],
+  "theme_name": "Plum Afterglow",
+  "publication": {
+    "status": "USER_AUTHORIZED_REPOSITORY_SUBMISSION",
+    "requested_on": "2026-09-30",
+    "scope": "desktop-theme-and-artwork",
+    "authorization": "User explicitly requested publication of the remaining six after being informed of the unresolved artwork record.",
+    "artwork_provenance_resolved": false
+  },
+  "review_bindings_sha256": {
+    "local-ocean-plum-visual-review.json": "219cc4a330bccfe7f844d60eb59de99295085eb764a80a7ea96844ba5864a261",
+    "local-eight-integration-review.json": "1a56849e8968015805e142c0877516fdd42b1ac51d24d40957f8c30c3733c693",
+    "local-eight-package-validation-final.json": "b8331f8b57df0adfffc88f0d0f1ce317f75f4ee9b426f2c72516389dd813fb6b",
+    "desktop-public-provenance-review.json": "e1cba196c77ede81d0e4a712fb08ffc119f7d03876cd9e18b22eb136f3a54298"
+  }
+}

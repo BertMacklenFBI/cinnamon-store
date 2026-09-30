@@ -1,0 +1,51 @@
+{
+  "boot_login_accepted": false,
+  "captures_sha256": {
+    "desktop.png": "9a5594748757236d773dd6c11d744e14a813338d7bd2cadd2485e13c58534fc5",
+    "gtk2.png": "aabdafefc7702c248f5174e0e75115d65eda0eda75f669954997796473807348",
+    "gtk3.png": "50dd726d48ffb973ffb2147fae10e6bb737b7afa49890d7b87952a6cf301c708",
+    "gtk4.png": "ac2d9b572ccd656a3128b5c93b2d8adcb65ab5c398acbe51a0b47c0dac3b6fe9",
+    "menu.png": "90b358f25457e6f65a9b7c04f7480f66e5895f78b585825d7988f7b70f52d730",
+    "notifications.png": "0c0a9cbccab8c6917601a7d5e5230e9f361270aa83747b5377d450a59095f777",
+    "sound.png": "734f00a62a799f41921cae1ff27fe47308c50077d9124c125e1e6d9d144dd9af",
+    "wallpaper.png": "f1a60a8b3da127bfb37c02fc665cd0645f114d2367e004a13640b8be7667b52b"
+  },
+  "checks": [
+    "Exact packaged theme installed in private HOME",
+    "Private 2880x1800 Cinnamon started with selected theme and stock applets",
+    "Workspace hit targets and labels fit actual allocations",
+    "Four stock workspace controls accept native pointer clicks",
+    "menu@cinnamon.org opens, paints within screen and closes",
+    "notifications@cinnamon.org opens, paints within screen and closes",
+    "sound@cinnamon.org opens, paints within screen and closes",
+    "GTK 2 selected theme, mapped controls and interaction states",
+    "GTK 3 selected theme, mapped controls and interaction states",
+    "GTK 4 selected theme, mapped controls and interaction states",
+    "Cinnamon theme reload"
+  ],
+  "full_workstation_accepted": false,
+  "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+  "independent_visual_review": "PASS_WITH_SCOPED_LIMITS",
+  "installed_tree_sha256": "aded22cc16278fc5d48863dc7b704920b5e436375497a726cf3bfaf3d4fa0206",
+  "live_installation_performed": false,
+  "package_integration": "PASS",
+  "package_scope": "desktop-theme-and-artwork",
+  "private_home_removed": true,
+  "public_artwork_provenance": "UNRESOLVED_ORIGINAL_ARTWORK_SOURCE_AND_GRANT",
+  "remaining_owned_private_processes": [],
+  "schema": 1,
+  "slug": "dusk-ribbons",
+  "source_native_report": "reports/cinnamon-store-readiness-2026-09-30/native/dusk-ribbons/20260930-124303/report.json",
+  "source_native_report_sha256": "41ae2ca0a35059a886dd72cb677b7d8121731a5753676ea967e2669b544ceef6",
+  "source_theme_unchanged_after_native_test": true,
+  "status": "PASS_BOUNDED_DESKTOP_PACKAGE_NATIVE",
+  "test_harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
+  "theme_name": "Dusk-Ribbons",
+  "workspace_native_pointer_visits": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "publication_authorized": true
+}

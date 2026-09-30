@@ -1,0 +1,51 @@
+{
+  "boot_login_accepted": false,
+  "captures_sha256": {
+    "desktop.png": "a33fae7ef7f4357471831c409885deb758528e6334ed57903659cd5f6e7444bc",
+    "gtk2.png": "317e5bebbba623e55be6f24f2056464b23029a391c97abddee045b62efda6f76",
+    "gtk3.png": "fbace1e1f77d67e1df7f15d6473120aab6adfe8103cdd1859b11c942b1443b0f",
+    "gtk4.png": "2c3f5b4a106751f74571c2bc7825b8321bc4e2623abd37edf93bf74c70f5d545",
+    "menu.png": "2ac0ade79558a899c79cdeab4f617bc1240615fc9f55132df2022683b4ac84b3",
+    "notifications.png": "d038f8a7edf1121c9961ac0f3e8f43204e7f4587a2a0e1e23afbea3fc4d4a639",
+    "sound.png": "18b01aabf536a64a62bd678d3b523c52cc4f181de75ba2c3f25d9749507271f1",
+    "wallpaper.png": "47c672c90403b254198d2000717173144a6becdd16c595a8d078ef5eb57cd98d"
+  },
+  "checks": [
+    "Exact packaged theme installed in private HOME",
+    "Private 2880x1800 Cinnamon started with selected theme and stock applets",
+    "Workspace hit targets and labels fit actual allocations",
+    "Four stock workspace controls accept native pointer clicks",
+    "menu@cinnamon.org opens, paints within screen and closes",
+    "notifications@cinnamon.org opens, paints within screen and closes",
+    "sound@cinnamon.org opens, paints within screen and closes",
+    "GTK 2 selected theme, mapped controls and interaction states",
+    "GTK 3 selected theme, mapped controls and interaction states",
+    "GTK 4 selected theme, mapped controls and interaction states",
+    "Cinnamon theme reload"
+  ],
+  "full_workstation_accepted": false,
+  "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+  "independent_visual_review": "PASS_WITH_SCOPED_LIMITS",
+  "installed_tree_sha256": "0b3b28a0cd7fda2574b00dfddda0052075e784ea00807e0fa38e7231a0448c8c",
+  "live_installation_performed": false,
+  "package_integration": "PASS",
+  "package_scope": "desktop-theme-and-artwork",
+  "private_home_removed": true,
+  "public_artwork_provenance": "UNRESOLVED_ORIGINAL_ARTWORK_SOURCE_AND_GRANT",
+  "remaining_owned_private_processes": [],
+  "schema": 1,
+  "slug": "ocean-silk",
+  "source_native_report": "reports/cinnamon-store-readiness-2026-09-30/native/ocean-silk/20260930-123745/report.json",
+  "source_native_report_sha256": "987cb8f1398488c04243fa92453ebedfe6b5241bd290df10e8e08363d251443a",
+  "source_theme_unchanged_after_native_test": true,
+  "status": "PASS_BOUNDED_DESKTOP_PACKAGE_NATIVE",
+  "test_harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
+  "theme_name": "Ocean-Silk",
+  "workspace_native_pointer_visits": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "publication_authorized": true
+}
