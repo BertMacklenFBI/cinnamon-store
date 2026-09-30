@@ -6,22 +6,26 @@ Cinnamon shell, GTK 2/3/4 controls and Metacity window borders, with the matchin
 
 ## Install and select
 
-From this package directory, copy the theme into your personal theme folder. This command refuses to replace an existing installation:
+Run this example from this package directory. It refuses an existing same-name installation and refuses a symlink or non-directory at the personal theme parent. Review any existing installation and back it up or move it yourself before trying again.
 
 ```sh
 (
 name='GNU-Darwin Workstation'
-destination="$HOME/.themes/$name"
-if [ -L "$HOME/.themes" ] || { [ -e "$HOME/.themes" ] && [ ! -d "$HOME/.themes" ]; }; then
-  printf '%s\n' "The theme directory must be a real directory, not a symlink or file." >&2
+parent="$HOME/.themes"
+destination="$parent/$name"
+if [ -L "$parent" ] || { [ -e "$parent" ] && [ ! -d "$parent" ]; }; then
+  printf '%s\n' "The theme parent must be a real directory, not a symlink or file." >&2
   exit 1
 fi
-if [ -e "$destination" ] || [ -L "$destination" ]; then
-  printf '%s\n' "An installation already exists: $destination. Back it up before replacing it." >&2
-  exit 1
-fi
-mkdir -p "$HOME/.themes"
-cp -R -- "files/$name" "$destination"
+for existing in "$destination" "${XDG_DATA_HOME:-$HOME/.local/share}/themes/$name" "/usr/local/share/themes/$name" "/usr/share/themes/$name"; do
+  if [ -e "$existing" ] || [ -L "$existing" ]; then
+    printf '%s\n' "A same-name theme already exists: $existing. Review and back it up manually." >&2
+    exit 1
+  fi
+done
+mkdir -p -- "$parent" || exit 1
+mkdir -- "$destination" || exit 1
+cp -R -- "files/$name/." "$destination/" || exit 1
 )
 ```
 

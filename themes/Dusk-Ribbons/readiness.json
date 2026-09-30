@@ -55,12 +55,36 @@
       "reason": "Native GTK2 control rendering in repaired store package; replaces stale inherited raster-control engine paint."
     }
   ],
+  "historical_review_bindings_sha256": {
+    "desktop-public-provenance-review.json": "e1cba196c77ede81d0e4a712fb08ffc119f7d03876cd9e18b22eb136f3a54298",
+    "dusk-quiet-package-visual-review.json": "6a5b2f95aedac2d7e74d7eec13b757f29e401a51bebb55e7e53bce77fe5f25a2",
+    "local-eight-integration-review.json": "1a56849e8968015805e142c0877516fdd42b1ac51d24d40957f8c30c3733c693",
+    "local-eight-package-validation-final.json": "b8331f8b57df0adfffc88f0d0f1ce317f75f4ee9b426f2c72516389dd813fb6b"
+  },
   "icon": {
     "byte_exact_artwork_source": "files/Dusk-Ribbons/artwork/menu-logo.png",
     "path": "icon.png",
     "sha256": "d27a7ef34cd2d067b2a6097aedd379a047022999abcd2dc081fec0b318daf7d7"
   },
   "native_binding": {
+    "checks_passed": 13,
+    "gtk_fixture_sha256": "d469196a576245dbeaa35f5bb6a40e3fc97d4cab31307ba33b9453905f97364e",
+    "harness_sha256": "0abb5a5149d1abd1e87cdca2c3dec5c9dd1db09346bad0bd14c562eb537e1c0a",
+    "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
+    "installed_tree_sha256": "1536ad3827e658f24a2354a54c7278aa9140654872e0660141262d6a0265bdc6",
+    "native_callback_scope": "Stock workspace controls received private-session pointer clicks; GTK2/default GTK3/4 and explicit GTK3/4 dark variants mapped and passed programmatic button/checkbox callbacks.",
+    "owned_cleanup_complete": true,
+    "report": "reports/cinnamon-store-merge-2026-09-30/dusk-native/20260930-142648/report.json",
+    "report_sha256": "0c23a487b4df1ceb6d8bcf04bee1e558db32587e77cf4467a922c81db20b47ec",
+    "source_unchanged": true
+  },
+  "package_scope": "desktop-theme-and-artwork",
+  "palette": {
+    "path": "files/Dusk-Ribbons/palette.json",
+    "preserved_from_source": true,
+    "sha256": "a379fc52dd631ac151bc347e0dbf1b0dddcbeaae667f4a31fd6ef44e03b58706"
+  },
+  "previous_native_binding": {
     "checks_passed": 11,
     "harness_sha256": "ee91c6d3f47b17ab32082deff78f386994d251cfe06280e7bebaaf9750a47524",
     "helpers_sha256": "b8866b98be8411b8a9014a9776abda7f68f13c3e1d702826460f1f9ef548dcbf",
@@ -71,11 +95,12 @@
     "report_sha256": "41ae2ca0a35059a886dd72cb677b7d8121731a5753676ea967e2669b544ceef6",
     "source_unchanged": true
   },
-  "package_scope": "desktop-theme-and-artwork",
-  "palette": {
-    "path": "files/Dusk-Ribbons/palette.json",
-    "preserved_from_source": true,
-    "sha256": "a379fc52dd631ac151bc347e0dbf1b0dddcbeaae667f4a31fd6ef44e03b58706"
+  "publication": {
+    "artwork_provenance_resolved": false,
+    "authorization": "User explicitly requested publication of the remaining six after being informed of the unresolved artwork record.",
+    "requested_on": "2026-09-30",
+    "scope": "desktop-theme-and-artwork",
+    "status": "USER_AUTHORIZED_REPOSITORY_SUBMISSION"
   },
   "schema": 1,
   "screenshot": {
@@ -86,28 +111,16 @@
     "genuine_private_package_capture": true,
     "includes_optional_icons_and_panel_layout": true,
     "path": "screenshot.png",
-    "sha256": "50dd726d48ffb973ffb2147fae10e6bb737b7afa49890d7b87952a6cf301c708",
-    "source_report": "reports/cinnamon-store-readiness-2026-09-30/native/dusk-ribbons/20260930-124303/report.json",
-    "source_report_sha256": "41ae2ca0a35059a886dd72cb677b7d8121731a5753676ea967e2669b544ceef6",
+    "sha256": "3a8b90353432540b3ec1acb144286c937fa8fc3b029a113205dde11dfd6fac2d",
+    "source_report": "reports/cinnamon-store-merge-2026-09-30/dusk-native/20260930-142648/report.json",
+    "source_report_sha256": "0c23a487b4df1ceb6d8bcf04bee1e558db32587e77cf4467a922c81db20b47ec",
     "status": "CURRENT_PACKAGED_THEME_CAPTURE"
   },
   "slug": "dusk-ribbons",
   "store_only_rendering_repairs": [
     "six-theme-enabled-scale-text-repair.json",
-    "dark-theme-enabled-controls-repair.json"
+    "dark-theme-enabled-controls-repair.json",
+    "dusk-dark-fix.json"
   ],
-  "theme_name": "Dusk-Ribbons",
-  "publication": {
-    "status": "USER_AUTHORIZED_REPOSITORY_SUBMISSION",
-    "requested_on": "2026-09-30",
-    "scope": "desktop-theme-and-artwork",
-    "authorization": "User explicitly requested publication of the remaining six after being informed of the unresolved artwork record.",
-    "artwork_provenance_resolved": false
-  },
-  "review_bindings_sha256": {
-    "dusk-quiet-package-visual-review.json": "6a5b2f95aedac2d7e74d7eec13b757f29e401a51bebb55e7e53bce77fe5f25a2",
-    "local-eight-integration-review.json": "1a56849e8968015805e142c0877516fdd42b1ac51d24d40957f8c30c3733c693",
-    "local-eight-package-validation-final.json": "b8331f8b57df0adfffc88f0d0f1ce317f75f4ee9b426f2c72516389dd813fb6b",
-    "desktop-public-provenance-review.json": "e1cba196c77ede81d0e4a712fb08ffc119f7d03876cd9e18b22eb136f3a54298"
-  }
+  "theme_name": "Dusk-Ribbons"
 }
