@@ -1,0 +1,27 @@
+{
+  "scope": "Only shipped menu artwork; derived from original source report",
+  "artwork": [
+    {
+      "icon": "gnu-darwin-workstation-menu",
+      "function": "menu/settings icon",
+      "source": "proposals/gnu-darwin-archive/windowmaker-assets/extracted/usr/share/WindowMaker/Icons/GNUstepGlow.xpm",
+      "source_sha256": "3812d3f4056f6a5454d497e3e15366d706cb49ad038ee822e14c21faee9498de",
+      "output_sha256": "449767fe12347c85ea669acd5b7d20d9c6d475fda2108b24e9f2c86aa817fc53",
+      "author": "Banlu Kemiyatorn, 2000",
+      "license": "WTFPL-1",
+      "transformation": "lossless format conversion; shape and colors retained; toolkit scales to48px",
+      "historical_identity": "modern packaged source; not verified screenshot bytes"
+    },
+    {
+      "icon": "preferences-desktop",
+      "function": "menu/settings icon",
+      "source": "proposals/gnu-darwin-archive/windowmaker-assets/extracted/usr/share/WindowMaker/Icons/GNUstepGlow.xpm",
+      "source_sha256": "3812d3f4056f6a5454d497e3e15366d706cb49ad038ee822e14c21faee9498de",
+      "output_sha256": "449767fe12347c85ea669acd5b7d20d9c6d475fda2108b24e9f2c86aa817fc53",
+      "author": "Banlu Kemiyatorn, 2000",
+      "license": "WTFPL-1",
+      "transformation": "lossless format conversion; shape and colors retained; toolkit scales to48px",
+      "historical_identity": "modern packaged source; not verified screenshot bytes"
+    }
+  ]
+}

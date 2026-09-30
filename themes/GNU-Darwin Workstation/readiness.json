@@ -1,0 +1,78 @@
+{
+  "acceptance": {
+    "full_workstation": false,
+    "gtk2": "PASS",
+    "gtk3": "PASS",
+    "gtk4": "PASS",
+    "native_package": "PASS",
+    "package_integration": "PASS",
+    "public_provenance_review": "PASS",
+    "source_candidate_release_gates_changed": false,
+    "static_resource_closure": "PASS",
+    "store_package_ready": true,
+    "visual_review": "PASS"
+  },
+  "artwork": {
+    "files/GNU-Darwin Workstation/artwork/menu-logo.png": "449767fe12347c85ea669acd5b7d20d9c6d475fda2108b24e9f2c86aa817fc53",
+    "files/GNU-Darwin Workstation/artwork/wallpaper.png": "8c60777fa516815d301288ae4b92ae70505864893474ec88abccc75651d01ff6"
+  },
+  "display_name": "GNU-Darwin Workstation",
+  "excluded_layers": [
+    "icons",
+    "cursors",
+    "fonts",
+    "panel-arrangement",
+    "workspace-applet-runtime",
+    "Island/Eww",
+    "application-adapters",
+    "terminal-integrations",
+    "boot/login",
+    "activation/restore-controllers"
+  ],
+  "external_dependencies": [
+    {
+      "kind": "gtk-engine",
+      "name": "murrine",
+      "reason": "Referenced by GTK2 theme rules; required for GTK2 coverage."
+    },
+    {
+      "kind": "font",
+      "name": "Liberation Sans",
+      "reason": "Named in shipped desktop CSS; fonts are installed separately."
+    },
+    {
+      "kind": "icon-theme",
+      "name": "GNU-Darwin Workstation icons",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    },
+    {
+      "kind": "cursor-theme",
+      "name": "GNU-Darwin Workstation cursors",
+      "optional": true,
+      "reason": "Original source composition selected this separate component. It is not bundled or selected by this desktop package."
+    }
+  ],
+  "package_scope": "desktop-theme-and-artwork",
+  "palette": {
+    "path": "files/GNU-Darwin Workstation/palette.json",
+    "preserved_from_source": true,
+    "sha256": "20fb932daff094e1dff19d528b6795a95f66af8e30ee3afc293b1ab87363f33f"
+  },
+  "review_bindings_sha256": {
+    "GNU-visual-review.json": "45e954d728065a6391a1363124140cb884d43476d9195ea078fc627803181da0",
+    "desktop-public-provenance-review.json": "e1cba196c77ede81d0e4a712fb08ffc119f7d03876cd9e18b22eb136f3a54298",
+    "native-harness-review.json": "4c9ca2ee2ab4edb6f1adcc294903d60259c9b7708735a6b329b88b3c991386f9",
+    "public-gnu-integration-review.json": "ff48e102bd65db445bff72b0217646b433f184e1daad52f33bdd61d10cde9e1a",
+    "public-gnu-package-validation-final.json": "c8ce3996bc4a4ab6dd016e2d8f06eeaa76854e1f25479654186d03d7fec559b4"
+  },
+  "schema": 1,
+  "screenshot": {
+    "context": "Private Cinnamon 6.6.9 at 2880x1800, one 64px bottom panel with stock applets and Adwaita icons; GTK3 fixture; manually selected packaged wallpaper.",
+    "path": "screenshot.png",
+    "sha256": "6dd3b3d135bf8560806c17fc40f107f7f8d2740c4d08eb9ec180cd2e1fd7187e",
+    "status": "CURRENT_PACKAGED_THEME_CAPTURE"
+  },
+  "slug": "gnu-darwin-workstation",
+  "theme_name": "GNU-Darwin Workstation"
+}

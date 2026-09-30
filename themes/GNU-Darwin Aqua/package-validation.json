@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "scope": "Static portable package closure and owned temporary HOME file-copy rehearsal",
+  "checker_sha256": "2d0e60d629c9b0c8e8bf768210380d81773f5ab696f64bff6600d57ad572543f",
+  "source_report_sha256": "c8ce3996bc4a4ab6dd016e2d8f06eeaa76854e1f25479654186d03d7fec559b4",
+  "errors": [],
+  "warnings": [
+    {
+      "code": "spices-all-name",
+      "detail": "Upstream validate-spice --all rejects whitespace paths; per-theme validation accepts this exact Cinnamon name. A future upstream submission needs a separately reconciled directory naming decision."
+    }
+  ],
+  "rehearsal": {
+    "status": "PASS",
+    "checks": {
+      "fresh_copy_bytes": true,
+      "fresh_restoration_absence": true,
+      "existing_install_refused": true,
+      "modified_install_restore_refused": true,
+      "replacement_restored_original": true,
+      "unrelated_theme_preserved": true,
+      "package_source_unchanged": true
+    },
+    "scope": "Owned temporary HOME file-copy/install/restore only; no settings, GUI or original installers executed."
+  },
+  "source_fixtures": {
+    "tests_run": 31,
+    "status": "PASS",
+    "scope": "Parser, dependency, host-path, recovery, private-session guard and bounded cleanup failure cases"
+  }
+}
